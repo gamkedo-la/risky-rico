@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 2059695250948575312}
   - component: {fileID: 4692112344766710275}
   - component: {fileID: -1692661798096625055}
+  - component: {fileID: 5613115866552506646}
+  - component: {fileID: 4231717167968313040}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -221,3 +223,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17f12308fb82ff409af4af9188042d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5613115866552506646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5220456760211092832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5c0b4d14993b147a3f1629f4cd0135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collidableObjects: {fileID: 11400000, guid: 5867dc72610f0ff43b7e2f0286ca1f31, type: 2}
+  _enterResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4231717167968313040}
+        m_TargetAssemblyTypeName: RaiseEvents, Assembly-CSharp
+        m_MethodName: RaiseAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _exitResponse:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &4231717167968313040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5220456760211092832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180840dc2eddfc34eb0d3ce0c6d6c13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _events:
+  - {fileID: 11400000, guid: 11937fd485ab1834992632af9d9d4840, type: 2}
