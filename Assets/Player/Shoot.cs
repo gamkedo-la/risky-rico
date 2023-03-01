@@ -8,7 +8,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private Vector2Variable _aimDirection;
     [SerializeField] private GameObject _projectile;
     [SerializeField] private PlayerInput _input;
-    private float _shotDelay = 1f;
+    private float _shotDelay = 0.5f;
     private float _shotSpeed = 3f;
     private float _timeBetweenShots;
     private bool _didShoot = false; 
@@ -22,6 +22,9 @@ public class Shoot : MonoBehaviour
     {
         if (_input.actions["shoot"].triggered && !_didShoot)
         {
+            float _aimDirectionX = _input.actions["shoot"].ReadValue<Vector2>().x;
+            float _aimDirectionY = _input.actions["shoot"].ReadValue<Vector2>().y;
+            _aimDirection.Value = new Vector2(_aimDirectionX, _aimDirectionY);
             SpawnProjectile();
             _didShoot = true;
         }
