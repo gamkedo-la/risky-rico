@@ -43,7 +43,8 @@ public class Shoot : MonoBehaviour
 
     void SpawnProjectile()
     {
-        GameObject _newProjectile = Instantiate(_projectile, transform.position, Quaternion.identity);
+        Vector3 spawnPosition = new Vector3(transform.position.x + _aimDirection.Value.x, transform.position.y + _aimDirection.Value.y, transform.position.z);
+        GameObject _newProjectile = Instantiate(_projectile, spawnPosition, Quaternion.identity);
         _newProjectile.GetComponent<MoveInOwnDirection>().SetDirection(_aimDirection.Value * _shotSpeed);
     }
 }
