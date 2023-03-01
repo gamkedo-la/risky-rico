@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RaiseEvents : MonoBehaviour
 {
-    private List<GameEventBase> _events = new List<GameEventBase>();
+    [SerializeField] private List<GameEventBase> _events = new List<GameEventBase>();
 
     public void RaiseAll() 
     {
