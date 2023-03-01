@@ -26,4 +26,10 @@ public class MoveInOwnDirection : MonoBehaviour
         _xDirection = direction.x;
         _yDirection = direction.y;
     }
+
+    public void FlipDirection()
+    {
+        _xDirection *= -1;
+        _yDirection *= -1;
+    }
 }
