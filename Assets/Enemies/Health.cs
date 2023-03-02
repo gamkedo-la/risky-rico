@@ -5,9 +5,22 @@ using ScriptableObjectArchitecture;
 
 public class Health : MonoBehaviour
 {
+    [Header("Stats")]
     [SerializeField] private int _xHealth;
     [SerializeField] private int _yHealth;
+    public int YHealth => _yHealth;
+    public int XHealth => _xHealth;
+    public int XHealthMax { get; private set; }
+    public int YHealthMax { get; private set; }
+
+    [Header("Collisions")]
     [SerializeField] private GameObjectCollection _damagingObjects;
+
+    void Start()
+    {
+        XHealthMax = _xHealth;
+        YHealthMax = _yHealth;
+    }
 
     public void TakeDamage(int xDamage, int yDamage)
     {
