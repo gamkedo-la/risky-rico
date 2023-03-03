@@ -10,13 +10,16 @@ public class MoveInOwnDirection : MonoBehaviour
     [SerializeField]
     private float _yDirection = 0f;
 
+    [SerializeField]
+    private float _speed = 1f;
+
     void Update()
     {
         float currentX = transform.position.x;
         float currentY = transform.position.y;
 
-        float nextX = currentX + _xDirection * Time.deltaTime;
-        float nextY = currentY + _yDirection * Time.deltaTime;
+        float nextX = currentX + _xDirection * _speed * Time.deltaTime;
+        float nextY = currentY + _yDirection * _speed * Time.deltaTime;
 
         transform.position = new Vector3(nextX, nextY, transform.position.z);
     }
