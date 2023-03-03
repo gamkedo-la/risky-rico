@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _xDirection: 1
   _yDirection: 0
+  _speed: 2
 --- !u!114 &1277900420103318668
 MonoBehaviour:
   m_ObjectHideFlags: 0
