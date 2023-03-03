@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class MoveInOwnDirection : MonoBehaviour
 {
@@ -11,15 +12,15 @@ public class MoveInOwnDirection : MonoBehaviour
     private float _yDirection = 0f;
 
     [SerializeField]
-    private float _speed = 1f;
+    private FloatVariable _speed;
 
     void Update()
     {
         float currentX = transform.position.x;
         float currentY = transform.position.y;
 
-        float nextX = currentX + _xDirection * _speed * Time.deltaTime;
-        float nextY = currentY + _yDirection * _speed * Time.deltaTime;
+        float nextX = currentX + _xDirection * _speed.Value * Time.deltaTime;
+        float nextY = currentY + _yDirection * _speed.Value * Time.deltaTime;
 
         transform.position = new Vector3(nextX, nextY, transform.position.z);
     }
