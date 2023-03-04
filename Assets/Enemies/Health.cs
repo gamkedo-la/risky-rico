@@ -45,20 +45,19 @@ public class Health : MonoBehaviour
         // get point of contact and collider boundaries
         Vector3 contactPoint = collision.contacts[0].point;
         Bounds bounds = GetComponent<BoxCollider2D>().bounds;
+        Bounds otherBounds = collision.gameObject.GetComponent<BoxCollider2D>().bounds;
         Vector3 center = bounds.center;
- 
-        // buffer distance to detect collision points in the event of tunneling
-        float padding = 0.25f;
+        Vector3 otherCenter = otherBounds.center;
 
         // contained within height boundary of other collider
-        if (contactPoint.y - padding > center.y - bounds.extents.y && contactPoint.y + padding < center.y + bounds.extents.y)
+        if (otherCenter.y > center.y - bounds.extents.y && otherCenter.y < center.y + bounds.extents.y)
         {
             Debug.Log("Contact x");
             xDamage = 1;
         }
 
         // contained within height boundary of other collider
-        if (contactPoint.x - padding > center.x - bounds.extents.x && contactPoint.x + padding < center.x + bounds.extents.x)
+        if (otherCenter.x > center.x - bounds.extents.x && otherCenter.x < center.x + bounds.extents.x)
         {
             Debug.Log("Contact y");
             yDamage = 1;
