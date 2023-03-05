@@ -19,7 +19,9 @@ public class SpawnController : MonoBehaviour
     [Header("Waves")]
     [SerializeField] private FloatVariable _waveDuration;
     [SerializeField] private FloatReference _defaultWaveDuration;
-    
+    [SerializeField] private IntGameObjectDictionary _waveMap;
+    private int _waveCount = 1;
+
     [Header("Rest")]
     [SerializeField] private FloatVariable _restDuration;
     [SerializeField] private FloatReference _defaultRestDuration;
@@ -65,12 +67,25 @@ public class SpawnController : MonoBehaviour
         {
             _state = "rest";
             _waveDuration.Value = _defaultWaveDuration.Value;
+            _waveCount += 1;
+            UpdateAvailableSpawnTypes();
         }
 
         if (_restDuration.Value <= 0f)
         {
             _state = "wave";
             _restDuration.Value = _defaultRestDuration.Value;
+        }
+    }
+
+    public void UpdateAvailableSpawnTypes()
+    {
+        foreach(int i in _waveMap.Keys)
+        {
+            if (_waveCount >= i && !_spawnTypes.Contains(_waveMap[i]))
+            {
+                _spawnTypes.Add(_waveMap[i]);
+            }
         }
     }
 
