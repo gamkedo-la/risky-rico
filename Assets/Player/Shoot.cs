@@ -26,18 +26,6 @@ public class Shoot : MonoBehaviour
             float _aimDirectionY = _input.actions["shoot"].ReadValue<Vector2>().y;
             _aimDirection.Value = new Vector2(_aimDirectionX, _aimDirectionY);
             SpawnProjectile();
-            _didShoot = true;
-        }
-
-        if (_didShoot)
-        {
-            _timeBetweenShots -= Time.deltaTime;
-        }
-
-        if (_timeBetweenShots <= 0)
-        {
-            _didShoot = false;
-            _timeBetweenShots = _shotDelay;
         }
     }
 
