@@ -24,3 +24,9 @@ public class MyClass
 
 [Serializable]
 public class QuaternionMyClassDictionary : SerializableDictionary<Quaternion, MyClass> {}
+
+[Serializable]
+public class FloatGameObjectDictionary : SerializableDictionary<float, GameObject> {}
+
+[Serializable]
+public class IntGameObjectDictionary : SerializableDictionary<int, GameObject> {}
