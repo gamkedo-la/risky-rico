@@ -179,7 +179,6 @@ GameObject:
   m_Component:
   - component: {fileID: 322519326}
   - component: {fileID: 322519325}
-  - component: {fileID: 322519327}
   m_Layer: 0
   m_Name: SpawnController
   m_TagString: Untagged
@@ -200,16 +199,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnTypes:
-  - {fileID: 8724373994609232352, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
-  - {fileID: 6445072975868926767, guid: 6325e11e88fd33447abbe2f69b00cb4e, type: 3}
   - {fileID: 8237274823440949965, guid: ec252aa042f898e44a7138813fd51810, type: 3}
-  - {fileID: 8693628864122072353, guid: 92a4fce607c18474099918d2b7dcf5a8, type: 3}
   _spawnPoints:
   - {fileID: 1030227002}
   - {fileID: 1677756423}
   - {fileID: 297139340}
   - {fileID: 1739144010}
   addSelfToList: 0
+  _timeBetweenSpawns: {fileID: 11400000, guid: 3e4d3c7ab76622c4bb0fc947231324ae, type: 2}
+  _defaultTimeBetweenSpawns:
+    _useConstant: 1
+    _constantValue: 2
+    _variable: {fileID: 11400000, guid: 3e4d3c7ab76622c4bb0fc947231324ae, type: 2}
+  _waveDuration: {fileID: 11400000, guid: 1f6f3352e02522e4b8380cdf0362af88, type: 2}
+  _defaultWaveDuration:
+    _useConstant: 1
+    _constantValue: 12
+    _variable: {fileID: 11400000, guid: 1f6f3352e02522e4b8380cdf0362af88, type: 2}
+  _waveMap:
+    m_keys: 01000000020000000300000004000000
+    m_values:
+    - {fileID: 8237274823440949965, guid: ec252aa042f898e44a7138813fd51810, type: 3}
+    - {fileID: 8724373994609232352, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
+    - {fileID: 6445072975868926767, guid: 6325e11e88fd33447abbe2f69b00cb4e, type: 3}
+    - {fileID: 8693628864122072353, guid: 92a4fce607c18474099918d2b7dcf5a8, type: 3}
+  _restDuration: {fileID: 11400000, guid: b874eec0c0733a944b3c5d96c6547061, type: 2}
+  _defaultRestDuration:
+    _useConstant: 1
+    _constantValue: 4
+    _variable: {fileID: 0}
 --- !u!4 &322519326
 Transform:
   m_ObjectHideFlags: 0
@@ -225,58 +243,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &322519327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322519324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24d969133318cd04597bc27017012b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 322519325}
-        m_TargetAssemblyTypeName: SpawnController, Assembly-CSharp
-        m_MethodName: PickSpawnPoint
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 322519325}
-        m_TargetAssemblyTypeName: SpawnController, Assembly-CSharp
-        m_MethodName: PickSpawnType
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 322519325}
-        m_TargetAssemblyTypeName: SpawnController, Assembly-CSharp
-        m_MethodName: SpawnObjects
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _waitTime: 2
 --- !u!1 &418979491 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4274267268233061665, guid: bde12851b50d8b548829c8ee96450adc, type: 3}
