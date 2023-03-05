@@ -53,7 +53,8 @@ public class SpawnController : MonoBehaviour
                 PickSpawnType();
                 PickSpawnPoint();
                 SpawnObjects();
-                _timeBetweenSpawns.Value = _defaultTimeBetweenSpawns.Value;
+                _timeBetweenSpawns.Value = _defaultTimeBetweenSpawns.Value * (_waveDuration.Value / _defaultWaveDuration.Value);
+                _timeBetweenSpawns.Value = Mathf.Clamp(_timeBetweenSpawns.Value, 0.5f, _defaultTimeBetweenSpawns.Value);
             }
         }
 
