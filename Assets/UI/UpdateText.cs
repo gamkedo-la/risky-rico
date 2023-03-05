@@ -12,6 +12,6 @@ public class UpdateText : MonoBehaviour
     [SerializeField] private FloatVariable _value;
     void Update()
     {
-        _text.text = "Score: " + _value.Value;
+        _text.text = "" + _value.Value;
     }
 }
