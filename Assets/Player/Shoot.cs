@@ -8,19 +8,11 @@ public class Shoot : MonoBehaviour
     [SerializeField] private Vector2Variable _aimDirection;
     [SerializeField] private GameObject _projectile;
     [SerializeField] private PlayerInput _input;
-    private float _shotDelay = 0.2f;
     private float _shotSpeed = 3f;
-    private float _timeBetweenShots;
-    private bool _didShoot = false; 
-
-    void Awake() 
-    {
-        _timeBetweenShots = _shotDelay;
-    }
 
     void Update()
     {
-        if (_input.actions["shoot"].triggered && !_didShoot)
+        if (_input.actions["shoot"].triggered)
         {
             float _aimDirectionX = _input.actions["shoot"].ReadValue<Vector2>().x;
             float _aimDirectionY = _input.actions["shoot"].ReadValue<Vector2>().y;
