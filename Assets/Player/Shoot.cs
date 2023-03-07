@@ -4,14 +4,13 @@ using UnityEngine.InputSystem;
 
 public class Shoot : MonoBehaviour
 {
-
     [SerializeField] private Vector2Variable _aimDirection;
     [SerializeField] private GameObject _projectile;
     [SerializeField] private PlayerInput _input;
-    private float _shotSpeed = 3f;
 
     void Update()
     {
+        // update aiming direction with inputs and shoot
         if (_input.actions["shoot"].triggered)
         {
             float _aimDirectionX = _input.actions["shoot"].ReadValue<Vector2>().x;
@@ -23,8 +22,19 @@ public class Shoot : MonoBehaviour
 
     void SpawnProjectile()
     {
-        Vector3 spawnPosition = new Vector3(transform.position.x + _aimDirection.Value.x, transform.position.y + _aimDirection.Value.y, transform.position.z);
+        // set spawn position
+        float bufferX = _aimDirection.Value.x;
+        float bufferY = _aimDirection.Value.y;
+        Vector3 spawnPosition = new Vector3(transform.position.x + bufferX, transform.position.y + bufferY, transform.position.z);
+        
+        // spawn object
         GameObject _newProjectile = Instantiate(_projectile, spawnPosition, Quaternion.identity);
-        _newProjectile.GetComponent<MoveInOwnDirection>().SetDirection(_aimDirection.Value * _shotSpeed);
+
+        // move the new object in the aiming direction
+        MoveInOwnDirection moveComponent = _newProjectile.GetComponent<MoveInOwnDirection>();
+        if (moveComponent != null)
+        {
+            _newProjectile.GetComponent<MoveInOwnDirection>().SetDirection(_aimDirection.Value);
+        }
     }
 }
