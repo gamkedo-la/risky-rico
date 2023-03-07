@@ -2,6 +2,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
 
+public enum SpawnState 
+{
+    WAVE,
+    REST
+}
 public class SpawnController : MonoBehaviour
 {
     [Header("Collections")]
@@ -25,7 +30,7 @@ public class SpawnController : MonoBehaviour
     [Header("Rest")]
     [SerializeField] private FloatVariable _restDuration;
     [SerializeField] private FloatReference _defaultRestDuration;
-    private string _state = "wave";
+    [SerializeField] private SpawnState _state = SpawnState.WAVE;
 
     void Awake()
     {
@@ -42,7 +47,7 @@ public class SpawnController : MonoBehaviour
     void Update()
     {
         // update state
-        if (_state == "wave")
+        if (_state == SpawnState.WAVE)
         {
             _waveDuration.Value -= 1 * Time.deltaTime;
             _timeBetweenSpawns.Value -= 1 * Time.deltaTime;
@@ -58,7 +63,7 @@ public class SpawnController : MonoBehaviour
             }
         }
 
-        if (_state == "rest")
+        if (_state == SpawnState.REST)
         {
             _restDuration.Value -= 1 * Time.deltaTime;
         }
@@ -66,7 +71,7 @@ public class SpawnController : MonoBehaviour
         // change state 
         if (_waveDuration.Value <= 0f)
         {
-            _state = "rest";
+            _state = SpawnState.REST;
             _waveDuration.Value = _defaultWaveDuration.Value;
             _waveCount += 1;
             UpdateAvailableSpawnTypes();
@@ -74,7 +79,7 @@ public class SpawnController : MonoBehaviour
 
         if (_restDuration.Value <= 0f)
         {
-            _state = "wave";
+            _state = SpawnState.WAVE;
             _restDuration.Value = _defaultRestDuration.Value;
         }
     }
