@@ -15,9 +15,11 @@ public class Health : MonoBehaviour
 
     [Header("Collisions")]
     [SerializeField] private GameObjectCollection _damagingObjects;
+    private BoxCollider2D _collider;
 
     void Start()
     {
+        _collider = GetComponent<BoxCollider2D>();
         XHealthMax = _xHealth;
         YHealthMax = _yHealth;
     }
@@ -30,8 +32,6 @@ public class Health : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject);
-
         if (!_damagingObjects.Contains(collision.gameObject))
         {
             Debug.Log("not a damaging object");
@@ -42,9 +42,8 @@ public class Health : MonoBehaviour
         int xDamage = 0;
         int yDamage = 0;
 
-        // get point of contact and collider boundaries
-        Vector3 contactPoint = collision.contacts[0].point;
-        Bounds bounds = GetComponent<BoxCollider2D>().bounds;
+        // get center points and collider boundaries
+        Bounds bounds = _collider.bounds;
         Bounds otherBounds = collision.gameObject.GetComponent<BoxCollider2D>().bounds;
         Vector3 center = bounds.center;
         Vector3 otherCenter = otherBounds.center;
@@ -52,14 +51,12 @@ public class Health : MonoBehaviour
         // contained within height boundary of other collider
         if (otherCenter.y > center.y - bounds.extents.y && otherCenter.y < center.y + bounds.extents.y)
         {
-            Debug.Log("Contact x");
             xDamage = 1;
         }
 
-        // contained within height boundary of other collider
+        // contained within width boundary of other collider
         if (otherCenter.x > center.x - bounds.extents.x && otherCenter.x < center.x + bounds.extents.x)
         {
-            Debug.Log("Contact y");
             yDamage = 1;
         }
 
