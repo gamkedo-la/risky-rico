@@ -135,6 +135,9 @@ MonoBehaviour:
   _xHealth: 2
   _yHealth: 2
   _damagingObjects: {fileID: 11400000, guid: cf065a3fa2e5c644c8a9d4f3ea148a5e, type: 2}
+  _damageEvents: []
+  _deathEvents:
+  - {fileID: 11400000, guid: 3a98bc49dedf7d1419241501fbb726e4, type: 2}
 --- !u!50 &535639564
 Rigidbody2D:
   serializedVersion: 4
