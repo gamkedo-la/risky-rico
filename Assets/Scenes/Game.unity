@@ -1462,6 +1462,7 @@ GameObject:
   - component: {fileID: 2104192780}
   - component: {fileID: 2104192783}
   - component: {fileID: 2104192784}
+  - component: {fileID: 2104192785}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -1502,6 +1503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _score: {fileID: 11400000, guid: 835274fb7aacb1d4e8376a6e5ce64f25, type: 2}
+  _scoreMultiplier: {fileID: 11400000, guid: 2b4701aa415f8a843902ee174053ec4e, type: 2}
+  _maxScoreMultiplier: {fileID: 11400000, guid: de194e4ba72e2d74d99054a69120173b, type: 2}
 --- !u!114 &2104192781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1636,6 +1639,38 @@ MonoBehaviour:
       - m_Target: {fileID: 2104192780}
         m_TargetAssemblyTypeName: UpdateScore, Assembly-CSharp
         m_MethodName: IncreaseScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2104192785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104192778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: 21f5ce37a8c86be49a46e5bdc43d2f61, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2104192780}
+        m_TargetAssemblyTypeName: UpdateScore, Assembly-CSharp
+        m_MethodName: BreakCombo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
