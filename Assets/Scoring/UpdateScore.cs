@@ -10,8 +10,8 @@ public class UpdateScore : MonoBehaviour
         _score.Value = 0f;
     }
 
-    void Update()
+    public void IncreaseScore()
     {
-        _score.Value += 1 * Time.deltaTime;
+        _score.Value += 10;
     }
 }
