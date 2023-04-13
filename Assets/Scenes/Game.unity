@@ -1485,7 +1485,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1451624447, guid: 114367acc1301a346ae3593b0040b472, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1613,6 +1613,7 @@ MonoBehaviour:
   _aimDirection: {fileID: 11400000, guid: f727cdc12f876574483289b5508b7335, type: 2}
   _projectile: {fileID: 5220456760211092832, guid: 9263d746118dcd045aee19b647184304, type: 3}
   _input: {fileID: 1757148994}
+  _sound: {fileID: 11400000, guid: 2235b4818cfa234469793d2d9ae030cd, type: 2}
 --- !u!114 &1757148996
 MonoBehaviour:
   m_ObjectHideFlags: 0
