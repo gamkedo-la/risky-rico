@@ -3,7 +3,6 @@ using UnityEngine;
 public class Todo : MonoBehaviour
 {
     // TODO: refactor existing code [FIRST] (less rigidbodies, more raycasts, leverage SO vars, etc)
-    // TODO: play jam version
     // TODO: review JS code
     // TODO: hitbox favortism
     // TODO: combo-based score system (points for hitting an enemy, hitting wall breaks combo)
