@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0655fffd855c1048ad98b18142b0f16, type: 3}
+  m_Name: TestEnemyParameters
+  m_EditorClassIdentifier: 
+  _moveSpeed: 0
+  _rotationSpeed: 0
+  _swerveAmplitude: 0
+  _swervePeriod: 0
+  _swerveFrequency: 0
+  _strafingEnabled: 0
+  _attackAnimation: {fileID: 0}
+  _deathAnimation: {fileID: 0}
+  _spawnCry: {fileID: 0}
+  _deathCry: {fileID: 0}
