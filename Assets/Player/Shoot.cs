@@ -8,6 +8,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private GameObject _projectile;
     [SerializeField] private PlayerInput _input;
     [SerializeField] private SoundEffect _sound;
+    [SerializeField] private GameEvent _shootEvent;
 
     void Update()
     {
@@ -18,6 +19,7 @@ public class Shoot : MonoBehaviour
             float _aimDirectionY = _input.actions["shoot"].ReadValue<Vector2>().y;
             _aimDirection.Value = new Vector2(_aimDirectionX, _aimDirectionY);
             SpawnProjectile();
+            _shootEvent.Raise();
             _sound.Play();
         }
     }
