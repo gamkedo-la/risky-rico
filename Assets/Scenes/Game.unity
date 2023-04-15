@@ -1522,6 +1522,8 @@ GameObject:
   - component: {fileID: 1757148996}
   - component: {fileID: 1757148998}
   - component: {fileID: 1757148997}
+  - component: {fileID: 1757148999}
+  - component: {fileID: 1757149000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1677,6 +1679,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ca42e5ad-bad9-48a5-9206-0655e378fc02
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1345bdec-dfc5-4d97-9d8a-461cfcc9e81a
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -1759,6 +1765,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1757148999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757148991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ca104d6877fd243aee455714c690d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _xDirection: 0
+  _yDirection: 0
+  _speed: {fileID: 11400000, guid: 536ed5484cec1994c9bc37510d027939, type: 2}
+--- !u!114 &1757149000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757148991}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3e7402ddd773e543ab0fc7f2e73732f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1891730145
 GameObject:
   m_ObjectHideFlags: 0
