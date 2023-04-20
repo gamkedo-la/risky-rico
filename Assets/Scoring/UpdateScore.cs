@@ -1,11 +1,13 @@
 using UnityEngine;
 using ScriptableObjectArchitecture;
+using TMPro;
 
 public class UpdateScore : MonoBehaviour
 {
     [SerializeField] private FloatVariable _score;
     [SerializeField] private FloatVariable _scoreMultiplier;
     [SerializeField] private FloatVariable _maxScoreMultiplier;
+    [SerializeField] private GameObject _pointTextPrefab;
 
     void Awake()
     {
@@ -20,6 +22,11 @@ public class UpdateScore : MonoBehaviour
 
     public void IncreaseScore(FloatVariable points)
     {
+        // spawn text object to show score increase
+        GameObject pointText = Instantiate(_pointTextPrefab, transform.position, transform.rotation);
+        pointText.GetComponent<TMP_Text>().text = "+" + points.Value + "x" + _scoreMultiplier.Value;
+        pointText.transform.SetParent(transform.parent);
+
         // increase the score multiplier for consecutive kills; don't increase it past the max multiplier
         _score.Value += points.Value * _scoreMultiplier.Value;
         _scoreMultiplier.Value += 1f;

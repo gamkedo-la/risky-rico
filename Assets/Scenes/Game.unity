@@ -2158,6 +2158,7 @@ MonoBehaviour:
   _score: {fileID: 11400000, guid: 835274fb7aacb1d4e8376a6e5ce64f25, type: 2}
   _scoreMultiplier: {fileID: 11400000, guid: 2b4701aa415f8a843902ee174053ec4e, type: 2}
   _maxScoreMultiplier: {fileID: 11400000, guid: de194e4ba72e2d74d99054a69120173b, type: 2}
+  _pointTextPrefab: {fileID: 1926224252435917835, guid: d197a9bd1f602ff46b3577e5076a9674, type: 3}
 --- !u!114 &2104192781
 MonoBehaviour:
   m_ObjectHideFlags: 0
