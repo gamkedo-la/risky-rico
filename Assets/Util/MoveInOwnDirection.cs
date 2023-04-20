@@ -12,7 +12,7 @@ public class MoveInOwnDirection : MonoBehaviour
     private float _yDirection = 0f;
 
     [SerializeField]
-    private FloatVariable _speed;
+    private FloatReference _speed;
 
     void Update()
     {
