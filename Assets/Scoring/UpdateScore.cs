@@ -18,10 +18,10 @@ public class UpdateScore : MonoBehaviour
         _scoreMultiplier.Value = 1f;
     }
 
-    public void IncreaseScore()
+    public void IncreaseScore(FloatVariable points)
     {
         // increase the score multiplier for consecutive kills; don't increase it past the max multiplier
-        _score.Value += 10 * _scoreMultiplier.Value;
+        _score.Value += points.Value * _scoreMultiplier.Value;
         _scoreMultiplier.Value += 1f;
         _scoreMultiplier.Value = Mathf.Clamp(_scoreMultiplier.Value, 0f, _maxScoreMultiplier.Value);
     }
