@@ -8,6 +8,7 @@ public class UpdateScore : MonoBehaviour
     [SerializeField] private FloatVariable _scoreMultiplier;
     [SerializeField] private FloatVariable _maxScoreMultiplier;
     [SerializeField] private GameObject _pointTextPrefab;
+    [SerializeField] private SoundEffect _scoreSound;
 
     void Awake()
     {
@@ -31,5 +32,7 @@ public class UpdateScore : MonoBehaviour
         _score.Value += points.Value * _scoreMultiplier.Value;
         _scoreMultiplier.Value += 1f;
         _scoreMultiplier.Value = Mathf.Clamp(_scoreMultiplier.Value, 0f, _maxScoreMultiplier.Value);
+
+        _scoreSound.Play();
     }
 }
