@@ -7,6 +7,7 @@ public class UpdateScore : MonoBehaviour
     [SerializeField] private FloatVariable _score;
     [SerializeField] private FloatVariable _scoreMultiplier;
     [SerializeField] private FloatVariable _maxScoreMultiplier;
+    [SerializeField] private FloatVariable _shakeAmount;
     [SerializeField] private GameObject _pointTextPrefab;
     [SerializeField] private SoundEffect _scoreSound;
 
@@ -34,5 +35,7 @@ public class UpdateScore : MonoBehaviour
         _scoreMultiplier.Value = Mathf.Clamp(_scoreMultiplier.Value, 0f, _maxScoreMultiplier.Value);
 
         _scoreSound.Play();
+
+        _shakeAmount.Value = 1f;
     }
 }
