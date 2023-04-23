@@ -11,9 +11,13 @@ PrefabInstance:
       propertyPath: _xHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 535639565, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8724373994609232352, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
       propertyPath: m_Name
-      value: SkinnyEnemy
+      value: SkinnyEnemy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8724373994609232365, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
       propertyPath: _xDirection
@@ -29,7 +33,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8724373994609232366, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724373994609232366, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8724373994609232366, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -72,15 +80,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8724373994609232367, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 729e3b3f40a19834c847776c1a5b88f7, type: 3}
+    - target: {fileID: 8724373994609232367, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8724373994609232367, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
       propertyPath: m_Color.g
-      value: 0.4319017
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8724373994609232367, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724373994609232367, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
+      propertyPath: m_DrawMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
