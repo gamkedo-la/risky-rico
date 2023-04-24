@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
+using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class Health : MonoBehaviour
     private BoxCollider2D _collider;
 
     [Header("Events")]
-    [SerializeField] private List<GameEventBase> _damageEvents = new List<GameEventBase>();
+    [SerializeField] private UnityEvent _damageEvent = new UnityEvent();
     [SerializeField] private List<GameEventBase> _deathEvents = new List<GameEventBase>();
 
     void Start()
@@ -72,10 +73,7 @@ public class Health : MonoBehaviour
 
         // apply damage based on x and y values
         TakeDamage(xDamage, yDamage);
-        foreach(GameEventBase e in _damageEvents)
-        {
-            e.Raise();
-        }
+        _damageEvent?.Invoke();
 
         // remove colliding object from scene
         Destroy(collision.gameObject);
