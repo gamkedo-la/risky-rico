@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0655fffd855c1048ad98b18142b0f16, type: 3}
-  m_Name: TestEnemy
+  m_Name: Crawler
   m_EditorClassIdentifier: 
-  _moveSpeed: 0
+  _moveSpeed: 3
   _rotationSpeed: 0
+  _xHealth: 2
+  _yHealth: 2
   _swerveAmplitude: 0
   _swervePeriod: 0
   _swerveFrequency: 0
   _strafingEnabled: 0
-  _attackAnimation: {fileID: 0}
+  _attackAnimation: {fileID: 21300000, guid: 1a9c22c38cf75ce4487dd92c01c20f41, type: 3}
   _deathAnimation: {fileID: 0}
   _spawnCry: {fileID: 0}
   _deathCry: {fileID: 0}

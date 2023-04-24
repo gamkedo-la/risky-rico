@@ -15,9 +15,17 @@ PrefabInstance:
       propertyPath: _yHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6356103868356338648, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
+      propertyPath: _parameters
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a74e0697b8ac0847992269632e944e5, type: 2}
     - target: {fileID: 535639565, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.875
+      objectReference: {fileID: 0}
+    - target: {fileID: 535639565, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8724373994609232352, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
       propertyPath: m_Name

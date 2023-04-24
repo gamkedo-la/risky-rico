@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 535639565}
   - component: {fileID: 8724373995001741289}
   - component: {fileID: 8724373995001741298}
-  - component: {fileID: 6575975382492061801}
+  - component: {fileID: -6356103868356338648}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -107,8 +107,8 @@ MonoBehaviour:
   _xDirection: 0
   _yDirection: -1
   _speed:
-    _useConstant: 0
-    _constantValue: 0
+    _useConstant: 1
+    _constantValue: 2
     _variable: {fileID: 11400000, guid: 675773d6d0afd38409636d1a8a828fd1, type: 2}
 --- !u!114 &4201873130710652860
 MonoBehaviour:
@@ -233,18 +233,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _events:
   - {fileID: 11400000, guid: 11937fd485ab1834992632af9d9d4840, type: 2}
---- !u!114 &6575975382492061801
+--- !u!114 &-6356103868356338648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8724373994609232352}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c49969e4dfa57f41ba72b806e4fd96b, type: 3}
+  m_Script: {fileID: 11500000, guid: e33d8eb2a7bca6b4b8e49db45a997602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _parameters: {fileID: 11400000, guid: 20773ec1f6ad7b74f943ee5778a233fc, type: 2}
   _health: {fileID: -8256139097657875970}
-  _collider: {fileID: 535639565}
+  _movement: {fileID: 8724373994609232365}
   _renderer: {fileID: 8724373994609232367}

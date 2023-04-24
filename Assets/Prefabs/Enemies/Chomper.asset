@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0655fffd855c1048ad98b18142b0f16, type: 3}
+  m_Name: Chomper
+  m_EditorClassIdentifier: 
+  _moveSpeed: 4
+  _rotationSpeed: 0
+  _xHealth: 1
+  _yHealth: 1
+  _swerveAmplitude: 0
+  _swervePeriod: 0
+  _swerveFrequency: 0
+  _strafingEnabled: 0
+  _attackAnimation: {fileID: -1807793795, guid: 2d3284ff2c62c254cbd52215bae8c2ed, type: 3}
+  _deathAnimation: {fileID: 0}
+  _spawnCry: {fileID: 0}
+  _deathCry: {fileID: 0}
