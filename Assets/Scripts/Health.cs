@@ -28,6 +28,12 @@ public class Health : MonoBehaviour
         YHealthMax = _yHealth;
     }
 
+    public void SetHealth(int xHealth, int yHealth)
+    {
+        _xHealth = xHealth;
+        _yHealth = yHealth;
+    }
+
     public void TakeDamage(int xDamage, int yDamage)
     {
         _xHealth -= xDamage;

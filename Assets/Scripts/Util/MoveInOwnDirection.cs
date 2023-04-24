@@ -31,6 +31,11 @@ public class MoveInOwnDirection : MonoBehaviour
         _yDirection = direction.y;
     }
 
+    public void SetSpeed(float speed)
+    {
+        _speed.Value = speed;
+    }
+
     public void FlipDirection()
     {
         _xDirection *= -1;
