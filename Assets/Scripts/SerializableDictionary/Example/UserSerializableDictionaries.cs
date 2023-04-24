@@ -30,3 +30,6 @@ public class FloatGameObjectDictionary : SerializableDictionary<float, GameObjec
 
 [Serializable]
 public class IntGameObjectDictionary : SerializableDictionary<int, GameObject> {}
+
+[Serializable]
+public class IntEnemyParametersDictionary : SerializableDictionary<int, EnemyParameters> {}
