@@ -14,6 +14,13 @@ public class EnemyParameters : ScriptableObject
     public float RotationSpeed => _rotationSpeed;
 
 
+    [Header("Health")]
+    [SerializeField] private int _xHealth;
+    public int XHealth => _xHealth;
+    [SerializeField] private int _yHealth;
+    public int YHealth => _yHealth;
+
+
     [Header("Movement Style")]
     [SerializeField] private float _swerveAmplitude;
     public float SwerveAmplitude => _swerveAmplitude;
