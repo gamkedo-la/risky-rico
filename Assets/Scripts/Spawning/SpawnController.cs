@@ -10,10 +10,11 @@ public enum SpawnState
 public class SpawnController : MonoBehaviour
 {
     [Header("Collections")]
-    [SerializeField] private List<GameObject> _spawnTypes;
+    [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private List<EnemyParameters> _spawnTypes;
     [SerializeField] private List<GameObject> _spawnPoints = new List<GameObject>();
     private List<GameObject> _spawnedObjects = new List<GameObject>();
-    private List<GameObject> _targetSpawnTypes = new List<GameObject>();
+    private List<EnemyParameters> _targetSpawnTypes = new List<EnemyParameters>();
     private List<GameObject> _targetSpawnPoints = new List<GameObject>();
     [SerializeField] private bool addSelfToList = false;
 
@@ -24,7 +25,7 @@ public class SpawnController : MonoBehaviour
     [Header("Waves")]
     [SerializeField] private FloatVariable _waveDuration;
     [SerializeField] private FloatReference _defaultWaveDuration;
-    [SerializeField] private IntGameObjectDictionary _waveMap;
+    [SerializeField] private IntEnemyParametersDictionary _waveMap;
     private int _waveCount = 1;
 
     [Header("Rest")]
@@ -98,7 +99,7 @@ public class SpawnController : MonoBehaviour
     public void PickSpawnType()
     {
         int index = Random.Range(0, _spawnTypes.Count);
-        GameObject spawnType = _spawnTypes[index];
+        EnemyParameters spawnType = _spawnTypes[index];
         _targetSpawnTypes.Add(spawnType);
     }
 
@@ -113,16 +114,17 @@ public class SpawnController : MonoBehaviour
     {
         foreach(GameObject spawnPoint in _targetSpawnPoints)
         {
-            foreach(GameObject obj in _targetSpawnTypes)
+            foreach(EnemyParameters enemyType in _targetSpawnTypes)
             {
                 // get spawn point information
                 Transform spawnPointTransform = spawnPoint.GetComponent<Transform>();
                 SpawnData spawnPointData = spawnPoint.GetComponent<SpawnData>();
 
                 // set spawned game object properties
-                GameObject spawnedObject = Instantiate(obj, spawnPointTransform.position, Quaternion.identity);
+                GameObject spawnedObject = Instantiate(_enemyPrefab, spawnPointTransform.position, Quaternion.identity);
                 if (spawnPointData != null)
                 {
+                    spawnedObject.GetComponent<Enemy>().SetParameters(enemyType);
                     spawnedObject.GetComponent<MoveInOwnDirection>()?.SetDirection(new Vector2(spawnPointData.XDirection, spawnPointData.YDirection));
                 }
 
