@@ -12,7 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835aee1d6e6945740865e3cf605c934b, type: 3}
   m_Name: ItemDropTable
   m_EditorClassIdentifier: 
-  _probabilityTotalWeight: 0
+  _probabilityTotalWeight: 25
   Lookup:
-    m_keys: []
-    m_values: []
+    m_keys:
+    - {fileID: 11400000, guid: ec5b414ca9bdb764e84759c9da614e8d, type: 2}
+    - {fileID: 11400000, guid: 0b382f09957c99b4b8fda2152943677e, type: 2}
+    - {fileID: 11400000, guid: bca854ba9eec817419041d4e681de215, type: 2}
+    m_values:
+    - probabilityWeight: 5.03
+      probabilityFrom: 5
+      probabilityTo: 9
+    - probabilityWeight: 100
+      probabilityFrom: 9
+      probabilityTo: 15
+    - probabilityWeight: 1
+      probabilityFrom: 9
+      probabilityTo: 15
