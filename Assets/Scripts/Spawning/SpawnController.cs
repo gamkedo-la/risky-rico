@@ -13,7 +13,7 @@ public class SpawnController : MonoBehaviour
     [SerializeField] private GameObject _enemyPrefab;
     [SerializeField] private List<EnemyParameters> _spawnTypes;
     [SerializeField] private List<GameObject> _spawnPoints = new List<GameObject>();
-    private List<GameObject> _spawnedObjects = new List<GameObject>();
+    [SerializeField] private GameObjectCollection _spawnedObjects;
     private List<EnemyParameters> _targetSpawnTypes = new List<EnemyParameters>();
     private List<GameObject> _targetSpawnPoints = new List<GameObject>();
     [SerializeField] private bool addSelfToList = false;
@@ -32,6 +32,10 @@ public class SpawnController : MonoBehaviour
     [SerializeField] private FloatVariable _restDuration;
     [SerializeField] private FloatReference _defaultRestDuration;
     [SerializeField] private SpawnState _state = SpawnState.WAVE;
+
+    [Header("Events")]
+    [SerializeField] private GameEvent _waveEvent;
+    [SerializeField] private GameEvent _restEvent;
 
     void Awake()
     {
@@ -54,7 +58,7 @@ public class SpawnController : MonoBehaviour
             _timeBetweenSpawns.Value -= 1 * Time.deltaTime;
 
             // spawn when timer hits 0
-            if (_timeBetweenSpawns.Value <= 0f)
+            if (_timeBetweenSpawns.Value <= 0f && _waveDuration.Value > 0f)
             {
                 PickSpawnType();
                 PickSpawnPoint();
@@ -70,11 +74,12 @@ public class SpawnController : MonoBehaviour
         }
 
         // change state 
-        if (_waveDuration.Value <= 0f)
+        if (_waveDuration.Value <= 0f && _spawnedObjects.Count == 0)
         {
             _state = SpawnState.REST;
             _waveDuration.Value = _defaultWaveDuration.Value;
             _waveCount += 1;
+            _restEvent?.Raise();
             UpdateAvailableSpawnTypes();
         }
 
@@ -82,6 +87,7 @@ public class SpawnController : MonoBehaviour
         {
             _state = SpawnState.WAVE;
             _restDuration.Value = _defaultRestDuration.Value;
+            _waveEvent?.Raise();
         }
     }
 
@@ -129,7 +135,10 @@ public class SpawnController : MonoBehaviour
                 }
 
                 // track spawned object in a list
-                _spawnedObjects.Add(spawnedObject);
+                if (!_spawnedObjects.Contains(spawnedObject))
+                {
+                    _spawnedObjects.Add(spawnedObject);
+                }
             }
         }
         
