@@ -48,8 +48,17 @@ public class ExtendedScriptableObjectDrawer : PropertyDrawer {
 	public override void OnGUI (Rect position, SerializedProperty property, GUIContent label) {
 		EditorGUI.BeginProperty (position, label, property);
 		var type = GetFieldType();
+		var attributes = fieldInfo.GetCustomAttributes(false);
+		var hasHideAttribute = false;
+        foreach (object atr in attributes)
+        {
+            if (atr as HideCustomDrawer != null)
+            {
+                hasHideAttribute = true;
+            }
+        }
 		
-		if(type == null || ignoreClassFullNames.Contains(type.FullName)) {
+		if(type == null || ignoreClassFullNames.Contains(type.FullName) || hasHideAttribute) {
 			EditorGUI.PropertyField(position, property, label);	
 			EditorGUI.EndProperty ();
 			return;

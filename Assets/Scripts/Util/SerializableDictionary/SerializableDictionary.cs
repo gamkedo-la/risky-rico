@@ -6,7 +6,7 @@ using UnityEngine;
 
 public abstract class SerializableDictionaryBase<TKey, TValue, TValueStorage> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
 {
-	[SerializeField]
+	[SerializeField, HideCustomDrawer]
 	TKey[] m_keys;
 	[SerializeField]
 	TValueStorage[] m_values;
