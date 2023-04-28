@@ -4,7 +4,7 @@ using UnityEngine;
 using ScriptableObjectArchitecture;
 using UnityEngine.Events;
 
-public class Health : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     [Header("Stats")]
     [SerializeField] private int _xHealth;

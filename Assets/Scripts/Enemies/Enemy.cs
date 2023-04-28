@@ -6,7 +6,7 @@ using ScriptableObjectArchitecture;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyParameters _parameters;
-    [SerializeField] private Health _health;
+    [SerializeField] private EnemyHealth _health;
     [SerializeField] private MoveInOwnDirection _movement;
     [SerializeField] private SpriteRenderer _renderer;
 
@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     {
         // get necesssary components
         _renderer = gameObject.GetComponent<SpriteRenderer>();
-        _health = gameObject.GetComponent<Health>();
+        _health = gameObject.GetComponent<EnemyHealth>();
         _movement = gameObject.GetComponent<MoveInOwnDirection>();
 
         // apply parameters to individual components
