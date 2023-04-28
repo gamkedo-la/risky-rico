@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8724373995001741298}
   - component: {fileID: -6356103868356338648}
   - component: {fileID: 9149865959413056470}
+  - component: {fileID: 8954828896350092599}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -139,9 +140,21 @@ MonoBehaviour:
   _xHealth: 2
   _yHealth: 2
   _damagingObjects: {fileID: 11400000, guid: cf065a3fa2e5c644c8a9d4f3ea148a5e, type: 2}
-  _damageEvent:
+  _damageEvents:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: c556162b11f0bdf46830232f77f5d318, type: 2}
+        m_TargetAssemblyTypeName: SpriteFlash, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 9149865959413056470}
         m_TargetAssemblyTypeName: SpriteFlash, Assembly-CSharp
         m_MethodName: Flash
@@ -155,7 +168,32 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   _deathEvents:
-  - {fileID: 11400000, guid: 3a98bc49dedf7d1419241501fbb726e4, type: 2}
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 3a98bc49dedf7d1419241501fbb726e4, type: 2}
+        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8954828896350092599}
+        m_TargetAssemblyTypeName: ItemDropper, Assembly-CSharp
+        m_MethodName: GetRandomItemFromTable
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &535639564
 Rigidbody2D:
   serializedVersion: 4
@@ -278,3 +316,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 4d08959ff9c62c045a86fad7bea85df9, type: 2}
   duration: 0.2
+--- !u!114 &8954828896350092599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724373994609232352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3688b8c55cd57be4ca94f5f1d6c67d1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dropTable: {fileID: 11400000, guid: 19f24f48bdc1af54c9710039dea5b969, type: 2}
+  _itemPrefab: {fileID: 479861248325129923, guid: d89eacf054cb3cb4caf02d4075d4cf61, type: 3}

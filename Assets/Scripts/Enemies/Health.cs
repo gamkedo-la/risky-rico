@@ -19,8 +19,8 @@ public class Health : MonoBehaviour
     private BoxCollider2D _collider;
 
     [Header("Events")]
-    [SerializeField] private UnityEvent _damageEvent = new UnityEvent();
-    [SerializeField] private List<GameEventBase> _deathEvents = new List<GameEventBase>();
+    [SerializeField] private UnityEvent _damageEvents = new UnityEvent();
+    [SerializeField] private UnityEvent _deathEvents = new UnityEvent();
 
     void Start()
     {
@@ -73,7 +73,9 @@ public class Health : MonoBehaviour
 
         // apply damage based on x and y values
         TakeDamage(xDamage, yDamage);
-        _damageEvent?.Invoke();
+
+        // invoke follow-up damage events
+        _damageEvents?.Invoke();
 
         // remove colliding object from scene
         Destroy(collision.gameObject);
@@ -83,11 +85,7 @@ public class Health : MonoBehaviour
     {
         if (_yHealth <= 0 || _xHealth <= 0)
         {
-            foreach(GameEventBase e in _deathEvents)
-            {
-                e.Raise();
-            }
-
+            _deathEvents?.Invoke();
             Destroy(gameObject);
         }
     }
