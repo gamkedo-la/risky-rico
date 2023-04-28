@@ -18,7 +18,7 @@ public class HideCustomDrawer : Attribute {}
 [CreateAssetMenu(fileName = "ItemDropTable", menuName = "Items/Item Drop Table", order = 0)]
 public class ItemDropTable : ScriptableObject 
 {   
-    [SerializeField] private float _probabilityTotalWeight;
+    [SerializeField, ReadOnly] private float _probabilityTotalWeight;
     public float ProbabilityTotalWeight => _probabilityTotalWeight;
     public ItemDropTableDictionary Lookup;
 
