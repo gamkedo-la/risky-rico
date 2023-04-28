@@ -19,9 +19,11 @@ public class HideCustomDrawer : Attribute {}
 public class ItemDropTable : ScriptableObject 
 {   
     [SerializeField] private float _probabilityTotalWeight;
+    public float ProbabilityTotalWeight => _probabilityTotalWeight;
     public ItemDropTableDictionary Lookup;
 
-    void OnEnable()
+
+    void SetWeights()
     {
         float currentProbabilityWeightMaximum = 0f;
         List<ItemParameters> itemKeys = new List<ItemParameters>(Lookup.Keys);
@@ -43,6 +45,16 @@ public class ItemDropTable : ScriptableObject
             }
         }
         _probabilityTotalWeight = currentProbabilityWeightMaximum;
+    }
+
+    void OnValidate()
+    {
+        SetWeights();
+    }
+
+    void OnEnable()
+    {
+        SetWeights();
     }
 }
 
