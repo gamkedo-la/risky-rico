@@ -577,7 +577,6 @@ MonoBehaviour:
   - {fileID: 1935729151}
   - {fileID: 108855272}
   _spawnedObjects: {fileID: 11400000, guid: ff11018c6958365408a2d16f7d94eacb, type: 2}
-  addSelfToList: 0
   _timeBetweenSpawns: {fileID: 11400000, guid: 3e4d3c7ab76622c4bb0fc947231324ae, type: 2}
   _defaultTimeBetweenSpawns:
     _useConstant: 1
@@ -589,20 +588,19 @@ MonoBehaviour:
     _constantValue: 12
     _variable: {fileID: 11400000, guid: 1f6f3352e02522e4b8380cdf0362af88, type: 2}
   _waveMap:
-    m_keys: 01000000020000000300000004000000
+    m_keys: 0100000002000000
     m_values:
     - {fileID: 11400000, guid: 1a74e0697b8ac0847992269632e944e5, type: 2}
     - {fileID: 11400000, guid: 20773ec1f6ad7b74f943ee5778a233fc, type: 2}
-    - {fileID: 11400000, guid: 3366c022415899b4d8e19ff4d442f116, type: 2}
-    - {fileID: 11400000, guid: fe30147d47fd0f24eb07d1bc1c1d2d88, type: 2}
   _restDuration: {fileID: 11400000, guid: b874eec0c0733a944b3c5d96c6547061, type: 2}
   _defaultRestDuration:
     _useConstant: 1
-    _constantValue: 10
+    _constantValue: 5
     _variable: {fileID: 0}
   _state: 0
   _waveEvent: {fileID: 11400000, guid: 1348622ef20ab584c8082d2fa0229ca5, type: 2}
   _restEvent: {fileID: 11400000, guid: 697f39de4994da945808111ab4682867, type: 2}
+  _endEvent: {fileID: 11400000, guid: 22d214e29d7860f4abc40e0dd150775f, type: 2}
 --- !u!4 &322519326
 Transform:
   m_ObjectHideFlags: 0
@@ -1881,8 +1879,8 @@ MonoBehaviour:
   _showDebugFields: 1
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 697f39de4994da945808111ab4682867, type: 2}
-  _event: {fileID: 11400000, guid: 697f39de4994da945808111ab4682867, type: 2}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 22d214e29d7860f4abc40e0dd150775f, type: 2}
+  _event: {fileID: 11400000, guid: 22d214e29d7860f4abc40e0dd150775f, type: 2}
   _response:
     m_PersistentCalls:
       m_Calls:

@@ -6,7 +6,7 @@ public enum SpawnState
 {
     WAVE,
     REST,
-    DISABLED,
+    STOP,
 }
 public class EnemySpawnController : MonoBehaviour
 {
@@ -17,7 +17,6 @@ public class EnemySpawnController : MonoBehaviour
     [SerializeField] private GameObjectCollection _spawnedObjects;
     private List<EnemyParameters> _targetSpawnTypes = new List<EnemyParameters>();
     private List<GameObject> _targetSpawnPoints = new List<GameObject>();
-    [SerializeField] private bool addSelfToList = false;
 
     [Header("Tempo")]
     [SerializeField] private FloatVariable _timeBetweenSpawns;
@@ -37,22 +36,18 @@ public class EnemySpawnController : MonoBehaviour
     [Header("Events")]
     [SerializeField] private GameEvent _waveEvent;
     [SerializeField] private GameEvent _restEvent;
+    [SerializeField] private GameEvent _endEvent;
 
     void Awake()
     {
         _waveDuration.Value = _defaultWaveDuration.Value;
         _restDuration.Value = _defaultRestDuration.Value;
         _timeBetweenSpawns.Value = _defaultTimeBetweenSpawns.Value;
-
-        if (addSelfToList)
-        {
-            _spawnedObjects.Add(gameObject);
-        }
     }
 
     void Update()
     {
-        if (_state == SpawnState.DISABLED)
+        if (_state == SpawnState.STOP)
         {
             return;
         }
@@ -87,6 +82,7 @@ public class EnemySpawnController : MonoBehaviour
             _waveCount += 1;
             _restEvent?.Raise();
             UpdateAvailableSpawnTypes();
+            CheckIfAllWavesAreComplete();
         }
 
         if (_restDuration.Value <= 0f)
@@ -105,6 +101,15 @@ public class EnemySpawnController : MonoBehaviour
             {
                 _spawnTypes.Add(_waveMap[i]);
             }
+        }
+    }
+
+    public void CheckIfAllWavesAreComplete()
+    {
+        if (_waveCount > _waveMap.Keys.Count)
+        {
+            _state = SpawnState.STOP;
+            _endEvent.Raise();
         }
     }
 
