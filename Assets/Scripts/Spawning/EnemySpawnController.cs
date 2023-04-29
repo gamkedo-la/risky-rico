@@ -5,9 +5,10 @@ using ScriptableObjectArchitecture;
 public enum SpawnState 
 {
     WAVE,
-    REST
+    REST,
+    DISABLED,
 }
-public class SpawnController : MonoBehaviour
+public class EnemySpawnController : MonoBehaviour
 {
     [Header("Collections")]
     [SerializeField] private GameObject _enemyPrefab;
@@ -51,6 +52,11 @@ public class SpawnController : MonoBehaviour
 
     void Update()
     {
+        if (_state == SpawnState.DISABLED)
+        {
+            return;
+        }
+        
         // update state
         if (_state == SpawnState.WAVE)
         {
