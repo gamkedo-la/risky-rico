@@ -51,11 +51,14 @@ public class PlayerController : MonoBehaviour, IPlayerController {
 
     #region Collisions
 
-    [Header("COLLISION")] [SerializeField] private Bounds _characterBounds;
+    [Header("COLLISION")] 
+    [SerializeField] private Bounds _characterBounds;
     [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private int _detectorCount = 3;
     [SerializeField] private float _detectionRayLength = 0.1f;
     [SerializeField] [Range(0.1f, 0.3f)] private float _rayBuffer = 0.1f; // Prevents side detectors hitting the ground
+    [SerializeField, Tooltip("Raising this value increases collision accuracy at the cost of performance.")]
+    private int _freeColliderIterations = 10;
 
     private RayRange _raysUp, _raysRight, _raysDown, _raysLeft;
     private bool _colUp, _colRight, _colDown, _colLeft;
@@ -126,9 +129,10 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     #endregion
 
 
-    #region Walk
+    #region Move
 
-    [Header("WALKING")] [SerializeField] private float _acceleration = 90;
+    [Header("MOVEMENT")]
+    [SerializeField] private float _acceleration = 90;
     [SerializeField] private float _moveClamp = 13;
     [SerializeField] private float _deAcceleration = 60f;
 
@@ -180,10 +184,6 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     #endregion
 
     #region Move
-
-    [Header("MOVE")] [SerializeField, Tooltip("Raising this value increases collision accuracy at the cost of performance.")]
-    private int _freeColliderIterations = 10;
-
     // We cast our bounds before moving to avoid future collisions
     private void MoveCharacter() 
     {
