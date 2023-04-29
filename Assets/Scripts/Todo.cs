@@ -13,7 +13,7 @@ public class Todo : MonoBehaviour
     // TODO: loop first level for testing
     
     // GENERAL:
-    // TODO: review JS code
+    // TODO: rescale graphics
     // TODO: hitbox favortism
     // TODO: lines of enemies coming from one direction?
     // TODO: balancing (speed, tempo, spawn types)

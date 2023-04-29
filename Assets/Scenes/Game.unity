@@ -3221,6 +3221,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3e7402ddd773e543ab0fc7f2e73732f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _input: {fileID: 1757148994}
+  _characterBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.44, y: 0.43, z: 0}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  _detectorCount: 3
+  _detectionRayLength: 0.1
+  _rayBuffer: 0.1
+  _acceleration: 90
+  _moveClamp: 13
+  _deAcceleration: 60
+  _freeColliderIterations: 10
 --- !u!114 &1757149001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3424,6 +3438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _itemCollection: {fileID: 11400000, guid: b45b059ea774a9f4a82735d3360788e6, type: 2}
+  _playerParameters: {fileID: 0}
 --- !u!1 &1816273131
 GameObject:
   m_ObjectHideFlags: 0
