@@ -22,4 +22,9 @@ public class Item : MonoBehaviour
         _parameters = parameters;
         _renderer.sprite = _parameters.Image;
     }
+
+    public void ActivateEffects(PlayerParameters playerParameters)
+    {
+        Debug.Log("Activating effects of " + _parameters.name);
+    }
 }
