@@ -9,7 +9,7 @@ public class PickUpItem : MonoBehaviour
     [SerializeField] GameObjectCollection _itemCollection;
     [SerializeField] PlayerParameters _playerParameters;
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (_itemCollection.Contains(collision.gameObject))
         {
