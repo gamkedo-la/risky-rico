@@ -4,7 +4,6 @@ public class Todo : MonoBehaviour
 {
     // FOR COMBAT LOOP:
     // TODO: refactor existing code [FIRST] (more raycasts, leverage SO vars, etc)
-    // TODO:  and effects
     // TODO: loop first level for testing
     
     // GENERAL:
