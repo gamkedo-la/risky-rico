@@ -7,10 +7,11 @@ public class ItemDropper : MonoBehaviour
 {
     [SerializeField] private ItemDropTable _dropTable;
     [SerializeField] private GameObject _itemPrefab;
+    [SerializeField, Range(0.1f, 1f)] private float _dropChance;
 
     public void GetRandomItemFromTable()
     {
-        float randomNumber = Random.Range(0, _dropTable.ProbabilityTotalWeight);
+        float randomNumber = Random.Range(0, _dropTable.ProbabilityTotalWeight / _dropChance);
 
         List<ItemParameters> itemKeys = new List<ItemParameters>(_dropTable.Lookup.Keys);
 
