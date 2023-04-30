@@ -34,6 +34,10 @@ public class Shoot : MonoBehaviour
         // spawn object
         GameObject _newProjectile = Instantiate(_projectile, spawnPosition, Quaternion.identity);
 
+        // set rotation
+        float angle = Mathf.Atan2(_aimDirection.Value.y, _aimDirection.Value.x) * Mathf.Rad2Deg - 90f;
+        _newProjectile.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
         // move the new object in the aiming direction
         MoveInOwnDirection moveComponent = _newProjectile.GetComponent<MoveInOwnDirection>();
         if (moveComponent != null)
