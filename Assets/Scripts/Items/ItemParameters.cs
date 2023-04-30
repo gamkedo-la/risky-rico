@@ -23,33 +23,13 @@ public class ItemParameters : ScriptableObject
     #region Item Stats
 
     [Header("Stats")]
-    [Tooltip("How much it will increase the player's firing rate with all weapons")]
-    [SerializeField] private float _firingRateBuff;
-    public float FiringRateBuff => _firingRateBuff;
-
-    [Tooltip("How much it will increase the player's max ammo cap")]
-    [SerializeField] private int _ammoCapacityBuff;
-    public int AmmoCapacityBuff => _ammoCapacityBuff;
-
-    [Tooltip("How much damage it will deal to enemies")]
-    [SerializeField] private int _damageBuff;
-    public int DamageBuff => _damageBuff;
-
-    [Tooltip("How much it will increase the player's walk/run movment speed")]
-    [SerializeField] private float _movementSpeedBuff;
-    public float MovementSpeedBuff => _movementSpeedBuff;
-
-    [Tooltip("How much it will raise the limit of the player's max score multiplier")]
-    [SerializeField] private int _scoreMultiplierBuff;
-    public int ScoreMultiplierBuff => _scoreMultiplierBuff;
-
-    [Tooltip("How long the item's effect will last from the moment of activation")]
-    [SerializeField] private float _effectDuration;
-    public float EffectDuration => _effectDuration;
+    [Tooltip("How much it will increase the player's current ammo for their secondary weapon")]
+    [SerializeField] private int _ammoAmount;
+    public int AmmoAmount => _ammoAmount;
 
     [Tooltip("How much money the item can be sold for")]
-    [SerializeField] private int _sellValue;
-    public int SellValue => _sellValue;
+    [SerializeField] private int _moneyValue;
+    public int MoneyValue => _moneyValue;
     
     #endregion
 

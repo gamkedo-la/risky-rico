@@ -3,13 +3,13 @@ using UnityEngine;
 public class Todo : MonoBehaviour
 {
     // FOR COMBAT LOOP:
-    // TODO: refactor existing code [FIRST] (less rigidbodies, more raycasts, leverage SO vars, etc)
+    // TODO: refactor existing code [FIRST] (more raycasts, leverage SO vars, etc)
+    // TODO: make bullets sprites face correct direction
     // TODO: activate item pickups
-    // TODO: redo player controller for smoother movement during rest periods
+    // TODO: implement money pickups
+    // TODO: create sample item sprites
     // TODO: signify end of waves with a timer bar
     // TODO: signify end of combat with text and effects
-    // TODO: create sample item sprites
-    // TODO: implement money pickups
     // TODO: loop first level for testing
     
     // GENERAL:
