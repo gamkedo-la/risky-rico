@@ -6,6 +6,7 @@ using ScriptableObjectArchitecture;
 public class Curse : MonoBehaviour
 {
     [SerializeField] private CurseParameters _parameters;
+    public CurseParameters Parameters => _parameters;
     [SerializeField] private SpriteRenderer _renderer;
 
     void Awake()

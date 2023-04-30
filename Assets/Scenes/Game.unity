@@ -1781,10 +1781,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1020930761}
-  - component: {fileID: 1020930763}
   - component: {fileID: 1020930762}
+  - component: {fileID: 1020930763}
   m_Layer: 0
-  m_Name: ItemSpawnController
+  m_Name: CurseSpawnController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1826,7 +1826,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1020930763}
-        m_TargetAssemblyTypeName: ItemSpawnController, Assembly-CSharp
+        m_TargetAssemblyTypeName: CurseSpawnController, Assembly-CSharp
         m_MethodName: SpawnAtAllPoints
         m_Mode: 1
         m_Arguments:
@@ -1846,19 +1846,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1020930760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3743e99d7e803b4fb780e05093f2f47, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e0c53db9f4636943b989ef40575dc5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _prefab: {fileID: 479861248325129923, guid: d89eacf054cb3cb4caf02d4075d4cf61, type: 3}
+  _prefab: {fileID: 479861248325129923, guid: 96dad1649b849a2468732f8ebea409d5, type: 3}
   _spawnTypes:
-  - {fileID: 11400000, guid: 0b382f09957c99b4b8fda2152943677e, type: 2}
-  - {fileID: 11400000, guid: ec5b414ca9bdb764e84759c9da614e8d, type: 2}
-  - {fileID: 11400000, guid: bca854ba9eec817419041d4e681de215, type: 2}
+  - {fileID: 11400000, guid: 45d8e07f347c40e4188866b1e7a94e41, type: 2}
+  - {fileID: 11400000, guid: f5bd9ad7fbad3e649b8223c98e9be32e, type: 2}
+  - {fileID: 11400000, guid: 34a60dc24894b0c4196a1ad33b0b205c, type: 2}
   _spawnPoints:
   - {fileID: 388403117}
   - {fileID: 550060887}
   - {fileID: 193848678}
-  _spawnedObjectCollection: {fileID: 11400000, guid: b45b059ea774a9f4a82735d3360788e6, type: 2}
+  _spawnedObjectCollection: {fileID: 11400000, guid: be9f466d88f0b1f4d89fa431ef542a81, type: 2}
 --- !u!1 &1030227002 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1044023934079685419, guid: b4555c911b23ec9489b90caa3605f0ac, type: 3}
@@ -2879,6 +2879,8 @@ GameObject:
   - component: {fileID: 1757149005}
   - component: {fileID: 1757149006}
   - component: {fileID: 1757149007}
+  - component: {fileID: 1757149008}
+  - component: {fileID: 1757149009}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3381,6 +3383,36 @@ MonoBehaviour:
   _detectionRayLength: 0.1
   _rayBuffer: 0.1
   _freeColliderIterations: 10
+--- !u!114 &1757149008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757148991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6a8a2b41b252940bfb7999b5467b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _curses:
+  - {fileID: 11400000, guid: 45d8e07f347c40e4188866b1e7a94e41, type: 2}
+  _maxSlotCount: 3
+  _player: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
+--- !u!114 &1757149009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757148991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0d67ae25d486740a17e4467742faba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _curseCollection: {fileID: 11400000, guid: be9f466d88f0b1f4d89fa431ef542a81, type: 2}
+  _curseSlots: {fileID: 1757149008}
 --- !u!1 &1816273131
 GameObject:
   m_ObjectHideFlags: 0

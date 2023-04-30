@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89eed4e6dc3cfa4d98f0e6c77c3ddce, type: 3}
   m_Name: TestCurse2
   m_EditorClassIdentifier: 
-  _name: 
+  _name: Test Curse 2
   _description: 
   _firingRateEffect: 0
   _ammoCapacityEffect: 0
-  _damageEffect: 0
+  _damageEffect: 2
   _bulletCountEffect: 0
   _movementSpeedEffect: 0
   _scoreMultiplierEffect: 0

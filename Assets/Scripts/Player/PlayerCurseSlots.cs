@@ -14,6 +14,7 @@ public class PlayerCurseSlots : MonoBehaviour
 
     private void ActivateCurse(CurseParameters curse)
     {
+        Debug.Log("Activating: " + curse.Name);
         _player.ApplyCurse(curse);
     }
 
