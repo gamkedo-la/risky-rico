@@ -13,8 +13,8 @@ public class PlayerParameters : ScriptableObject
     [SerializeField] private float _firingRate;
     public float FiringRate => _firingRate;
 
-    [SerializeField] private float _maxHealth;
-    public float MaxHealth => _maxHealth;
+    [SerializeField] private int _damage;
+    public int Damage => _damage;
 
     [SerializeField] private float _maxSpecialMeter;
     public float MaxSpecialMeter => _maxSpecialMeter;
@@ -40,4 +40,18 @@ public class PlayerParameters : ScriptableObject
     [SerializeField] private AudioClip _walkSound;
     public AudioClip WalkSound => _walkSound;
     #endregion
+
+    public void ApplyCurse(CurseParameters curse)
+    {
+        _movementSpeed += curse.MovementSpeedEffect;
+        _firingRate += curse.FiringRateEffect;
+        _damage += curse.DamageEffect;
+    }
+
+    public void RemoveCurse(CurseParameters curse)
+    {
+        _movementSpeed -= curse.MovementSpeedEffect;
+        _firingRate -= curse.FiringRateEffect;
+        _damage -= curse.DamageEffect;
+    }
 }
