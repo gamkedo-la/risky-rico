@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     public Vector3 Velocity { get; private set; }
     public FrameInput Input { get; private set; }
     public Vector3 RawMovement { get; private set; }
-    public bool Grounded => _colDown;
+    public bool Grounded => _collider.ColDown;
 
     // Private members
     private Vector3 _lastPosition;
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour, IPlayerController {
 
         GatherInput();
 
-        RunCollisionChecks();
+        _collider.RunCollisionChecks();
 
         CalculateWalk(); 
 
@@ -36,7 +36,8 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     }
 
 
-    #region Gather Input
+    #region Input
+    
     [SerializeField] private PlayerInput _input;
 
     private void GatherInput() 
@@ -50,81 +51,11 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     #endregion
 
     #region Collisions
-
-    [Header("COLLISION")] 
-    [SerializeField] private Bounds _characterBounds;
-    [SerializeField] private LayerMask _groundLayer;
-    [SerializeField] private int _detectorCount = 3;
-    [SerializeField] private float _detectionRayLength = 0.1f;
-    [SerializeField] [Range(0.1f, 0.3f)] private float _rayBuffer = 0.1f; // Prevents side detectors hitting the ground
-    [SerializeField, Tooltip("Raising this value increases collision accuracy at the cost of performance.")]
-    private int _freeColliderIterations = 10;
-
+    
+    [Header("COLLISION")]
+    [SerializeField] private CustomCollider _collider;
     private RayRange _raysUp, _raysRight, _raysDown, _raysLeft;
-    private bool _colUp, _colRight, _colDown, _colLeft;
-
     private float _timeLeftGrounded;
-
-    // We use these raycast checks for pre-collision information
-    private void RunCollisionChecks() 
-    {
-        // Generate ray ranges. 
-        CalculateRayRanged();
-
-        // Collision sides
-        _colDown = RunDetection(_raysDown);
-        _colUp = RunDetection(_raysUp);
-        _colLeft = RunDetection(_raysLeft);
-        _colRight = RunDetection(_raysRight);
-
-        bool RunDetection(RayRange range) {
-            return EvaluateRayPositions(range).Any(point => Physics2D.Raycast(point, range.Dir, _detectionRayLength, _groundLayer));
-        }
-    }
-
-    private void CalculateRayRanged() 
-    {
-        // This is crying out for some kind of refactor. 
-        var b = new Bounds(transform.position + _characterBounds.center, _characterBounds.size);
-
-        _raysDown = new RayRange(b.min.x + _rayBuffer, b.min.y, b.max.x - _rayBuffer, b.min.y, Vector2.down);
-        _raysUp = new RayRange(b.min.x + _rayBuffer, b.max.y, b.max.x - _rayBuffer, b.max.y, Vector2.up);
-        _raysLeft = new RayRange(b.min.x, b.min.y + _rayBuffer, b.min.x, b.max.y - _rayBuffer, Vector2.left);
-        _raysRight = new RayRange(b.max.x, b.min.y + _rayBuffer, b.max.x, b.max.y - _rayBuffer, Vector2.right);
-    }
-
-    private IEnumerable<Vector2> EvaluateRayPositions(RayRange range) 
-    {
-        for (var i = 0; i < _detectorCount; i++) {
-            var t = (float)i / (_detectorCount - 1);
-            yield return Vector2.Lerp(range.Start, range.End, t);
-        }
-    }
-
-    private void OnDrawGizmos() 
-    {
-        // Bounds
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(transform.position + _characterBounds.center, _characterBounds.size);
-
-        // Rays
-        if (!Application.isPlaying) {
-            CalculateRayRanged();
-            Gizmos.color = Color.blue;
-            foreach (var range in new List<RayRange> { _raysUp, _raysRight, _raysDown, _raysLeft }) {
-                foreach (var point in EvaluateRayPositions(range)) {
-                    Gizmos.DrawRay(point, range.Dir * _detectionRayLength);
-                }
-            }
-        }
-
-        if (!Application.isPlaying) return;
-
-        // Draw the future position. Handy for visualizing gravity
-        Gizmos.color = Color.red;
-        var move = new Vector3(_currentHorizontalSpeed, _currentVerticalSpeed) * Time.deltaTime;
-        Gizmos.DrawWireCube(transform.position + _characterBounds.center + move, _characterBounds.size);
-    }
 
     #endregion
 
@@ -154,7 +85,7 @@ public class PlayerController : MonoBehaviour, IPlayerController {
             _currentHorizontalSpeed = Mathf.MoveTowards(_currentHorizontalSpeed, 0, _deAcceleration * Time.deltaTime);
         }
 
-        if (_currentHorizontalSpeed > 0 && _colRight || _currentHorizontalSpeed < 0 && _colLeft) {
+        if (_currentHorizontalSpeed > 0 && _collider.ColRight || _currentHorizontalSpeed < 0 && _collider.ColLeft) {
             // Don't walk through walls
             _currentHorizontalSpeed = 0;
         }
@@ -175,25 +106,22 @@ public class PlayerController : MonoBehaviour, IPlayerController {
             _currentVerticalSpeed = Mathf.MoveTowards(_currentVerticalSpeed, 0, _deAcceleration * Time.deltaTime);
         }
       
-        if (_currentVerticalSpeed > 0 && _colUp || _currentVerticalSpeed < 0 && _colDown) {
+        if (_currentVerticalSpeed > 0 && _collider.ColUp || _currentVerticalSpeed < 0 && _collider.ColDown) {
             // Don't walk through walls
             _currentVerticalSpeed = 0;
         }
     }
 
-    #endregion
-
-    #region Move
     // We cast our bounds before moving to avoid future collisions
     private void MoveCharacter() 
     {
-        var pos = transform.position + _characterBounds.center;
+        var pos = transform.position + _collider.GetBounds().center;
         RawMovement = new Vector3(_currentHorizontalSpeed, _currentVerticalSpeed); // Used externally
         var move = RawMovement * Time.deltaTime;
         var furthestPoint = pos + move;
 
         // check furthest movement. If nothing hit, move and don't do extra checks
-        var hit = Physics2D.OverlapBox(furthestPoint, _characterBounds.size, 0, _groundLayer);
+        var hit = Physics2D.OverlapBox(furthestPoint, _collider.GetBounds().size, 0, _collider.CollisionLayer);
         if (!hit) {
             transform.position += move;
             return;
@@ -201,12 +129,12 @@ public class PlayerController : MonoBehaviour, IPlayerController {
 
         // otherwise increment away from current pos; see what closest position we can move to
         var positionToMoveTo = transform.position;
-        for (int i = 1; i < _freeColliderIterations; i++) {
+        for (int i = 1; i < _collider.FreeColliderIterations; i++) {
             // increment to check all but furthestPoint - we did that already
-            var t = (float)i / _freeColliderIterations;
+            var t = (float)i / _collider.FreeColliderIterations;
             var posToTry = Vector2.Lerp(pos, furthestPoint, t);
 
-            if (Physics2D.OverlapBox(posToTry, _characterBounds.size, 0, _groundLayer)) {
+            if (Physics2D.OverlapBox(posToTry, _collider.GetBounds().size, 0, _collider.CollisionLayer)) {
                 transform.position = positionToMoveTo;
 
                 // We've landed on a corner or hit our head on a ledge. Nudge the player gently

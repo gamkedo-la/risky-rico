@@ -19,19 +19,32 @@ public class CustomCollider : MonoBehaviour
 {
     [Header("COLLISION")] 
     [SerializeField] private Bounds _bounds;
+    
     [SerializeField] private LayerMask _collisionLayer;
+    public LayerMask CollisionLayer => _collisionLayer;
+
     [SerializeField] private int _detectorCount = 3;
+    
     [SerializeField] private float _detectionRayLength = 0.1f;
+    
     [SerializeField] [Range(0.1f, 0.3f)] private float _rayBuffer = 0.1f; // Prevents side detectors hitting the ground
+    
     [SerializeField, Tooltip("Raising this value increases collision accuracy at the cost of performance.")]
+    
     private int _freeColliderIterations = 10;
+    public int FreeColliderIterations => _freeColliderIterations;
 
     private RayRange _raysUp, _raysRight, _raysDown, _raysLeft;
+
     private bool _colUp, _colRight, _colDown, _colLeft;
+    public bool ColUp => _colUp;
+    public bool ColRight => _colRight; 
+    public bool ColDown => _colDown; 
+    public bool ColLeft => _colLeft;
 
     public void RunCollisionChecks()
     {
-        // Generate ray ranges. 
+        // Generate ray ranges
         CalculateRayRanged();
 
         // Collision sides
@@ -48,6 +61,11 @@ public class CustomCollider : MonoBehaviour
     public bool GetOverLap(Vector3 position, LayerMask layer)
     {
         return Physics2D.OverlapBox(position, _bounds.size, 0, layer);
+    }
+
+    public Bounds GetBounds()
+    {
+        return _bounds;
     }
 
     private void CalculateRayRanged() 
