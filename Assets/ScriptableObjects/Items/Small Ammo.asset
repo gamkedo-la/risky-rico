@@ -16,6 +16,6 @@ MonoBehaviour:
   _description: 
   _ammoAmount: 1
   _moneyValue: 0
-  _image: {fileID: 21300000, guid: 46161995cd0c55946b72618ddd49b98b, type: 3}
+  _image: {fileID: 21300000, guid: 656e8f8936d9ee84dbb5bc2381f957bb, type: 3}
   _spawnSound: {fileID: 0}
   _collectSound: {fileID: 0}
