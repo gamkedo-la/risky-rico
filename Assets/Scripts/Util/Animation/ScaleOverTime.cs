@@ -7,6 +7,7 @@ public class ScaleOverTime : MonoBehaviour
     [SerializeField]private float _scaleRate;
     [SerializeField] private bool _startScaling = false;
     [SerializeField] private bool _useMaxScale = false;
+    [SerializeField] private bool _loop = false;
     private float _maxScale = 1f;
     private float _scaleTime = 0f;
     private Vector3 _currentScale;
@@ -40,5 +41,11 @@ public class ScaleOverTime : MonoBehaviour
         // perform scaling 
         _currentScale = new Vector3(x,y,z);
         transform.localScale = _currentScale;
+
+        // looping 
+        if (_loop && _scaleTime >= 1f)
+        {
+            _scaleTime = 0;
+        }
     }
 }
