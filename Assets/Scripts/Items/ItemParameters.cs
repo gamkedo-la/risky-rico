@@ -13,7 +13,7 @@ public class ItemParameters : ScriptableObject
     [SerializeField] private string _name;
     public string Name => _name;
 
-    [Tooltip("Text meant to describe the items functionality and add humor")]
+    [Tooltip("Text meant to describe the item's functionality and add humor")]
     [TextArea(15,20)]
     [SerializeField] private string _description;
     public string Description => _description;
@@ -32,9 +32,8 @@ public class ItemParameters : ScriptableObject
     public int MoneyValue => _moneyValue;
     
     #endregion
-
     
-    #region Visuals and Sound
+    #region Graphics and Sound
 
     [Header("Graphics")]
     [Tooltip("Default image for the item in the dungeons and the shop")]
