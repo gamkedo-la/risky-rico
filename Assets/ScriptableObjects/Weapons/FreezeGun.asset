@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Freeze Gun
   _description: Low-power gun with a special freeze effect
-  _baseFiringRate: 2
-  _baseDamage: 4
-  _baseAmmoCapacity: 3
+  _baseFiringRate: 2.06
+  _baseDamage: 1
+  _baseAmmoCapacity: 4
   _baseBulletCount: 1
   _effect: {fileID: 11400000, guid: 79cf8935d40b90444be4b2b70e05ea10, type: 2}
   _storeIcon: {fileID: 0}
