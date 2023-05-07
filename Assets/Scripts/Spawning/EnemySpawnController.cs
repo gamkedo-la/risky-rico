@@ -8,6 +8,7 @@ public enum SpawnState
     REST,
     STOP,
 }
+
 public class EnemySpawnController : MonoBehaviour
 {
     [Header("Collections")]
