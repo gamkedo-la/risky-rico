@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class SpriteFlash : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class SpriteFlash : MonoBehaviour
 
     [Tooltip("Duration of the flash.")]
     [SerializeField] private float duration;
+
+    [Tooltip("The option to toggle the flash feature on/off (affects all instances of this script)")]
+    [SerializeField, HideCustomDrawer] private BoolReference _flashToggle;
 
     #endregion
     
@@ -40,6 +44,12 @@ public class SpriteFlash : MonoBehaviour
 
     public void Flash()
     {
+        // Don't flash if the feature is toggled off
+        if (!_flashToggle.Value) 
+        {
+            return;
+        }
+
         // If the flashRoutine is not null, then it is currently running.
         if (flashRoutine != null)
         {

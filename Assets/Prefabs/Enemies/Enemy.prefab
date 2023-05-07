@@ -294,6 +294,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 4d08959ff9c62c045a86fad7bea85df9, type: 2}
   duration: 0.2
+  _flashToggle:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 80fdc83ecf601a64db7b743fa8645a89, type: 2}
 --- !u!114 &8954828896350092599
 MonoBehaviour:
   m_ObjectHideFlags: 0
