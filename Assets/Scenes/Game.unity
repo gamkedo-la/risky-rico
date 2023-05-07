@@ -583,7 +583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 322519326}
-  - component: {fileID: 322519325}
+  - component: {fileID: 322519327}
   m_Layer: 0
   m_Name: EnemySpawnController
   m_TagString: Untagged
@@ -591,51 +591,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &322519325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 322519324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50310ff315b0abe449387f974f0742da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 8724373994609232352, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
-  _spawnTypes:
-  - {fileID: 11400000, guid: 1a74e0697b8ac0847992269632e944e5, type: 2}
-  _spawnPoints:
-  - {fileID: 1030227002}
-  - {fileID: 100119199}
-  - {fileID: 1935729151}
-  - {fileID: 108855272}
-  _spawnedObjects: {fileID: 11400000, guid: ff11018c6958365408a2d16f7d94eacb, type: 2}
-  _timeBetweenSpawns: {fileID: 11400000, guid: 3e4d3c7ab76622c4bb0fc947231324ae, type: 2}
-  _defaultTimeBetweenSpawns:
-    _useConstant: 1
-    _constantValue: 2
-    _variable: {fileID: 11400000, guid: 3e4d3c7ab76622c4bb0fc947231324ae, type: 2}
-  _waveDuration: {fileID: 11400000, guid: 1f6f3352e02522e4b8380cdf0362af88, type: 2}
-  _defaultWaveDuration:
-    _useConstant: 1
-    _constantValue: 12
-    _variable: {fileID: 11400000, guid: 1f6f3352e02522e4b8380cdf0362af88, type: 2}
-  _waveMap:
-    m_keys: 0100000002000000
-    m_values:
-    - {fileID: 11400000, guid: 1a74e0697b8ac0847992269632e944e5, type: 2}
-    - {fileID: 11400000, guid: 20773ec1f6ad7b74f943ee5778a233fc, type: 2}
-  _restDuration: {fileID: 11400000, guid: b874eec0c0733a944b3c5d96c6547061, type: 2}
-  _defaultRestDuration:
-    _useConstant: 0
-    _constantValue: 3
-    _variable: {fileID: 11400000, guid: db062cecae4f01c4cba4f6f578758014, type: 2}
-  _state: 0
-  _waveEvent: {fileID: 11400000, guid: 1348622ef20ab584c8082d2fa0229ca5, type: 2}
-  _restEvent: {fileID: 11400000, guid: 697f39de4994da945808111ab4682867, type: 2}
-  _endEvent: {fileID: 11400000, guid: 22d214e29d7860f4abc40e0dd150775f, type: 2}
 --- !u!4 &322519326
 Transform:
   m_ObjectHideFlags: 0
@@ -651,6 +606,39 @@ Transform:
   m_Father: {fileID: 849440094}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &322519327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322519324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e8695a9aeb5be49852a698ae463a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _state: 0
+  _loopWaves: 0
+  _waves:
+  - {fileID: 11400000, guid: 8914cb05061615245a8a1470683a7ae6, type: 2}
+  - {fileID: 11400000, guid: 8914cb05061615245a8a1470683a7ae6, type: 2}
+  - {fileID: 11400000, guid: 8914cb05061615245a8a1470683a7ae6, type: 2}
+  _waveTimer: 0
+  _restTimer: 0
+  _spawnTimer: 0
+  _patternIndex: 0
+  _waveIndex: 0
+  _spawnPrefab: {fileID: 8724373994609232352, guid: aafac9a21def72041af4dfce54d2c58f, type: 3}
+  _spawnPoints:
+  - {fileID: 1030227002}
+  - {fileID: 100119199}
+  - {fileID: 1935729151}
+  - {fileID: 108855272}
+  _spawnedObjects: {fileID: 11400000, guid: ff11018c6958365408a2d16f7d94eacb, type: 2}
+  _waveEvent: {fileID: 11400000, guid: 1348622ef20ab584c8082d2fa0229ca5, type: 2}
+  _restEvent: {fileID: 11400000, guid: 697f39de4994da945808111ab4682867, type: 2}
+  _endEvent: {fileID: 11400000, guid: 22d214e29d7860f4abc40e0dd150775f, type: 2}
 --- !u!1 &343253891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4274267268233061665, guid: bde12851b50d8b548829c8ee96450adc, type: 3}

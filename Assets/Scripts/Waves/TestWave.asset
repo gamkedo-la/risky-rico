@@ -16,7 +16,7 @@ MonoBehaviour:
   _designPurpose: 
   _duration: 10
   _restPeriod: 5
-  _baseTimeBetweenSpawns: 1
+  _baseTimeBetweenSpawns: 1.5
   _spawnRateChange:
     _useConstant: 1
     _constantValue:
@@ -53,4 +53,8 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     _variable: {fileID: 0}
-  _enemyPatterns: []
+  _enemyPatterns:
+  - {fileID: 11400000, guid: aa4433f7da8ea4644a4697e9a8f0ddb9, type: 2}
+  - {fileID: 11400000, guid: aa4433f7da8ea4644a4697e9a8f0ddb9, type: 2}
+  - {fileID: 11400000, guid: aa4433f7da8ea4644a4697e9a8f0ddb9, type: 2}
+  _chooseRandomPattern: 1
