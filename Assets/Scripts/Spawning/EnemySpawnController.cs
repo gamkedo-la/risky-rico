@@ -1,168 +1,195 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
 
-public enum SpawnState 
-{
-    WAVE,
-    REST,
-    STOP,
-}
-
 public class EnemySpawnController : MonoBehaviour
 {
-    [Header("Collections")]
-    [SerializeField] private GameObject _enemyPrefab;
-    [SerializeField] private List<EnemyParameters> _spawnTypes;
-    [SerializeField] private List<GameObject> _spawnPoints = new List<GameObject>();
-    [SerializeField] private GameObjectCollection _spawnedObjects;
-    private List<EnemyParameters> _targetSpawnTypes = new List<EnemyParameters>();
-    private List<GameObject> _targetSpawnPoints = new List<GameObject>();
-
-    [Header("Tempo")]
-    [SerializeField] private FloatVariable _timeBetweenSpawns;
-    [SerializeField] private FloatReference _defaultTimeBetweenSpawns;
-
-    [Header("Waves")]
-    [SerializeField] private FloatVariable _waveDuration;
-    [SerializeField] private FloatReference _defaultWaveDuration;
-    [SerializeField] private IntEnemyParametersDictionary _waveMap;
-    private int _waveCount = 1;
-
-    [Header("Rest")]
-    [SerializeField] private FloatVariable _restDuration;
-    [SerializeField] private FloatReference _defaultRestDuration;
+    #region Inspector Info
+    #region Controller State
+    [Header("CONTROLLER STATE")]
     [SerializeField] private SpawnState _state = SpawnState.WAVE;
+    [SerializeField] private bool _loopWaves = false;
+    #endregion
 
-    [Header("Events")]
+    #region Wave Data
+    [Header("WAVE DATA")]
+    [SerializeField] private List<WaveData> _waves = new List<WaveData>();
+    [Tooltip("Counts up until it reaches the current wave's max wave duration")]
+    [SerializeField, ReadOnly] private float _waveTimer = 0;
+
+    [Tooltip("Counts up until it reaches the current wave's max rest duration")]
+    [SerializeField, ReadOnly] private float _restTimer = 0;
+    
+    [Tooltip("Counts up until it reaches the current wave's max time between spawns")]
+    [SerializeField, ReadOnly] private float _spawnTimer = 0;
+
+    [Tooltip("Counts up until it reaches the max index of the current wave's pattern list")]
+    [SerializeField, ReadOnly] private int _patternIndex = 0;
+
+    [Tooltip("Counts up until it reaches the max index of the wave list")]
+    [SerializeField, ReadOnly] private int _waveIndex = 0;
+    #endregion
+
+    #region Spawn Data
+    [Header("Spawn Data")]
+    [Tooltip("The base prefab to spawn")]
+    [SerializeField] private GameObject _spawnPrefab;
+
+    [Tooltip("Acceptable locations to spawn the prefab")]
+    [SerializeField] private List<GameObject> _spawnPoints = new List<GameObject>();
+    
+    [Tooltip("Collection of game objects that have been spawned (used for deleting all objects in cleanup)")]
+    [SerializeField, HideCustomDrawer] private GameObjectCollection _spawnedObjects;
+    #endregion
+
+    #region Events
+    [Header("EVENTS")]
+    [Tooltip("Signifies when a wave begins")]
     [SerializeField] private GameEvent _waveEvent;
-    [SerializeField] private GameEvent _restEvent;
-    [SerializeField] private GameEvent _endEvent;
 
+    [Tooltip("Signifies when a rest begins")]
+    [SerializeField] private GameEvent _restEvent;
+
+    [Tooltip("Signifies when combat ends")]
+    [SerializeField] private GameEvent _endEvent;
+    #endregion
+    #endregion
+
+    #region Methods
     void Awake()
     {
-        _waveDuration.Value = _defaultWaveDuration.Value;
-        _restDuration.Value = _defaultRestDuration.Value;
-        _timeBetweenSpawns.Value = _defaultTimeBetweenSpawns.Value;
+        _waveIndex = 0;
+        _patternIndex = 0;
     }
 
     void Update()
     {
-        if (_state == SpawnState.STOP)
-        {
-            return;
-        }
-        
-        // update state
-        if (_state == SpawnState.WAVE)
-        {
-            _waveDuration.Value -= 1 * Time.deltaTime;
-            _timeBetweenSpawns.Value -= 1 * Time.deltaTime;
 
-            // spawn when timer hits 0
-            if (_timeBetweenSpawns.Value <= 0f && _waveDuration.Value > 0f)
-            {
-                PickSpawnType();
-                PickSpawnPoint();
-                SpawnObjects();
-                _timeBetweenSpawns.Value = _defaultTimeBetweenSpawns.Value * (_waveDuration.Value / _defaultWaveDuration.Value);
-                _timeBetweenSpawns.Value = Mathf.Clamp(_timeBetweenSpawns.Value, 0.5f, _defaultTimeBetweenSpawns.Value);
-            }
-        }
-
-        if (_state == SpawnState.REST)
+        // if all waves are done
+        if (_waveIndex > _waves.Count - 1)
         {
-            _restDuration.Value -= 1 * Time.deltaTime;
-        }
-
-        // change state 
-        if (_waveDuration.Value <= 0f && _spawnedObjects.Count == 0)
-        {
-            _state = SpawnState.REST;
-            _waveDuration.Value = _defaultWaveDuration.Value;
-            _waveCount += 1;
-            _restEvent?.Raise();
-            UpdateAvailableSpawnTypes();
-            CheckIfAllWavesAreComplete();
-        }
-
-        if (_restDuration.Value <= 0f)
-        {
-            _state = SpawnState.WAVE;
-            _restDuration.Value = _defaultRestDuration.Value;
-            _waveEvent?.Raise();
-        }
-    }
-
-    public void UpdateAvailableSpawnTypes()
-    {
-        foreach(int i in _waveMap.Keys)
-        {
-            if (_waveCount >= i && !_spawnTypes.Contains(_waveMap[i]))
-            {
-                _spawnTypes.Add(_waveMap[i]);
-            }
-        }
-    }
-
-    public void CheckIfAllWavesAreComplete()
-    {
-        if (_waveCount > _waveMap.Keys.Count)
-        {
+            // --- set spawn state to STOP,
             _state = SpawnState.STOP;
+
+            // --- end combat sequence
+            _waveIndex = 0;
             _endEvent.Raise();
         }
-    }
 
-    public void PickSpawnType()
-    {
-        int index = Random.Range(0, _spawnTypes.Count);
-        EnemyParameters spawnType = _spawnTypes[index];
-        _targetSpawnTypes.Add(spawnType);
-    }
+        // get current wave with waveIndex
+        WaveData currentWave = _waves[_waveIndex];
 
-    public void PickSpawnPoint()
-    {
-        int index = Random.Range(0, _spawnPoints.Count);
-        GameObject spawnPoint = _spawnPoints[index];
-        _targetSpawnPoints.Add(spawnPoint);
-    }
-    
-    public void SpawnObjects() 
-    {
-        foreach(GameObject spawnPoint in _targetSpawnPoints)
+        switch(_state) 
         {
-            foreach(EnemyParameters enemyType in _targetSpawnTypes)
+            case SpawnState.STOP:
+                break;
+
+            case SpawnState.WAVE:
+
+                // increment wave timer
+                _waveTimer += Time.deltaTime;
+
+                // increment spawn timer
+                _spawnTimer += Time.deltaTime;
+
+                // if it's time to spawn a pattern
+                if (_spawnTimer >= currentWave.BaseTimeBetweenSpawns)
+                {
+                    // --- get current pattern with patternIndex
+                    EnemyPattern currentPattern = currentWave.EnemyPatterns[_patternIndex];
+
+                    // --- spawn enemies in a specific pattern
+                    SpawnEnemyPattern(currentPattern);
+                    
+                    // --- reset spawn timer
+                    _spawnTimer = 0;
+                    
+                    // --- increment patternIndex
+                    _patternIndex += 1;
+                    _patternIndex = Mathf.Clamp(_patternIndex, 0, currentWave.EnemyPatterns.Count - 1);
+
+                }
+
+                
+                // if wave has ended
+                if (_waveTimer >= currentWave.Duration)
+                {
+                    // --- reset timers
+                    _waveTimer = 0;
+                    _spawnTimer = 0;
+
+                    // --- reset pattern index
+                    _patternIndex = 0; 
+                    
+                    // --- set spawn state to REST
+                    _state = SpawnState.REST;
+                    _restEvent?.Raise();
+                }
+
+                break;
+
+            case SpawnState.REST:
+                // increment rest timer
+                _restTimer += Time.deltaTime;
+
+                // if the rest period is over
+                if (_restTimer >= currentWave.RestPeriod)
+                {
+                    // --- reset rest timer
+                    _restTimer = 0;
+
+                    // --- increment wave index
+                    _waveIndex += 1;
+
+                    // --- switch state to WAVE
+                    _state = SpawnState.WAVE;
+                    _waveEvent?.Raise();
+                }
+
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    void SpawnEnemyPattern(EnemyPattern pattern)
+    {
+        GameObject spawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Count)];
+        Transform spawnPointTransform = spawnPoint.GetComponent<Transform>();
+        float offsetAmount = 1f;
+        float enemyCount = 0;
+
+        foreach(EnemyParameters enemyType in pattern.Enemies)
+        {
+            // get spawn point data
+            SpawnData spawnPointData = spawnPoint.GetComponent<SpawnData>();
+
+            // spawn enemies in the pattern separated by an offset
+            float xOffset = spawnPointData.XDirection * offsetAmount * enemyCount;
+            float yOffset = spawnPointData.YDirection * offsetAmount * enemyCount;
+            Vector3 spawnPosition = spawnPointTransform.position;
+            Vector3 spawnPositionWithOffSet = new Vector3(spawnPosition.x - xOffset, spawnPosition.y - yOffset, spawnPosition.z); 
+            GameObject spawnedObject = Instantiate(_spawnPrefab, spawnPositionWithOffSet, Quaternion.identity);
+
+            // set the enemy's movement direction based on spawn point data
+            if (spawnPointData != null)
             {
-                // get spawn point information
-                Transform spawnPointTransform = spawnPoint.GetComponent<Transform>();
-                SpawnData spawnPointData = spawnPoint.GetComponent<SpawnData>();
-
-                // set spawned game object properties
-                GameObject spawnedObject = Instantiate(_enemyPrefab, spawnPointTransform.position, Quaternion.identity);
-                if (spawnPointData != null)
-                {
-                    spawnedObject.GetComponent<Enemy>().SetParameters(enemyType);
-                    spawnedObject.GetComponent<MoveInOwnDirection>()?.SetDirection(new Vector2(spawnPointData.XDirection, spawnPointData.YDirection));
-                }
-
-                // track spawned object in a list
-                if (!_spawnedObjects.Contains(spawnedObject))
-                {
-                    _spawnedObjects.Add(spawnedObject);
-                }
+                spawnedObject.GetComponent<Enemy>().SetParameters(enemyType);
+                spawnedObject.GetComponent<MoveInOwnDirection>()?.SetDirection(new Vector2(spawnPointData.XDirection, spawnPointData.YDirection));
             }
-        }
-        
-        _targetSpawnPoints.Clear();
-        _targetSpawnTypes.Clear();
-    }
 
-    public void DestroyObjects() 
-    {
-        foreach(GameObject obj in _spawnedObjects)
-        {
-            Destroy(obj);
+            // track spawned object in a list
+            if (!_spawnedObjects.Contains(spawnedObject))
+            {
+                _spawnedObjects.Add(spawnedObject);
+            }
+
+            // increment multiplier for the position offset
+            enemyCount += 1;
         }
+
     }
+    #endregion
 }
