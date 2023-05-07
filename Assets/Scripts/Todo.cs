@@ -8,10 +8,7 @@ public class Todo : MonoBehaviour
     
     // GENERAL:
     // TODO: hitbox favortism
-    // TODO: lines of enemies coming from one direction?
     // TODO: balancing (speed, tempo, spawn types)
-    // TODO: give each enemy type its own mini-wave
-    // TODO: switch to custom wave design via SOs?
     // TODO: rotating enemy
     // TODO: highscore recording
     // TODO: basic options
