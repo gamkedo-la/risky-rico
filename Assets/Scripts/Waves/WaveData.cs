@@ -57,5 +57,8 @@ public class WaveData : ScriptableObject
     [Tooltip("What patterns of enemies will spawn in this wave")]
     [SerializeField] private List<EnemyPattern> _enemyPatterns = new List<EnemyPattern>(); 
     public List<EnemyPattern> EnemyPatterns => _enemyPatterns;
+
+    [Tooltip("If checked, it will choose a random pattern on each spawn; otherwise, it will follow the list order")]
+    [SerializeField] private bool _chooseRandomPattern = true;
     #endregion
 }
