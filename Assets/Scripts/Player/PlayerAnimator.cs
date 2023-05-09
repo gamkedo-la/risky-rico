@@ -1,5 +1,6 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.InputSystem;
 
 public class PlayerAnimator : MonoBehaviour {
     [SerializeField] private Animator _anim;
@@ -20,10 +21,15 @@ public class PlayerAnimator : MonoBehaviour {
     [SerializeField] private float _timeBetweenFootsteps = 0.5f;
     private float _footStepTimer;
 
+    [SerializeField] private PlayerInput _input;
+
     void Awake() 
     {
         _player = GetComponentInParent<IPlayerController>();
         _footStepTimer = _timeBetweenFootsteps;
+
+        // Kick dust on direction change
+        _input.actions["move"].performed += _ => KickDust();
     }
 
     void Update() {
@@ -34,17 +40,17 @@ public class PlayerAnimator : MonoBehaviour {
 
         // Lean while running
         var targetRotVector = new Vector3(0, 0, Mathf.Lerp(-_maxTilt, _maxTilt, Mathf.InverseLerp(-1, 1, _player.Input.X)));
-        _anim.transform.rotation = Quaternion.RotateTowards(_anim.transform.rotation, Quaternion.Euler(targetRotVector), _tiltSpeed * Time.deltaTime);
+        // _anim.transform.rotation = Quaternion.RotateTowards(_anim.transform.rotation, Quaternion.Euler(targetRotVector), _tiltSpeed * Time.deltaTime);
 
         // Speed up idle while running
-        _anim.SetFloat(IdleSpeedKey, Mathf.Lerp(1, _maxIdleSpeed, Mathf.Abs(_player.Input.X)));
+        // _anim.SetFloat(IdleSpeedKey, Mathf.Lerp(1, _maxIdleSpeed, Mathf.Abs(_player.Input.X)));
 
         // Footstep sound loop
         _footStepTimer -= Time.deltaTime;
         if ((_player.Input.X != 0 || _player.Input.Y != 0) && _footStepTimer < 0f) 
         {
             // _anim.SetTrigger(GroundedKey);
-            _source.PlayOneShot(_footsteps[Random.Range(0, _footsteps.Length)]);
+            // _source.PlayOneShot(_footsteps[Random.Range(0, _footsteps.Length)]);
         }
 
         if (_footStepTimer < 0f)
@@ -53,19 +59,19 @@ public class PlayerAnimator : MonoBehaviour {
         }
 
         // Play landing effects and begin ground movement effects
-        if (!_playerGrounded && _player.Grounded) 
-        {
-            _playerGrounded = true;
-            _moveParticles.Play();
-            _landParticles.transform.localScale = Vector3.one * Mathf.InverseLerp(0, _maxParticleFallSpeed, _movement.y);
-            SetColor(_landParticles);
-            _landParticles.Play();
-        }
-        else if (_playerGrounded && !_player.Grounded) 
-        {
-            _playerGrounded = false;
-            _moveParticles.Stop();
-        }
+        // if (!_playerGrounded && _player.Grounded) 
+        // {
+        //     _playerGrounded = true;
+        //     _moveParticles.Play();
+        //     _landParticles.transform.localScale = Vector3.one * Mathf.InverseLerp(0, _maxParticleFallSpeed, _movement.y);
+        //     SetColor(_landParticles);
+        //     _landParticles.Play();
+        // }
+        // else if (_playerGrounded && !_player.Grounded) 
+        // {
+        //     _playerGrounded = false;
+        //     _moveParticles.Stop();
+        // }
 
         // Detect ground color
         var groundHit = Physics2D.Raycast(transform.position, Vector3.down, 2, _groundMask);
@@ -92,6 +98,19 @@ public class PlayerAnimator : MonoBehaviour {
     {
         var main = ps.main;
         main.startColor = _currentGradient;
+    }
+
+    void KickDust()
+    {
+        if(!_moveParticles.isPlaying) {
+            _moveParticles.Play();
+            return;
+        }
+
+        if(_moveParticles.isPlaying) {
+            _moveParticles.Stop();
+            _moveParticles.Play();
+        }
     }
 
     #region Animation Keys
