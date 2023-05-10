@@ -10,8 +10,8 @@ public class EnemyParameters : ScriptableObject
     [SerializeField] private float _moveSpeed;
     public float MoveSpeed => _moveSpeed;
     
-    [SerializeField] private float _rotationSpeed;
-    public float RotationSpeed => _rotationSpeed;
+    [SerializeField] private float _rotationFrequency;
+    public float RotationFrequency => _rotationFrequency;
 
 
     [Header("Health")]
