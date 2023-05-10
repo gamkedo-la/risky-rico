@@ -8,6 +8,7 @@ public class PickUpItem : MonoBehaviour
 {
     [SerializeField] GameObjectCollection _itemCollection;
     [SerializeField] PlayerParameters _playerParameters;
+    [SerializeField] GameObject _particleEffect;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +20,9 @@ public class PickUpItem : MonoBehaviour
             {
                 itemComponent.ActivateEffects(_playerParameters);
             }
+
+            // Spawn particle effect
+            Instantiate(_particleEffect, transform.position, Quaternion.identity);
 
             // Remove item from scene
             Destroy(collision.gameObject);
