@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SplitSkull
   m_EditorClassIdentifier: 
   _moveSpeed: 2
-  _rotationSpeed: 0
+  _rotationFrequency: 0.5
   _xHealth: 1
   _yHealth: 2
   _swerveAmplitude: 0
