@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyHealth _health;
     [SerializeField] private MoveInOwnDirection _movement;
     [SerializeField] private SpriteRenderer _renderer;
+    [SerializeField] private EnemyRotate _rotationBehavior;
 
     void Awake()
     {
@@ -16,6 +17,7 @@ public class Enemy : MonoBehaviour
         _renderer = gameObject.GetComponent<SpriteRenderer>();
         _health = gameObject.GetComponent<EnemyHealth>();
         _movement = gameObject.GetComponent<MoveInOwnDirection>();
+        _rotationBehavior = gameObject.GetComponent<EnemyRotate>();
 
         // apply parameters to individual components
         SetParameters(_parameters);
@@ -27,5 +29,6 @@ public class Enemy : MonoBehaviour
         _movement.SetSpeed(_parameters.MoveSpeed);
         _renderer.sprite = _parameters.AttackAnimation;
         _health.SetHealth(_parameters.XHealth, _parameters.YHealth);
+        _rotationBehavior.enemy = parameters;
     }
 }
