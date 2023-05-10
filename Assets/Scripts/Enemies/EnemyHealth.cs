@@ -22,6 +22,9 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private UnityEvent _damageEvents = new UnityEvent();
     [SerializeField] private UnityEvent _deathEvents = new UnityEvent();
 
+    [Header("Visual Effects")]
+    [SerializeField] private GameObject _explosion;
+
     void Start()
     {
         _collider = GetComponent<BoxCollider2D>();
@@ -86,6 +89,7 @@ public class EnemyHealth : MonoBehaviour
         if (_yHealth <= 0 || _xHealth <= 0)
         {
             _deathEvents?.Invoke();
+            Instantiate(_explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
