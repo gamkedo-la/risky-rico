@@ -1270,6 +1270,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _explosion: {fileID: 0}
+  _damageSplash: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,7 @@ public class EnemyHealth : MonoBehaviour
 
     [Header("Visual Effects")]
     [SerializeField] private GameObject _explosion;
+    [SerializeField] private GameObject _damageSplash;
 
     void Start()
     {
@@ -79,6 +80,9 @@ public class EnemyHealth : MonoBehaviour
 
         // invoke follow-up damage events
         _damageEvents?.Invoke();
+
+        // spawn particle effects
+        Instantiate(_damageSplash, transform.position, transform.rotation);
 
         // remove colliding object from scene
         Destroy(collision.gameObject);
