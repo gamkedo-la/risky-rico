@@ -12,16 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a89eed4e6dc3cfa4d98f0e6c77c3ddce, type: 3}
   m_Name: TestCurse1
   m_EditorClassIdentifier: 
-  _name: Test Curse 1
+  _name: Slow Curse
   _description: 
-  _firingRateEffect: 0
-  _ammoCapacityEffect: 0
-  _damageEffect: 0
-  _bulletCountEffect: 0
-  _movementSpeedEffect: 4
-  _scoreMultiplierEffect: 0
-  _effectDuration: 0
-  _sellValue: 0
+  _modifiers:
+  - _operator: 3
+    _value: 2
+    _targetAttribute: 0
+    _durationType: 0
+    _duration: 0
+    _listeners:
+    - _type: 0
+      _baseValue: 45
+      _currentValue: 45
+      _modifiers: []
+    - _type: 0
+      _baseValue: 45
+      _currentValue: 45
+      _modifiers: []
+    - _type: 0
+      _baseValue: 45
+      _currentValue: 45
+      _modifiers: []
   _image: {fileID: 21300000, guid: 6a1f17f4cfcd7ea44b4570f4c69608a3, type: 3}
   _spawnSound: {fileID: 0}
   _collectSound: {fileID: 0}

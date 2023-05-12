@@ -15,12 +15,7 @@ public class PlayerCurseSlots : MonoBehaviour
     private void ActivateCurse(CurseModifiers curse)
     {
         Debug.Log("Activating: " + curse.Name);
-        _player.ApplyCurse(curse);
-    }
-
-    private void DeactivateCurse(CurseModifiers curse)
-    {
-        _player.RemoveCurse(curse);
+        AddCurse(curse);
     }
 
     public void RemoveCurse(CurseModifiers curse)
@@ -28,16 +23,18 @@ public class PlayerCurseSlots : MonoBehaviour
         if (_curses.Contains(curse))
         {
             _curses.Remove(curse);
-            DeactivateCurse(curse);
+            curse.RemoveModifiers(_player);
         }
     }
 
     public void AddCurse(CurseModifiers curse)
     {
+        Debug.Log("Checking curse");
         if (!_curses.Contains(curse) && _curses.Count < _maxSlotCount)
         {
+            Debug.Log("Added curse");
             _curses.Add(curse);
-            ActivateCurse(curse);
+            curse.ApplyModifiers(_player);
         }
     }
 }

@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour, IPlayerController {
+    // Attributes
+    public PlayerAttributes _playerAttributes;
+    
     // Public members
     public Vector3 Velocity { get; private set; }
     public FrameInput Input { get; private set; }
@@ -63,7 +66,6 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     #region Move
 
     [Header("MOVEMENT")]
-    [SerializeField] private float _acceleration = 90;
     [SerializeField] private float _moveClamp = 13;
     [SerializeField] private float _deAcceleration = 60f;
 
@@ -72,7 +74,7 @@ public class PlayerController : MonoBehaviour, IPlayerController {
         // HORIZONTAL MOVEMENT
         if (Input.X != 0) {
             // Set horizontal move speed
-            _currentHorizontalSpeed += Input.X * _acceleration * Time.deltaTime;
+            _currentHorizontalSpeed += Input.X * _playerAttributes.MovementSpeed.CurrentValue * Time.deltaTime;
 
             // clamped by max frame movement
             _currentHorizontalSpeed = Mathf.Clamp(_currentHorizontalSpeed, -_moveClamp, _moveClamp);
@@ -93,7 +95,7 @@ public class PlayerController : MonoBehaviour, IPlayerController {
         // VERTICAL MOVEMENT
         if (Input.Y != 0) {
             // Set horizontal move speed
-            _currentVerticalSpeed += Input.Y * _acceleration * Time.deltaTime;
+            _currentVerticalSpeed += Input.Y * _playerAttributes.MovementSpeed.CurrentValue * Time.deltaTime;
 
             // clamped by max frame movement
             _currentVerticalSpeed = Mathf.Clamp(_currentVerticalSpeed, -_moveClamp, _moveClamp);

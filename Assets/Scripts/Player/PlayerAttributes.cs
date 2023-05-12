@@ -5,26 +5,26 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerAttributes", menuName = "Player/PlayerAttributes", order = 1)]
 public class PlayerAttributes : ScriptableObject
 {
-    #region Stats
-    [Header("Stats")]
-    [SerializeField] private FloatAttribute _movementSpeed = default(FloatAttribute);
-    public FloatAttribute MovementSpeed => _movementSpeed;
+    #region Combat
+    [Header("COMBAT STATS")]
+    [SerializeField] private ModifiableAttribute _movementSpeed = default(ModifiableAttribute);
+    public ModifiableAttribute MovementSpeed => _movementSpeed;
 
-    [SerializeField] private FloatAttribute _firingRate = default(FloatAttribute);
-    public FloatAttribute FiringRate => _firingRate;
+    [SerializeField] private ModifiableAttribute _firingRate = default(ModifiableAttribute);
+    public ModifiableAttribute FiringRate => _firingRate;
 
-    [SerializeField] private IntAttribute _damage = default(IntAttribute);
-    public IntAttribute Damage => _damage;
+    [SerializeField] private ModifiableAttribute _damage = default(ModifiableAttribute);
+    public ModifiableAttribute Damage => _damage;
 
-    [SerializeField] private float _maxSpecialMeter;
-    public float MaxSpecialMeter => _maxSpecialMeter;
+    [SerializeField] private ModifiableAttribute _shotCount = default(ModifiableAttribute);
+    public ModifiableAttribute ShotCount => _shotCount;
 
-    [SerializeField] private IntAttribute _shotCount = default(IntAttribute);
-    public IntAttribute ShotCount => _shotCount;
+    private List<ModifiableAttribute> _attributes = new List<ModifiableAttribute>();
+    public List<ModifiableAttribute> Attributes => _attributes;
     #endregion
 
     #region Graphics
-    [Header("Graphics")]
+    [Header("GRAPHICS")]
     [SerializeField] private Sprite _idleAnimation;
     public Sprite IdleAnimation => _idleAnimation;
 
@@ -39,18 +39,38 @@ public class PlayerAttributes : ScriptableObject
     #endregion
 
     #region Sounds
-    [Header("Sounds")]
+    [Header("SOUNDS")]
     [SerializeField] private AudioClip _walkSound;
     public AudioClip WalkSound => _walkSound;
     #endregion
 
-    public void ApplyCurse(CurseModifiers curse)
+    public void OnValidate()
     {
-        
+        foreach(ModifiableAttribute attribute in _attributes)
+        {
+            attribute.CalculateValue();
+        }
     }
 
-    public void RemoveCurse(CurseModifiers curse)
+    public void OnEnable()
     {
-       
+        // initialize the attribute list
+        Debug.Log("Awake");
+        _attributes.Clear();
+        _attributes.Add(_movementSpeed);
+        _attributes.Add(_firingRate);
+        _attributes.Add(_damage);
+        _attributes.Add(_shotCount);
+
+        foreach(ModifiableAttribute attribute in _attributes)
+        {
+            attribute.Awake();
+            attribute.CalculateValue();
+        }
+    }
+
+    public ModifiableAttribute GetAttribute(AttributeType type)
+    {
+        return _attributes.Find(s => s.Type == type);
     }
 }
