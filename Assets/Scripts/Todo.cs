@@ -9,7 +9,6 @@ public class Todo : MonoBehaviour
     // GENERAL:
     // TODO: hitbox favortism
     // TODO: balancing (speed, tempo, spawn types)
-    // TODO: rotating enemy
     // TODO: highscore recording
     // TODO: basic options
     // TODO: scoring zones based on proximity to player (closer to player, higher score)

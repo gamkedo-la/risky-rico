@@ -2966,7 +2966,6 @@ GameObject:
   - component: {fileID: 1757149007}
   - component: {fileID: 1757149008}
   - component: {fileID: 1757149009}
-  - component: {fileID: 1757149011}
   - component: {fileID: 1757149012}
   m_Layer: 0
   m_Name: Player
@@ -3478,19 +3477,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _curseCollection: {fileID: 11400000, guid: be9f466d88f0b1f4d89fa431ef542a81, type: 2}
   _curseSlots: {fileID: 1757149008}
---- !u!114 &1757149011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757148991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d327bdd6e0256c04db5ecb53e124d5af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _attribute: {fileID: 11400000, guid: fd6ffd5da43a49b43a21fb785eac7f91, type: 2}
 --- !u!114 &1757149012
 MonoBehaviour:
   m_ObjectHideFlags: 0
