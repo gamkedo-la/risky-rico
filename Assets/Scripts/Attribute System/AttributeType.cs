@@ -8,4 +8,9 @@ public enum AttributeType
     DAMAGE,
     FIRING_RATE,
     SHOT_COUNT,
+    HEALTH,
+    ROTATION_FREQUENCY,
+    SWERVE_AMPLITUDE,
+    SWERVE_FREQUENCY,
+    SWERVE_PERIOD,
 }

@@ -31,10 +31,6 @@ public class EnemyAttributes : AttributeSet
     [SerializeField] private float _swerveFrequency;
     public float SwerveFrequency => _swerveFrequency;
 
-    [SerializeField] private bool _strafingEnabled;
-    public bool StrafingEnabled => _strafingEnabled;
-
-
     [Header("Graphics")]
     [SerializeField] private Sprite _attackAnimation;
     public Sprite AttackAnimation => _attackAnimation;
@@ -52,6 +48,6 @@ public class EnemyAttributes : AttributeSet
 
     public void OnEnable() 
     {
-        
+
     }
 }
