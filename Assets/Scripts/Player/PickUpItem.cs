@@ -7,7 +7,7 @@ using ScriptableObjectArchitecture;
 public class PickUpItem : MonoBehaviour
 {
     [SerializeField] GameObjectCollection _itemCollection;
-    [SerializeField] PlayerParameters _playerParameters;
+    [SerializeField] PlayerAttributes _playerAttributes;
     [SerializeField] GameObject _particleEffect;
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -18,7 +18,7 @@ public class PickUpItem : MonoBehaviour
             Item itemComponent = collision.gameObject.GetComponent<Item>();
             if (itemComponent != null)
             {
-                itemComponent.ActivateEffects(_playerParameters);
+                itemComponent.ActivateEffects(_playerAttributes);
             }
 
             // Spawn particle effect
