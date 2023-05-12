@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95186ed2c35dafc45bcddf5ff492fd7d, type: 3}
+  m_Name: PlayerAttributes
+  m_EditorClassIdentifier: 
+  _damageAmount:
+    _baseValue: 6
+    _currentValue: 0
+    _modifiers: []
+  _movementSpeed:
+    _baseValue: 7.54
+    _currentValue: 0
+    _modifiers: []
+  _firingRate:
+    _baseValue: 6.97
+    _currentValue: 0
+    _modifiers: []
+  _shotCount:
+    _baseValue: 6
+    _currentValue: 0
+    _modifiers: []

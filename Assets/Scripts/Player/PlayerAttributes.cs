@@ -2,22 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PlayerParameters", menuName = "Player/PlayerParameters", order = 1)]
-public class PlayerParameters : ScriptableObject
+[CreateAssetMenu(fileName = "PlayerAttributes", menuName = "Player/PlayerAttributes", order = 1)]
+public class PlayerAttributes : ScriptableObject
 {
     #region Stats
     [Header("Stats")]
-    [SerializeField] private float _movementSpeed;
-    public float MovementSpeed => _movementSpeed;
+    [SerializeField] private FloatAttribute _movementSpeed = default(FloatAttribute);
+    public FloatAttribute MovementSpeed => _movementSpeed;
 
-    [SerializeField] private float _firingRate;
-    public float FiringRate => _firingRate;
+    [SerializeField] private FloatAttribute _firingRate = default(FloatAttribute);
+    public FloatAttribute FiringRate => _firingRate;
 
-    [SerializeField] private int _damage;
-    public int Damage => _damage;
+    [SerializeField] private IntAttribute _damage = default(IntAttribute);
+    public IntAttribute Damage => _damage;
 
     [SerializeField] private float _maxSpecialMeter;
     public float MaxSpecialMeter => _maxSpecialMeter;
+
+    [SerializeField] private IntAttribute _shotCount = default(IntAttribute);
+    public IntAttribute ShotCount => _shotCount;
     #endregion
 
     #region Graphics
@@ -41,17 +44,13 @@ public class PlayerParameters : ScriptableObject
     public AudioClip WalkSound => _walkSound;
     #endregion
 
-    public void ApplyCurse(CurseParameters curse)
+    public void ApplyCurse(CurseModifiers curse)
     {
-        _movementSpeed += curse.MovementSpeedEffect;
-        _firingRate += curse.FiringRateEffect;
-        _damage += curse.DamageEffect;
+        
     }
 
-    public void RemoveCurse(CurseParameters curse)
+    public void RemoveCurse(CurseModifiers curse)
     {
-        _movementSpeed -= curse.MovementSpeedEffect;
-        _firingRate -= curse.FiringRateEffect;
-        _damage -= curse.DamageEffect;
+       
     }
 }
