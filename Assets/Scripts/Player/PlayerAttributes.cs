@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerAttributes", menuName = "Player/PlayerAttributes", order = 1)]
-public class PlayerAttributes : ScriptableObject
+public class PlayerAttributes : AttributeSet
 {
     #region Combat
     [Header("COMBAT STATS")]
@@ -18,9 +18,6 @@ public class PlayerAttributes : ScriptableObject
 
     [SerializeField] private ModifiableAttribute _shotCount = default(ModifiableAttribute);
     public ModifiableAttribute ShotCount => _shotCount;
-
-    private List<ModifiableAttribute> _attributes = new List<ModifiableAttribute>();
-    public List<ModifiableAttribute> Attributes => _attributes;
     #endregion
 
     #region Graphics
@@ -44,14 +41,6 @@ public class PlayerAttributes : ScriptableObject
     public AudioClip WalkSound => _walkSound;
     #endregion
 
-    public void OnValidate()
-    {
-        foreach(ModifiableAttribute attribute in _attributes)
-        {
-            attribute.CalculateValue();
-        }
-    }
-
     public void OnEnable()
     {
         // initialize the attribute list
@@ -67,10 +56,5 @@ public class PlayerAttributes : ScriptableObject
             attribute.Awake();
             attribute.CalculateValue();
         }
-    }
-
-    public ModifiableAttribute GetAttribute(AttributeType type)
-    {
-        return _attributes.Find(s => s.Type == type);
     }
 }
