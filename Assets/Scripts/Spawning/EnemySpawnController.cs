@@ -161,7 +161,7 @@ public class EnemySpawnController : MonoBehaviour
         float offsetAmount = 1f;
         float enemyCount = 0;
 
-        foreach(EnemyParameters enemyType in pattern.Enemies)
+        foreach(EnemyAttributes enemyType in pattern.Enemies)
         {
             // get spawn point data
             SpawnData spawnPointData = spawnPoint.GetComponent<SpawnData>();

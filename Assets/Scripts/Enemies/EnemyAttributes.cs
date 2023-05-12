@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
 
-[CreateAssetMenu(fileName = "EnemyParameters", menuName = "Enemies/EnemyParameters", order = 1)]
-public class EnemyParameters : ScriptableObject
+[CreateAssetMenu(fileName = "EnemyAttributes", menuName = "Enemies/Enemy Attributes", order = 1)]
+public class EnemyAttributes : AttributeSet
 {
     [Header("Speed")]
     [SerializeField] private float _moveSpeed;
@@ -49,4 +49,9 @@ public class EnemyParameters : ScriptableObject
 
     [SerializeField] private AudioClip _deathCry;
     public AudioClip DeathCry => _deathCry;
+
+    public void OnEnable() 
+    {
+        
+    }
 }

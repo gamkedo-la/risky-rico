@@ -5,7 +5,7 @@ using ScriptableObjectArchitecture;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private EnemyParameters _parameters;
+    [SerializeField] private EnemyAttributes _parameters;
     [SerializeField] private EnemyHealth _health;
     [SerializeField] private MoveInOwnDirection _movement;
     [SerializeField] private SpriteRenderer _renderer;
@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
         SetParameters(_parameters);
     }
 
-    public void SetParameters(EnemyParameters parameters)
+    public void SetParameters(EnemyAttributes parameters)
     {
         _parameters = parameters;
         _movement.SetSpeed(_parameters.MoveSpeed);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyRotate : MonoBehaviour
 {
-   [SerializeField] public EnemyParameters enemy;
+   [SerializeField] public EnemyAttributes enemy;
    private float _rotationTimer;
 
    void Update()

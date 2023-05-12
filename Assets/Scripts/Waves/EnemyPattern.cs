@@ -24,8 +24,8 @@ public class EnemyPattern : ScriptableObject
     #region Enemies
     [Header("Enemy Types")]
     [Tooltip("The types of enemies in this pattern (list order determines spawn order)")]
-    [SerializeField] private List<EnemyParameters> _enemies = new List<EnemyParameters>();
-    public List<EnemyParameters> Enemies => _enemies;
+    [SerializeField] private List<EnemyAttributes> _enemies = new List<EnemyAttributes>();
+    public List<EnemyAttributes> Enemies => _enemies;
     #endregion
 
     #region Overrides
