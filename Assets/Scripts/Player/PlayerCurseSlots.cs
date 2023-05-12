@@ -6,24 +6,24 @@ using ScriptableObjectArchitecture;
 public class PlayerCurseSlots : MonoBehaviour
 {
     [Header("Slots")]
-    [SerializeField] private List<CurseParameters> _curses = new List<CurseParameters>();
+    [SerializeField] private List<CurseModifiers> _curses = new List<CurseModifiers>();
     [SerializeField] private int _maxSlotCount = 3;
     
     [Header("Player")]
-    [SerializeField] private PlayerParameters _player;
+    [SerializeField] private PlayerAttributes _player;
 
-    private void ActivateCurse(CurseParameters curse)
+    private void ActivateCurse(CurseModifiers curse)
     {
         Debug.Log("Activating: " + curse.Name);
         _player.ApplyCurse(curse);
     }
 
-    private void DeactivateCurse(CurseParameters curse)
+    private void DeactivateCurse(CurseModifiers curse)
     {
         _player.RemoveCurse(curse);
     }
 
-    public void RemoveCurse(CurseParameters curse)
+    public void RemoveCurse(CurseModifiers curse)
     {
         if (_curses.Contains(curse))
         {
@@ -32,7 +32,7 @@ public class PlayerCurseSlots : MonoBehaviour
         }
     }
 
-    public void AddCurse(CurseParameters curse)
+    public void AddCurse(CurseModifiers curse)
     {
         if (!_curses.Contains(curse) && _curses.Count < _maxSlotCount)
         {

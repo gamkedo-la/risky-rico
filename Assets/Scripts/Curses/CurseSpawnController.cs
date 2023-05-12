@@ -11,7 +11,7 @@ public class CurseSpawnController : MonoBehaviour
     [SerializeField] private GameObject _prefab;
 
     [Tooltip("The types of objects that can spawn")]
-    [SerializeField] private List<CurseParameters> _spawnTypes;
+    [SerializeField] private List<CurseModifiers> _spawnTypes;
 
     [Tooltip("Acceptable locations to spawn")]
     [SerializeField] private List<GameObject> _spawnPoints = new List<GameObject>();
@@ -30,7 +30,7 @@ public class CurseSpawnController : MonoBehaviour
             Transform spawnPointTransform = spawnPoint.GetComponent<Transform>();
 
             // type of object to spawn
-            CurseParameters spawnType = PickSpawnType();
+            CurseModifiers spawnType = PickSpawnType();
 
             // spawn the object
             GameObject spawnedObject = Instantiate(_prefab, spawnPointTransform.position, Quaternion.identity);
@@ -50,10 +50,10 @@ public class CurseSpawnController : MonoBehaviour
         }
     }
 
-    public CurseParameters PickSpawnType()
+    public CurseModifiers PickSpawnType()
     {
         int index = Random.Range(0, _spawnTypes.Count);
-        CurseParameters spawnType = _spawnTypes[index];
+        CurseModifiers spawnType = _spawnTypes[index];
         return spawnType;
     }
 
