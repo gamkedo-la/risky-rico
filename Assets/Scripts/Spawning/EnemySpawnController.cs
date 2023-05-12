@@ -176,7 +176,7 @@ public class EnemySpawnController : MonoBehaviour
             // set the enemy's movement direction based on spawn point data
             if (spawnPointData != null)
             {
-                spawnedObject.GetComponent<Enemy>().SetParameters(enemyType);
+                spawnedObject.GetComponent<Enemy>().SetAttributes(enemyType);
                 spawnedObject.GetComponent<MoveInOwnDirection>()?.SetDirection(new Vector2(spawnPointData.XDirection, spawnPointData.YDirection));
             }
 

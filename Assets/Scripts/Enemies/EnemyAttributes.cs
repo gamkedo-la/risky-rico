@@ -7,8 +7,8 @@ using ScriptableObjectArchitecture;
 public class EnemyAttributes : AttributeSet
 {
     [Header("Speed")]
-    [SerializeField] private float _moveSpeed;
-    public float MoveSpeed => _moveSpeed;
+    [SerializeField] private ModifiableAttribute _moveSpeed;
+    public ModifiableAttribute MoveSpeed => _moveSpeed;
     
     [SerializeField] private float _rotationFrequency;
     public float RotationFrequency => _rotationFrequency;
@@ -48,6 +48,10 @@ public class EnemyAttributes : AttributeSet
 
     public void OnEnable() 
     {
+        _attributes.Clear();
 
+        _attributes.Add(_moveSpeed);
+
+        InitAttributes();
     }
 }

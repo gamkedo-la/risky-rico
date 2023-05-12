@@ -20,4 +20,13 @@ public class AttributeSet : ScriptableObject
     {
         return _attributes.Find(s => s.Type == type);
     }
+
+    protected void InitAttributes()
+    {
+        foreach(ModifiableAttribute attribute in _attributes)
+        {
+            attribute.Awake();
+            attribute.CalculateValue();
+        }
+    }
 }

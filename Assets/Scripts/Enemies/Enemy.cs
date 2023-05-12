@@ -20,13 +20,13 @@ public class Enemy : MonoBehaviour
         _rotationBehavior = gameObject.GetComponent<EnemyRotate>();
 
         // apply parameters to individual components
-        SetParameters(_parameters);
+        SetAttributes(_parameters);
     }
 
-    public void SetParameters(EnemyAttributes parameters)
+    public void SetAttributes(EnemyAttributes parameters)
     {
         _parameters = parameters;
-        _movement.SetSpeed(_parameters.MoveSpeed);
+        _movement.SetSpeed(_parameters.MoveSpeed.CurrentValue);
         _renderer.sprite = _parameters.AttackAnimation;
         _health.SetHealth(_parameters.XHealth, _parameters.YHealth);
         _rotationBehavior.enemy = parameters;

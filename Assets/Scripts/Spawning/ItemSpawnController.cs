@@ -39,7 +39,7 @@ public class ItemSpawnController : MonoBehaviour
             Item itemComponent = spawnedObject.GetComponent<Item>();
             if (itemComponent != null)
             {
-                itemComponent.SetParameters(spawnType);
+                itemComponent.SetAttributes(spawnType);
             }
     
             // track spawned object in a list

@@ -51,10 +51,6 @@ public class PlayerAttributes : AttributeSet
         _attributes.Add(_damage);
         _attributes.Add(_shotCount);
 
-        foreach(ModifiableAttribute attribute in _attributes)
-        {
-            attribute.Awake();
-            attribute.CalculateValue();
-        }
+        InitAttributes();
     }
 }

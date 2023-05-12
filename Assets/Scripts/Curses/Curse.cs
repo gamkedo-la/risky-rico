@@ -15,10 +15,10 @@ public class Curse : MonoBehaviour
         _renderer = gameObject.GetComponent<SpriteRenderer>();
 
         // apply parameters to individual components
-        SetParameters(_parameters);
+        SetAttributes(_parameters);
     }
 
-    public void SetParameters(CurseModifiers parameters)
+    public void SetAttributes(CurseModifiers parameters)
     {
         _parameters = parameters;
         _renderer.sprite = _parameters.Image;

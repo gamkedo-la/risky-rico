@@ -14,10 +14,10 @@ public class Item : MonoBehaviour
         _renderer = gameObject.GetComponent<SpriteRenderer>();
 
         // apply parameters to individual components
-        SetParameters(_parameters);
+        SetAttributes(_parameters);
     }
 
-    public void SetParameters(ItemParameters parameters)
+    public void SetAttributes(ItemParameters parameters)
     {
         _parameters = parameters;
         _renderer.sprite = _parameters.Image;

@@ -21,7 +21,7 @@ public class ItemDropper : MonoBehaviour
             {
                 Debug.Log("dropped: " + item.name);
                 GameObject droppedItem = Instantiate(_itemPrefab, transform.position, Quaternion.identity);
-                droppedItem.GetComponent<Item>().SetParameters(item);
+                droppedItem.GetComponent<Item>().SetAttributes(item);
             }
         }
     }

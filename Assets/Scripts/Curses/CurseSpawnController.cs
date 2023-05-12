@@ -39,7 +39,7 @@ public class CurseSpawnController : MonoBehaviour
             Curse curseComponent = spawnedObject.GetComponent<Curse>();
             if (curseComponent != null)
             {
-                curseComponent.SetParameters(spawnType);
+                curseComponent.SetAttributes(spawnType);
             }
     
             // track spawned object in a list
