@@ -26,5 +26,6 @@ public class AttributeSet : ScriptableObject
     }
 
     public virtual void ApplyModifier(Modifier mod) {}
+
     public virtual void RemoveModifier(Modifier mod) {}
 }

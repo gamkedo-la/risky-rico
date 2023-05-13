@@ -4,7 +4,7 @@ using UnityEngine;
 using ScriptableObjectArchitecture;
 
 [CreateAssetMenu(fileName = "EnemyAttributes", menuName = "Enemies/Enemy Attributes", order = 1)]
-public class EnemyAttributes : AttributeSet
+public class EnemyAttributes : AttributeSet, IResetOnExitPlay
 {
     #region Combat Attributes
     [Header("MOVEMENT")]
@@ -50,7 +50,7 @@ public class EnemyAttributes : AttributeSet
     #endregion
 
     #region Methods
-    public void OnEnable() 
+    public void ResetAttributeList() 
     {
         _attributes.Clear();
 
@@ -60,6 +60,11 @@ public class EnemyAttributes : AttributeSet
         _attributes.Add(_yHealth);
 
         InitAttributes();
+    }
+
+    public void ResetOnExitPlay()
+    {
+        ResetAttributeList();
     }
 
     public void ApplyModifier(Modifier mod)

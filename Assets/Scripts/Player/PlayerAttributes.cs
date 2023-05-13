@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerAttributes", menuName = "Player/PlayerAttributes", order = 1)]
-public class PlayerAttributes : AttributeSet
+public class PlayerAttributes : AttributeSet, IResetOnExitPlay
 {
     #region Combat
     [Header("COMBAT STATS")]
@@ -42,7 +42,7 @@ public class PlayerAttributes : AttributeSet
     #endregion
 
     #region Methods
-    public void OnEnable()
+    public void ResetAttributeList()
     {
         _attributes.Clear();
 
@@ -52,6 +52,11 @@ public class PlayerAttributes : AttributeSet
         _attributes.Add(_shotCount);
 
         InitAttributes();
+    }
+
+    public void ResetOnExitPlay()
+    {
+        ResetAttributeList();
     }
 
     public void ApplyModifier(Modifier mod)
