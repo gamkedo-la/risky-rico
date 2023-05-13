@@ -58,4 +58,23 @@ public class EnemyAttributes : AttributeSet
 
         InitAttributes();
     }
+
+    public void ApplyModifier(Modifier mod)
+    {
+        switch(mod.TargetAttribute)
+        {
+            case AttributeType.MOVEMENT_SPEED:
+                _moveSpeed.AddModifier(mod);
+                break;
+
+            case AttributeType.ROTATION_FREQUENCY:
+                _rotationFrequency.AddModifier(mod);
+                break;
+
+            case AttributeType.HEALTH:
+                _xHealth.AddModifier(mod);
+                _yHealth.AddModifier(mod);
+                break;
+        }
+    }
 }

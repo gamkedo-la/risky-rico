@@ -52,4 +52,48 @@ public class PlayerAttributes : AttributeSet
 
         InitAttributes();
     }
+
+    public void ApplyModifier(Modifier mod)
+    {
+        switch(mod.TargetAttribute)
+        {
+            case AttributeType.MOVEMENT_SPEED:
+                _movementSpeed.AddModifier(mod);
+                break;
+
+            case AttributeType.DAMAGE:
+                _firingRate.AddModifier(mod);
+                break;
+
+            case AttributeType.FIRING_RATE:
+                _damage.AddModifier(mod);
+                break;
+
+            case AttributeType.SHOT_COUNT:
+                _shotCount.AddModifier(mod);
+                break;
+        }
+    }
+
+    public void RemoveModifier(Modifier mod)
+    {
+        switch(mod.TargetAttribute)
+        {
+            case AttributeType.MOVEMENT_SPEED:
+                _movementSpeed.RemoveModifier(mod);
+                break;
+
+            case AttributeType.DAMAGE:
+                _firingRate.RemoveModifier(mod);
+                break;
+
+            case AttributeType.FIRING_RATE:
+                _damage.RemoveModifier(mod);
+                break;
+
+            case AttributeType.SHOT_COUNT:
+                _shotCount.RemoveModifier(mod);
+                break;
+        }
+    }
 }

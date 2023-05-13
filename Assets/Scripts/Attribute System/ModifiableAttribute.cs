@@ -5,16 +5,16 @@ using UnityEngine;
 [System.Serializable]
 public class ModifiableAttribute
 {
-    [SerializeField] protected AttributeType _type;
+    [SerializeField] private AttributeType _type;
     public AttributeType Type => _type;
 
-    [SerializeReference] protected float _baseValue;
+    [SerializeReference] private float _baseValue;
     public float BaseValue => _baseValue;
     
-    [SerializeField, ReadOnly] protected float _currentValue;
+    [SerializeField, ReadOnly] private float _currentValue;
     public float CurrentValue => _currentValue;
 
-    [SerializeField] protected List<Modifier> _modifiers;
+    [SerializeField] private List<Modifier> _modifiers;
     public List<Modifier> Modifiers => _modifiers;
 
     public void Awake()
@@ -43,6 +43,12 @@ public class ModifiableAttribute
     public void AddModifier(Modifier modifier)
     {
         _modifiers.Add(modifier);
+        CalculateValue();
+    }
+
+    public void RemoveModifier(Modifier modifier)
+    {
+        _modifiers.Remove(modifier);
         CalculateValue();
     }
 }

@@ -13,4 +13,5 @@ public class Todo : MonoBehaviour
     // TODO: basic options
     // TODO: scoring zones based on proximity to player (closer to player, higher score)
     // TODO: consider global attribute set?
+    // TODO: clean out every attribute's modiifer list on start
 }

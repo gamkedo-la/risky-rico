@@ -24,6 +24,7 @@ public class CurseModifiers : ScriptableObject
 
     [Header("MODIFIERS")]
     [SerializeField] private List<Modifier> _modifiers = new List<Modifier>();
+    public List<Modifier> Modifiers => _modifiers;
 
     #endregion
     
@@ -46,18 +47,6 @@ public class CurseModifiers : ScriptableObject
     #endregion
 
     #region Methods
-    public void ApplyModifiers(PlayerAttributes player)
-    {
-        foreach(Modifier mod in _modifiers)
-        {
-            ModifiableAttribute attribute = player.GetAttribute(mod.TargetAttribute);
-            if (attribute != null)
-            {
-                attribute.AddModifier(mod);
-            }
-        }
-    }
-
     public void RemoveModifiers(PlayerAttributes player)
     {
         foreach(Modifier mod in _modifiers)

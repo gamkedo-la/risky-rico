@@ -29,4 +29,7 @@ public class AttributeSet : ScriptableObject
             attribute.CalculateValue();
         }
     }
+
+    public virtual void ApplyModifier(Modifier mod) {}
+    public virtual void RemoveModifier(Modifier mod) {}
 }

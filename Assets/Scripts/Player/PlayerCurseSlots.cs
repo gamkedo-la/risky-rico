@@ -34,7 +34,11 @@ public class PlayerCurseSlots : MonoBehaviour
         {
             Debug.Log("Added curse");
             _curses.Add(curse);
-            curse.ApplyModifiers(_player);
+
+            foreach(Modifier mod in curse.Modifiers)
+            {
+                _player.ApplyModifier(mod);
+            }
         }
     }
 }
