@@ -43,9 +43,8 @@ public class PlayerAttributes : AttributeSet
 
     public void OnEnable()
     {
-        // initialize the attribute list
-        Debug.Log("Awake");
         _attributes.Clear();
+
         _attributes.Add(_movementSpeed);
         _attributes.Add(_firingRate);
         _attributes.Add(_damage);

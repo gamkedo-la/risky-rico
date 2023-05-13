@@ -9,9 +9,9 @@ public class EnemyRotate : MonoBehaviour
 
    void Update()
    {
-        _rotationTimer += enemy.RotationFrequency * Time.deltaTime;
+        _rotationTimer += enemy.RotationFrequency.CurrentValue * Time.deltaTime;
 
-        if (enemy.RotationFrequency > 0f &&  _rotationTimer >= 1f)
+        if (enemy.RotationFrequency.CurrentValue > 0f &&  _rotationTimer >= 1f)
         {
             // rotate the enemy gameobject
             transform.Rotate(0,0,90);

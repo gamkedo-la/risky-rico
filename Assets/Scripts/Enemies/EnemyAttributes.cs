@@ -10,8 +10,8 @@ public class EnemyAttributes : AttributeSet
     [SerializeField] private ModifiableAttribute _moveSpeed;
     public ModifiableAttribute MoveSpeed => _moveSpeed;
     
-    [SerializeField] private float _rotationFrequency;
-    public float RotationFrequency => _rotationFrequency;
+    [SerializeField] private ModifiableAttribute _rotationFrequency;
+    public ModifiableAttribute RotationFrequency => _rotationFrequency;
 
 
     [Header("Health")]
@@ -22,14 +22,14 @@ public class EnemyAttributes : AttributeSet
 
 
     [Header("Movement Style")]
-    [SerializeField] private float _swerveAmplitude;
-    public float SwerveAmplitude => _swerveAmplitude;
+    [SerializeField] private ModifiableAttribute _swerveAmplitude;
+    public ModifiableAttribute SwerveAmplitude => _swerveAmplitude;
     
-    [SerializeField] private float _swervePeriod;
-    public float SwervePeriod => _swervePeriod;
+    [SerializeField] private ModifiableAttribute _swervePeriod;
+    public ModifiableAttribute SwervePeriod => _swervePeriod;
     
-    [SerializeField] private float _swerveFrequency;
-    public float SwerveFrequency => _swerveFrequency;
+    [SerializeField] private ModifiableAttribute _swerveFrequency;
+    public ModifiableAttribute SwerveFrequency => _swerveFrequency;
 
     [Header("Graphics")]
     [SerializeField] private Sprite _attackAnimation;
@@ -51,6 +51,7 @@ public class EnemyAttributes : AttributeSet
         _attributes.Clear();
 
         _attributes.Add(_moveSpeed);
+        _attributes.Add(_rotationFrequency);
 
         InitAttributes();
     }
