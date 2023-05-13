@@ -5,9 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class ModifiableAttribute
 {
-    [SerializeField] private AttributeType _type;
-    public AttributeType Type => _type;
-
     [SerializeReference] private float _baseValue;
     public float BaseValue => _baseValue;
     
@@ -23,18 +20,13 @@ public class ModifiableAttribute
         _modifiers.Clear();
     }
 
-    public void OnValidate()
-    {
-        CalculateValue();
-    }
-
     public void CalculateValue()
     {
         float newValue = _baseValue;
         
         foreach (Modifier modifier in _modifiers)
         {
-            newValue = modifier.ApplyModifier(newValue);
+            newValue = modifier.GetModifiedValue(newValue);
         }
         
         _currentValue = newValue;

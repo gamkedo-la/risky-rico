@@ -5,8 +5,8 @@ using ScriptableObjectArchitecture;
 
 public class Curse : MonoBehaviour
 {
-    [SerializeField] private CurseModifiers _parameters;
-    public CurseModifiers Parameters => _parameters;
+    [SerializeField] private CurseData _parameters;
+    public CurseData Parameters => _parameters;
     [SerializeField] private SpriteRenderer _renderer;
 
     void Awake()
@@ -18,7 +18,7 @@ public class Curse : MonoBehaviour
         SetAttributes(_parameters);
     }
 
-    public void SetAttributes(CurseModifiers parameters)
+    public void SetAttributes(CurseData parameters)
     {
         _parameters = parameters;
         _renderer.sprite = _parameters.Image;

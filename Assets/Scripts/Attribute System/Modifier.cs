@@ -19,7 +19,7 @@ public class Modifier
     [SerializeField] private float _duration;
     public float Duration => _duration;
 
-    public float ApplyModifier(float value)
+    public float GetModifiedValue(float value)
     {
         float newValue = value;
 

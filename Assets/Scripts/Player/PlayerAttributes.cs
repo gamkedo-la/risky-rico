@@ -41,6 +41,7 @@ public class PlayerAttributes : AttributeSet
     public AudioClip WalkSound => _walkSound;
     #endregion
 
+    #region Methods
     public void OnEnable()
     {
         _attributes.Clear();
@@ -96,4 +97,5 @@ public class PlayerAttributes : AttributeSet
                 break;
         }
     }
+    #endregion
 }
