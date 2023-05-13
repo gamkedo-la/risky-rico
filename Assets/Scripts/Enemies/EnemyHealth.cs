@@ -7,12 +7,12 @@ using UnityEngine.Events;
 public class EnemyHealth : MonoBehaviour
 {
     [Header("Stats")]
-    [SerializeField] private int _xHealth;
-    [SerializeField] private int _yHealth;
-    public int YHealth => _yHealth;
-    public int XHealth => _xHealth;
-    public int XHealthMax { get; private set; }
-    public int YHealthMax { get; private set; }
+    [SerializeField] private float _xHealth;
+    [SerializeField] private float _yHealth;
+    public float YHealth => _yHealth;
+    public float XHealth => _xHealth;
+    public float XHealthMax { get; private set; }
+    public float YHealthMax { get; private set; }
 
     [Header("Collisions")]
     [SerializeField] private GameObjectCollection _damagingObjects;
@@ -33,13 +33,13 @@ public class EnemyHealth : MonoBehaviour
         YHealthMax = _yHealth;
     }
 
-    public void SetHealth(int xHealth, int yHealth)
+    public void SetHealth(float xHealth, float yHealth)
     {
         _xHealth = xHealth;
         _yHealth = yHealth;
     }
 
-    public void TakeDamage(int xDamage, int yDamage)
+    public void TakeDamage(float xDamage, float yDamage)
     {
         _xHealth -= xDamage;
         _yHealth -= yDamage;
@@ -54,8 +54,8 @@ public class EnemyHealth : MonoBehaviour
         }  
 
         // assume zero damage as default
-        int xDamage = 0;
-        int yDamage = 0;
+        float xDamage = 0;
+        float yDamage = 0;
 
         // get center points and collider boundaries
         Bounds bounds = _collider.bounds;

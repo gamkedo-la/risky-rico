@@ -17,7 +17,6 @@ public class ModifiableAttribute
     [SerializeField] protected List<Modifier> _modifiers;
     public List<Modifier> Modifiers => _modifiers;
 
-
     public void Awake()
     {
         _currentValue = _baseValue;
@@ -44,12 +43,6 @@ public class ModifiableAttribute
     public void AddModifier(Modifier modifier)
     {
         _modifiers.Add(modifier);
-
-        if (!modifier.Listeners.Contains(this))
-        {
-            modifier.AddListener(this);
-        }
-        
         CalculateValue();
     }
 }

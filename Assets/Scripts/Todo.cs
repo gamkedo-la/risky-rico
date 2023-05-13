@@ -12,4 +12,5 @@ public class Todo : MonoBehaviour
     // TODO: highscore recording
     // TODO: basic options
     // TODO: scoring zones based on proximity to player (closer to player, higher score)
+    // TODO: consider global attribute set?
 }

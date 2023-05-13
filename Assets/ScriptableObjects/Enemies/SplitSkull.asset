@@ -22,8 +22,16 @@ MonoBehaviour:
     _baseValue: 0.5
     _currentValue: 0.5
     _modifiers: []
-  _xHealth: 1
-  _yHealth: 2
+  _xHealth:
+    _type: 4
+    _baseValue: 1
+    _currentValue: 1
+    _modifiers: []
+  _yHealth:
+    _type: 4
+    _baseValue: 2
+    _currentValue: 2
+    _modifiers: []
   _swerveAmplitude:
     _type: 0
     _baseValue: 0

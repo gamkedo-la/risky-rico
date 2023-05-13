@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AttributeSet", menuName = "Attribute System/Attribute Set", order = 1)]
 public class AttributeSet : ScriptableObject
 {
-    protected List<ModifiableAttribute> _attributes = new List<ModifiableAttribute>();
+    [SerializeField] protected List<ModifiableAttribute> _attributes = new List<ModifiableAttribute>();
     public List<ModifiableAttribute> Attributes => _attributes;
 
     public void OnValidate()

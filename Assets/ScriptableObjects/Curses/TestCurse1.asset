@@ -15,7 +15,7 @@ MonoBehaviour:
   _name: Slow Curse
   _description: 
   _modifiers:
-  - _operator: 3
+  - _operator: 2
     _value: 2
     _targetAttribute: 0
     _durationType: 0
@@ -33,6 +33,943 @@ MonoBehaviour:
       _baseValue: 45
       _currentValue: 45
       _modifiers: []
+    - _type: 0
+      _baseValue: 45
+      _currentValue: 90
+      _modifiers:
+      - _operator: 3
+        _value: 2
+        _targetAttribute: 0
+        _durationType: 0
+        _duration: 0
+        _listeners:
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 45
+          _modifiers: []
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 45
+          _modifiers: []
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 45
+          _modifiers: []
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 90
+          _modifiers:
+          - _operator: 3
+            _value: 2
+            _targetAttribute: 0
+            _durationType: 0
+            _duration: 0
+            _listeners:
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 90
+              _modifiers:
+              - _operator: 3
+                _value: 2
+                _targetAttribute: 0
+                _durationType: 0
+                _duration: 0
+                _listeners:
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+    - _type: 0
+      _baseValue: 45
+      _currentValue: 90
+      _modifiers:
+      - _operator: 3
+        _value: 2
+        _targetAttribute: 0
+        _durationType: 0
+        _duration: 0
+        _listeners:
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 45
+          _modifiers: []
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 45
+          _modifiers: []
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 45
+          _modifiers: []
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 90
+          _modifiers:
+          - _operator: 3
+            _value: 2
+            _targetAttribute: 0
+            _durationType: 0
+            _duration: 0
+            _listeners:
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 90
+              _modifiers:
+              - _operator: 3
+                _value: 2
+                _targetAttribute: 0
+                _durationType: 0
+                _duration: 0
+                _listeners:
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 90
+          _modifiers:
+          - _operator: 3
+            _value: 2
+            _targetAttribute: 0
+            _durationType: 0
+            _duration: 0
+            _listeners:
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 90
+              _modifiers:
+              - _operator: 3
+                _value: 2
+                _targetAttribute: 0
+                _durationType: 0
+                _duration: 0
+                _listeners:
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 90
+              _modifiers:
+              - _operator: 3
+                _value: 2
+                _targetAttribute: 0
+                _durationType: 0
+                _duration: 0
+                _listeners:
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+    - _type: 0
+      _baseValue: 45
+      _currentValue: 22.5
+      _modifiers:
+      - _operator: 2
+        _value: 2
+        _targetAttribute: 0
+        _durationType: 0
+        _duration: 0
+        _listeners:
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 45
+          _modifiers: []
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 45
+          _modifiers: []
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 45
+          _modifiers: []
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 90
+          _modifiers:
+          - _operator: 3
+            _value: 2
+            _targetAttribute: 0
+            _durationType: 0
+            _duration: 0
+            _listeners:
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 90
+              _modifiers:
+              - _operator: 3
+                _value: 2
+                _targetAttribute: 0
+                _durationType: 0
+                _duration: 0
+                _listeners:
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 90
+          _modifiers:
+          - _operator: 3
+            _value: 2
+            _targetAttribute: 0
+            _durationType: 0
+            _duration: 0
+            _listeners:
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 90
+              _modifiers:
+              - _operator: 3
+                _value: 2
+                _targetAttribute: 0
+                _durationType: 0
+                _duration: 0
+                _listeners:
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 90
+              _modifiers:
+              - _operator: 3
+                _value: 2
+                _targetAttribute: 0
+                _durationType: 0
+                _duration: 0
+                _listeners:
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+        - _type: 0
+          _baseValue: 45
+          _currentValue: 22.5
+          _modifiers:
+          - _operator: 2
+            _value: 2
+            _targetAttribute: 0
+            _durationType: 0
+            _duration: 0
+            _listeners:
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 45
+              _modifiers: []
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 90
+              _modifiers:
+              - _operator: 3
+                _value: 2
+                _targetAttribute: 0
+                _durationType: 0
+                _duration: 0
+                _listeners:
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 90
+              _modifiers:
+              - _operator: 3
+                _value: 2
+                _targetAttribute: 0
+                _durationType: 0
+                _duration: 0
+                _listeners:
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+            - _type: 0
+              _baseValue: 45
+              _currentValue: 22.5
+              _modifiers:
+              - _operator: 2
+                _value: 2
+                _targetAttribute: 0
+                _durationType: 0
+                _duration: 0
+                _listeners:
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 45
+                  _modifiers: []
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 90
+                  _modifiers:
+                  - _operator: 3
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+                - _type: 0
+                  _baseValue: 45
+                  _currentValue: 22.5
+                  _modifiers:
+                  - _operator: 2
+                    _value: 2
+                    _targetAttribute: 0
+                    _durationType: 0
+                    _duration: 0
+                    _listeners:
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 45
+                      _modifiers: []
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 90
+                      _modifiers:
+                      - _operator: 3
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
+                    - _type: 0
+                      _baseValue: 45
+                      _currentValue: 22.5
+                      _modifiers:
+                      - _operator: 2
+                        _value: 2
+                        _targetAttribute: 0
+                        _durationType: 0
+                        _duration: 0
   _image: {fileID: 21300000, guid: 6a1f17f4cfcd7ea44b4570f4c69608a3, type: 3}
   _spawnSound: {fileID: 0}
   _collectSound: {fileID: 0}

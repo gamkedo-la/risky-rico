@@ -12,6 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f394943c4c0a740bcc1105a174b559, type: 3}
   m_Name: PlayerAttributes
   m_EditorClassIdentifier: 
+  _attributes:
+  - _type: 0
+    _baseValue: 45
+    _currentValue: 45
+    _modifiers: []
+  - _type: 2
+    _baseValue: 0
+    _currentValue: 0
+    _modifiers: []
+  - _type: 1
+    _baseValue: 0
+    _currentValue: 0
+    _modifiers: []
+  - _type: 3
+    _baseValue: 0
+    _currentValue: 0
+    _modifiers: []
   _movementSpeed:
     _type: 0
     _baseValue: 45

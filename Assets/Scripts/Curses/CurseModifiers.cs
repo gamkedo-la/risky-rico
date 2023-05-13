@@ -48,11 +48,13 @@ public class CurseModifiers : ScriptableObject
     #region Methods
     public void ApplyModifiers(PlayerAttributes player)
     {
-        Debug.Log("ApplyModifiers");
         foreach(Modifier mod in _modifiers)
         {
             ModifiableAttribute attribute = player.GetAttribute(mod.TargetAttribute);
-            attribute.AddModifier(mod);
+            if (attribute != null)
+            {
+                attribute.AddModifier(mod);
+            }
         }
     }
 

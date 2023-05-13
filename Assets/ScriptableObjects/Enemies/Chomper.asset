@@ -12,18 +12,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0655fffd855c1048ad98b18142b0f16, type: 3}
   m_Name: Chomper
   m_EditorClassIdentifier: 
+  _attributes:
+  - _type: 0
+    _baseValue: 2
+    _currentValue: 2
+    _modifiers: []
+  - _type: 5
+    _baseValue: 0
+    _currentValue: 0
+    _modifiers: []
+  - _type: 4
+    _baseValue: 1
+    _currentValue: 1
+    _modifiers: []
+  - _type: 4
+    _baseValue: 1
+    _currentValue: 1
+    _modifiers: []
   _moveSpeed:
     _type: 0
     _baseValue: 2
     _currentValue: 2
     _modifiers: []
   _rotationFrequency:
-    _type: 0
+    _type: 5
     _baseValue: 0
     _currentValue: 0
     _modifiers: []
-  _xHealth: 1
-  _yHealth: 1
+  _xHealth:
+    _type: 4
+    _baseValue: 1
+    _currentValue: 1
+    _modifiers: []
+  _yHealth:
+    _type: 4
+    _baseValue: 1
+    _currentValue: 1
+    _modifiers: []
   _swerveAmplitude:
     _type: 6
     _baseValue: 0

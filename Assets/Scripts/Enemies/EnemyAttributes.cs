@@ -15,10 +15,11 @@ public class EnemyAttributes : AttributeSet
 
 
     [Header("Health")]
-    [SerializeField] private int _xHealth;
-    public int XHealth => _xHealth;
-    [SerializeField] private int _yHealth;
-    public int YHealth => _yHealth;
+    [SerializeField] private ModifiableAttribute _xHealth;
+    public ModifiableAttribute XHealth => _xHealth;
+
+    [SerializeField] private ModifiableAttribute _yHealth;
+    public ModifiableAttribute YHealth => _yHealth;
 
 
     [Header("Movement Style")]
@@ -52,6 +53,8 @@ public class EnemyAttributes : AttributeSet
 
         _attributes.Add(_moveSpeed);
         _attributes.Add(_rotationFrequency);
+        _attributes.Add(_xHealth);
+        _attributes.Add(_yHealth);
 
         InitAttributes();
     }

@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
         _parameters = parameters;
         _movement.SetSpeed(_parameters.MoveSpeed.CurrentValue);
         _renderer.sprite = _parameters.AttackAnimation;
-        _health.SetHealth(_parameters.XHealth, _parameters.YHealth);
+        _health.SetHealth(_parameters.XHealth.CurrentValue, _parameters.YHealth.CurrentValue);
         _rotationBehavior.enemy = parameters;
     }
 }
