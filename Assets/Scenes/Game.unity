@@ -2969,6 +2969,7 @@ GameObject:
   - component: {fileID: 1757149008}
   - component: {fileID: 1757149009}
   - component: {fileID: 1757149012}
+  - component: {fileID: 1757149013}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3175,7 +3176,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.004518509, y: 0.001273632}
@@ -3417,6 +3418,37 @@ MonoBehaviour:
   _maxParticleFallSpeed: -40
   _timeBetweenFootsteps: 0.5
   _input: {fileID: 1757148994}
+--- !u!114 &1757149013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757148991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5c0b4d14993b147a3f1629f4cd0135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collidableObjects: {fileID: 11400000, guid: 38d80e077c4c53c46927dc395409ca05, type: 2}
+  _enterResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 11937fd485ab1834992632af9d9d4840, type: 2}
+        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _exitResponse:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1810324352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4789620735973683907, guid: b318476577cc88e4893f450c116f8504, type: 3}

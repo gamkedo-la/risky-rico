@@ -17,9 +17,9 @@ GameObject:
   - component: {fileID: 2059695250948575312}
   - component: {fileID: 4692112344766710275}
   - component: {fileID: -1692661798096625055}
-  - component: {fileID: 5613115866552506646}
   - component: {fileID: 7656057947769960373}
   - component: {fileID: 5469568675701410671}
+  - component: {fileID: 8250850953221487804}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -177,6 +177,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 38d80e077c4c53c46927dc395409ca05, type: 2}
+        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.Collection`1[[UnityEngine.GameObject,
+          UnityEngine
+        m_MethodName: Add
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5220456760211092832}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _exitResponse:
     m_PersistentCalls:
       m_Calls: []
@@ -192,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cfd3a2488a5a9b4c81d97bc322ed83f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collidableObjects: {fileID: 11400000, guid: cf065a3fa2e5c644c8a9d4f3ea148a5e, type: 2}
+  _collidableObjects: {fileID: 11400000, guid: 38d80e077c4c53c46927dc395409ca05, type: 2}
 --- !u!61 &2059695250948575312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -206,7 +219,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.03634669}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -217,7 +230,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.8215709}
   m_EdgeRadius: 0
 --- !u!50 &4692112344766710275
 Rigidbody2D:
@@ -252,37 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17f12308fb82ff409af4af9188042d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5613115866552506646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5220456760211092832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c5c0b4d14993b147a3f1629f4cd0135, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collidableObjects: {fileID: 11400000, guid: 5867dc72610f0ff43b7e2f0286ca1f31, type: 2}
-  _enterResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 11937fd485ab1834992632af9d9d4840, type: 2}
-        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _exitResponse:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &7656057947769960373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,3 +296,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 1
+--- !u!114 &8250850953221487804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5220456760211092832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5c0b4d14993b147a3f1629f4cd0135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collidableObjects: {fileID: 11400000, guid: 38d80e077c4c53c46927dc395409ca05, type: 2}
+  _enterResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -1692661798096625055}
+        m_TargetAssemblyTypeName: DestroySelf, Assembly-CSharp
+        m_MethodName: DestroyOnCall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _exitResponse:
+    m_PersistentCalls:
+      m_Calls: []
