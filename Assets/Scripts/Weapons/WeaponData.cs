@@ -7,7 +7,7 @@ public class WeaponData : ScriptableObject
 {
     #region Basic Weapon Information
 
-    [Header("Basic Information")]
+    [Header("BASIC INFO")]
     [Tooltip("The name of the weapon the player will see on the UI")]
     [SerializeField] private string _name;
     public string Name => _name;
@@ -19,9 +19,15 @@ public class WeaponData : ScriptableObject
 
     #endregion
 
+    #region Weapon Modifiers
+    [Header("MODIFIERS")]
+    [SerializeField] private List<Modifier> _modifiers = new List<Modifier>();
+    public List<Modifier> Modifiers => _modifiers;
+    #endregion
+
     #region Weapon Stats
 
-    [Header("Combat Stats")]
+    [Header("COMBAT STATS")]
     [Tooltip("How quickly the weapon can fire (measured in shots per second)")]
     [Range(0.1f, 10f)]
     [SerializeField] private float _baseFiringRate;
@@ -49,7 +55,7 @@ public class WeaponData : ScriptableObject
 
     #region Graphics and Sound
 
-    [Header("Graphics and Sound")]
+    [Header("GRAPHICS AND SOUND")]
     [Tooltip("The icon displayed when viewed in the Shop UI")]
     [SerializeField] private Sprite _storeIcon;
     public Sprite StoreIcon => _storeIcon;

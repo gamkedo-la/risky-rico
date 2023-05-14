@@ -10,16 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29ea26e92beb1c644b5efbabf99569dd, type: 3}
-  m_Name: FreezeGun
+  m_Name: MultiShot
   m_EditorClassIdentifier: 
-  _name: Freeze Gun
-  _description: Low-power gun with a special freeze effect
-  _modifiers: []
-  _baseFiringRate: 2.47
+  _name: Multi-Shot
+  _description: Shoot 2 consecutive bullets at once. Gives you more firepower but
+    makes it harder to count your shots.
+  _modifiers:
+  - _operator: 4
+    _value: 2
+    _targetAttribute: 3
+    _durationType: 1
+    _duration: 0
+  _baseFiringRate: 4
   _baseDamage: 1
-  _baseAmmoCapacity: 4
-  _baseBulletCount: 1
-  _effect: {fileID: 11400000, guid: 79cf8935d40b90444be4b2b70e05ea10, type: 2}
+  _baseAmmoCapacity: 10
+  _baseBulletCount: 2
+  _effect: {fileID: 0}
   _storeIcon: {fileID: 0}
   _equipIcon: {fileID: 0}
   _firingSound: {fileID: 0}
