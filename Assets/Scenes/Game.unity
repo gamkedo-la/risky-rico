@@ -1198,7 +1198,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &468978263
 Transform:
   m_ObjectHideFlags: 0
@@ -2970,6 +2970,7 @@ GameObject:
   - component: {fileID: 1757149009}
   - component: {fileID: 1757149012}
   - component: {fileID: 1757149013}
+  - component: {fileID: 1757149014}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3130,6 +3131,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 1345bdec-dfc5-4d97-9d8a-461cfcc9e81a
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 501bc0a1-8850-4c08-af1b-0bf735a13dc4
+    m_ActionName: Player/SwitchWeapon[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -3449,6 +3454,20 @@ MonoBehaviour:
   _exitResponse:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1757149014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757148991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cdbba2661cd17b489ccb24c80856847, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
+  _input: {fileID: 1757148994}
 --- !u!1 &1810324352 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4789620735973683907, guid: b318476577cc88e4893f450c116f8504, type: 3}
