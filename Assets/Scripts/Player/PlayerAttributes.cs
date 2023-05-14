@@ -18,6 +18,12 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
 
     [SerializeField] private ModifiableAttribute _shotCount = default(ModifiableAttribute);
     public ModifiableAttribute ShotCount => _shotCount;
+
+    [SerializeField] private WeaponData _currentWeapon = default(WeaponData);
+    public WeaponData CurrentWeapon => _currentWeapon;
+
+    [SerializeField] private List<WeaponData> _weaponList = new List<WeaponData>();
+    public List<WeaponData> WeaponList => _weaponList;
     #endregion
 
     #region Graphics
@@ -106,6 +112,11 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
                 _shotCount.RemoveModifier(mod);
                 break;
         }
+    }
+
+    public void SetCurrentWeapon(WeaponData weapon)
+    {
+        _currentWeapon = weapon;
     }
     #endregion
 }

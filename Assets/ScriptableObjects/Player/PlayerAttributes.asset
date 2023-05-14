@@ -28,6 +28,10 @@ MonoBehaviour:
     _baseValue: 2
     _currentValue: 2
     _modifiers: []
+  _currentWeapon: {fileID: 11400000, guid: 0c067d4eb4affc24ca8d8b13fab7cd27, type: 2}
+  _weaponList:
+  - {fileID: 11400000, guid: a2abe3a84582ac64cb2e943d563a0d54, type: 2}
+  - {fileID: 11400000, guid: 0c067d4eb4affc24ca8d8b13fab7cd27, type: 2}
   _idleAnimation: {fileID: 0}
   _deathAnimation: {fileID: 0}
   _walkAnimation: {fileID: 1451624447, guid: 114367acc1301a346ae3593b0040b472, type: 3}
