@@ -25,21 +25,27 @@ public class Shoot : MonoBehaviour
         // update aiming direction with inputs and shoot when the timer reaches 1
         if (_input.actions["shoot"].triggered && _shotTimer >= 1f)
         {
+            float offsetAmount = 1f;
             float _aimDirectionX = _input.actions["shoot"].ReadValue<Vector2>().x;
             float _aimDirectionY = _input.actions["shoot"].ReadValue<Vector2>().y;
             _aimDirection.Value = new Vector2(_aimDirectionX, _aimDirectionY);
-            SpawnProjectile();
+
+            for (float i = 0; i < _player.ShotCount.CurrentValue; i++)
+            {
+                float xOffset = _aimDirectionX * offsetAmount * i;
+                float yOffset = _aimDirectionY * offsetAmount * i;
+                SpawnProjectile(xOffset, yOffset);
+            }
+            
             _shootEvent.Raise();
             _sound.Play();
             _shotTimer = 0f;
         }
     }
 
-    void SpawnProjectile()
+    void SpawnProjectile(float bufferX, float bufferY)
     {
         // set spawn position
-        float bufferX = _aimDirection.Value.x;
-        float bufferY = _aimDirection.Value.y;
         Vector3 spawnPosition = new Vector3(transform.position.x + bufferX, transform.position.y + bufferY, transform.position.z);
         
         // spawn object

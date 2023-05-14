@@ -25,8 +25,8 @@ MonoBehaviour:
     _currentValue: 1
     _modifiers: []
   _shotCount:
-    _baseValue: 0
-    _currentValue: 0
+    _baseValue: 2
+    _currentValue: 2
     _modifiers: []
   _idleAnimation: {fileID: 0}
   _deathAnimation: {fileID: 0}
