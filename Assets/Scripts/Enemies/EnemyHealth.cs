@@ -63,16 +63,24 @@ public class EnemyHealth : MonoBehaviour
         Vector3 center = bounds.center;
         Vector3 otherCenter = otherBounds.center;
 
-        // contained within height boundary of other collider
-        if (otherCenter.y > center.y - bounds.extents.y && otherCenter.y < center.y + bounds.extents.y)
+        // get damage data of colliding object
+        DamageController damageController = collision.gameObject.GetComponent<DamageController>();
+        float defaultDamageAmount = 1;
+        if (damageController != null)
         {
-            xDamage = 1;
+            defaultDamageAmount = damageController.Damage;
         }
 
-        // contained within width boundary of other collider
+        // check if colliding object is contained within height boundary of this collider
+        if (otherCenter.y > center.y - bounds.extents.y && otherCenter.y < center.y + bounds.extents.y)
+        {
+            xDamage = defaultDamageAmount;
+        }
+
+        // check if colliding object is contained within width boundary of this collider
         if (otherCenter.x > center.x - bounds.extents.x && otherCenter.x < center.x + bounds.extents.x)
         {
-            yDamage = 1;
+            yDamage = defaultDamageAmount;
         }
 
         // apply damage based on x and y values

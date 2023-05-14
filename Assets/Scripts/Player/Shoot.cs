@@ -55,5 +55,12 @@ public class Shoot : MonoBehaviour
         {
             _newProjectile.GetComponent<MoveInOwnDirection>().SetDirection(_aimDirection.Value);
         }
+
+        // set damage of the projectile
+        DamageController damageController = _newProjectile.GetComponent<DamageController>();
+        if (damageController != null)
+        {
+            damageController.SetDamage(_player.Damage.CurrentValue);
+        }
     }
 }
