@@ -9,11 +9,21 @@ public class Shoot : MonoBehaviour
     [SerializeField] private PlayerInput _input;
     [SerializeField] private SoundEffect _sound;
     [SerializeField] private GameEvent _shootEvent;
+    [SerializeField] private PlayerAttributes _player;
+    private float _shotTimer;
+
+    void Awake()
+    {
+        _shotTimer = 1f;
+    }
 
     void Update()
     {
-        // update aiming direction with inputs and shoot
-        if (_input.actions["shoot"].triggered)
+        // tick shot timer upward by the player's firing rate
+        _shotTimer += Time.deltaTime * _player.FiringRate.CurrentValue;
+
+        // update aiming direction with inputs and shoot when the timer reaches 1
+        if (_input.actions["shoot"].triggered && _shotTimer >= 1f)
         {
             float _aimDirectionX = _input.actions["shoot"].ReadValue<Vector2>().x;
             float _aimDirectionY = _input.actions["shoot"].ReadValue<Vector2>().y;
@@ -21,6 +31,7 @@ public class Shoot : MonoBehaviour
             SpawnProjectile();
             _shootEvent.Raise();
             _sound.Play();
+            _shotTimer = 0f;
         }
     }
 

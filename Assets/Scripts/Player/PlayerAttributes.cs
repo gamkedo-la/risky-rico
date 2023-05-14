@@ -59,6 +59,11 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         ResetAttributeList();
     }
 
+    public void OnEnable()
+    {
+        ResetAttributeList();
+    }
+
     public void ApplyModifier(Modifier mod)
     {
         switch(mod.TargetAttribute)
