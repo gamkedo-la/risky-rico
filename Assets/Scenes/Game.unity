@@ -3461,6 +3461,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1757148993}
     m_Modifications:
+    - target: {fileID: 9184134307034593389, guid: 618757171ca55dd40a3455714c0108d8, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9184134307034593392, guid: 618757171ca55dd40a3455714c0108d8, type: 3}
       propertyPath: m_Name
       value: Dust

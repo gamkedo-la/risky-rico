@@ -32,9 +32,9 @@ public class Shoot : MonoBehaviour
 
             for (float i = 0; i < _player.ShotCount.CurrentValue; i++)
             {
-                float xOffset = _aimDirectionX * offsetAmount * i;
-                float yOffset = _aimDirectionY * offsetAmount * i;
-                SpawnProjectile(xOffset, yOffset);
+                float offsetX = _aimDirectionX * offsetAmount * i;
+                float offsetY = _aimDirectionY * offsetAmount * i;
+                SpawnProjectile(offsetX, offsetY);
             }
             
             _shootEvent.Raise();
