@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.InputSystem;
+using ScriptableObjectArchitecture;
 
 public class InteractionRadius : MonoBehaviour
 {
+    [Header("INPUTS")]
     private PlayerInput _input;
+
+    [Header("DETECTION SETTINGS")]
     public List<IInteractable> interactables = new List<IInteractable>();
     public float detectionDistance = 2f;
+
+    [Header("UI")]
+    [SerializeField] private StringReference _interactionPrompt;
 
     void Awake()
     {
@@ -38,7 +45,16 @@ public class InteractionRadius : MonoBehaviour
                 )
             {
                 interactables.Add(interactable);
+
+                // signal UI to display interation prompt
+                _interactionPrompt.Value = interactable.Prompt;
             }
+        }
+
+        // reset UI when no interactable is near
+        if (interactables.Count == 0)
+        {
+            _interactionPrompt.Value = "";
         }
 
         // interact with the nearest interactable on input
