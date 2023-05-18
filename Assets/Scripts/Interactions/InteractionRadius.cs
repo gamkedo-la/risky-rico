@@ -44,6 +44,7 @@ public class InteractionRadius : MonoBehaviour
                     interactable.InteractionEnabled
                 )
             {
+                // add interactable to a list of interactables that is treated as a stack (last in, first out)
                 interactables.Add(interactable);
 
                 // signal UI to display interation prompt
@@ -57,10 +58,10 @@ public class InteractionRadius : MonoBehaviour
             _interactionPrompt.Value = "";
         }
 
-        // interact with the nearest interactable on input
+        // interact with the last interactable (top of the stack)
         if (_input.actions["interact"].triggered && interactables.Count > 0)
         {
-            interactables[0].ReceiveInteraction(gameObject);
+            interactables.Last().ReceiveInteraction(gameObject);
         }
     }
 }
