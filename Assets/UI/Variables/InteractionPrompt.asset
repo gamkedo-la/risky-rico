@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2474e5d1f7070d64da66908d8dabfce4, type: 3}
   m_Name: InteractionPrompt
   m_EditorClassIdentifier: 
-  _value: TEST PROMPT
+  _value: 
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0

@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
 
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour, IInteractable
 {
     [SerializeField] private ItemParameters _parameters;
     [SerializeField] private SpriteRenderer _renderer;
 
+    public string Prompt {get; set; }
+    public bool InteractionEnabled {get; set; }
+
     void Awake()
     {
+        InteractionEnabled = true;
+        Prompt = "Pick up";
+
         // get necesssary components
         _renderer = gameObject.GetComponent<SpriteRenderer>();
 
@@ -26,5 +32,12 @@ public class Item : MonoBehaviour
     public void ActivateEffects(PlayerAttributes playerParameters)
     {
         Debug.Log("Activating effects of " + _parameters.name);
+    }
+
+    public void ReceiveInteraction(GameObject interactor)
+    {
+        Debug.Log("Item found");
+        InteractionEnabled = false;
+        Destroy(gameObject);
     }
 }
