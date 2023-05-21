@@ -16,15 +16,9 @@ public class Todo : MonoBehaviour
 
     // UI:
     // TODO: menu prefab
-    // TODO: --- header
-    // TODO: --- selection cursor prefab
-    // TODO: --- input list
-    // TODO: --- slider with label prefab
-    // TODO: --- selection with label prefab
-    // TODO: --- explanation text object
-    // TODO: --- option data: (explanation text, label, type, value, handler)
-    // TODO: --- input handler (move cursor, select options, back out of menu)
-    // TODO: menu stack
+    // TODO: --- input handler 
+
+    // TODO: menu stack (back out of menu with spacebar)
     // TODO: options menu prefab
     // TODO: main menu prefab
     // TODO: pause menu prefab
