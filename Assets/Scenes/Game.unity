@@ -1028,7 +1028,6 @@ GameObject:
   - component: {fileID: 445036593}
   - component: {fileID: 445036592}
   - component: {fileID: 445036594}
-  - component: {fileID: 445036595}
   m_Layer: 5
   m_Name: ScoreTextShadow
   m_TagString: Untagged
@@ -1173,25 +1172,6 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 
     _variable: {fileID: 0}
---- !u!114 &445036595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 445036586}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1713efd51c26a543b4cdc92011716bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxScreenShakeOffset: 4
-  _traumaLevel: {fileID: 11400000, guid: 0ef49d46e6b989849801aec2cb2a0774, type: 2}
-  _maxTraumaLevel: {fileID: 0}
-  _shakeX: 0
-  _shakeY: 1
-  _rotate: 0
-  _initialPosition: {x: 0, y: 0}
 --- !u!4 &452306817 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1449252526331913631, guid: 67d257e52c8f34141a15cf302823219f, type: 3}
@@ -3116,7 +3096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxScreenShakeOffset: 3
   _traumaLevel: {fileID: 11400000, guid: 0ef49d46e6b989849801aec2cb2a0774, type: 2}
-  _maxTraumaLevel: {fileID: 0}
+  _maxTraumaLevel: {fileID: 11400000, guid: 6587344d9af4e7c4b942b2275c6ac9ea, type: 2}
   _shakeX: 0
   _shakeY: 1
   _rotate: 0
@@ -3136,7 +3116,6 @@ GameObject:
   - component: {fileID: 1470854284}
   - component: {fileID: 1470854283}
   - component: {fileID: 1470854282}
-  - component: {fileID: 1470854288}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -3364,25 +3343,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470854280}
   m_CullTransparentMesh: 1
---- !u!114 &1470854288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1470854280}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1713efd51c26a543b4cdc92011716bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxScreenShakeOffset: 2
-  _traumaLevel: {fileID: 11400000, guid: 0ef49d46e6b989849801aec2cb2a0774, type: 2}
-  _maxTraumaLevel: {fileID: 11400000, guid: 6587344d9af4e7c4b942b2275c6ac9ea, type: 2}
-  _shakeX: 0
-  _shakeY: 1
-  _rotate: 0
-  _initialPosition: {x: 0, y: 0}
 --- !u!1 &1477986043
 GameObject:
   m_ObjectHideFlags: 0
