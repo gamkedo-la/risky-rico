@@ -123,17 +123,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &50151907 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8626482490646374238, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
-  m_PrefabInstance: {fileID: 348201161}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &50151909 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8626482490646374208, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
   m_PrefabInstance: {fileID: 348201161}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 50151907}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
@@ -281,7 +276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8626482491602490610, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
       propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8626482491602490610, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
       propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -290,22 +285,22 @@ PrefabInstance:
     - target: {fileID: 8626482491602490610, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
       propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 50151907}
+      objectReference: {fileID: 360067459}
     - target: {fileID: 8626482491602490610, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
       propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8626482491602490610, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
       propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: UpdateValue
       objectReference: {fileID: 0}
     - target: {fileID: 8626482491602490610, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
       propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: 
+      value: SliderSOVariable, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8626482491602490610, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
       propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8626482491602490611, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
       propertyPath: m_Pivot.x

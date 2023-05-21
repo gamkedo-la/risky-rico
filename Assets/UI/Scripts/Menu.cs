@@ -96,6 +96,9 @@ public class Menu : MonoBehaviour
 
     void SetExplanationText(string newText)
     {
-        _explanationText.text = newText;
+        if (_explanationText != null)
+        {
+            _explanationText.text = newText;
+        }
     }
 }
