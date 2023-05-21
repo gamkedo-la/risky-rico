@@ -58,11 +58,18 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
         _attributes.Add(_rotationFrequency);
         _attributes.Add(_xHealth);
         _attributes.Add(_yHealth);
+        _attributes.Add(_swerveAmplitude);
+        _attributes.Add(_swerveFrequency);
 
         InitAttributes();
     }
 
     public void ResetOnExitPlay()
+    {
+        ResetAttributeList();
+    }
+
+    public void OnEnable()
     {
         ResetAttributeList();
     }

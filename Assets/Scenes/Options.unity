@@ -1452,6 +1452,10 @@ PrefabInstance:
       value: RESOLUTION
       objectReference: {fileID: 0}
     - target: {fileID: 2372733442975367386, guid: b4206dcec2b671049a6b0254501a8fd9, type: 3}
+      propertyPath: _description
+      value: Pick a resolution size
+      objectReference: {fileID: 0}
+    - target: {fileID: 2372733442975367386, guid: b4206dcec2b671049a6b0254501a8fd9, type: 3}
       propertyPath: _values.Array.data[0]
       value: 1920x1080
       objectReference: {fileID: 0}

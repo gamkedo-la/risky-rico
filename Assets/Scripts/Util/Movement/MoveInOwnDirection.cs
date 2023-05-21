@@ -7,12 +7,15 @@ public class MoveInOwnDirection : MonoBehaviour
 {
     [SerializeField]
     private float _xDirection = 0f;
+    public float XDirection => _xDirection;
     
     [SerializeField]
     private float _yDirection = 0f;
+    public float YDirection => _yDirection;
 
     [SerializeField]
     private FloatReference _speed;
+    public FloatReference Speed => _speed;
 
     void Update()
     {
@@ -27,6 +30,9 @@ public class MoveInOwnDirection : MonoBehaviour
 
     public void SetDirection(Vector2 direction)
     {
+
+        Debug.Log("New direction: " + direction);
+        
         _xDirection = direction.x;
         _yDirection = direction.y;
     }
