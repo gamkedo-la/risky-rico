@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxScreenShakeOffset: 0.1
   _traumaLevel: {fileID: 11400000, guid: f9b09d929a2435e41a6bc41559af562b, type: 2}
+  _maxTraumaLevel: {fileID: 11400000, guid: 6587344d9af4e7c4b942b2275c6ac9ea, type: 2}
   _shakeX: 1
   _shakeY: 0
   _rotate: 0

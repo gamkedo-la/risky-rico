@@ -1187,6 +1187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxScreenShakeOffset: 4
   _traumaLevel: {fileID: 11400000, guid: 0ef49d46e6b989849801aec2cb2a0774, type: 2}
+  _maxTraumaLevel: {fileID: 0}
   _shakeX: 0
   _shakeY: 1
   _rotate: 0
@@ -3115,6 +3116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxScreenShakeOffset: 3
   _traumaLevel: {fileID: 11400000, guid: 0ef49d46e6b989849801aec2cb2a0774, type: 2}
+  _maxTraumaLevel: {fileID: 0}
   _shakeX: 0
   _shakeY: 1
   _rotate: 0
@@ -3376,6 +3378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxScreenShakeOffset: 2
   _traumaLevel: {fileID: 11400000, guid: 0ef49d46e6b989849801aec2cb2a0774, type: 2}
+  _maxTraumaLevel: {fileID: 11400000, guid: 6587344d9af4e7c4b942b2275c6ac9ea, type: 2}
   _shakeX: 0
   _shakeY: 1
   _rotate: 0

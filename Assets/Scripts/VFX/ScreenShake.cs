@@ -5,6 +5,7 @@ public class ScreenShake : MonoBehaviour
 {
     [SerializeField] private float _maxScreenShakeOffset; // maximum offset for shaking translationally
     [SerializeField] private FloatVariable _traumaLevel; // determines time and power of screenshake
+    [SerializeField] private FloatVariable _maxTraumaLevel; // determines maximum screenshake multiplier
     [SerializeField] private bool _shakeX;
     [SerializeField] private bool _shakeY;
     [SerializeField] private bool _rotate;
@@ -19,7 +20,7 @@ public class ScreenShake : MonoBehaviour
     void Update()
     {
         // decrease trauma over time
-        _traumaLevel.Value -= Time.deltaTime;
+        _traumaLevel.Value = (_traumaLevel.Value - Time.deltaTime) * _maxTraumaLevel.Value;
         if (_traumaLevel <= 0)
         {
             gameObject.transform.position = new Vector3(_initialPosition.x, _initialPosition.y, gameObject.transform.position.z);
