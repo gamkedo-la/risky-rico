@@ -964,6 +964,7 @@ Transform:
   - {fileID: 151275995}
   - {fileID: 1136618706}
   - {fileID: 1093256044}
+  - {fileID: 1546020196}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2414,7 +2415,7 @@ GameObject:
   - component: {fileID: 1406932314}
   - component: {fileID: 1406932315}
   m_Layer: 0
-  m_Name: PauseMenu
+  m_Name: PauseMenuController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2944,13 +2945,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546020194}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.019357204, y: 0.38232815, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.9140269, y: 1.5015346, z: -0.1264298}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 397148488}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1695337516 stripped
 Transform:
@@ -3745,6 +3746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 281514952879029380, guid: c95593126d3686f41b138834804dfea9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 281514952879029383, guid: c95593126d3686f41b138834804dfea9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3832,7 +3837,7 @@ PrefabInstance:
     - target: {fileID: 1151727966648666853, guid: c95593126d3686f41b138834804dfea9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1406932315}
+      objectReference: {fileID: 0}
     - target: {fileID: 8936309058160252649, guid: c95593126d3686f41b138834804dfea9, type: 3}
       propertyPath: _input
       value: 
