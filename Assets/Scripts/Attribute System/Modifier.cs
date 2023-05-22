@@ -14,11 +14,6 @@ public class Modifier
     [SerializeField] private AttributeType _targetAttribute;
     public AttributeType TargetAttribute => _targetAttribute;
 
-    [SerializeField] private DurationType _durationType;
-
-    [SerializeField] private float _duration;
-    public float Duration => _duration;
-
     public float GetModifiedValue(float value)
     {
         float newValue = value;

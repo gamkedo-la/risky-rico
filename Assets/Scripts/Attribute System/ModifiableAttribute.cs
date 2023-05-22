@@ -5,12 +5,17 @@ using UnityEngine;
 [System.Serializable]
 public class ModifiableAttribute
 {
+    [Header("VALUES")]
+    [Tooltip("The default float value for this attribute")]
     [SerializeReference] private float _baseValue;
     public float BaseValue => _baseValue;
     
+    [Tooltip("The modified float value for this attribute (typically read by other components)")]
     [SerializeField, ReadOnly] private float _currentValue;
     public float CurrentValue => _currentValue;
 
+    [Header("MODIFICATIONS")]
+    [Tooltip("The active modifers factored into the current value")]
     [SerializeField] private List<Modifier> _modifiers;
     public List<Modifier> Modifiers => _modifiers;
 
