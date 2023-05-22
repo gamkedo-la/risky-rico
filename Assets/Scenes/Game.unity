@@ -629,6 +629,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8914cb05061615245a8a1470683a7ae6, type: 2}
   - {fileID: 11400000, guid: 8914cb05061615245a8a1470683a7ae6, type: 2}
   - {fileID: 11400000, guid: 8914cb05061615245a8a1470683a7ae6, type: 2}
+  - {fileID: 11400000, guid: 8914cb05061615245a8a1470683a7ae6, type: 2}
   _waveTimer: 0
   _restTimer: 0
   _spawnTimer: 0
@@ -641,6 +642,7 @@ MonoBehaviour:
   - {fileID: 1935729151}
   - {fileID: 108855272}
   _spawnedObjects: {fileID: 11400000, guid: ff11018c6958365408a2d16f7d94eacb, type: 2}
+  _spawnFluctuation: {fileID: 11400000, guid: 18f9d1e93b1381c46b9b38b784262fc4, type: 2}
   _waveEvent: {fileID: 11400000, guid: 1348622ef20ab584c8082d2fa0229ca5, type: 2}
   _restEvent: {fileID: 11400000, guid: 697f39de4994da945808111ab4682867, type: 2}
   _endEvent: {fileID: 11400000, guid: 22d214e29d7860f4abc40e0dd150775f, type: 2}

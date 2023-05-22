@@ -41,6 +41,8 @@ public class EnemySpawnController : MonoBehaviour
     
     [Tooltip("Collection of game objects that have been spawned (used for deleting all objects in cleanup)")]
     [SerializeField, HideCustomDrawer] private GameObjectCollection _spawnedObjects;
+
+    [SerializeField, HideCustomDrawer] private AnimationCurveVariable _spawnFluctuation;
     #endregion
 
     #region Events
@@ -93,8 +95,11 @@ public class EnemySpawnController : MonoBehaviour
                 // increment spawn timer
                 _spawnTimer += Time.deltaTime;
 
+                // get our current point in the spawn fluctuation
+                float timeBetweenSpawnsModifier = _spawnFluctuation.Value.Evaluate(_waveTimer / currentWave.Duration) * (_waveIndex + 1);
+
                 // if it's time to spawn a pattern
-                if (_spawnTimer >= currentWave.BaseTimeBetweenSpawns)
+                if (_spawnTimer >= currentWave.BaseTimeBetweenSpawns - timeBetweenSpawnsModifier)
                 {
                     // --- get current pattern with patternIndex
                     EnemyPattern currentPattern = currentWave.EnemyPatterns[_patternIndex];

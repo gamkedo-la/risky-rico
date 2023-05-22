@@ -30,9 +30,6 @@ public class MoveInOwnDirection : MonoBehaviour
 
     public void SetDirection(Vector2 direction)
     {
-
-        Debug.Log("New direction: " + direction);
-        
         _xDirection = direction.x;
         _yDirection = direction.y;
     }

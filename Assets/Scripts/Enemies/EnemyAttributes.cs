@@ -17,9 +17,6 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
     [SerializeField] private ModifiableAttribute _swerveAmplitude;
     public ModifiableAttribute SwerveAmplitude => _swerveAmplitude;
     
-    [SerializeField] private ModifiableAttribute _swervePeriod;
-    public ModifiableAttribute SwervePeriod => _swervePeriod;
-    
     [SerializeField] private ModifiableAttribute _swerveFrequency;
     public ModifiableAttribute SwerveFrequency => _swerveFrequency;
 
