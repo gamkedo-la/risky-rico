@@ -3,7 +3,7 @@ using UnityEngine;
 public class Todo : MonoBehaviour
 {
     // FOR COMBAT LOOP:
-    // TODO: refactor existing code (consitent style, use custom collider)
+    // TODO: refactor existing code (consitent style, use custom collider, remove unused files, file org)
     // TODO: loop first level for testing
     
     // GENERAL:
