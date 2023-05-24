@@ -33,3 +33,6 @@ public class IntGameObjectDictionary : SerializableDictionary<int, GameObject> {
 
 [Serializable]
 public class IntEnemyParametersDictionary : SerializableDictionary<int, EnemyAttributes> {}
+
+[Serializable]
+public class SoundEffectDictionary : SerializableDictionary<string, SoundEffect> {}
