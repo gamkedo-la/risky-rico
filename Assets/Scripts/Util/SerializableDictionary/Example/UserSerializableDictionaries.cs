@@ -36,3 +36,6 @@ public class IntEnemyParametersDictionary : SerializableDictionary<int, EnemyAtt
 
 [Serializable]
 public class SoundEffectDictionary : SerializableDictionary<string, SoundEffect> {}
+
+[Serializable]
+public class MusicDictionary : SerializableDictionary<string, MusicTrack> {}

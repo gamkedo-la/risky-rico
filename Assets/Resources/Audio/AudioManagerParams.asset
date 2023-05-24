@@ -16,4 +16,20 @@ MonoBehaviour:
   masterGroup: {fileID: 24300002, guid: 1b5384a8d8364834fa5d3ebfc448db96, type: 2}
   sfxGroup: {fileID: -4277074891955562761, guid: 1b5384a8d8364834fa5d3ebfc448db96, type: 2}
   musicGroup: {fileID: -8598886053118577034, guid: 1b5384a8d8364834fa5d3ebfc448db96, type: 2}
-  snapShots: []
+  snapShots:
+  - {fileID: 24500006, guid: 1b5384a8d8364834fa5d3ebfc448db96, type: 2}
+  - {fileID: 6844079630540778751, guid: 1b5384a8d8364834fa5d3ebfc448db96, type: 2}
+  soundDictionary:
+    m_keys:
+    - PlayerShoot
+    - Score
+    - ComboBreak
+    m_values:
+    - {fileID: 11400000, guid: 2235b4818cfa234469793d2d9ae030cd, type: 2}
+    - {fileID: 11400000, guid: 45fd6e348b2c6d04ea2507f755e224fc, type: 2}
+    - {fileID: 11400000, guid: 4e49115fdc74b0d4d892eee2615a608d, type: 2}
+  musicDictionary:
+    m_keys:
+    - Combat
+    m_values:
+    - {fileID: 11400000, guid: 7ff71c7d7e8579d49b89591f85789687, type: 2}

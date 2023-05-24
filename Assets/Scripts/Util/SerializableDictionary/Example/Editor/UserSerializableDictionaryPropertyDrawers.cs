@@ -10,6 +10,7 @@ using UnityEditor;
 [CustomPropertyDrawer(typeof(IntGameObjectDictionary))]
 [CustomPropertyDrawer(typeof(IntEnemyParametersDictionary))]
 [CustomPropertyDrawer(typeof(SoundEffectDictionary))]
+[CustomPropertyDrawer(typeof(MusicDictionary))]
 [CustomPropertyDrawer(typeof(ItemDropTableDictionary))]
 public class AnySerializableDictionaryPropertyDrawer : SerializableDictionaryPropertyDrawer {}
 
