@@ -9,8 +9,6 @@ using UnityEngine;
         [SerializeField] private AudioClip clip;
         public AudioClip Clip => clip;
 
-        // TODO: write fade-in/fade-out methods
-
         [SerializeField] private bool loop;
         public bool Loop => loop;
 

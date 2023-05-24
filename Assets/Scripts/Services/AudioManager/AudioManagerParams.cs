@@ -12,4 +12,5 @@ public class AudioManagerParams : ScriptableObject
     public AudioMixerGroup musicGroup;
     public List<AudioMixerSnapshot> snapShots;
     public SoundEffectDictionary soundDictionary;
+    public MusicDictionary musicDictionary;
 }

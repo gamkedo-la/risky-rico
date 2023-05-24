@@ -7,7 +7,6 @@ public class Shoot : MonoBehaviour
     [SerializeField] private Vector2Variable _aimDirection;
     [SerializeField] private GameObject _projectile;
     [SerializeField] private PlayerInput _input;
-    [SerializeField] private SoundEffect _sound;
     [SerializeField] private GameEvent _shootEvent;
     [SerializeField] private PlayerAttributes _player;
     private float _shotTimer;
@@ -38,7 +37,7 @@ public class Shoot : MonoBehaviour
             }
             
             _shootEvent.Raise();
-            _sound.Play();
+            ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("PlayerShoot");
             _shotTimer = 0f;
         }
     }
