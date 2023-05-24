@@ -43,7 +43,7 @@ using UnityEngine;
             }
         }
 
-        private AudioClip GetAudioClip()
+        public AudioClip GetAudioClip()
         {
             // get current clip
             var clip = clips[playIndex >= clips.Length ? 0 : playIndex];

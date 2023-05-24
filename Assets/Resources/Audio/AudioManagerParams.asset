@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fead6953ffd2f04b8e3c88ee1a04043, type: 3}
+  m_Name: AudioManagerParams
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 1b5384a8d8364834fa5d3ebfc448db96, type: 2}
+  masterGroup: {fileID: 24300002, guid: 1b5384a8d8364834fa5d3ebfc448db96, type: 2}
+  sfxGroup: {fileID: -4277074891955562761, guid: 1b5384a8d8364834fa5d3ebfc448db96, type: 2}
+  musicGroup: {fileID: -8598886053118577034, guid: 1b5384a8d8364834fa5d3ebfc448db96, type: 2}
+  snapShots: []
