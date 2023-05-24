@@ -26,6 +26,9 @@ public class PickUpItem : MonoBehaviour
 
             // Remove item from scene
             Destroy(collision.gameObject);
+
+            // Play pickup sound
+            ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Pickup");
         }
     }
 }

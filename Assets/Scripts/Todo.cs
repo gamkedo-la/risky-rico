@@ -13,8 +13,8 @@ public class Todo : MonoBehaviour
     // TODO: consider global attribute set?
 
     // CODE PATTERNS:
-    // TODO: input event system
-    // TODO: state machines
+    // TODO: input service
+    // TODO: state machines (for animation, game state, player state, enemy state)
     // TODO: SO vars as middleman for UI
     // TODO: refactor existing code (consitent style, use custom collider, find anti-patterns)
 }
