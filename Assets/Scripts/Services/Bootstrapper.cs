@@ -22,6 +22,7 @@ public static class Bootstrapper
         
         //Setup Services
         ServiceLocator.Instance.Register(new AudioManager());
+        ServiceLocator.Instance.Register(new MusicManager());
     }
 }
 
