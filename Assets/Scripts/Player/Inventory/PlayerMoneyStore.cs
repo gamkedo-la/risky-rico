@@ -43,6 +43,11 @@ public class PlayerMoneyStore : MonoBehaviour
         _onHandMoney.Value -= amount;
         _onHandMoney.Value = Mathf.Clamp(_onHandMoney.Value, 0, _onHandMoneyLimit);
     }
+
+    public bool CanAfford(int amount)
+    {
+        return _onHandMoney.Value <= amount;
+    }
     #endregion
 
     #region Deposited Money Methods
