@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraTracking : MonoBehaviour
 {
     [SerializeField] private GameObject _focalPoint;
-    [SerializeField] private float _trackingSpeed = 0.01f;
+    [SerializeField] private float _trackingSpeed = 0.02f;
 
     void Start()
     {
@@ -15,7 +15,7 @@ public class CameraTracking : MonoBehaviour
         }
     }
 
-    void Update()
+    void LateUpdate()
     {
         SetPositionToFocalPoint();
     }
