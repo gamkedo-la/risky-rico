@@ -8,21 +8,23 @@ public class Menu : MonoBehaviour
 {
     [Header("NAVIGATION")]
     [Tooltip("The object used to highlight the current menu item")]
-    [SerializeField] private GameObject _cursor;
+    [SerializeField] protected GameObject _cursor;
 
     [Tooltip("The interactive fields contained in this menu")]
-    [SerializeField] private List<InputField> _fields = new List<InputField>();
-    [SerializeField] private int _cursorIndex;
+    [SerializeField] protected List<InputField> _fields = new List<InputField>();
+    public List<InputField> Fields => _fields;
+
+    [SerializeField] protected int _cursorIndex;
     
     [Header("INPUT")]
     [Tooltip("The input module used for navigation")]
-    [SerializeField] private PlayerInput _input;
+    [SerializeField] protected PlayerInput _input;
 
     [Header("TEXT")]
     [Tooltip("The text to explain the current menu item's functionality")]
-    [SerializeField] private TMP_Text _explanationText;
+    [SerializeField] protected TMP_Text _explanationText;
 
-    void Start()
+    protected void Start()
     {
         _cursorIndex = 0;
 
@@ -40,16 +42,17 @@ public class Menu : MonoBehaviour
         if (_input.actions["navigate"].triggered)
         {
             int newCursorPosition = _cursorIndex + (int) _input.actions["navigate"].ReadValue<Vector2>().y * -1;
-            SetCursorPosition(newCursorPosition);
+            SetCursorIndex(newCursorPosition);
+            SetCursorPosition();
             SetActiveInput();
             SetExplanationText(GetCurrentField().Description);
         }
     }
 
-    void SetCursorPosition(int position)
+    protected void SetCursorIndex(int index)
     {
-        // get the attempted new cursor position
-        _cursorIndex = position;
+         // get the attempted new cursor position
+        _cursorIndex = index;
 
         // loop back to start of menu list
         if (_cursorIndex > _fields.Count - 1)
@@ -62,7 +65,10 @@ public class Menu : MonoBehaviour
         {
             _cursorIndex = _fields.Count - 1;
         }
+    }
 
+    protected void SetCursorPosition()
+    {
         // move the menu cursor to the current field
         if (_fields[_cursorIndex] != null)
         {
@@ -72,11 +78,9 @@ public class Menu : MonoBehaviour
             Vector3 cursorPosition = _cursor.transform.position;
             _cursor.transform.position = new Vector3(cursorPosition.x, currentFieldPosition.y, cursorPosition.z);
         }
-
-
     }
 
-    void SetActiveInput()
+    protected void SetActiveInput()
     {
         foreach(InputField field in _fields)
         {
@@ -89,12 +93,27 @@ public class Menu : MonoBehaviour
         }
     }
 
-    InputField GetCurrentField()
+    public InputField GetActiveInput()
+    {
+        InputField activeInput = null;
+        
+        foreach(InputField field in _fields)
+        {
+            if (field.InputEnabled)
+            {
+                activeInput = field;
+            }
+        }
+
+        return activeInput;
+    }
+
+    protected InputField GetCurrentField()
     {
         return _fields[_cursorIndex]; 
     }
 
-    void SetExplanationText(string newText)
+    protected void SetExplanationText(string newText)
     {
         if (_explanationText != null)
         {

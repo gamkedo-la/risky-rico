@@ -23,6 +23,7 @@ public class InputField : MonoBehaviour
     [SerializeField] protected UnityEvent _onInput = new UnityEvent();
 
     protected bool _inputEnabled;
+    public bool InputEnabled => _inputEnabled;
 
     protected PlayerInput _input;
 
