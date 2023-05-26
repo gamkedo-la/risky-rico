@@ -27,9 +27,13 @@ public class ItemParameters : ScriptableObject
     [SerializeField] private int _ammoAmount;
     public int AmmoAmount => _ammoAmount;
 
-    [Tooltip("How much money the item can be sold for")]
-    [SerializeField] private int _moneyValue;
-    public int MoneyValue => _moneyValue;
+    [Tooltip("How much money the item can be bought for")]
+    [SerializeField] private int _price;
+    public int Price => _price;
+
+    [Tooltip("Weapon data associated with this item (affects UI display in shop)")]
+    [SerializeField] private WeaponData _weaponData;
+    public WeaponData WeaponData => _weaponData;
     
     #endregion
     
