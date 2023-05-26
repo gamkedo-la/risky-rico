@@ -8,11 +8,16 @@ using TMPro;
 public class UpdateText : MonoBehaviour
 {
 
+    [Header("TEXT OBJECT")]
     [SerializeField] private TMP_Text _text;
     
     [Header("FLOAT VALUE")]
     [SerializeField] private bool _useFloat = false;
     [SerializeField, HideCustomDrawer] private FloatVariable _value;
+
+    [Header("INT VALUE")]
+    [SerializeField] private bool _useInt = false;
+    [SerializeField, HideCustomDrawer] private IntVariable _intValue;
 
     [Header("STRING VALUE")]
     [SerializeField] private bool _useString = false;
@@ -23,6 +28,11 @@ public class UpdateText : MonoBehaviour
         if (_useFloat && _value != null)
         {
             _text.text = "" + _value.Value;
+        }
+     
+        if (_useInt && _intValue != null)
+        {
+            _text.text = "" + _intValue.Value;
         }
 
         if (_useString && _stringValue != null)
