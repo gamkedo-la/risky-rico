@@ -14,8 +14,6 @@ public static class Bootstrapper
         
         //Setup services that must be attached to a GameObject
         GameObject singletonObject = new GameObject("singletonObject",
-            typeof(EventSystem),
-            typeof(InputSystemUIInputModule),
             typeof(MonoBehaviorService));
         ServiceLocator.Instance.Register(singletonObject.GetComponent<MonoBehaviorService>());
         Object.DontDestroyOnLoad(singletonObject);
@@ -23,6 +21,7 @@ public static class Bootstrapper
         //Setup Services
         ServiceLocator.Instance.Register(new AudioManager());
         ServiceLocator.Instance.Register(new MusicManager());
+        ServiceLocator.Instance.Register(new InputManager());
     }
 }
 

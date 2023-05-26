@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 80325514655829928, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: _rayBuffer
+      value: 0.123
+      objectReference: {fileID: 0}
     - target: {fileID: 667373275773948733, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: m_Name
       value: BaseGameScene
