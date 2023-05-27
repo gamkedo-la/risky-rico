@@ -87,6 +87,13 @@ public class Dialog : MonoBehaviour
                 // set our text object to equal the new string we created on this iteration
                 textObject.text = textToDisplay;
 
+                // if we have reached the end of the the line, set the text object to exactly match the current line
+                // this is done so that it is clear we have reached the end of the line in other methods of the component
+                if (characterIndex >= charactersOfCurrentLine.Length - 1)
+                {
+                    textObject.text = currentLine;
+                }
+
                 // wait for a set time before revealing the next character
                 yield return new WaitForSeconds(1f/(float)typingSpeed);
             }
