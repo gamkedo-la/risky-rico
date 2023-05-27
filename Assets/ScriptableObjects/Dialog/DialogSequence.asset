@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f7e853beb301d4c8fc63f58bee40a2, type: 3}
   m_Name: DialogSequence
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - _content: Hi! This is a dialog box. It will be used for testing out the typewriter
+      dialog feature in Risky Rico.
+  - _content: This is the second line. It's shorter.
