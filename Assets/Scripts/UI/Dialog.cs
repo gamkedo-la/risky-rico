@@ -81,8 +81,8 @@ public class Dialog : MonoBehaviour
                     characterIndex++;
                 }
 
-                // for all characters that are not yet ready to be displayed, add them as a transparent substring (color=#000000 is transparent)
-                textToDisplay += "<color=#000000>" + currentLine.Substring(characterIndex) + "</color>";
+                // for all characters that are not yet ready to be displayed, add them as a transparent substring (color=#00000000 is transparent)
+                textToDisplay += "<color=#00000000>" + currentLine.Substring(characterIndex) + "</color>";
 
                 // set our text object to equal the new string we created on this iteration
                 textObject.text = textToDisplay;
