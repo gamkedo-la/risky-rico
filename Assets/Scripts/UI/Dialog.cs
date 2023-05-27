@@ -6,21 +6,29 @@ using UnityEngine.InputSystem;
 
 public class Dialog : MonoBehaviour
 {
+    #region Inspector Settings
     [Header("INPUT")]
     [SerializeField] private PlayerInput _input;
     
     [Header("CONTENT")]
-    public TextMeshProUGUI textDisplay;
-    public string[] sentences;
+    [Tooltip("The text object to hold the current line of dialog")]
+    [SerializeField] private TextMeshProUGUI textObject;
+    public TextMeshProUGUI TextObject => textObject;
+
+    [Tooltip("The lines of dialog to display (displayed one at a time)")]
+    [SerializeField] private string[] lines;
+    public string[] Lines => lines;
     private int index;
 
     [Header("SETTINGS")]
     [Tooltip("Select a speed setting for the text typewriter (higher number = faster text)")]
     [Range(1, 10)]
-    public int typingSpeed;
-
+    [SerializeField] private int typingSpeed;
+    public int TypingSpeed => typingSpeed;
     IEnumerator typingCoroutine;
+    #endregion
     
+    #region Methods
     void Start()
     {
         typingCoroutine = TypeWriter();
@@ -29,14 +37,16 @@ public class Dialog : MonoBehaviour
 
     void Update()
     {
-        string currentSentence = sentences[index];
+        string currentLine = lines[index];
 
-        if (_input.actions["interact"].triggered && textDisplay.text != currentSentence)
+        // if the user has pressed the interact button before a line completes, immediately complete the whole line
+        if (_input.actions["interact"].triggered && textObject.text != currentLine)
         {
             StopCoroutine(typingCoroutine);
             AutoCompleteSentence();
         }
-        else if (_input.actions["interact"].triggered && textDisplay.text == currentSentence)
+        // if the line has completed and the user has pressed the interact button, get the next line
+        else if (_input.actions["interact"].triggered && textObject.text == currentLine)
         {
             MoveToNextSentence();
             typingCoroutine = TypeWriter();
@@ -46,29 +56,38 @@ public class Dialog : MonoBehaviour
 
     IEnumerator TypeWriter()
     {
-        string currentSentence = sentences[index];
-        char[] currentSentenceCharacters = currentSentence.ToCharArray();
+        string currentLine = lines[index];
+        char[] charactersOfCurrentLine = currentLine.ToCharArray();
         int characterIndex = 0;
 
-        if (textDisplay.text != currentSentence)
+        if (textObject.text != currentLine)
         {
-            while(characterIndex <= currentSentenceCharacters.Length - 1)
+            while(characterIndex <= charactersOfCurrentLine.Length - 1)
             {
-                char currentCharacter = currentSentenceCharacters[characterIndex];
-                string textToDisplay = currentSentence.Substring(0, characterIndex + 1);
+                // get the next character to display
+                char currentCharacter = charactersOfCurrentLine[characterIndex];
+                
+                // increment the character index so that we can display another character on the next iteration
+                characterIndex++;
 
-                if (currentCharacter.ToString() == " " && characterIndex + 1 <= currentSentenceCharacters.Length - 1)
+                // get a portion of the full sentence to display (going all from the first character to the current character)
+                string textToDisplay = currentLine.Substring(0, characterIndex);
+
+                // if our current character is a space, don't wait to display next the character after it; add it to the display text immediately
+                // (this is done to prevent the text writing from feeling slow and choppy when there are spaces between words)
+                if (currentCharacter.ToString() == " " && characterIndex + 1 <= charactersOfCurrentLine.Length - 1)
                 {
-                    textToDisplay += currentSentenceCharacters[characterIndex + 1];
-                    characterIndex += 1;
+                    textToDisplay += charactersOfCurrentLine[characterIndex];
+                    characterIndex++;
                 }
 
-                textToDisplay += "<color=#000000>" + currentSentence.Substring(characterIndex) + "</color>";
+                // for all characters that are not yet ready to be displayed, add them as a transparent substring (color=#000000 is transparent)
+                textToDisplay += "<color=#000000>" + currentLine.Substring(characterIndex) + "</color>";
 
-                textDisplay.text = textToDisplay;
+                // set our text object to equal the new string we created on this iteration
+                textObject.text = textToDisplay;
 
-                characterIndex += 1;
-
+                // wait for a set time before revealing the next character
                 yield return new WaitForSeconds(1f/(float)typingSpeed);
             }
         }
@@ -76,22 +95,27 @@ public class Dialog : MonoBehaviour
 
     void AutoCompleteSentence()
     {
-        if (textDisplay.text != sentences[index])
+        // fully complete a line of text if it has not finished
+        if (textObject.text != lines[index])
         {
-            textDisplay.text = sentences[index];
+            textObject.text = lines[index];
         }
     }
 
     void MoveToNextSentence()
     {
+        // increment the index so that we can grab the next line in TypeWriter()
         index += 1;
 
-        if (index > sentences.Length - 1)
+        // clamp the index to the maximum line count, so that we don't move past the final line 
+        if (index > lines.Length - 1)
         {
-            index = sentences.Length - 1;
-            return;
+            index = lines.Length - 1;
+            return; // return so that we don't reset the final line to an empty string (see below)
         }
     
-        textDisplay.text = "";
+        // reset the text so that we have a clear textbox for the next line
+        textObject.text = "";
     }
+    #endregion
 }
