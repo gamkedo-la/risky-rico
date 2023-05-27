@@ -1384,6 +1384,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 959242863438754528, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _input
+      value: 
+      objectReference: {fileID: 439676218}
+    - target: {fileID: 1966434693510766331, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966434693510766331, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966434693510766331, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966434693510766331, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966434693510766331, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1966434693510766331, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3805912975508695830, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1435,6 +1463,22 @@ PrefabInstance:
     - target: {fileID: 3805912976037242094, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: m_Name
       value: GraveyardTemplate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168806207161291278, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168806207161291278, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168806207161291278, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4168806207161291278, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4363691703271536759, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: m_Enabled
