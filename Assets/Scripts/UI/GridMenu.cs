@@ -50,6 +50,11 @@ public class GridMenu : Menu
             GameObject newGridItem = Instantiate(field.gameObject, transform.position, transform.rotation);
             newGridItem.transform.parent = gameObject.transform;
             _gridItems.Add(newGridItem);
+            RectTransform rect = newGridItem.GetComponent<RectTransform>();
+            if (rect != null)
+            {
+                rect.localScale = new Vector3(1f, 1f, 1f);
+            }
        }
     }
 }
