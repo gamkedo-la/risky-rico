@@ -15,5 +15,6 @@ MonoBehaviour:
   _name: Dual Fire
   _description: A special effect that makes the player shoot an extra shot in the
     opposite direction of where they aim
+  _type: 2
   _icon: {fileID: 0}
   _activationSound: {fileID: 0}

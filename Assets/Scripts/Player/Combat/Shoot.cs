@@ -18,6 +18,9 @@ public class Shoot : MonoBehaviour
 
     void Update()
     {
+        // get the ammo effect of the player's current weapon
+        AmmoEffect effect = _player.CurrentWeapon.Effect;
+
         // tick shot timer upward by the player's firing rate
         _shotTimer += Time.deltaTime * _player.FiringRate.CurrentValue;
 
@@ -34,6 +37,11 @@ public class Shoot : MonoBehaviour
                 float offsetX = _aimDirectionX * offsetAmount * i;
                 float offsetY = _aimDirectionY * offsetAmount * i;
                 SpawnProjectile(offsetX, offsetY);
+                if (effect.Type == AmmoType.DUAL_FIRE)
+                {
+                    _aimDirection.Value = new Vector2(_aimDirectionX * -1, _aimDirectionY * -1);
+                    SpawnProjectile(offsetX, offsetY);
+                }
             }
             
             _shootEvent.Raise();

@@ -2,6 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public enum AmmoType
+{
+    FREEZE,
+    PIERCE,
+    DUAL_FIRE,
+    NONE,
+}
+
 [CreateAssetMenu(fileName = "Ammo Effect", menuName = "Weapon/AmmoEffect", order = 1)]
 public class AmmoEffect : ScriptableObject
 {
@@ -16,6 +25,10 @@ public class AmmoEffect : ScriptableObject
     [TextArea(15,20)]
     [SerializeField] private string _description;
     public string Description => _description;
+
+    [Tooltip("The ammo's type (determines the effect)")]
+    [SerializeField] private AmmoType _type;
+    public AmmoType Type => _type;
 
     #endregion
 
