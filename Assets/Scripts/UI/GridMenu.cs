@@ -28,9 +28,10 @@ public class GridMenu : Menu
             int newCursorColumn = (int) _input.actions["navigate"].ReadValue<Vector2>().x;
             int newCursorIndex = _cursorIndex + newCursorColumn + newCursorRow;
             SetCursorIndex(newCursorIndex);
-            SetCursorPosition();
             SetActiveInput();
         }
+
+         SetCursorPosition();
     }
 
     void SetCursorPosition()

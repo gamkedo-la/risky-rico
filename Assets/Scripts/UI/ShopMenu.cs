@@ -20,7 +20,7 @@ public class ShopMenu : MonoBehaviour
             ItemParameters item = currentItem.ItemData;
             _itemName.text = item.Name;
             _itemDescription.text = item.Description;
-            _itemPrice.text = "" + item.Price;
+            _itemPrice.text = "PRICE: " + item.Price;
         }
     }
 

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c76e72387a28e7d4b89bfc5367aa96af, type: 3}
-  m_Name: Small Ammo
+  m_Name: DualFire_Shop
   m_EditorClassIdentifier: 
-  _name: Small Ammo
-  _description: Gives you 1 unit of ammo
-  _ammoAmount: 1
-  _price: 10
-  _weaponData: {fileID: 0}
-  _image: {fileID: 21300000, guid: 656e8f8936d9ee84dbb5bc2381f957bb, type: 3}
+  _name: Dual Fire Attack
+  _description: Shoot in two directions at once
+  _ammoAmount: 0
+  _price: 1000
+  _weaponData: {fileID: 11400000, guid: 892b2bdc5943a5243a2eefd46ed99cd1, type: 2}
+  _image: {fileID: 21300000, guid: d8203803e3cb6374f94dc05a28c62f3d, type: 3}
   _spawnSound: {fileID: 0}
   _collectSound: {fileID: 0}
