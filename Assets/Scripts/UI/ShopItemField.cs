@@ -13,4 +13,9 @@ public class ShopItemField : InputField
         Image image = GetComponent<Image>();
         image.sprite = _itemData.Image;
     }
+
+    public void SetItemData(ItemData data)
+    {
+        _itemData = data;
+    }
 }

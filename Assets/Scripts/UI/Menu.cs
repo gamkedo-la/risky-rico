@@ -70,7 +70,7 @@ public class Menu : MonoBehaviour
     protected void SetCursorPosition()
     {
         // move the menu cursor to the current field
-        if (_fields[_cursorIndex] != null)
+        if (_fields.Count > 0 && _fields[_cursorIndex] != null)
         {
             GameObject currentField = _fields[_cursorIndex].gameObject;
             Vector3 currentFieldPosition = currentField.transform.position;
@@ -87,7 +87,7 @@ public class Menu : MonoBehaviour
             field.SetInputEnabled(false);
         }
 
-        if (_fields[_cursorIndex] != null)
+        if (_fields.Count > 0 && _fields[_cursorIndex] != null)
         {
             _fields[_cursorIndex].SetInputEnabled(true);
         }
@@ -110,7 +110,12 @@ public class Menu : MonoBehaviour
 
     protected InputField GetCurrentField()
     {
-        return _fields[_cursorIndex]; 
+        if (_fields.Count > 0 && _fields[_cursorIndex] != null)
+        {
+            return _fields[_cursorIndex]; 
+        }
+
+        return new InputField();
     }
 
     protected void SetExplanationText(string newText)
