@@ -46,7 +46,7 @@ public class PlayerMoneyStore : MonoBehaviour
 
     public bool CanAfford(int amount)
     {
-        return _onHandMoney.Value <= amount;
+        return amount <= _onHandMoney.Value;
     }
     #endregion
 

@@ -26,5 +26,10 @@ public class PlayerWeaponStore : MonoBehaviour
             _acquiredWeapons.Remove(weapon);
         }
     }
+
+    public bool HasWeapon(WeaponData weapon)
+    {
+        return _acquiredWeapons.Contains(weapon);
+    }
     #endregion
 }

@@ -1,10 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class ShopMenu : MonoBehaviour
 {
+    [Header("PLAYER DATA")]
+    [SerializeField] private GameObject _player;
+    private PlayerInput _input;
+    private PlayerMoneyStore _playerMoneyStore;
+    private PlayerWeaponStore _playerWeaponStore;
+    private PlayerAmmoStore _playerAmmoStore;
+    
     [Header("ITEM DATA")]
     [SerializeField] private GridMenu _gridMenu;
     [SerializeField] private TMP_Text _itemName;
@@ -18,10 +26,19 @@ public class ShopMenu : MonoBehaviour
     [SerializeField] private TMP_Text _weaponDamage;
     [SerializeField] private GameObject _statsContainer;
 
+    void Start()
+    {
+        _input = _player.GetComponent<PlayerInput>();
+        _playerMoneyStore = _player.GetComponent<PlayerMoneyStore>();
+        _playerWeaponStore = _player.GetComponent<PlayerWeaponStore>();
+        _playerAmmoStore = _player.GetComponent<PlayerAmmoStore>();
+    }
+
     void Update()
     {
         InputField currentInput = _gridMenu.GetActiveInput();
 
+        // view item details
         if (currentInput != null && currentInput is ShopItemField)
         {
             ShopItemField currentItem = (ShopItemField)currentInput;
@@ -32,6 +49,48 @@ public class ShopMenu : MonoBehaviour
             _statsContainer.active = item.WeaponData != null;
             UpdateStatsContainer(item.WeaponData);
         }
+
+        // attempt to purchase item
+        if (_input.actions["interact"].triggered && currentInput != null && currentInput is ShopItemField)
+        {
+            AttemptPurchase((ShopItemField)currentInput);
+        }
+
+    }
+
+    void AttemptPurchase(ShopItemField selectedItem)
+    {
+        ItemData item = selectedItem.ItemData;
+        
+        // do you own the item?
+        bool ownItem = item.WeaponData != null && _playerWeaponStore.HasWeapon(item.WeaponData);
+
+        // can you afford the item?
+        bool canAfford = _playerMoneyStore.CanAfford(item.Price);
+
+        // attemp purchase based on criteria
+        if (canAfford && !ownItem)
+        {
+            PurchaseItem(item);
+            return;
+        }
+
+        Debug.Log("CAN'T BUY ITEM");
+    }
+
+    void PurchaseItem(ItemData item)
+    {
+        _playerMoneyStore.SubtractOnHandMoney(item.Price);
+
+        bool isWeapon = item.WeaponData != null;
+
+        if (isWeapon)
+        {
+            _playerWeaponStore.AddWeapon(item.WeaponData);
+            return;
+        }
+
+        _playerAmmoStore.GainAmmo(item.AmmoAmount);
     }
 
     void UpdateStatsContainer(WeaponData weapon)
