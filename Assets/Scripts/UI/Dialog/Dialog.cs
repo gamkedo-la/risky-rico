@@ -129,6 +129,11 @@ public class Dialog : MonoBehaviour
     {
         _UITextbox.SetActive(false);
         StopCoroutine(typingCoroutine);
+        
+        if (_dialogSequence.OnDialogEnd != null)
+        {
+            _dialogSequence.OnDialogEnd.Raise();
+        }
     }
 
     void MoveToNextSentence()

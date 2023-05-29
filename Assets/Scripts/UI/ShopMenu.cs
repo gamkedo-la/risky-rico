@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using ScriptableObjectArchitecture;
 
 public class ShopMenu : MonoBehaviour
 {
@@ -25,6 +26,9 @@ public class ShopMenu : MonoBehaviour
     [SerializeField] private TMP_Text _weaponShotCount;
     [SerializeField] private TMP_Text _weaponDamage;
     [SerializeField] private GameObject _statsContainer;
+
+    [Header("EVENTS")]
+    [SerializeField] private GameEvent _onShopClose;
 
     void Start()
     {
@@ -54,6 +58,12 @@ public class ShopMenu : MonoBehaviour
         if (_input.actions["interact"].triggered && currentInput != null && currentInput is ShopItemField)
         {
             AttemptPurchase((ShopItemField)currentInput);
+        }
+
+        // close shop menu
+        if (_input.actions["exit"].triggered)
+        {
+            _onShopClose?.Raise();
         }
 
     }

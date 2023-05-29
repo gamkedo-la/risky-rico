@@ -1,5 +1,5 @@
 {
-    "name": "ProjectRico",
+    "name": "PlayerControls",
     "maps": [
         {
             "name": "Player",
@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "Press",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Exit",
+                    "type": "Button",
+                    "id": "7be4dff2-7006-4cf3-9b8e-53dd2d55598c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -410,6 +419,17 @@
                     "processors": "",
                     "groups": "Joystick",
                     "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a53297e3-2792-4668-83d0-8fdac33b7538",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Exit",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

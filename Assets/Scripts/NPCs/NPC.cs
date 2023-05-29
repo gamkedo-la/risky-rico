@@ -12,7 +12,6 @@ public class NPC : MonoBehaviour, IInteractable
     
     [Header("EVENTS")]
     [SerializeField] private GameEvent _onDialogStart;
-    [SerializeField] private UnityEvent _onDialogEnd;
     
     [Header("INTERACTIONS")]
     [SerializeField] private string _interactionPrompt;
@@ -31,9 +30,8 @@ public class NPC : MonoBehaviour, IInteractable
        if (_npcDialogueSequence != null && _activeDialogueSequence != null)
        {
             _activeDialogueSequence.SetLines(_npcDialogueSequence.Lines);
-
+            _activeDialogueSequence.SetEndEvent(_npcDialogueSequence.OnDialogEnd);
             InteractionEnabled = false;
-            
             _onDialogStart?.Raise();
        }
     }
