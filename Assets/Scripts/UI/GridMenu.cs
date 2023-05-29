@@ -31,6 +31,7 @@ public class GridMenu : Menu
             int newCursorIndex = _cursorIndex + newCursorColumn + newCursorRow;
             SetCursorIndex(newCursorIndex);
             SetActiveInput();
+            AnimateCursor();
         }
 
          SetCursorPosition();
@@ -43,6 +44,17 @@ public class GridMenu : Menu
             GameObject currentItem = _gridItems[_cursorIndex].gameObject;
             Vector3 currentItemPosition = currentItem.transform.position;
             _cursor.transform.position = currentItemPosition;
+
+        }
+    }
+
+    void AnimateCursor()
+    {
+        Animator cursorAnimator = _cursor.GetComponent<Animator>();
+
+        if (cursorAnimator != null)
+        {
+            cursorAnimator.StartPlayback();
         }
     }
 
