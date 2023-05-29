@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4107461189483190654}
   - component: {fileID: 5751050438381696047}
   m_Layer: 0
-  m_Name: hell-well
+  m_Name: HellWell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
