@@ -15,19 +15,18 @@ GameObject:
   - component: {fileID: 603381006608176296}
   - component: {fileID: 603381006608176298}
   - component: {fileID: 603381006608176297}
-  - component: {fileID: 603381006608176299}
-  - component: {fileID: 603381006608176292}
-  - component: {fileID: 603381006608176293}
-  - component: {fileID: 603381006608176295}
-  - component: {fileID: 603381006608176294}
-  - component: {fileID: 603381006608176290}
   - component: {fileID: 603381006608176291}
   - component: {fileID: 603381006608176316}
-  - component: {fileID: 603381006608176317}
+  - component: {fileID: 603381006608176299}
+  - component: {fileID: 603381006608176292}
   - component: {fileID: 603381006608176312}
-  - component: {fileID: 603381006608176313}
+  - component: {fileID: 603381006608176293}
+  - component: {fileID: 2184584551925953628}
   - component: {fileID: 603381006608176314}
   - component: {fileID: 603381006608176315}
+  - component: {fileID: 603381006608176290}
+  - component: {fileID: 603381006608176317}
+  - component: {fileID: 603381006608176313}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -196,6 +195,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 63682bb6-808a-454c-b62d-6936266eee33
     m_ActionName: Player/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7afb24c3-3412-4759-a203-39674e02d06b
+    m_ActionName: Player/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 34d2e315-fa9a-471d-a6bc-32d9a6930131
+    m_ActionName: Player/Navigate[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -216,9 +223,12 @@ MonoBehaviour:
   _aimDirection: {fileID: 11400000, guid: f727cdc12f876574483289b5508b7335, type: 2}
   _projectile: {fileID: 5220456760211092832, guid: 9263d746118dcd045aee19b647184304, type: 3}
   _input: {fileID: 603381006608176302}
-  _sound: {fileID: 11400000, guid: 2235b4818cfa234469793d2d9ae030cd, type: 2}
   _shootEvent: {fileID: 11400000, guid: 1b419bf46b45ed54fb533c37629698ac, type: 2}
   _player: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
+  _ammo:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 0}
 --- !u!114 &603381006608176296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,134 +289,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.50056994, y: 0.31478167}
   m_EdgeRadius: 0
---- !u!114 &603381006608176299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603381006608176339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6ca104d6877fd243aee455714c690d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _xDirection: 0
-  _yDirection: 0
-  _speed:
-    _useConstant: 0
-    _constantValue: 0
-    _variable: {fileID: 11400000, guid: 536ed5484cec1994c9bc37510d027939, type: 2}
---- !u!114 &603381006608176292
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603381006608176339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3e7402ddd773e543ab0fc7f2e73732f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerAttributes: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
-  _input: {fileID: 603381006608176302}
-  _collider: {fileID: 603381006608176291}
-  _moveClamp: 6
-  _deAcceleration: 30
---- !u!114 &603381006608176293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603381006608176339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93cae35a9143f7b4a90e8d93024de38b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _onHandMoney:
-    _useConstant: 1
-    _constantValue: 60
-    _variable: {fileID: 0}
-  _depositedMoney:
-    _useConstant: 1
-    _constantValue: 0
-    _variable: {fileID: 0}
-  _onHandMoneyLimit: 1000
-  _depositMoneyLimit: 5000
---- !u!114 &603381006608176295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603381006608176339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c5c0b4d14993b147a3f1629f4cd0135, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collidableObjects: {fileID: 11400000, guid: 8f01db8d19af7b345be4a5d13fe3984c, type: 2}
-  _enterResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 603381006608176293}
-        m_TargetAssemblyTypeName: PlayerMoneyStore, Assembly-CSharp
-        m_MethodName: AddOnHandMoney
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PlayerMoneyStore, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _exitResponse:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &603381006608176294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603381006608176339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cfd3a2488a5a9b4c81d97bc322ed83f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _collidableObjects: {fileID: 11400000, guid: 8f01db8d19af7b345be4a5d13fe3984c, type: 2}
---- !u!114 &603381006608176290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603381006608176339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7003251a1c96ecd45b1d8d4b308a1268, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _itemCollection: {fileID: 11400000, guid: b45b059ea774a9f4a82735d3360788e6, type: 2}
-  _playerAttributes: {fileID: 0}
-  _particleEffect: {fileID: 9131268053268607772, guid: 60fdbc45a883cd44aba26670a1a93b93, type: 3}
 --- !u!114 &603381006608176291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,7 +326,7 @@ MonoBehaviour:
   _curses: []
   _maxSlotCount: 3
   _player: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
---- !u!114 &603381006608176317
+--- !u!114 &603381006608176299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -453,11 +335,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 603381006608176339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b0d67ae25d486740a17e4467742faba, type: 3}
+  m_Script: {fileID: 11500000, guid: c6ca104d6877fd243aee455714c690d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _curseCollection: {fileID: 11400000, guid: be9f466d88f0b1f4d89fa431ef542a81, type: 2}
-  _curseSlots: {fileID: 603381006608176316}
+  _xDirection: 0
+  _yDirection: 0
+  _speed:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 536ed5484cec1994c9bc37510d027939, type: 2}
+--- !u!114 &603381006608176292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603381006608176339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3e7402ddd773e543ab0fc7f2e73732f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerAttributes: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
+  _input: {fileID: 603381006608176302}
+  _collider: {fileID: 603381006608176291}
+  _moveClamp: 6
+  _deAcceleration: 30
 --- !u!114 &603381006608176312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -484,7 +387,7 @@ MonoBehaviour:
   _maxParticleFallSpeed: -40
   _timeBetweenFootsteps: 0.5
   _input: {fileID: 603381006608176302}
---- !u!114 &603381006608176313
+--- !u!114 &603381006608176293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -493,28 +396,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 603381006608176339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c5c0b4d14993b147a3f1629f4cd0135, type: 3}
+  m_Script: {fileID: 11500000, guid: 93cae35a9143f7b4a90e8d93024de38b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _collidableObjects: {fileID: 11400000, guid: 38d80e077c4c53c46927dc395409ca05, type: 2}
-  _enterResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 11937fd485ab1834992632af9d9d4840, type: 2}
-        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _exitResponse:
-    m_PersistentCalls:
-      m_Calls: []
+  _onHandMoney:
+    _useConstant: 1
+    _constantValue: 60
+    _variable: {fileID: 0}
+  _depositedMoney:
+    _useConstant: 1
+    _constantValue: 0
+    _variable: {fileID: 0}
+  _onHandMoneyLimit: 1000
+  _depositMoneyLimit: 5000
+--- !u!114 &2184584551925953628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603381006608176339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b32b1f71796f94647b6e9b0d082a1879, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _acquiredWeapons: []
 --- !u!114 &603381006608176314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,6 +453,66 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 
     _variable: {fileID: 11400000, guid: 9473b9ecfab5da34cbd82224ead58d5c, type: 2}
+--- !u!114 &603381006608176290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603381006608176339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7003251a1c96ecd45b1d8d4b308a1268, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemCollection: {fileID: 11400000, guid: b45b059ea774a9f4a82735d3360788e6, type: 2}
+  _playerAttributes: {fileID: 0}
+  _particleEffect: {fileID: 9131268053268607772, guid: 60fdbc45a883cd44aba26670a1a93b93, type: 3}
+--- !u!114 &603381006608176317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603381006608176339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0d67ae25d486740a17e4467742faba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _curseCollection: {fileID: 11400000, guid: be9f466d88f0b1f4d89fa431ef542a81, type: 2}
+  _curseSlots: {fileID: 603381006608176316}
+--- !u!114 &603381006608176313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603381006608176339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5c0b4d14993b147a3f1629f4cd0135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collidableObjects: {fileID: 11400000, guid: 38d80e077c4c53c46927dc395409ca05, type: 2}
+  _enterResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 11937fd485ab1834992632af9d9d4840, type: 2}
+        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _exitResponse:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &603381006687435592
 PrefabInstance:
   m_ObjectHideFlags: 0

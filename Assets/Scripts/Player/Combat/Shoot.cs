@@ -9,6 +9,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private PlayerInput _input;
     [SerializeField] private GameEvent _shootEvent;
     [SerializeField] private PlayerAttributes _player;
+    [SerializeField] private IntReference _ammo;
     private float _shotTimer;
 
     void Awake()
@@ -20,12 +21,13 @@ public class Shoot : MonoBehaviour
     {
         // get the ammo effect of the player's current weapon
         AmmoEffect effect = _player.CurrentWeapon.Effect;
+        int ammoUsage = _player.CurrentWeapon.BaseAmmoUsage;
 
         // tick shot timer upward by the player's firing rate
         _shotTimer += Time.deltaTime * _player.FiringRate.CurrentValue;
 
         // update aiming direction with inputs and shoot when the timer reaches 1
-        if (_input.actions["shoot"].triggered && _shotTimer >= 1f)
+        if (_input.actions["shoot"].triggered && _shotTimer >= 1f && _ammo.Value >= ammoUsage)
         {
             float offsetAmount = 1f;
             float _aimDirectionX = _input.actions["shoot"].ReadValue<Vector2>().x;
@@ -37,12 +39,16 @@ public class Shoot : MonoBehaviour
                 float offsetX = _aimDirectionX * offsetAmount * i;
                 float offsetY = _aimDirectionY * offsetAmount * i;
                 SpawnProjectile(offsetX, offsetY);
-                if (effect.Type == AmmoType.DUAL_FIRE)
+
+                if (effect != null && effect.Type == AmmoType.DUAL_FIRE)
                 {
                     _aimDirection.Value = new Vector2(_aimDirectionX * -1, _aimDirectionY * -1);
                     SpawnProjectile(offsetX, offsetY);
                 }
+
+                _ammo.Value -= ammoUsage;
             }
+
             
             _shootEvent.Raise();
             ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("PlayerShoot");

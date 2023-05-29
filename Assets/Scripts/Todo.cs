@@ -19,7 +19,6 @@ public class Todo : MonoBehaviour
     // TODO: refactor existing code (consitent style, use custom collider, find anti-patterns)
 
     // SHOP:
-    // TODO: create player inventory and ammo reserve (test with weapon types)
     // TODO: buy items from shop (give player ammo, give player weapons)
     // TODO: play cursor animation
     // TODO: make shopkeeper interactable

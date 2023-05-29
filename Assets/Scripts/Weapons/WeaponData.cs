@@ -38,10 +38,10 @@ public class WeaponData : ScriptableObject
     [SerializeField] private int _baseDamage;
     public int BaseDamage => _baseDamage;
 
-    [Tooltip("Maximum ammo for the weapon. Can be raised by other item effects")]
-    [Range(1, 10)]
-    [SerializeField] private int _baseAmmoCapacity;
-    public int BaseAmmoCapacity => _baseAmmoCapacity;
+    [Tooltip("Amount of ammo used by the weapon on one shot. Can be changed by other item effects")]
+    [Range(0, 10)]
+    [SerializeField] private int _baseAmmoUsage;
+    public int BaseAmmoUsage => _baseAmmoUsage;
     
     [Tooltip("How many bullets come out when fired. Must fire at least 1 bullet")]
     [Range(1, 4)]

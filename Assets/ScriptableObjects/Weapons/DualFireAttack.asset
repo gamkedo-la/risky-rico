@@ -17,7 +17,7 @@ MonoBehaviour:
   _modifiers: []
   _baseFiringRate: 5
   _baseDamage: 1
-  _baseAmmoCapacity: 10
+  _baseAmmoUsage: 2
   _baseBulletCount: 1
   _effect: {fileID: 11400000, guid: 70a9b3e2ee681824aa40e643e75e7231, type: 2}
   _storeIcon: {fileID: 21300000, guid: d8203803e3cb6374f94dc05a28c62f3d, type: 3}
