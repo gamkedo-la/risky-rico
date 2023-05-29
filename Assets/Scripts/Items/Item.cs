@@ -5,7 +5,7 @@ using ScriptableObjectArchitecture;
 
 public class Item : MonoBehaviour, IInteractable
 {
-    [SerializeField] private ItemParameters _parameters;
+    [SerializeField] private ItemData _parameters;
     [SerializeField] private SpriteRenderer _renderer;
 
     public string Prompt {get; set; }
@@ -23,7 +23,7 @@ public class Item : MonoBehaviour, IInteractable
         SetAttributes(_parameters);
     }
 
-    public void SetAttributes(ItemParameters parameters)
+    public void SetAttributes(ItemData parameters)
     {
         _parameters = parameters;
         _renderer.sprite = _parameters.Image;

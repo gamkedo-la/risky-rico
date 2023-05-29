@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
 
-[CreateAssetMenu(fileName = "ItemParameters", menuName = "Items/ItemParameters", order = 1)]
-public class ItemParameters : ScriptableObject
+[CreateAssetMenu(fileName = "ItemData", menuName = "Items/ItemData", order = 1)]
+public class ItemData : ScriptableObject
 {
     #region Basic Item Information
 

@@ -10,7 +10,7 @@ public struct ItemDrop {
 }
 
 [Serializable]
-public class ItemDropTableDictionary : SerializableDictionary<ItemParameters, ItemDrop> {}
+public class ItemDropTableDictionary : SerializableDictionary<ItemData, ItemDrop> {}
 
  [AttributeUsage(AttributeTargets.Field)]
 public class HideCustomDrawer : Attribute {}
@@ -26,8 +26,8 @@ public class ItemDropTable : ScriptableObject
     void SetWeights()
     {
         float currentProbabilityWeightMaximum = 0f;
-        List<ItemParameters> itemKeys = new List<ItemParameters>(Lookup.Keys);
-        foreach(ItemParameters item in itemKeys)
+        List<ItemData> itemKeys = new List<ItemData>(Lookup.Keys);
+        foreach(ItemData item in itemKeys)
         {
             ItemDrop itemDropEntry = new ItemDrop();
             if (Lookup[item].probabilityWeight < 0f)

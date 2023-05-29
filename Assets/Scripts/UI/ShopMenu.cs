@@ -17,7 +17,7 @@ public class ShopMenu : MonoBehaviour
         if (currentInput != null && currentInput is ShopItemField)
         {
             ShopItemField currentItem = (ShopItemField)currentInput;
-            ItemParameters item = currentItem.ItemData;
+            ItemData item = currentItem.ItemData;
             _itemName.text = item.Name;
             _itemDescription.text = item.Description;
             _itemPrice.text = "PRICE: " + item.Price;

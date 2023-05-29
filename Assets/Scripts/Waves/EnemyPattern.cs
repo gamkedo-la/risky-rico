@@ -47,7 +47,7 @@ public class EnemyPattern : ScriptableObject
     public List<SpawnLocation> SpawnLocations => _spawnLocations;
     
     [Tooltip("Force enemies to drop specific items (or no items) with a 100% drop rate")]
-    [SerializeField] private List<ItemParameters> _itemDrops = new List<ItemParameters>();
-    public List<ItemParameters> ItemDrops => _itemDrops;
+    [SerializeField] private List<ItemData> _itemDrops = new List<ItemData>();
+    public List<ItemData> ItemDrops => _itemDrops;
     #endregion
 }

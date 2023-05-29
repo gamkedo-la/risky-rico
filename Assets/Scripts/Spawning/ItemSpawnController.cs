@@ -11,7 +11,7 @@ public class ItemSpawnController : MonoBehaviour
     [SerializeField] private GameObject _prefab;
 
     [Tooltip("The types of objects that can spawn")]
-    [SerializeField] private List<ItemParameters> _spawnTypes;
+    [SerializeField] private List<ItemData> _spawnTypes;
 
     [Tooltip("Acceptable locations to spawn")]
     [SerializeField] private List<GameObject> _spawnPoints = new List<GameObject>();
@@ -30,7 +30,7 @@ public class ItemSpawnController : MonoBehaviour
             Transform spawnPointTransform = spawnPoint.GetComponent<Transform>();
 
             // type of object to spawn
-            ItemParameters spawnType = PickSpawnType();
+            ItemData spawnType = PickSpawnType();
 
             // spawn the object
             GameObject spawnedObject = Instantiate(_prefab, spawnPointTransform.position, Quaternion.identity);
@@ -50,10 +50,10 @@ public class ItemSpawnController : MonoBehaviour
         }
     }
 
-    public ItemParameters PickSpawnType()
+    public ItemData PickSpawnType()
     {
         int index = Random.Range(0, _spawnTypes.Count);
-        ItemParameters spawnType = _spawnTypes[index];
+        ItemData spawnType = _spawnTypes[index];
         return spawnType;
     }
 

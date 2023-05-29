@@ -13,9 +13,9 @@ public class ItemDropper : MonoBehaviour
     {
         float randomNumber = Random.Range(0, _dropTable.ProbabilityTotalWeight / _dropChance);
 
-        List<ItemParameters> itemKeys = new List<ItemParameters>(_dropTable.Lookup.Keys);
+        List<ItemData> itemKeys = new List<ItemData>(_dropTable.Lookup.Keys);
 
-        foreach(ItemParameters item in itemKeys)
+        foreach(ItemData item in itemKeys)
         {
             if (randomNumber > _dropTable.Lookup[item].probabilityFrom && randomNumber < _dropTable.Lookup[item].probabilityTo)
             {

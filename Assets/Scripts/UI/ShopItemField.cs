@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class ShopItemField : InputField
 {
-    [SerializeField] private ItemParameters _itemData;
-    public ItemParameters ItemData => _itemData;
+    [SerializeField] private ItemData _itemData;
+    public ItemData ItemData => _itemData;
 
     void Start()
     {
