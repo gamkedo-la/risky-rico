@@ -32,6 +32,8 @@ public class NPC : MonoBehaviour, IInteractable
        {
             _activeDialogueSequence.SetLines(_npcDialogueSequence.Lines);
 
+            InteractionEnabled = false;
+            
             _onDialogStart?.Raise();
        }
     }

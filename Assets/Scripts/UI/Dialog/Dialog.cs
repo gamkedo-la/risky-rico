@@ -36,7 +36,7 @@ public class Dialog : MonoBehaviour
     #endregion
     
     #region Methods
-    void Start()
+    void StartDialog()
     {
         typingCoroutine = TypeWriter();
         StartCoroutine(typingCoroutine);
@@ -58,6 +58,7 @@ public class Dialog : MonoBehaviour
             MoveToNextSentence();
             typingCoroutine = TypeWriter();
             StartCoroutine(typingCoroutine);
+            CheckIfDialogIsComplete();
         }
     }
 
@@ -116,6 +117,14 @@ public class Dialog : MonoBehaviour
         }
     }
 
+    void CheckIfDialogIsComplete()
+    {
+        if (index >= lines.Length - 1 && textObject.text == lines[index])
+        {
+            CloseDialog();
+        }
+    }
+
     void CloseDialog()
     {
         _UITextbox.SetActive(false);
@@ -149,6 +158,10 @@ public class Dialog : MonoBehaviour
 
         lines = newLines;
         index = 0;
+
+        textObject.text = "";
+
+        StartDialog();
     }
     #endregion
 }
