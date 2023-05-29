@@ -19,13 +19,10 @@ public class Todo : MonoBehaviour
     // TODO: refactor existing code (consitent style, use custom collider, find anti-patterns)
 
     // SHOP:
-    // TODO: buy items from shop (give player ammo, give player weapons)
-    // TODO: play cursor animation
-    // TODO: make shopkeeper interactable
-    // TODO: bring up dialogs when interacting with shopkeeper
     // TODO: bring up shop menu when done talking with shopkeeper
     // TODO: disable player movement/shooting when in shop menu
     // TODO: write shopkeeper dialog (add flags for game progress)
     // TODO: emit particles from shop chimney
     // TODO: change particle texture after player buys things
+    // TODO: play cursor animation
 }

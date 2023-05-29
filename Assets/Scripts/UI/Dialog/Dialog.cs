@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem;
+using ScriptableObjectArchitecture;
 
 public class Dialog : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class Dialog : MonoBehaviour
     [SerializeField] private PlayerInput _input;
     
     [Header("CONTENT")]
+    [Tooltip("The current dialog sequence (will be split into lines)")]
+    [SerializeField] private DialogSequence _dialogSequence;
+
     [Tooltip("The text object to hold the current line of dialog")]
     [SerializeField] private TextMeshProUGUI textObject;
     public TextMeshProUGUI TextObject => textObject;
@@ -19,6 +23,9 @@ public class Dialog : MonoBehaviour
     [SerializeField] private string[] lines;
     public string[] Lines => lines;
     private int index;
+
+    [Header("UI")]
+    [SerializeField] private GameObject _UITextbox;
 
     [Header("SETTINGS")]
     [Tooltip("Select a speed setting for the text typewriter (higher number = faster text)")]
@@ -39,7 +46,7 @@ public class Dialog : MonoBehaviour
     {
         string currentLine = lines[index];
 
-        // if the user has pressed the interact button before a line completes, immediately complete the whole line
+        // if the player has pressed the interact button before a line completes, immediately complete the whole line
         if (_input.actions["interact"].triggered && textObject.text != currentLine)
         {
             StopCoroutine(typingCoroutine);
@@ -109,6 +116,12 @@ public class Dialog : MonoBehaviour
         }
     }
 
+    void CloseDialog()
+    {
+        _UITextbox.SetActive(false);
+        StopCoroutine(typingCoroutine);
+    }
+
     void MoveToNextSentence()
     {
         // increment the index so that we can grab the next line in TypeWriter()
@@ -123,6 +136,19 @@ public class Dialog : MonoBehaviour
     
         // reset the text so that we have a clear textbox for the next line
         textObject.text = "";
+    }
+
+    public void UpdateDialogSequence()
+    {
+        string[] newLines = new string[_dialogSequence.Lines.Count];
+
+        for (int i = 0; i < _dialogSequence.Lines.Count; i++)
+        {
+            newLines[i] = _dialogSequence.Lines[i].Content;
+        }
+
+        lines = newLines;
+        index = 0;
     }
     #endregion
 }

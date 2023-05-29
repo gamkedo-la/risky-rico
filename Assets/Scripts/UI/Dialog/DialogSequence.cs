@@ -6,4 +6,10 @@ using UnityEngine;
 public class DialogSequence : ScriptableObject
 {
    [SerializeField] private List<DialogLine> lines = new List<DialogLine>();
+   public List<DialogLine> Lines => lines;
+
+   public void SetLines(List<DialogLine> newLines)
+   {
+      lines = newLines;
+   }
 }

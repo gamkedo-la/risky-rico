@@ -7,4 +7,5 @@ public class DialogLine
 {
     [TextArea(15,20)]
     [SerializeField] private string _content;
+    public string Content => _content;
 }
