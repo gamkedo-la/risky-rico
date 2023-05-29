@@ -31,12 +31,12 @@ public class WeaponData : ScriptableObject
     [Tooltip("How quickly the weapon can fire (measured in shots per second)")]
     [Range(0.1f, 10f)]
     [SerializeField] private float _baseFiringRate;
-    public float baseFiringRate => _baseFiringRate;
+    public float BaseFiringRate => _baseFiringRate;
     
     [Tooltip("How much damage the weapon deals on contact")]
     [Range(0, 4)]
     [SerializeField] private int _baseDamage;
-    public int baseDamage => _baseDamage;
+    public int BaseDamage => _baseDamage;
 
     [Tooltip("Maximum ammo for the weapon. Can be raised by other item effects")]
     [Range(1, 10)]

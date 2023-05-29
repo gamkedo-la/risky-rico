@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76e72387a28e7d4b89bfc5367aa96af, type: 3}
   m_Name: Large Ammo
   m_EditorClassIdentifier: 
-  _name: Medium Ammo
+  _name: Large Ammo
   _description: Gives you 10 units of ammo
   _ammoAmount: 5
   _price: 80

@@ -130,6 +130,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8676174329611445737}
     m_Modifications:
+    - target: {fileID: 31197231, guid: 1d5424291fa329442a53e6761af17bd7, type: 3}
+      propertyPath: _weaponAmmo
+      value: 
+      objectReference: {fileID: 2099108431}
+    - target: {fileID: 31197231, guid: 1d5424291fa329442a53e6761af17bd7, type: 3}
+      propertyPath: _weaponDamage
+      value: 
+      objectReference: {fileID: 1013736485}
+    - target: {fileID: 31197231, guid: 1d5424291fa329442a53e6761af17bd7, type: 3}
+      propertyPath: _statsContainer
+      value: 
+      objectReference: {fileID: 1854121012}
+    - target: {fileID: 31197231, guid: 1d5424291fa329442a53e6761af17bd7, type: 3}
+      propertyPath: _weaponShotCount
+      value: 
+      objectReference: {fileID: 1013124432}
+    - target: {fileID: 31197231, guid: 1d5424291fa329442a53e6761af17bd7, type: 3}
+      propertyPath: _weaponFiringRate
+      value: 
+      objectReference: {fileID: 843006142}
+    - target: {fileID: 31197231, guid: 1d5424291fa329442a53e6761af17bd7, type: 3}
+      propertyPath: _itemStatsContainer
+      value: 
+      objectReference: {fileID: 1854121012}
     - target: {fileID: 2072276240, guid: 1d5424291fa329442a53e6761af17bd7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -634,6 +658,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7177433555238076017, guid: d0f5ae1fd063a8247ada998e75df6fdf, type: 3}
   m_PrefabInstance: {fileID: 738471435}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &843006142 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8510926853665576000, guid: 1d5424291fa329442a53e6761af17bd7, type: 3}
+  m_PrefabInstance: {fileID: 339269309}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1013124432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8510926852339003829, guid: 1d5424291fa329442a53e6761af17bd7, type: 3}
+  m_PrefabInstance: {fileID: 339269309}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1013736485 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8510926852456482191, guid: 1d5424291fa329442a53e6761af17bd7, type: 3}
+  m_PrefabInstance: {fileID: 339269309}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1147377082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4107461189483190654, guid: 774123e437678424d9c9aba86edf710b, type: 3}
@@ -1154,6 +1211,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1854121012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8419238123474157759, guid: 1d5424291fa329442a53e6761af17bd7, type: 3}
+  m_PrefabInstance: {fileID: 339269309}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2069532579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 913232897779728163, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
@@ -1173,6 +1235,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _focalPoint: {fileID: 439676199}
   _trackingSpeed: 0.02
+--- !u!114 &2099108431 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8510926853861691499, guid: 1d5424291fa329442a53e6761af17bd7, type: 3}
+  m_PrefabInstance: {fileID: 339269309}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1128033562717717743
 PrefabInstance:
   m_ObjectHideFlags: 0
