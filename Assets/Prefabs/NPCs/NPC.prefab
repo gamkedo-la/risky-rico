@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4743856800151966578}
   - component: {fileID: 963542596828204352}
   - component: {fileID: -747211122740706475}
+  - component: {fileID: 7819595489692357984}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -100,7 +101,36 @@ MonoBehaviour:
   _activeDialogueSequence: {fileID: 11400000, guid: 4ec1a8a081ba3a4468273fe3e5c1296b, type: 2}
   _npcDialogueSequence: {fileID: 0}
   _onDialogStart: {fileID: 0}
-  _onDialogEnd:
-    m_PersistentCalls:
-      m_Calls: []
   _interactionPrompt: Talk
+--- !u!114 &7819595489692357984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4017927638213761040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: a612b7e88fc4e4445a6272dc0775ddf4, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -747211122740706475}
+        m_TargetAssemblyTypeName: NPC, Assembly-CSharp
+        m_MethodName: set_InteractionEnabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2

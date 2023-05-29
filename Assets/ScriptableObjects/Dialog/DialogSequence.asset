@@ -16,3 +16,4 @@ MonoBehaviour:
   - _content: Hi! This is a dialog box. It will be used for testing out the typewriter
       dialog feature in Risky Rico.
   - _content: This is the second line. It's shorter.
+  _onDialogEnd: {fileID: 11400000, guid: a612b7e88fc4e4445a6272dc0775ddf4, type: 2}

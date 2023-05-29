@@ -31,8 +31,8 @@ public class NPC : MonoBehaviour, IInteractable
        {
             _activeDialogueSequence.SetLines(_npcDialogueSequence.Lines);
             _activeDialogueSequence.SetEndEvent(_npcDialogueSequence.OnDialogEnd);
-            InteractionEnabled = false;
             _onDialogStart?.Raise();
+            InteractionEnabled = false;
        }
     }
 }
