@@ -161,7 +161,16 @@ public class EnemySpawnController : MonoBehaviour
 
     void SpawnEnemyPattern(EnemyPattern pattern)
     {
-        GameObject spawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Count)];
+        GameObject spawnPoint;
+        
+        do
+        {
+            spawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Count)];
+        } 
+        while (GameObject.ReferenceEquals(spawnPoint, _previousSpawnPoint));
+
+        _previousSpawnPoint = spawnPoint;
+
         Transform spawnPointTransform = spawnPoint.GetComponent<Transform>();
         float offsetAmount = 1f;
         float enemyCount = 0;
