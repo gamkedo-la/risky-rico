@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 80325514655829936, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 667373274299993066, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 667373275586918954, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 667373275773948733, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: m_Name
       value: BaseGameScene
@@ -176,6 +188,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 667373275773948734, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 667373276347449089, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

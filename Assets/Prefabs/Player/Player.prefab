@@ -204,6 +204,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 34d2e315-fa9a-471d-a6bc-32d9a6930131
     m_ActionName: Player/Navigate[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7be4dff2-7006-4cf3-9b8e-53dd2d55598c
+    m_ActionName: Player/Exit[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
