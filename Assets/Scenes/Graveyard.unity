@@ -829,7 +829,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 0}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 4451cbcc74d235d4b8dc25f858d64b2f, type: 2}
   _event: {fileID: 11400000, guid: 4451cbcc74d235d4b8dc25f858d64b2f, type: 2}
   _response:
     m_PersistentCalls:
@@ -2220,6 +2220,22 @@ PrefabInstance:
     - target: {fileID: 4363691703271536739, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: detectionDistance
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363691703271536758, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: Gamepad
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363691703271536758, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363691703271536758, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_ActionId
+      value: 7be4dff2-7006-4cf3-9b8e-53dd2d55598c
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363691703271536758, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_ActionEvents.Array.data[16].m_ActionName
+      value: Player/Exit[/Keyboard/escape]
       objectReference: {fileID: 0}
     - target: {fileID: 4363691703271536759, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: m_Enabled

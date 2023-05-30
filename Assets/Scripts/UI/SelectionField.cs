@@ -49,7 +49,7 @@ public class SelectionField : InputField
         }
     }
 
-    string GetCurrentValue()
+    public string GetCurrentValue()
     {
         return _values[_valueIndex];
     } 

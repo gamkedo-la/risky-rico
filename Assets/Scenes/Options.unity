@@ -224,6 +224,45 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &873655812 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7957254881146983952, guid: 336c96a0446fc0342aec6a9b0aa44fb2, type: 3}
+  m_PrefabInstance: {fileID: 5656658955168142651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &873655814 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7957254881146983954, guid: 336c96a0446fc0342aec6a9b0aa44fb2, type: 3}
+  m_PrefabInstance: {fileID: 5656658955168142651}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873655812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5156837ef4bad6b44b3fc6ae01dc3901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &873655815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873655812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d82f1d44e89127d41ae0fadad790c423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _resolutionField: {fileID: 873655814}
+  _resolutions:
+  - key: 1920x1080
+    width: 1920
+    height: 1080
+  - key: 1280x720
+    width: 1280
+    height: 720
+  - key: 640x480
+    width: 640
+    height: 480
 --- !u!224 &1351573789 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5656658953834804262, guid: 336c96a0446fc0342aec6a9b0aa44fb2, type: 3}
@@ -236,6 +275,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: orthographic size
+      value: 8.4375
+      objectReference: {fileID: 0}
     - target: {fileID: 4070451234905853740, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -523,6 +566,34 @@ PrefabInstance:
     - target: {fileID: 5656658953834804263, guid: 336c96a0446fc0342aec6a9b0aa44fb2, type: 3}
       propertyPath: m_Name
       value: OptionsMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7957254881146983954, guid: 336c96a0446fc0342aec6a9b0aa44fb2, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7957254881146983954, guid: 336c96a0446fc0342aec6a9b0aa44fb2, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7957254881146983954, guid: 336c96a0446fc0342aec6a9b0aa44fb2, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 873655815}
+    - target: {fileID: 7957254881146983954, guid: 336c96a0446fc0342aec6a9b0aa44fb2, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7957254881146983954, guid: 336c96a0446fc0342aec6a9b0aa44fb2, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetResolution
+      objectReference: {fileID: 0}
+    - target: {fileID: 7957254881146983954, guid: 336c96a0446fc0342aec6a9b0aa44fb2, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ChangeResolution, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7957254881146983954, guid: 336c96a0446fc0342aec6a9b0aa44fb2, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 336c96a0446fc0342aec6a9b0aa44fb2, type: 3}
