@@ -43,6 +43,11 @@ public class EnemySpawnController : MonoBehaviour
     [SerializeField, HideCustomDrawer] private GameObjectCollection _spawnedObjects;
 
     [SerializeField, HideCustomDrawer] private AnimationCurveVariable _spawnFluctuation;
+
+    [Tooltip("The shortest allowable time between enemy spawns")]
+    [SerializeField] private float _minimumSpawnTimeBuffer;
+
+    private GameObject _previousSpawnPoint;
     #endregion
 
     #region Events
@@ -96,10 +101,12 @@ public class EnemySpawnController : MonoBehaviour
                 _spawnTimer += Time.deltaTime;
 
                 // get our current point in the spawn fluctuation
-                float timeBetweenSpawnsModifier = _spawnFluctuation.Value.Evaluate(_waveTimer / currentWave.Duration) * (_waveIndex + 1);
+                float timeBetweenSpawnsModifier = _spawnFluctuation.Value.Evaluate(_waveTimer / currentWave.Duration) * (_waveIndex + 1 / _waves.Count);
+                float timeBetweenSpawns = currentWave.MaxTimeBetweenSpawns / timeBetweenSpawnsModifier;
+                timeBetweenSpawns = Mathf.Clamp(timeBetweenSpawns, _minimumSpawnTimeBuffer, currentWave.MaxTimeBetweenSpawns);
 
                 // if it's time to spawn a pattern
-                if (_spawnTimer >= currentWave.BaseTimeBetweenSpawns - timeBetweenSpawnsModifier)
+                if (_spawnTimer >= timeBetweenSpawns)
                 {
                     // --- get current pattern with patternIndex
                     EnemyPattern currentPattern = currentWave.EnemyPatterns[_patternIndex];

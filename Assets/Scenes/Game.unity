@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 667373275440951651, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: _minimumSpawnTimeBuffer
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 667373275586918954, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: m_IsActive
       value: 1

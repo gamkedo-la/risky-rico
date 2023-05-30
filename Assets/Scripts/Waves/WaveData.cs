@@ -46,8 +46,8 @@ public class WaveData : ScriptableObject
     public float RestPeriod => _restPeriod;
     
     [Tooltip("Time between enemy spawns (in seconds)")]
-    [SerializeField] private float _baseTimeBetweenSpawns = 1f;
-    public float BaseTimeBetweenSpawns => _baseTimeBetweenSpawns;
+    [SerializeField] private float _maxTimeBetweenSpawns = 1f;
+    public float MaxTimeBetweenSpawns => _maxTimeBetweenSpawns;
 
     [Tooltip("Change in spawn intensity over time (the y value is subtracted from timeBetweenSpawns))")]
     [SerializeField] private AnimationCurveReference _spawnRateChange;
