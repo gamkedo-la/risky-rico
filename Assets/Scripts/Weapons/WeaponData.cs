@@ -20,8 +20,7 @@ public class WeaponData : ScriptableObject
     #endregion
 
     #region Weapon Modifiers
-    [Header("MODIFIERS")]
-    [SerializeField] private List<Modifier> _modifiers = new List<Modifier>();
+    private List<Modifier> _modifiers = new List<Modifier>();
     public List<Modifier> Modifiers => _modifiers;
     #endregion
 
@@ -68,6 +67,22 @@ public class WeaponData : ScriptableObject
     [SerializeField] private AudioClip _firingSound;
     public AudioClip FiringSound => _firingSound;
 
+    #endregion
+
+    #region Methods
+    void OnValidate()
+    {
+        _modifiers.Clear();
+
+        Modifier firingRateMod = new Modifier(_baseFiringRate, AttributeType.FIRING_RATE, Operator.SET);
+        Modifier damageMod = new Modifier(_baseDamage, AttributeType.DAMAGE, Operator.SET);
+        Modifier bulletCountMod = new Modifier(_baseBulletCount, AttributeType.SHOT_COUNT, Operator.SET);
+
+        _modifiers.Add( firingRateMod );
+        _modifiers.Add( damageMod );
+        _modifiers.Add( bulletCountMod );
+
+    }
     #endregion
 
 }

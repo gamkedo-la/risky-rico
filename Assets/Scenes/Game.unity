@@ -134,6 +134,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 193153920921115104, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: orthographic size
+      value: 8.4375
+      objectReference: {fileID: 0}
+    - target: {fileID: 193153920921115104, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_NormalizedViewPortRect.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 193153920921115104, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 193153920921115104, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 193153920921115104, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_NormalizedViewPortRect.height
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 667373274299993066, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -205,6 +225,26 @@ PrefabInstance:
     - target: {fileID: 667373276347449089, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411704297101301033, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411704297101301033, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_AssetsPPU
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411704297101301033, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_CropFrame
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411704297101301033, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_GridSnapping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4411704297101301033, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_RefResolutionY
+      value: 256
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
