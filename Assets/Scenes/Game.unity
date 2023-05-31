@@ -139,6 +139,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 667373275440951651, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: _waves.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 667373275440951651, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: _waves.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8914cb05061615245a8a1470683a7ae6, type: 2}
+    - target: {fileID: 667373275440951651, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: _minimumSpawnTimeBuffer
       value: 0.5
       objectReference: {fileID: 0}

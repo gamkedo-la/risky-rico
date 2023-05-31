@@ -16,7 +16,7 @@ MonoBehaviour:
   _designPurpose: 
   _duration: 20
   _restPeriod: 5
-  _baseTimeBetweenSpawns: 3
+  _maxTimeBetweenSpawns: 3
   _spawnRateChange:
     _useConstant: 1
     _constantValue:
