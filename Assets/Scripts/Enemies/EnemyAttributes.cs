@@ -26,6 +26,31 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
 
     [SerializeField] private ModifiableAttribute _yHealth;
     public ModifiableAttribute YHealth => _yHealth;
+
+    [Header("STAT TUNING")]
+    [Tooltip("How quickly the enemy can move")]
+    [Range(0f, 10f)]
+    [SerializeField] private float _baseMoveSpeed;
+
+    [Tooltip("How often the enemy will rotate (rotations per second)")]
+    [Range(0f, 10f)]
+    [SerializeField] private float _baseRotationFrequency;
+
+    [Tooltip("How far the enemy will swerve")]
+    [Range(0f, 10f)]
+    [SerializeField] private float _baseSwerveAmplitude;
+
+    [Tooltip("How often the enemy will swerve")]
+    [Range(0f, 10f)]
+    [SerializeField] private float _baseSwerveFrequency;
+    
+    [Tooltip("How many hits the enemy can take on the x-axis")]
+    [Range(1, 3)]
+    [SerializeField] private int _baseXHealth;
+    
+    [Range(1, 3)]
+    [Tooltip("How many hits the enemy can take on the y-axis")]
+    [SerializeField] private int _baseYHealth;
     #endregion
 
     #region Visuals and Sound
@@ -120,7 +145,12 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
 
     public void SetBaseValuesOnValidate() 
     {
-        
+        _moveSpeed.SetBaseValue(_baseMoveSpeed);
+        _rotationFrequency.SetBaseValue(_baseRotationFrequency);
+        _swerveAmplitude.SetBaseValue(_baseSwerveAmplitude);
+        _swerveFrequency.SetBaseValue(_baseSwerveFrequency);
+        _xHealth.SetBaseValue((float) _baseXHealth);
+        _yHealth.SetBaseValue((float) _baseYHealth);
     }
     #endregion
 }

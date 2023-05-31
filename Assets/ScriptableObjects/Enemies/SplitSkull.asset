@@ -13,40 +13,35 @@ MonoBehaviour:
   m_Name: SplitSkull
   m_EditorClassIdentifier: 
   _moveSpeed:
-    _type: 0
     _baseValue: 2
     _currentValue: 2
     _modifiers: []
   _rotationFrequency:
-    _type: 0
-    _baseValue: 0.5
-    _currentValue: 0.5
-    _modifiers: []
-  _xHealth:
-    _type: 4
     _baseValue: 1
     _currentValue: 1
     _modifiers: []
-  _yHealth:
-    _type: 4
-    _baseValue: 2
-    _currentValue: 2
-    _modifiers: []
   _swerveAmplitude:
-    _type: 0
-    _baseValue: 0
-    _currentValue: 0
-    _modifiers: []
-  _swervePeriod:
-    _type: 0
     _baseValue: 0
     _currentValue: 0
     _modifiers: []
   _swerveFrequency:
-    _type: 0
     _baseValue: 0
     _currentValue: 0
     _modifiers: []
+  _xHealth:
+    _baseValue: 1
+    _currentValue: 1
+    _modifiers: []
+  _yHealth:
+    _baseValue: 2
+    _currentValue: 2
+    _modifiers: []
+  _baseMoveSpeed: 2
+  _baseRotationFrequency: 1
+  _baseSwerveAmplitude: 0
+  _baseSwerveFrequency: 0
+  _baseXHealth: 1
+  _baseYHealth: 2
   _attackAnimation: {fileID: 21300000, guid: 729e3b3f40a19834c847776c1a5b88f7, type: 3}
   _deathAnimation: {fileID: 0}
   _spawnCry: {fileID: 0}

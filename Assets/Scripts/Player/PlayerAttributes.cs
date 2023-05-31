@@ -148,7 +148,6 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
 
     public void SetBaseValuesOnValidate() 
     {
-        Debug.Log("SetBaseValuesOnValidate");
         _movementSpeed.SetBaseValue(_baseMovementSpeed);
         _firingRate.SetBaseValue(_baseFiringRate);
         _damage.SetBaseValue((float) _baseDamage);

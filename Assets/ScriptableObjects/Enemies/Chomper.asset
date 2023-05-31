@@ -36,6 +36,12 @@ MonoBehaviour:
     _baseValue: 1
     _currentValue: 1
     _modifiers: []
+  _baseMoveSpeed: 2
+  _baseRotationFrequency: 0
+  _baseSwerveAmplitude: 0
+  _baseSwerveFrequency: 0
+  _baseXHealth: 1
+  _baseYHealth: 1
   _attackAnimation: {fileID: -1807793795, guid: 2d3284ff2c62c254cbd52215bae8c2ed, type: 3}
   _deathAnimation: {fileID: 0}
   _spawnCry: {fileID: 0}
