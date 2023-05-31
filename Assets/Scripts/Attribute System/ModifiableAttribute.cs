@@ -7,7 +7,7 @@ public class ModifiableAttribute
 {
     [Header("VALUES")]
     [Tooltip("The default float value for this attribute")]
-    [SerializeReference] private float _baseValue;
+    [SerializeReference, ReadOnly] private float _baseValue;
     public float BaseValue => _baseValue;
     
     [Tooltip("The modified float value for this attribute (typically read by other components)")]
@@ -47,5 +47,10 @@ public class ModifiableAttribute
     {
         _modifiers.Remove(modifier);
         CalculateValue();
+    }
+
+    public void SetBaseValue(float value)
+    {
+        _baseValue = value;
     }
 }

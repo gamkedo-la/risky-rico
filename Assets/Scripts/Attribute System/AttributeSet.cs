@@ -8,8 +8,10 @@ public class AttributeSet : ScriptableObject
     protected List<ModifiableAttribute> _attributes = new List<ModifiableAttribute>();
     public List<ModifiableAttribute> Attributes => _attributes;
 
-    public void OnValidate()
+    protected void OnValidate()
     {
+        SetBaseValuesOnValidate();
+        
         foreach(ModifiableAttribute attribute in _attributes)
         {
             attribute.CalculateValue();
@@ -28,4 +30,6 @@ public class AttributeSet : ScriptableObject
     public virtual void ApplyModifier(Modifier mod) {}
 
     public virtual void RemoveModifier(Modifier mod) {}
+
+    public virtual void SetBaseValuesOnValidate() {}
 }

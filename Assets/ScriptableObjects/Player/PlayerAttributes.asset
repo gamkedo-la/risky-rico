@@ -17,8 +17,8 @@ MonoBehaviour:
     _currentValue: 45
     _modifiers: []
   _firingRate:
-    _baseValue: 16
-    _currentValue: 16
+    _baseValue: 8
+    _currentValue: 8
     _modifiers: []
   _damage:
     _baseValue: 1
@@ -32,6 +32,10 @@ MonoBehaviour:
   _weaponList:
   - {fileID: 11400000, guid: 4047390979408764e98da0c07486dcb0, type: 2}
   - {fileID: 11400000, guid: 0c067d4eb4affc24ca8d8b13fab7cd27, type: 2}
+  _baseMovementSpeed: 45
+  _baseFiringRate: 8
+  _baseDamage: 1
+  _baseShotCount: 1
   _idleAnimation: {fileID: 0}
   _deathAnimation: {fileID: 0}
   _walkAnimation: {fileID: 1451624447, guid: 114367acc1301a346ae3593b0040b472, type: 3}

@@ -20,7 +20,6 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
     [SerializeField] private ModifiableAttribute _swerveFrequency;
     public ModifiableAttribute SwerveFrequency => _swerveFrequency;
 
-
     [Header("HEALTH")]
     [SerializeField] private ModifiableAttribute _xHealth;
     public ModifiableAttribute XHealth => _xHealth;
@@ -47,6 +46,16 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
     #endregion
 
     #region Methods
+    void OnValidate()
+    {
+        SetBaseValuesOnValidate();
+        
+        foreach(ModifiableAttribute attribute in _attributes)
+        {
+            attribute.CalculateValue();
+        }
+    }
+
     public void ResetAttributeList() 
     {
         _attributes.Clear();
@@ -107,6 +116,11 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
                 _yHealth.RemoveModifier(mod);
                 break;
         }
+    }
+
+    public void SetBaseValuesOnValidate() 
+    {
+        
     }
     #endregion
 }

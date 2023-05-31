@@ -15,13 +15,9 @@ MonoBehaviour:
   _name: Multi-Shot
   _description: Shoot 2 consecutive bullets at once. Gives you more firepower but
     makes it harder to count your shots.
-  _modifiers:
-  - _operator: 4
-    _value: 2
-    _targetAttribute: 3
-  _baseFiringRate: 4
-  _baseDamage: 1
-  _baseAmmoUsage: 2
+  _baseFiringRate: 3.91
+  _baseDamage: 2
+  _baseAmmoUsage: 3
   _baseBulletCount: 2
   _effect: {fileID: 0}
   _storeIcon: {fileID: 0}

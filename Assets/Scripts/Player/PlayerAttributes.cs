@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerAttributes : AttributeSet, IResetOnExitPlay
 {
     #region Combat
-    [Header("COMBAT STATS")]
+    [Header("COMBAT STATS (READ ONLY)")]
     [SerializeField] private ModifiableAttribute _movementSpeed = default(ModifiableAttribute);
     public ModifiableAttribute MovementSpeed => _movementSpeed;
 
@@ -24,6 +24,23 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
 
     [SerializeField] private List<WeaponData> _weaponList = new List<WeaponData>();
     public List<WeaponData> WeaponList => _weaponList;
+
+    [Header("STAT TUNING")]
+    [Tooltip("How quickly the player can move around in the Half-Skull state")]
+    [Range(0f, 90f)]
+    [SerializeField] private float _baseMovementSpeed;
+
+    [Tooltip("How quickly the player can shoot in the Full-Skull state (shots per second)")]
+    [Range(0f, 16f)]
+    [SerializeField] private float _baseFiringRate;
+
+    [Tooltip("How much damage is dealt to enemies per shot")]
+    [Range(0, 4)]
+    [SerializeField] private int _baseDamage;
+
+    [Tooltip("How many rounds are fired on each shot")]
+    [Range(0, 3)]
+    [SerializeField] private int _baseShotCount;
     #endregion
 
     #region Graphics
@@ -48,6 +65,16 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     #endregion
 
     #region Methods
+    void OnValidate()
+    {
+        SetBaseValuesOnValidate();
+        
+        foreach(ModifiableAttribute attribute in _attributes)
+        {
+            attribute.CalculateValue();
+        }
+    }
+
     public void ResetAttributeList()
     {
         _attributes.Clear();
@@ -117,6 +144,15 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     public void SetCurrentWeapon(WeaponData weapon)
     {
         _currentWeapon = weapon;
+    }
+
+    public void SetBaseValuesOnValidate() 
+    {
+        Debug.Log("SetBaseValuesOnValidate");
+        _movementSpeed.SetBaseValue(_baseMovementSpeed);
+        _firingRate.SetBaseValue(_baseFiringRate);
+        _damage.SetBaseValue((float) _baseDamage);
+        _shotCount.SetBaseValue((float) _baseShotCount);
     }
     #endregion
 }
