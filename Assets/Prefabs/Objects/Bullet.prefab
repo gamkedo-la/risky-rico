@@ -367,4 +367,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ammoType: 4
-  FrozenBlock: 0
+  _iceBlockPrefab: {fileID: 3925684681538655905, guid: 03a06508edca41e478780946f85a821e, type: 3}
+  _destroyableProjectiles: {fileID: 11400000, guid: 38d80e077c4c53c46927dc395409ca05, type: 2}
+  CanBeDestoyedByEnemies: 1

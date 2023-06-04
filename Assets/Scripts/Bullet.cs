@@ -6,8 +6,9 @@ using ScriptableObjectArchitecture;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private AmmoType _ammoType = AmmoType.NONE;
+    [SerializeField] private GameObject _iceBlockPrefab;
     public AmmoType AmmoType => _ammoType;
-    public bool FrozenBlock = false;
+    public bool CanBeDestoyedByEnemies = true;
 
     public void SetAmmoType(AmmoType ammoType)
     {
@@ -33,6 +34,8 @@ public class Bullet : MonoBehaviour
     {
         // spawn a frozen version of the enemy
         GameObject frozenTarget = Instantiate(gameObject, target.transform.position, Quaternion.identity);
+        GameObject iceBlock = Instantiate(_iceBlockPrefab, target.transform.position, Quaternion.identity); 
+        iceBlock.transform.SetParent(frozenTarget.transform);
 
         // set the frozen target's damage property to as high as possible
         frozenTarget.AddComponent<DamageController>();
@@ -42,10 +45,13 @@ public class Bullet : MonoBehaviour
         Sprite targetSprite = target.GetComponent<SpriteRenderer>().sprite;
         frozenTarget.GetComponent<SpriteRenderer>().sprite = targetSprite;
         frozenTarget.transform.localScale = new Vector3(1f, 1f, 1f);
+        iceBlock.transform.localScale = new Vector3(1f, 1f, 1f);
 
         // make the frozen block indestructible by enemies
-        frozenTarget.GetComponent<Bullet>().FrozenBlock = true;
-
+        Bullet bulletProperties = frozenTarget.GetComponent<Bullet>();
+        bulletProperties.CanBeDestoyedByEnemies = false;
+        bulletProperties.SetAmmoType(AmmoType.NONE);
+        
         // destroy original target
         Destroy(target);
     }

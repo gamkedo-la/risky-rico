@@ -97,16 +97,14 @@ public class EnemyHealth : MonoBehaviour
         Bullet bullet = collision.gameObject.GetComponent<Bullet>();
 
         // get type of ammo
-        bool canDestroyProjectile = true;
         if (bullet != null)
         {
             // based on ammo type, affect the enemy gameobject
             bullet.ApplyAmmoEffect(gameObject);
-            canDestroyProjectile = !bullet.FrozenBlock;
         }
 
         // remove colliding object from scene
-        if (canDestroyProjectile)
+        if (bullet.CanBeDestoyedByEnemies)
         {
             Destroy(collision.gameObject);
         }
