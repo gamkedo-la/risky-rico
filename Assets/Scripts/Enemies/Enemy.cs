@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private EnemyRotate _rotationBehavior;
     [SerializeField] private EnemySwerve _swerveBehavior;
+    [SerializeField] private FloatReference _speedModifier;
 
     void Awake()
     {
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour
     public void SetAttributes(EnemyAttributes parameters)
     {
         _parameters = parameters;
-        _movement.SetSpeed(_parameters.MoveSpeed.CurrentValue);
+        _movement.SetSpeed(_parameters.MoveSpeed.CurrentValue * _speedModifier.Value);
         _renderer.sprite = _parameters.AttackAnimation;
         _health.SetHealth(_parameters.XHealth.CurrentValue, _parameters.YHealth.CurrentValue);
         _rotationBehavior.enemy = parameters;

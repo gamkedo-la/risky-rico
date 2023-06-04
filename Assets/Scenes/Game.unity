@@ -170,6 +170,10 @@ PrefabInstance:
       propertyPath: _minimumSpawnTimeBuffer
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 667373275440951651, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: _spawnIntensity._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 1ab51e5bf01849c479ef8f7fe38ce52e, type: 2}
     - target: {fileID: 667373275586918954, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: m_IsActive
       value: 1

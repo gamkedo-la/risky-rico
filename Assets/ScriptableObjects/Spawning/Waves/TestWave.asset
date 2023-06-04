@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _waveName: 
   _designPurpose: 
-  _duration: 20
+  _duration: 10
   _restPeriod: 5
   _maxTimeBetweenSpawns: 3
   _spawnRateChange:
@@ -46,6 +46,5 @@ MonoBehaviour:
     _variable: {fileID: 0}
   _enemyPatterns:
   - {fileID: 11400000, guid: aa4433f7da8ea4644a4697e9a8f0ddb9, type: 2}
-  - {fileID: 11400000, guid: aa4433f7da8ea4644a4697e9a8f0ddb9, type: 2}
-  - {fileID: 11400000, guid: aa4433f7da8ea4644a4697e9a8f0ddb9, type: 2}
+  - {fileID: 11400000, guid: 66aacab350c82e4459574678415b9aeb, type: 2}
   _chooseRandomPattern: 1

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 694300751456116890}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,6 +321,10 @@ MonoBehaviour:
   _renderer: {fileID: 8724373994609232367}
   _rotationBehavior: {fileID: 0}
   _swerveBehavior: {fileID: 0}
+  _speedModifier:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 1ab51e5bf01849c479ef8f7fe38ce52e, type: 2}
 --- !u!114 &9149865959413056470
 MonoBehaviour:
   m_ObjectHideFlags: 0

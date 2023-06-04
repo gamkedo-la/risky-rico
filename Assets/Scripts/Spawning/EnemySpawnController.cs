@@ -100,17 +100,22 @@ public class EnemySpawnController : MonoBehaviour
                 // increment spawn timer
                 _spawnTimer += Time.deltaTime;
 
+                // TODO: refactor this to use enemy speed instead of spawn rate
                 // get our current point in the spawn fluctuation
-                float timeBetweenSpawnsModifier = _spawnFluctuation.Value.Evaluate(_waveTimer / currentWave.Duration) * (_waveIndex + 1 / _waves.Count);
-                float timeBetweenSpawns = currentWave.MaxTimeBetweenSpawns / timeBetweenSpawnsModifier;
-                timeBetweenSpawns = Mathf.Clamp(timeBetweenSpawns, _minimumSpawnTimeBuffer, currentWave.MaxTimeBetweenSpawns);
+                // float timeBetweenSpawnsModifier = _spawnFluctuation.Value.Evaluate(_waveTimer / currentWave.Duration) * (_waveIndex + 1 / _waves.Count) * _spawnIntensity.Value;
+                // float timeBetweenSpawns = currentWave.MaxTimeBetweenSpawns / timeBetweenSpawnsModifier;
+                // timeBetweenSpawns = Mathf.Clamp(timeBetweenSpawns, _minimumSpawnTimeBuffer, currentWave.MaxTimeBetweenSpawns);
 
-                // if it's time to spawn a pattern
-                if (_spawnTimer >= timeBetweenSpawns)
+                // get count of enemies on screen
+                GameObject[] activeEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+                int numberOfEnemies = activeEnemies.Length;
+
+                // only spawn enemies when none are active
+                if (numberOfEnemies <= 0)
                 {
                     // --- get current pattern with patternIndex
-                    EnemyPattern currentPattern = currentWave.EnemyPatterns[_patternIndex];
-
+                    EnemyPattern currentPattern = currentWave.EnemyPatterns[Random.Range(0, currentWave.EnemyPatterns.Count)];
+                    
                     // --- spawn enemies in a specific pattern
                     SpawnEnemyPattern(currentPattern);
                     
@@ -168,6 +173,11 @@ public class EnemySpawnController : MonoBehaviour
 
     void SpawnEnemyPattern(EnemyPattern pattern)
     {
+        if (_state != SpawnState.WAVE)
+        {
+            return;
+        }
+
         GameObject spawnPoint;
         
         do
