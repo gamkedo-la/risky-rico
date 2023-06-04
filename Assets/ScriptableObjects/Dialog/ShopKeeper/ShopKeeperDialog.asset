@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: ShopKeeperDialog
   m_EditorClassIdentifier: 
   lines:
-  - _content: Hey, shopkeeper here. Buy some things, plz
+  - _content: Howdy, stranger.
+  - _content: Whatcha need?
   _onDialogEnd: {fileID: 11400000, guid: 1a7da9822322bca42bd37f826a98afc9, type: 2}
