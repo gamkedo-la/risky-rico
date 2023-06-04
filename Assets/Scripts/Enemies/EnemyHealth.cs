@@ -16,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
 
     [Header("Collisions")]
     [SerializeField] private GameObjectCollection _damagingObjects;
+    public GameObjectCollection DamagingObjects => _damagingObjects;
     private BoxCollider2D _collider;
 
     [Header("Events")]
@@ -92,8 +93,23 @@ public class EnemyHealth : MonoBehaviour
         // spawn particle effects
         Instantiate(_damageSplash, transform.position, transform.rotation);
 
+        // get ammo data of the projectile
+        Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+
+        // get type of ammo
+        bool canDestroyProjectile = true;
+        if (bullet != null)
+        {
+            // based on ammo type, affect the enemy gameobject
+            bullet.ApplyAmmoEffect(gameObject);
+            canDestroyProjectile = !bullet.FrozenBlock;
+        }
+
         // remove colliding object from scene
-        Destroy(collision.gameObject);
+        if (canDestroyProjectile)
+        {
+            Destroy(collision.gameObject);
+        }
     }
 
     void Update()

@@ -8,6 +8,7 @@ public enum AmmoType
     FREEZE,
     PIERCE,
     DUAL_FIRE,
+    SHOCK,
     NONE,
 }
 

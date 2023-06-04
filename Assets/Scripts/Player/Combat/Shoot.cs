@@ -81,5 +81,14 @@ public class Shoot : MonoBehaviour
         {
             damageController.SetDamage(_player.Damage.CurrentValue);
         }
+
+        // set ammo type of bullet
+        Bullet bullet = _newProjectile.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            AmmoType currentAmmoType = _player.CurrentWeapon.Effect.Type;
+            bullet.SetAmmoType(currentAmmoType);
+        }
+
     }
 }
