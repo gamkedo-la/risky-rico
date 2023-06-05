@@ -17,13 +17,20 @@ public class MoveInOwnDirection : MonoBehaviour
     private FloatReference _speed;
     public FloatReference Speed => _speed;
 
+    private float _instanceSpeed;
+
+    void Awake()
+    {
+        _instanceSpeed = _speed.Value;
+    }
+
     void Update()
     {
         float currentX = transform.position.x;
         float currentY = transform.position.y;
 
-        float nextX = currentX + _xDirection * _speed.Value * Time.deltaTime;
-        float nextY = currentY + _yDirection * _speed.Value * Time.deltaTime;
+        float nextX = currentX + _xDirection * _instanceSpeed * Time.deltaTime;
+        float nextY = currentY + _yDirection * _instanceSpeed * Time.deltaTime;
 
         transform.position = new Vector3(nextX, nextY, transform.position.z);
     }
@@ -36,7 +43,7 @@ public class MoveInOwnDirection : MonoBehaviour
 
     public void SetSpeed(float speed)
     {
-        _speed.Value = speed;
+        _instanceSpeed = speed;
     }
 
     public void FlipDirection()
