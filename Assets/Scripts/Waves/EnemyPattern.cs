@@ -34,10 +34,6 @@ public class EnemyPattern : ScriptableObject
     [SerializeField] private bool _useOverrides = false;
     public bool UseOverrides => _useOverrides;
 
-    [Tooltip("Override the default enemy speed for all enemies in this pattern")]
-    [SerializeField] private float _enemySpeed = 1f;
-    public float EnemySpeed => _enemySpeed;
-
     [Tooltip("Override the default enemy rotation for all enemies in this pattern (in degrees, default is 0)")]
     [SerializeField] private Rotation _enemyRotation;
     public Rotation EnemyRotation => _enemyRotation;

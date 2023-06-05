@@ -3,7 +3,6 @@ using UnityEngine;
 public class Todo : MonoBehaviour
 {
     // GAME LOOP:
-    // TODO: increment enemy speed over waves
     // TODO: open next rooms after waves end
     // TODO: layout level maps (need a room prefab)
     // TODO: add level exit / entrances
