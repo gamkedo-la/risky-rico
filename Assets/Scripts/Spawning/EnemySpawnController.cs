@@ -42,7 +42,7 @@ public class EnemySpawnController : MonoBehaviour
     [Tooltip("Collection of game objects that have been spawned (used for deleting all objects in cleanup)")]
     [SerializeField, HideCustomDrawer] private GameObjectCollection _spawnedObjects;
 
-    [SerializeField, HideCustomDrawer] private AnimationCurveVariable _spawnFluctuation;
+    [SerializeField, HideCustomDrawer] private AnimationCurveVariable _enemySpeedFluctuation;
 
     [Tooltip("The shortest allowable time between enemy spawns")]
     [SerializeField] private float _minimumSpawnTimeBuffer;
@@ -100,12 +100,10 @@ public class EnemySpawnController : MonoBehaviour
                 // increment spawn timer
                 _spawnTimer += Time.deltaTime;
 
-                // TODO: refactor this to use enemy speed instead of spawn rate
-                // get our current point in the spawn fluctuation
-                // float timeBetweenSpawnsModifier = _spawnFluctuation.Value.Evaluate(_waveTimer / currentWave.Duration) * (_waveIndex + 1 / _waves.Count) * _spawnIntensity.Value;
-                // float timeBetweenSpawns = currentWave.MaxTimeBetweenSpawns / timeBetweenSpawnsModifier;
-                // timeBetweenSpawns = Mathf.Clamp(timeBetweenSpawns, _minimumSpawnTimeBuffer, currentWave.MaxTimeBetweenSpawns);
-
+                // get our current point in the speed fluctuation
+                float enemySpeedModifier = _enemySpeedFluctuation.Value.Evaluate(_waveTimer / currentWave.Duration) * (_waveIndex + 1);
+                enemySpeedModifier = Mathf.Clamp(enemySpeedModifier, 1f, 3f);
+       
                 // get count of enemies on screen
                 GameObject[] activeEnemies = GameObject.FindGameObjectsWithTag("Enemy");
                 int numberOfEnemies = activeEnemies.Length;
@@ -117,7 +115,7 @@ public class EnemySpawnController : MonoBehaviour
                     EnemyPattern currentPattern = currentWave.EnemyPatterns[Random.Range(0, currentWave.EnemyPatterns.Count)];
                     
                     // --- spawn enemies in a specific pattern
-                    SpawnEnemyPattern(currentPattern);
+                    SpawnEnemyPattern(currentPattern, enemySpeedModifier);
                     
                     // --- reset spawn timer
                     _spawnTimer = 0;
@@ -171,7 +169,7 @@ public class EnemySpawnController : MonoBehaviour
         }
     }
 
-    void SpawnEnemyPattern(EnemyPattern pattern)
+    void SpawnEnemyPattern(EnemyPattern pattern, float speedModifier)
     {
         if (_state != SpawnState.WAVE)
         {
@@ -209,6 +207,8 @@ public class EnemySpawnController : MonoBehaviour
             {
                 spawnedObject.GetComponent<Enemy>().SetAttributes(enemyType);
                 spawnedObject.GetComponent<MoveInOwnDirection>()?.SetDirection(new Vector2(spawnPointData.XDirection, spawnPointData.YDirection));
+                MoveInOwnDirection enemyMovement = spawnedObject.GetComponent<MoveInOwnDirection>();
+                enemyMovement?.SetSpeed(enemyMovement.Speed.Value + speedModifier);
             }
 
             // track spawned object in a list

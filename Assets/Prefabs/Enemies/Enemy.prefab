@@ -111,7 +111,7 @@ MonoBehaviour:
   _xDirection: 0
   _yDirection: -1
   _speed:
-    _useConstant: 1
+    _useConstant: 0
     _constantValue: 2
     _variable: {fileID: 11400000, guid: 675773d6d0afd38409636d1a8a828fd1, type: 2}
 --- !u!114 &4201873130710652860
@@ -321,10 +321,6 @@ MonoBehaviour:
   _renderer: {fileID: 8724373994609232367}
   _rotationBehavior: {fileID: 0}
   _swerveBehavior: {fileID: 0}
-  _speedModifier:
-    _useConstant: 0
-    _constantValue: 0
-    _variable: {fileID: 11400000, guid: 1ab51e5bf01849c479ef8f7fe38ce52e, type: 2}
 --- !u!114 &9149865959413056470
 MonoBehaviour:
   m_ObjectHideFlags: 0

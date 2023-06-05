@@ -516,6 +516,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8914cb05061615245a8a1470683a7ae6, type: 2}
     - target: {fileID: 667373275440951651, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: _enemySpeedFluctuation
+      value: 
+      objectReference: {fileID: 11400000, guid: 18f9d1e93b1381c46b9b38b784262fc4, type: 2}
+    - target: {fileID: 667373275440951651, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: _minimumSpawnTimeBuffer
       value: 0.5
       objectReference: {fileID: 0}
