@@ -63,15 +63,25 @@ public class PlayerMoneyStore : MonoBehaviour
         {
             SubtractOnHandMoney(amount);
             _depositedMoney.Value += amount;
+        } 
+        else if (amount >= _onHandMoney.Value)
+        {
+            _depositedMoney.Value += _onHandMoney.Value;
+            SubtractOnHandMoney(_onHandMoney.Value);
         }
     }
 
     public void WithdrawMoney(int amount)
     {
-        if (amount <= _depositedMoney.Value)
+        if (amount <= _depositedMoney.Value && amount + _onHandMoney.Value <= _onHandMoneyLimit)
         {
             AddOnHandMoney(amount);
             _depositedMoney.Value -= amount;
+        }
+        else if (amount >= _depositedMoney.Value)
+        {
+            AddOnHandMoney(_depositedMoney.Value);
+            _depositedMoney.Value -= _depositedMoney.Value;
         }
     }
     #endregion
