@@ -379,6 +379,7 @@ MonoBehaviour:
   _cursorIndex: 0
   _input: {fileID: 0}
   _explanationText: {fileID: 0}
+  _itemList: []
   _gridItem: {fileID: 1502191600886906404, guid: 3a35d5e4cbdf1444a88425372208f179, type: 3}
   _gridLayout: {fileID: 150976719683718818}
 --- !u!114 &150976719683718818
@@ -461,10 +462,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d07f956522396c488b5da50c8b0aa6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _player: {fileID: 0}
   _gridMenu: {fileID: 1011550740610510819}
   _itemName: {fileID: 2072276243}
   _itemDescription: {fileID: 8510926852507453907}
   _itemPrice: {fileID: 8510926852659946104}
+  _weaponAmmo: {fileID: 0}
+  _weaponFiringRate: {fileID: 0}
+  _weaponShotCount: {fileID: 0}
+  _weaponDamage: {fileID: 0}
+  _statsContainer: {fileID: 0}
+  _onShopClose: {fileID: 0}
 --- !u!222 &474827982
 CanvasRenderer:
   m_ObjectHideFlags: 0
