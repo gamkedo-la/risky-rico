@@ -55,6 +55,10 @@ public class InputField : MonoBehaviour
         _input = input;
     }
 
+    protected virtual void GetCurrentValue()
+    {
+    }
+
     void Update()
     {
         if (_inputEnabled && _input != null && InputDetected())
