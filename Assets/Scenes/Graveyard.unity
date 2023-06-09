@@ -681,6 +681,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8676174329611445737}
     m_Modifications:
+    - target: {fileID: 949696326507329509, guid: 9fe7a6ef5a7cd4040b72649ecde5e7e0, type: 3}
+      propertyPath: _maxRewardBoost
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466893254398195722, guid: 9fe7a6ef5a7cd4040b72649ecde5e7e0, type: 3}
+      propertyPath: _maxRewardBoost
+      value: 1.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3561358565911983656, guid: 9fe7a6ef5a7cd4040b72649ecde5e7e0, type: 3}
       propertyPath: _input
       value: 

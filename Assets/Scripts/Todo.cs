@@ -3,8 +3,8 @@ using UnityEngine;
 public class Todo : MonoBehaviour
 {
     // GAME LOOP:
-    // TODO: open next rooms after waves end
     // TODO: layout level maps (need a room prefab)
+    // TODO: open next rooms after waves end
     // TODO: add level exit / entrances
     // TODO: respawn at graveyard on death
     
