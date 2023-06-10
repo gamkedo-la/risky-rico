@@ -17,7 +17,7 @@ public class RoomTransition : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (enabled && _endPoint && _transportableObjects.Contains(collision.gameObject))
         {
@@ -27,7 +27,7 @@ public class RoomTransition : MonoBehaviour
         }
     }
  
-    public void OnCollisionExit2D(Collision2D collision)
+    public void OnTriggerExit2D(Collider2D collision)
     {
         if (!enabled && _transportableObjects.Contains(collision.gameObject))
         {

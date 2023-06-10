@@ -219,6 +219,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 421204391}
     m_Modifications:
+    - target: {fileID: 2800759087174809061, guid: c4a5675b762123d49baa3e36cf6cbaae, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 22d214e29d7860f4abc40e0dd150775f, type: 2}
     - target: {fileID: 6599287266193180513, guid: c4a5675b762123d49baa3e36cf6cbaae, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -285,6 +289,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 421204391}
     m_Modifications:
+    - target: {fileID: 2800759087174809061, guid: c4a5675b762123d49baa3e36cf6cbaae, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 22d214e29d7860f4abc40e0dd150775f, type: 2}
+    - target: {fileID: 5968240923502339998, guid: c4a5675b762123d49baa3e36cf6cbaae, type: 3}
+      propertyPath: _state
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6599287266193180513, guid: c4a5675b762123d49baa3e36cf6cbaae, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -692,12 +704,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 80325514655829922, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 375788465477839690, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: _endPoint
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 507563961939282092, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 22d214e29d7860f4abc40e0dd150775f, type: 2}
     - target: {fileID: 667373274771679003, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: m_LocalPosition.y
       value: -20
@@ -754,14 +770,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 667373276347449089, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1009932213039324328, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: m_Name
       value: RoomA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194186239453620219, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2987538718018389530, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: _endPoint
       value: 
       objectReference: {fileID: 2016311478}
+    - target: {fileID: 5955749924807801940, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
+      propertyPath: _previouslyRegisteredEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 22d214e29d7860f4abc40e0dd150775f, type: 2}
     - target: {fileID: 6606734768849217616, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
       propertyPath: m_Name
       value: RoomB

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3431328352760771261}
   - component: {fileID: 4319973750528184725}
   - component: {fileID: 8173643032533035937}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpawnTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawner: {fileID: 0}
+  _exit: {fileID: 0}
   _collidableObjects: {fileID: 11400000, guid: 5867dc72610f0ff43b7e2f0286ca1f31, type: 2}
 --- !u!61 &8173643032533035937
 BoxCollider2D:
