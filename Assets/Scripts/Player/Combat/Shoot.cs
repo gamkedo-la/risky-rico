@@ -84,7 +84,7 @@ public class Shoot : MonoBehaviour
 
         // set ammo type of bullet
         Bullet bullet = _newProjectile.GetComponent<Bullet>();
-        if (bullet != null)
+        if (bullet != null && _player.CurrentWeapon.Effect != null)
         {
             AmmoType currentAmmoType = _player.CurrentWeapon.Effect.Type;
             bullet.SetAmmoType(currentAmmoType);
