@@ -39,3 +39,6 @@ public class SoundEffectDictionary : SerializableDictionary<string, SoundEffect>
 
 [Serializable]
 public class MusicDictionary : SerializableDictionary<string, MusicTrack> {}
+
+[Serializable]
+public class SpriteDictionary : SerializableDictionary<string, Sprite> {}
