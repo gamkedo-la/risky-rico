@@ -9,6 +9,7 @@ public class EnemySpawnController : MonoBehaviour
     #region Controller State
     [Header("CONTROLLER STATE")]
     [SerializeField] private SpawnState _state = SpawnState.WAVE;
+    public SpawnState State => _state;
     [SerializeField] private bool _loopWaves = false;
     #endregion
 

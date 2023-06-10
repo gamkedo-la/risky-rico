@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1207446984064745656}
   - component: {fileID: 5701726785729935599}
   m_Layer: 0
-  m_Name: ring
+  m_Name: CombatRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -372,7 +372,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6855968754650758440}
   m_Layer: 0
-  m_Name: -- SPAWNING --
+  m_Name: SpawnControllers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,8 +439,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6599287266193180513}
-  - component: {fileID: 2800759087174809061}
-  - component: {fileID: 3102075720666414236}
+  - component: {fileID: 8806544843137362627}
+  - component: {fileID: 4414803778942514186}
   m_Layer: 0
   m_Name: CombatRoom
   m_TagString: Untagged
@@ -468,7 +468,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2800759087174809061
+--- !u!114 &8806544843137362627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -477,73 +477,44 @@ MonoBehaviour:
   m_GameObject: {fileID: 8825550534947951897}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e95eb5cef403124fb39d46907c7e98b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _showDebugFields: 0
-  _enableGizmoDebugging: 1
-  _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 22d214e29d7860f4abc40e0dd150775f, type: 2}
-  _event: {fileID: 11400000, guid: 22d214e29d7860f4abc40e0dd150775f, type: 2}
-  _response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7917654015140821950}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &3102075720666414236
-MonoBehaviour:
+  _combatFinished: 0
+  _exits:
+  - {fileID: 8164543519764308731}
+  - {fileID: 686188579270024788}
+  - {fileID: 6704881478373494699}
+  - {fileID: 1003887568381874485}
+  _spawnTrigger: {fileID: 3776858633347815170}
+  _spawnController: {fileID: 5968240923502339998}
+  _collidableObjects: {fileID: 11400000, guid: 5867dc72610f0ff43b7e2f0286ca1f31, type: 2}
+--- !u!61 &4414803778942514186
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8825550534947951897}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showDebugFields: 0
-  _enableGizmoDebugging: 1
-  _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 6ab2e8fe4e0480944b7b5a5662a145b1, type: 2}
-  _event: {fileID: 11400000, guid: 6ab2e8fe4e0480944b7b5a5662a145b1, type: 2}
-  _response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7917654015140821950}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 3776858633347815170}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.0217149, y: 1.5863467}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.7321525, y: 5.4632797}
+  m_EdgeRadius: 0
 --- !u!1001 &284360338400580451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -595,6 +566,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5430019014320181369, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6673292471665026623, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
       propertyPath: m_Name
       value: RoomExitTop
@@ -610,6 +585,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4927975735328685082, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
   m_PrefabInstance: {fileID: 284360338400580451}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6704881478373494699 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6845126284211641544, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+  m_PrefabInstance: {fileID: 284360338400580451}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c2d77a667e1bf4e9dc129b2284bb32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &994394991681198383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -732,6 +718,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5430019014320181369, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6673292471665026623, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
       propertyPath: m_Name
       value: RoomExitLeft
@@ -747,6 +737,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4927975735328685082, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
   m_PrefabInstance: {fileID: 3436403765137849907}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8164543519764308731 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6845126284211641544, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+  m_PrefabInstance: {fileID: 3436403765137849907}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c2d77a667e1bf4e9dc129b2284bb32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4566108897136305626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1101,6 +1102,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1977891031896136432, guid: 5864a2f659e392544be26f84f4ef300a, type: 3}
   m_PrefabInstance: {fileID: 5305682458062617965}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5968240923502339998 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1977891031896136435, guid: 5864a2f659e392544be26f84f4ef300a, type: 3}
+  m_PrefabInstance: {fileID: 5305682458062617965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968240923502339997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e8695a9aeb5be49852a698ae463a95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &5968240923502339999 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1977891031896136434, guid: 5864a2f659e392544be26f84f4ef300a, type: 3}
@@ -1157,6 +1169,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5430019014320181369, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6673292471665026623, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
       propertyPath: m_Name
       value: RoomExitBottom
@@ -1167,6 +1183,17 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 6ab2e8fe4e0480944b7b5a5662a145b1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+--- !u!114 &1003887568381874485 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6845126284211641544, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+  m_PrefabInstance: {fileID: 5985354797887966717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c2d77a667e1bf4e9dc129b2284bb32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1689957791248708071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4927975735328685082, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
@@ -1223,6 +1250,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5430019014320181369, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6673292471665026623, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
       propertyPath: m_Name
       value: RoomExitRight
@@ -1233,6 +1264,17 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 6ab2e8fe4e0480944b7b5a5662a145b1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+--- !u!114 &686188579270024788 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6845126284211641544, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+  m_PrefabInstance: {fileID: 6303652952033591964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c2d77a667e1bf4e9dc129b2284bb32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1376057650345459334 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4927975735328685082, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}

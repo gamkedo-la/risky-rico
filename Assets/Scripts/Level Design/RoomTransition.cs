@@ -10,6 +10,7 @@ public class RoomTransition : MonoBehaviour
     [SerializeField] private GameEvent _onRoomEnter;
     
     public bool enabled = false;
+    public bool open = true;
 
     void Awake()
     {
@@ -21,7 +22,7 @@ public class RoomTransition : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (enabled && _endPoint && _transportableObjects.Contains(collision.gameObject))
+        if (open && enabled && _endPoint && _transportableObjects.Contains(collision.gameObject))
         {
             collision.gameObject.transform.position = _endPoint.transform.position;
             RoomTransition otherTransitionPoint = _endPoint.GetComponent<RoomTransition>();
