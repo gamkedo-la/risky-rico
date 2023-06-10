@@ -7,6 +7,8 @@ public class RoomTransition : MonoBehaviour
 {
     [SerializeField] private GameObjectCollection _transportableObjects;
     [SerializeField] private GameObject _endPoint;
+    [SerializeField] private GameEvent _onRoomEnter;
+    
     public bool enabled = false;
 
     void Awake()
@@ -32,6 +34,7 @@ public class RoomTransition : MonoBehaviour
         if (!enabled && _transportableObjects.Contains(collision.gameObject))
         {
             enabled = true;
+            _onRoomEnter?.Raise();
         }
     }
 

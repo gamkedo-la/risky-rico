@@ -440,6 +440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6599287266193180513}
   - component: {fileID: 2800759087174809061}
+  - component: {fileID: 3102075720666414236}
   m_Layer: 0
   m_Name: CombatRoom
   m_TagString: Untagged
@@ -488,6 +489,50 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7917654015140821950}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &3102075720666414236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825550534947951897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 6ab2e8fe4e0480944b7b5a5662a145b1, type: 2}
+  _event: {fileID: 11400000, guid: 6ab2e8fe4e0480944b7b5a5662a145b1, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7917654015140821950}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3776858633347815170}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -554,6 +599,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomExitTop
       objectReference: {fileID: 0}
+    - target: {fileID: 6845126284211641544, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+      propertyPath: _onRoomEnter
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ab2e8fe4e0480944b7b5a5662a145b1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
 --- !u!4 &5157166839848054649 stripped
@@ -687,6 +736,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomExitLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 6845126284211641544, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+      propertyPath: _onRoomEnter
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ab2e8fe4e0480944b7b5a5662a145b1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
 --- !u!4 &7769589886240784937 stripped
@@ -1108,6 +1161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomExitBottom
       objectReference: {fileID: 0}
+    - target: {fileID: 6845126284211641544, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+      propertyPath: _onRoomEnter
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ab2e8fe4e0480944b7b5a5662a145b1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
 --- !u!4 &1689957791248708071 stripped
@@ -1170,6 +1227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomExitRight
       objectReference: {fileID: 0}
+    - target: {fileID: 6845126284211641544, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+      propertyPath: _onRoomEnter
+      value: 
+      objectReference: {fileID: 11400000, guid: 6ab2e8fe4e0480944b7b5a5662a145b1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
 --- !u!4 &1376057650345459334 stripped
@@ -1384,6 +1445,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a57a8ce82ae56e54c94dde10f7d165ae, type: 3}
+--- !u!1 &3776858633347815170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5896344372463503488, guid: a57a8ce82ae56e54c94dde10f7d165ae, type: 3}
+  m_PrefabInstance: {fileID: 7331329257649463170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5341440583419817279 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3431328352760771261, guid: a57a8ce82ae56e54c94dde10f7d165ae, type: 3}
