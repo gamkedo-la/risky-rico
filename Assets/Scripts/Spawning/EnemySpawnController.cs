@@ -203,5 +203,10 @@ public class EnemySpawnController : MonoBehaviour
         }
 
     }
+    
+    public void ResetState()
+    {
+        _state = SpawnState.WAVE;
+    }
     #endregion
 }
