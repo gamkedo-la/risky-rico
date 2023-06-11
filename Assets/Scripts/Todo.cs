@@ -19,5 +19,5 @@ public class Todo : MonoBehaviour
     // TODO: write shopkeeper dialog (add flags for game progress)
     // TODO: emit particles from shop chimney
     // TODO: change particle texture after player buys things
-    // TODO: play cursor animation
+    // TODO: play cursor sound
 }
