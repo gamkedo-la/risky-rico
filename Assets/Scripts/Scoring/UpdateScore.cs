@@ -19,6 +19,15 @@ public class UpdateScore : MonoBehaviour
 
     public void BreakCombo()
     {
+        // spawn text object to show combo break
+        if (_scoreMultiplier.Value > 1f)
+        {
+            GameObject combobreakText = Instantiate(_pointTextPrefab, transform.position, transform.rotation);
+            combobreakText.GetComponent<TMP_Text>().text = "<color=#ac3232>x0</color>";
+            combobreakText.transform.SetParent(transform.parent);
+        }
+
+        // reset combo multiplier
         _scoreMultiplier.Value = 1f;
     }
 
