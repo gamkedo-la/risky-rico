@@ -192,6 +192,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8109491639713886447}
+        m_TargetAssemblyTypeName: SpawnObject, Assembly-CSharp
+        m_MethodName: SpawnPrefab
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7096906171524865790, guid: d1d2c56cc2049df4d96e2cf5e51d8b82, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _exitResponse:
     m_PersistentCalls:
       m_Calls: []
@@ -353,7 +365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66bcd871392b37542b00cc0575ac2153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _object: {fileID: 1535447269072338634, guid: 57248d116d4d4f44da6903360af90cfd, type: 3}
+  _object: {fileID: 7096906171524865790, guid: d1d2c56cc2049df4d96e2cf5e51d8b82, type: 3}
 --- !u!114 &7074290994495607345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,5 +380,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ammoType: 4
   _iceBlockPrefab: {fileID: 3925684681538655905, guid: 03a06508edca41e478780946f85a821e, type: 3}
-  _destroyableProjectiles: {fileID: 11400000, guid: 38d80e077c4c53c46927dc395409ca05, type: 2}
   CanBeDestoyedByEnemies: 1

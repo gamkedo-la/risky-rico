@@ -10,4 +10,9 @@ public class SpawnObject : MonoBehaviour
     {
         Instantiate(_object, transform.position, transform.rotation);
     }
+
+    public void SpawnPrefab(GameObject prefab)
+    {
+        Instantiate(prefab, transform.position, transform.rotation);
+    }
 }
