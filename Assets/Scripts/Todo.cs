@@ -2,12 +2,6 @@ using UnityEngine;
 
 public class Todo : MonoBehaviour
 {
-    // GAME LOOP:
-    // TODO: layout level maps (need a room prefab)
-    // TODO: open next rooms after waves end
-    // TODO: add level exit / entrances
-    // TODO: respawn at graveyard on death
-    
     // GAME POLISH:
     // TODO: hitbox favortism
     // TODO: balancing (speed, tempo, spawn types)

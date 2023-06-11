@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelExit : MonoBehaviour, IInteractable
 {
@@ -18,6 +19,6 @@ public class LevelExit : MonoBehaviour, IInteractable
 
     public void ReceiveInteraction(GameObject interactor)
     {
-       Debug.Log("Going to next level");
+       SceneManager.LoadScene("Game");
     }
 }
