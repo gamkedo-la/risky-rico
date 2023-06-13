@@ -71,17 +71,7 @@ public class ScoreTracker : MonoBehaviour
 
     public int CompareScoreValues(Score a, Score b)
     {
-        if (a.value > b.value)
-        {
-            return 1;
-        }
-        else if (a.value < b.value)
-        {
-            return -1;
-        }
-        else 
-        {
-            return 0;
-        }
+        if (a.value == b.value) return 0;
+        return a.value > b.value ? 1 : -1;
     }
 }
