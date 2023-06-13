@@ -791,6 +791,7 @@ GameObject:
   - component: {fileID: 1886486023}
   - component: {fileID: 1886486022}
   - component: {fileID: 1886486021}
+  - component: {fileID: 1886486024}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -937,6 +938,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1886486019}
   m_CullTransparentMesh: 1
+--- !u!114 &1886486024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886486019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ebb1b23ea208694ab9d92843ddb0120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerScore: {fileID: 0}
+  _scoreMessageMap:
+    m_keys: 000000000a0000003200000064000000c8000000900100002003000040060000800c00000019000000320000
+    m_values:
+    - Not worth mentioning
+    - He tried (hardly)
+    - 'He tried '
+    - An honest attempt
+    - Decent
+    - He got better
+    - Put on a good show
+    - Doing much better these days
+    - Gotta admit, he was good. Really good.
+    - Outstanding performance (shame he's dead)
+    - A (formerly) living legend
+  _maxScoreCount: 5
 --- !u!1 &2093771368
 GameObject:
   m_ObjectHideFlags: 0
