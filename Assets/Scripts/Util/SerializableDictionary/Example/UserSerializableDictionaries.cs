@@ -42,3 +42,6 @@ public class MusicDictionary : SerializableDictionary<string, MusicTrack> {}
 
 [Serializable]
 public class SpriteDictionary : SerializableDictionary<string, Sprite> {}
+
+[Serializable]
+public class IntStringDictionary : SerializableDictionary<int, string> {}

@@ -12,6 +12,7 @@ using UnityEditor;
 [CustomPropertyDrawer(typeof(SoundEffectDictionary))]
 [CustomPropertyDrawer(typeof(MusicDictionary))]
 [CustomPropertyDrawer(typeof(SpriteDictionary))]
+[CustomPropertyDrawer(typeof(IntStringDictionary))]
 [CustomPropertyDrawer(typeof(ItemDropTableDictionary))]
 public class AnySerializableDictionaryPropertyDrawer : SerializableDictionaryPropertyDrawer {}
 

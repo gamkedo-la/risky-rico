@@ -66,6 +66,7 @@ public class ServiceLocator
     }
 
     /// <summary>
+    
     /// Registers a service instance with the ServiceLocator instance.
     /// </summary>
     /// <typeparam name="T">The type of the service to register. Must implement the IService interface.</typeparam>
