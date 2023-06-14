@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
 
+[System.Serializable]
 public struct Score 
 {
     public int value;
     public string holder;
     public string message;
 }
+// test score tracker script
+// need a grave script to hold the score and message(make interactable)
+// reset player score on retry
+// populate grave site with the list of scores (1 score and message per grave)
+// display grave score and message on interaction
 
 public class ScoreTracker : MonoBehaviour
 {
@@ -24,6 +30,11 @@ public class ScoreTracker : MonoBehaviour
     [Tooltip("The limit to how many elements are allowed in the high score list")]
     [Range(5, 10)]
     [SerializeField] private int _maxScoreCount = 5;
+
+    void Awake()
+    {
+        UpdateScoreList();
+    }
 
     public void UpdateScoreList()
     {
@@ -53,9 +64,6 @@ public class ScoreTracker : MonoBehaviour
             _highScores.Sort(CompareScoreValues);
         }
 
-        // reset the player's score
-        _playerScore.Value = 0;
-
         // restrict the high score list to its maximum list
         if (_highScores.Count > _maxScoreCount)
         {
@@ -72,6 +80,6 @@ public class ScoreTracker : MonoBehaviour
     public int CompareScoreValues(Score a, Score b)
     {
         if (a.value == b.value) return 0;
-        return a.value > b.value ? 1 : -1;
+        return a.value > b.value ? -1 : 1;
     }
 }
