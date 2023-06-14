@@ -25,6 +25,9 @@ public class ScoreTracker : MonoBehaviour
     
     [Tooltip("Messages to display when the player reaches a specific score")]
     [SerializeField] private IntStringDictionary _scoreMessageMap = new IntStringDictionary();
+
+    [Tooltip("The collection of text objects that will hold the scores and messages for the gravesite")]
+    [SerializeField] List<DialogSequence> _scoreEpitaphs = new List<DialogSequence>();
     
     [Tooltip("The limit to how many elements are allowed in the high score list")]
     [Range(5, 10)]
@@ -69,6 +72,29 @@ public class ScoreTracker : MonoBehaviour
             _highScores.RemoveAt(_highScores.Count - 1);
         }
 
+        // update the list of score graves to hold the new messages and scores
+        for(int i = 0; i < _highScores.Count; i++)
+        {
+            if (_scoreEpitaphs[i] != null)
+            {
+                CreateScoreEpitaph(_scoreEpitaphs[i], _highScores[i]);
+            }
+        }
+    }
+
+    void CreateScoreEpitaph(DialogSequence dialogObject, Score scoreObject)
+    {
+        DialogLine nameLine = new DialogLine();
+        nameLine.SetContent("Here lies " + scoreObject.holder);
+
+        DialogLine scoreLine = new DialogLine();
+        scoreLine.SetContent(scoreObject.value + " points - " + scoreObject.message);
+
+        List<DialogLine> epitaphLines = new List<DialogLine>();
+        epitaphLines.Add(nameLine);
+        epitaphLines.Add(scoreLine);
+
+        dialogObject.SetLines(epitaphLines);
     }
 
     string GetScoreMessage(int score)

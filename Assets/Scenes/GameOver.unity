@@ -1044,6 +1044,12 @@ MonoBehaviour:
     - Gotta admit, he was good. Really good.
     - Outstanding performance (shame he's dead)
     - A (formerly) living legend
+  _scoreEpitaphs:
+  - {fileID: 11400000, guid: d2306d511271f734b8b6519ca8663f97, type: 2}
+  - {fileID: 11400000, guid: f26a23013327e5648902c3eebd0a1ab0, type: 2}
+  - {fileID: 11400000, guid: dbec54b935fad2942a48526550554e96, type: 2}
+  - {fileID: 11400000, guid: e8b749478e27e2f448cf610b9f54fd73, type: 2}
+  - {fileID: 11400000, guid: a1890311e5d4bc7448f59fa0236b9c59, type: 2}
   _maxScoreCount: 5
 --- !u!1 &2093771368
 GameObject:
