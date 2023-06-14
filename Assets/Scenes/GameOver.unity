@@ -772,6 +772,58 @@ PrefabInstance:
       propertyPath: _label
       value: RETRY
       objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1866196244}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1866196244}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoTo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GoTo
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneChangeHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SceneChangeHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: graveyard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: graveyard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
 --- !u!224 &1866196242 stripped
@@ -779,6 +831,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 870292178765805432, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
   m_PrefabInstance: {fileID: 1866196241}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1866196244 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 870292178765805316, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+  m_PrefabInstance: {fileID: 1866196241}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8787a6e0815b94bba3637074eaab24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1886486019
 GameObject:
   m_ObjectHideFlags: 0

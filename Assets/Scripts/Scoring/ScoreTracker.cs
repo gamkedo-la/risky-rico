@@ -10,9 +10,8 @@ public struct Score
     public string holder;
     public string message;
 }
-// test score tracker script
-// need a grave script to hold the score and message(make interactable)
-// reset player score on retry
+
+// need a grave script to hold the score and message (make interactable)
 // populate grave site with the list of scores (1 score and message per grave)
 // display grave score and message on interaction
 
@@ -74,7 +73,17 @@ public class ScoreTracker : MonoBehaviour
 
     string GetScoreMessage(int score)
     {
-        return "";
+        string scoreMessage = "";
+
+        foreach(int messageKey in _scoreMessageMap.Keys)
+        {
+            if (score >= messageKey)
+            {
+                scoreMessage = _scoreMessageMap[messageKey];
+            }
+        }
+
+        return scoreMessage;
     }
 
     public int CompareScoreValues(Score a, Score b)
