@@ -11,10 +11,6 @@ public struct Score
     public string message;
 }
 
-// need a grave script to hold the score and message (make interactable)
-// populate grave site with the list of scores (1 score and message per grave)
-// display grave score and message on interaction
-
 public class ScoreTracker : MonoBehaviour
 {
     [Tooltip("The score the player currently has at the time of a game over")]
