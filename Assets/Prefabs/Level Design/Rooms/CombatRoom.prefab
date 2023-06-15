@@ -489,6 +489,7 @@ MonoBehaviour:
   _spawnTrigger: {fileID: 3776858633347815170}
   _spawnController: {fileID: 5968240923502339998}
   _collidableObjects: {fileID: 11400000, guid: 5867dc72610f0ff43b7e2f0286ca1f31, type: 2}
+  _background: {fileID: 667373274511202225}
 --- !u!61 &4414803778942514186
 BoxCollider2D:
   m_ObjectHideFlags: 0

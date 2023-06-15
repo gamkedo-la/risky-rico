@@ -19,6 +19,6 @@ public class LevelEscape : MonoBehaviour, IInteractable
 
     public void ReceiveInteraction(GameObject interactor)
     {
-       SceneManager.LoadScene("Graveyard");
+       ServiceLocator.Instance.Get<LevelManager>().EscapeLevel();
     }
 }

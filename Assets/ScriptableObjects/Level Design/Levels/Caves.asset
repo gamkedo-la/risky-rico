@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4826ad51bfc11d48bf1aaa2390b0b8e, type: 3}
   m_Name: Caves
   m_EditorClassIdentifier: 
-  _levelName: Caverns
+  _levelName: caverns
   _graphics:
     m_keys:
-    - combatroom
-    - deadendroom
+    - combat
+    - deadend
     m_values:
     - {fileID: 21300000, guid: 83397cb1077090f488587a67bbc7cf7f, type: 3}
     - {fileID: 21300000, guid: 4383fd18ce68f8e4fa54409096bbf2e0, type: 3}

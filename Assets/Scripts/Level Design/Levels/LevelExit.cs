@@ -19,6 +19,6 @@ public class LevelExit : MonoBehaviour, IInteractable
 
     public void ReceiveInteraction(GameObject interactor)
     {
-       SceneManager.LoadScene("Game");
+       ServiceLocator.Instance.Get<LevelManager>().GoToNextLevel();
     }
 }

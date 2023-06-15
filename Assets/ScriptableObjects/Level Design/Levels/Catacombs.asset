@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4826ad51bfc11d48bf1aaa2390b0b8e, type: 3}
   m_Name: Catacombs
   m_EditorClassIdentifier: 
-  _levelName: Catacombs
+  _levelName: catacombs
   _graphics:
     m_keys:
-    - combatroom
-    - deadendroom
+    - combat
+    - deadend
     m_values:
     - {fileID: 21300000, guid: e0bc60abcd2b1ba47bf13d1a643b3af0, type: 3}
     - {fileID: 21300000, guid: e0bc60abcd2b1ba47bf13d1a643b3af0, type: 3}
