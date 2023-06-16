@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6789261900581026812}
   - component: {fileID: 6789261900581026815}
   m_Layer: 0
-  m_Name: ExtraRoom
+  m_Name: DeadendRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
