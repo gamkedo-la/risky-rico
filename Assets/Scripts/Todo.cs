@@ -22,7 +22,6 @@ public class Todo : MonoBehaviour
 
     // LEVELS:
     // TODO: Create prefabs for room exit types (4-way, 3-way, 2-way, deadend)
-    // TODO: Create prefab variants of the base level for each level
     // TODO: Update base game scene to contain all level prefabs
     // TODO: When changing levels, move player and camera to the starting position for that level prefab
 }
