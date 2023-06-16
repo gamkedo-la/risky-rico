@@ -15,4 +15,4 @@ MonoBehaviour:
   levels:
   - {fileID: 11400000, guid: 3d482394ea8162442b77d0d1b5882b01, type: 2}
   - {fileID: 11400000, guid: a3a6414d1828ff94e8399670181a777c, type: 2}
-  levelIndex: 1
+  levelIndex: 0
