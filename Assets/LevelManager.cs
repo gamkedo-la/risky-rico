@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class LevelManager : IService
 {
     private readonly LevelManagerParams _params = Resources.Load<LevelManagerParams>("Level Design/LevelManagerParams");
+    public delegate void ChangeLevel();
+    public static event ChangeLevel OnLevelChange;
+
     
     public LevelManager() {}
 
@@ -25,9 +28,9 @@ public class LevelManager : IService
             // when exiting a level, update the index + 1 if we are not at the end of all levels
             _params.levelIndex += 1;
             Level currentLevel = _params.levels[_params.levelIndex];
-    
-            // if we updated the level index, load the next level as a scene
-            SceneManager.LoadScene(currentLevel.LevelName);
+
+            // invoke the event of a level change so that all rooms in a level will respond
+            OnLevelChange();
         }
         else 
         {
