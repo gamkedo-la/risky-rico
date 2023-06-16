@@ -21,8 +21,6 @@ public class Todo : MonoBehaviour
     // TODO: play cursor sound
 
     // LEVELS:
-    // TODO: Create a level prefab
-    // TODO: Make the prefab read from the current level in the levelmanager
     // TODO: Create prefabs for room exit types (4-way, 3-way, 2-way, deadend)
     // TODO: Create prefab variants of the base level for each level
     // TODO: Update base game scene to contain all level prefabs
