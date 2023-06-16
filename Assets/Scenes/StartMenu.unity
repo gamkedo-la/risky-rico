@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 1070296204}
   - component: {fileID: 1070296203}
   m_Layer: 0
-  m_Name: Random-Music-Intro-2
+  m_Name: Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -395,7 +395,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cefd97100089e354aa3c404ff1384240, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 86849be784fed224e87e35e88afbfa92, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -580,6 +580,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: orthographic size
+      value: 14.0625
+      objectReference: {fileID: 0}
     - target: {fileID: 4070451234905853740, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_Name
       value: Main Camera
