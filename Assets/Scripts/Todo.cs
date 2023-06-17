@@ -21,6 +21,5 @@ public class Todo : MonoBehaviour
     // TODO: play cursor sound
 
     // LEVELS:
-    // TODO: Create prefabs for room exit types (4-way, 3-way, 2-way, deadend)
     // TODO: When changing levels, move player and camera to the starting position for that level prefab
 }
