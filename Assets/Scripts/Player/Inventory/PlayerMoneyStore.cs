@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,11 @@ public class PlayerMoneyStore : MonoBehaviour
     [SerializeField] private int _depositMoneyLimit;
 
     #endregion
+
+    private void Awake()
+    {
+        SetDepositedMoney(ServiceLocator.Instance.Get<SaveDataManager>().GetDepositedMoney());
+    }
 
     #region Methods
 
@@ -55,6 +61,7 @@ public class PlayerMoneyStore : MonoBehaviour
     {
         _depositedMoney.Value = amount;
         _depositedMoney.Value = Mathf.Clamp(_depositedMoney.Value, 0, _depositMoneyLimit);
+        ServiceLocator.Instance.Get<SaveDataManager>().SetDespositedMoney(_depositedMoney.Value);
     }
 
     public void DepositMoney(int amount)
@@ -69,6 +76,7 @@ public class PlayerMoneyStore : MonoBehaviour
             _depositedMoney.Value += _onHandMoney.Value;
             SubtractOnHandMoney(_onHandMoney.Value);
         }
+        ServiceLocator.Instance.Get<SaveDataManager>().SetDespositedMoney(_depositedMoney.Value);
     }
 
     public void WithdrawMoney(int amount)
@@ -83,6 +91,7 @@ public class PlayerMoneyStore : MonoBehaviour
             AddOnHandMoney(_depositedMoney.Value);
             _depositedMoney.Value -= _depositedMoney.Value;
         }
+        ServiceLocator.Instance.Get<SaveDataManager>().SetDespositedMoney(_depositedMoney.Value);
     }
     #endregion
 

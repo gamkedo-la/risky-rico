@@ -19,6 +19,7 @@ public static class Bootstrapper
         Object.DontDestroyOnLoad(singletonObject);
         
         //Setup Services
+        ServiceLocator.Instance.Register(new SaveDataManager());
         ServiceLocator.Instance.Register(new AudioManager());
         ServiceLocator.Instance.Register(new MusicManager());
         ServiceLocator.Instance.Register(new LevelManager());

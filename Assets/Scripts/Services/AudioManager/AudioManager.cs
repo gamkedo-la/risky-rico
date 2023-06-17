@@ -31,6 +31,10 @@ public class AudioManager : IService
         //Create a new SFX audio source for playing non-positional SFX
         _sfxAudioSource = _audioManagerGameObject.AddComponent<AudioSource>();
         _sfxAudioSource.outputAudioMixerGroup = _params.sfxGroup;
+        
+        SetMasterVolume(ServiceLocator.Instance.Get<SaveDataManager>().GetMasterVolume());
+        SetMusicVolume(ServiceLocator.Instance.Get<SaveDataManager>().GetMusicVolume());
+        SetSfxVolume(ServiceLocator.Instance.Get<SaveDataManager>().GetSFXVolume());
     }
 
     /// <summary>
@@ -79,6 +83,7 @@ public class AudioManager : IService
         newVal = Mathf.Clamp(newVal, 0f, 1f);
         newVal = LinearToDecibel(newVal);
         _mixer.SetFloat("MasterVolume", newVal);
+        ServiceLocator.Instance.Get<SaveDataManager>().SetMasterVolume(newVal);
     }
     
     /// <summary>
@@ -91,6 +96,7 @@ public class AudioManager : IService
         newVal = Mathf.Clamp(newVal, 0f, 1f);
         newVal = LinearToDecibel(newVal);
         _mixer.SetFloat("MusicVolume", newVal);
+        ServiceLocator.Instance.Get<SaveDataManager>().SetMusicVolume(newVal);
     }
     
     /// <summary>
@@ -103,6 +109,7 @@ public class AudioManager : IService
         newVal = Mathf.Clamp(newVal, 0f, 1f);
         newVal = LinearToDecibel(newVal);
         _mixer.SetFloat("SFXVolume", newVal);
+        ServiceLocator.Instance.Get<SaveDataManager>().SetSFXVolume(newVal);
     }
     
     /// <summary>

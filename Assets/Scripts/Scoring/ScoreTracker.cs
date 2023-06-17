@@ -31,6 +31,7 @@ public class ScoreTracker : MonoBehaviour
 
     void Awake()
     {
+        _highScores = ServiceLocator.Instance.Get<SaveDataManager>().GetHighScores();
         UpdateScoreList();
     }
 
@@ -61,7 +62,7 @@ public class ScoreTracker : MonoBehaviour
             // re-sort the list
             _highScores.Sort(CompareScoreValues);
         }
-
+        
         // restrict the high score list to its maximum list
         if (_highScores.Count > _maxScoreCount)
         {
@@ -76,6 +77,8 @@ public class ScoreTracker : MonoBehaviour
                 CreateScoreEpitaph(_scoreEpitaphs[i], _highScores[i]);
             }
         }
+
+        ServiceLocator.Instance.Get<SaveDataManager>().SetHighScores(_highScores);
     }
 
     void CreateScoreEpitaph(DialogSequence dialogObject, Score scoreObject)
