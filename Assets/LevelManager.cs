@@ -21,6 +21,12 @@ public class LevelManager : IService
         SceneManager.LoadScene("graveyard");
     }
 
+    public void StartLevel()
+    {
+        _params.levelIndex = 0;
+        SceneManager.LoadScene("game");
+    }
+
     public void GoToNextLevel()
     {
         if (_params.levelIndex < _params.levels.Count - 1)

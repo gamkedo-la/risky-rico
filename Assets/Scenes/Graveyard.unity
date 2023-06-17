@@ -186,7 +186,8 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 9
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1531295548555682044, guid: d0a504e0e7e62574ea678165cc80ed20, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d0a504e0e7e62574ea678165cc80ed20, type: 3}
 --- !u!1001 &401559476
 PrefabInstance:
@@ -540,6 +541,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7177433555238076017, guid: d0f5ae1fd063a8247ada998e75df6fdf, type: 3}
   m_PrefabInstance: {fileID: 1472322216}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1480279353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2026642537076470009, guid: d0a504e0e7e62574ea678165cc80ed20, type: 3}
+  m_PrefabInstance: {fileID: 30357719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1480279354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480279353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64ec1c2d867812438d82ed9b3d81c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interactionPrompt: Enter the dungeon depths?
 --- !u!1001 &1567138427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1364,8 +1383,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ba8e9b68b6881804898227dfbb000eca, type: 2}
     - target: {fileID: 4363691703271536765, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _onHandMoney._useConstant
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363691703271536765, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _onHandMoney._constantValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363691703271536765, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: _depositedMoney._useConstant
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4363691703271536765, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _depositedMoney._constantValue
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
