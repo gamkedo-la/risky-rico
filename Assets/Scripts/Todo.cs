@@ -22,4 +22,18 @@ public class Todo : MonoBehaviour
 
     // LEVELS:
     // TODO: When changing levels, move player and camera to the starting position for that level prefab
+
+    // FOR PLAYTESTING:
+    // TODO: shop with artwork for each item (and equipment functionality)
+    // TODO: character animation
+
+    // TODO: level layouts for each level (just demo 2 levels, no ending sequence)
+    // TODO: enemy wave design for each combat room (use enemy count instead of wave timer)
+    // TODO: combat UI
+    
+    // TODO: player state controller (prevent movement from player while in menus, lock movement when in combat)
+    // TODO: WebGL build test
+
+    // TODO: tutorial sequence
+    // TODO: fix known bugs
 }
