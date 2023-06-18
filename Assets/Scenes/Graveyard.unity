@@ -979,6 +979,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -36.025
       objectReference: {fileID: 0}
+    - target: {fileID: 7957254881238348199, guid: 9fe7a6ef5a7cd4040b72649ecde5e7e0, type: 3}
+      propertyPath: _description
+      value: This time, your weapon chooses you
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fe7a6ef5a7cd4040b72649ecde5e7e0, type: 3}
 --- !u!1001 &1128033562717717743
