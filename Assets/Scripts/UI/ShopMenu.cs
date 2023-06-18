@@ -122,8 +122,8 @@ public class ShopMenu : MonoBehaviour
         int weaponDamage = weapon.BaseDamage;
 
         // display the stats as a portion of the maximum stat string
-        _weaponAmmo.text = "AMMO USAGE: " + statString.Substring(0, weaponAmmo);
-        _weaponDamage.text = "DAMAGE: " + statString.Substring(0, weaponDamage);
+        _weaponAmmo.text = "AMMO USAGE: " + weaponAmmo;
+        _weaponDamage.text = "DAMAGE: " + weaponDamage;
     }
 
     ShopItemField GetActiveItem()
