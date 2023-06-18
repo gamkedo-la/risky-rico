@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Medium Ammo
   m_EditorClassIdentifier: 
   _name: Medium Ammo
-  _description: Gives you 5 units of ammo
+  _description: A hearty helping of impending violence / + 5 AMMO
   _ammoAmount: 5
   _price: 40
   _weaponData: {fileID: 0}

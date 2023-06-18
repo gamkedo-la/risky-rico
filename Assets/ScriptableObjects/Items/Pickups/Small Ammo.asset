@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Small Ammo
   m_EditorClassIdentifier: 
   _name: Small Ammo
-  _description: Gives you 1 unit of ammo
+  _description: Just a little ammunition, as a treat / +1 AMMO
   _ammoAmount: 1
   _price: 10
   _weaponData: {fileID: 0}
