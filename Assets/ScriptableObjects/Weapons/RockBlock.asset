@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29ea26e92beb1c644b5efbabf99569dd, type: 3}
-  m_Name: FreezeGun
+  m_Name: RockBlock
   m_EditorClassIdentifier: 
-  _name: Freeze Gun
-  _description: Low-power attack with a special freeze effect
-  _baseFiringRate: 4
+  _name: Rock Block
+  _description: Okay, what if I just turn you into a rock? What then??
+  _baseFiringRate: 5
   _baseDamage: 0
-  _baseAmmoUsage: 0
+  _baseAmmoUsage: 5
   _baseBulletCount: 1
-  _effect: {fileID: 11400000, guid: 79cf8935d40b90444be4b2b70e05ea10, type: 2}
-  _storeIcon: {fileID: 0}
-  _equipIcon: {fileID: 0}
+  _effect: {fileID: 11400000, guid: ccbb22016ac65c74bbd00fcc6b29e7ae, type: 2}
+  _storeIcon: {fileID: 21300000, guid: d8203803e3cb6374f94dc05a28c62f3d, type: 3}
+  _equipIcon: {fileID: 21300000, guid: d8203803e3cb6374f94dc05a28c62f3d, type: 3}
   _firingSound: {fileID: 0}

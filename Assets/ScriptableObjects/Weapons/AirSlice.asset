@@ -10,17 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29ea26e92beb1c644b5efbabf99569dd, type: 3}
-  m_Name: BasicAttack
+  m_Name: AirSlice
   m_EditorClassIdentifier: 
-  _name: Basic Shot
-  _description: Solid firing and minimal ammo usage, but it deals little damage and
-    has no special effects.
-  _modifiers: []
+  _name: Air Slice
+  _description: A gust of wind with serious spread
   _baseFiringRate: 8
   _baseDamage: 1
-  _baseAmmoUsage: 0
+  _baseAmmoUsage: 2
   _baseBulletCount: 1
   _effect: {fileID: 0}
-  _storeIcon: {fileID: 21300000, guid: fb1292b76d35e8940aad2d69da39c715, type: 3}
-  _equipIcon: {fileID: 0}
+  _storeIcon: {fileID: 21300000, guid: c18fd40049635b840bb23fe6efa393b5, type: 3}
+  _equipIcon: {fileID: 21300000, guid: c18fd40049635b840bb23fe6efa393b5, type: 3}
   _firingSound: {fileID: 0}
