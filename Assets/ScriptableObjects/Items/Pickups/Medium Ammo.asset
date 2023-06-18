@@ -17,6 +17,6 @@ MonoBehaviour:
   _ammoAmount: 5
   _price: 40
   _weaponData: {fileID: 0}
-  _image: {fileID: 21300000, guid: 656e8f8936d9ee84dbb5bc2381f957bb, type: 3}
+  _image: {fileID: 21300000, guid: 498c416257d7b374cb0ff6f21e542c19, type: 3}
   _spawnSound: {fileID: 0}
   _collectSound: {fileID: 0}

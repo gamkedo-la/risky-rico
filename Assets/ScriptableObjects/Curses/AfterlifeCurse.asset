@@ -9,15 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c76e72387a28e7d4b89bfc5367aa96af, type: 3}
-  m_Name: Large Ammo
+  m_Script: {fileID: 11500000, guid: a89eed4e6dc3cfa4d98f0e6c77c3ddce, type: 3}
+  m_Name: AfterlifeCurse
   m_EditorClassIdentifier: 
-  _name: Large Ammo
-  _description: "You don\u2019t need permission to destroy; you need forgiveness
-    / +10 AMMO"
-  _ammoAmount: 10
-  _price: 80
-  _weaponData: {fileID: 0}
-  _image: {fileID: 21300000, guid: 9ffff6fd64945ef48b257b17f46e9b6e, type: 3}
+  _name: Afterlife
+  _description: 'You get a second chance at life - a harder, more horrible life '
+  _modifiers: []
+  _image: {fileID: 21300000, guid: 26b7a7b6d643e3c43827707afbf5ad61, type: 3}
   _spawnSound: {fileID: 0}
   _collectSound: {fileID: 0}

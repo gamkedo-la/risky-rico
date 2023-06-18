@@ -1049,6 +1049,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SadGhost
       objectReference: {fileID: 0}
+    - target: {fileID: 1812750331873722305, guid: b3fad644327614e48904e251917c7a66, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1812750331873722319, guid: b3fad644327614e48904e251917c7a66, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -1207,6 +1211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HappyGhost
       objectReference: {fileID: 0}
+    - target: {fileID: 3328512855516026927, guid: 5877eb03730a4c74bbeb8c0fcdb076b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5877eb03730a4c74bbeb8c0fcdb076b0, type: 3}
 --- !u!1001 &4966216977294100099
@@ -1330,6 +1338,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3805912975322417946, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3805912975354278691, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: _useInt
       value: 1
