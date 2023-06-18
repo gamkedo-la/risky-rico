@@ -525,7 +525,6 @@ MonoBehaviour:
   _prompts:
   - {fileID: 11400000, guid: 1c4e1ef02c0bbcc4288c3265a9ce06d9, type: 2}
   - {fileID: 11400000, guid: 5893c45918bc2c04782c18e6c5b05bf1, type: 2}
-  - {fileID: 11400000, guid: 5a4be43cdf4a34e40bf04a28dfb0755d, type: 2}
   - {fileID: 11400000, guid: df2dea99498ac584fbe3cb83bf122024, type: 2}
   _promptText: {fileID: 1115787515}
   _promptCountText: {fileID: 288111714}
@@ -717,6 +716,10 @@ PrefabInstance:
     - target: {fileID: 1606937870534627003, guid: 2f7cdc760d175f348b5c7e66524a39a3, type: 3}
       propertyPath: m_Name
       value: TutorialPrompt
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940081778726361515, guid: 2f7cdc760d175f348b5c7e66524a39a3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 40
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f7cdc760d175f348b5c7e66524a39a3, type: 3}

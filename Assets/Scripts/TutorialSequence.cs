@@ -22,10 +22,12 @@ public class TutorialSequence : MonoBehaviour
     void Update()
     {
         TutorialPrompt prompt = CurrentPrompt();
+        
         if (_playerInput.actions[prompt.InputKey].triggered && _inputCounter < prompt.MaxInputCounter)
         {
             _inputCounter++;        
             _promptCountText.text = _inputCounter + "/" + prompt.MaxInputCounter;
+            ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("BonusPoints");
         }
 
         if (_inputCounter >= prompt.MaxInputCounter)

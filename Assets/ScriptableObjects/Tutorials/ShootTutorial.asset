@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _promptText: 'Arrow Keys: shoot'
   _inputKey: shoot
-  _maxInputCounter: 3
+  _maxInputCounter: 4
