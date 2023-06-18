@@ -19,6 +19,6 @@ MonoBehaviour:
   _baseAmmoUsage: 5
   _baseBulletCount: 1
   _effect: {fileID: 11400000, guid: ccbb22016ac65c74bbd00fcc6b29e7ae, type: 2}
-  _storeIcon: {fileID: 21300000, guid: d8203803e3cb6374f94dc05a28c62f3d, type: 3}
-  _equipIcon: {fileID: 21300000, guid: d8203803e3cb6374f94dc05a28c62f3d, type: 3}
+  _storeIcon: {fileID: 21300000, guid: f6151126563ede74a946597b21518068, type: 3}
+  _equipIcon: {fileID: 21300000, guid: f6151126563ede74a946597b21518068, type: 3}
   _firingSound: {fileID: 0}

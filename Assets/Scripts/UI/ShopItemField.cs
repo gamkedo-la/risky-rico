@@ -12,6 +12,12 @@ public class ShopItemField : InputField
     {
         Image image = GetComponent<Image>();
         image.sprite = _itemData.Image;
+        if (_itemData.WeaponData != null)
+        {
+            image.sprite = _itemData.WeaponData.StoreIcon;
+            _itemData.SetName(_itemData.WeaponData.Name);
+            _itemData.SetDescription(_itemData.WeaponData.Description);
+        }
     }
 
     public void SetItemData(ItemData data)

@@ -22,8 +22,6 @@ public class ShopMenu : MonoBehaviour
 
     [Header("WEAPON STATS")]
     [SerializeField] private TMP_Text _weaponAmmo;
-    [SerializeField] private TMP_Text _weaponFiringRate;
-    [SerializeField] private TMP_Text _weaponShotCount;
     [SerializeField] private TMP_Text _weaponDamage;
     [SerializeField] private GameObject _statsContainer;
 
@@ -122,14 +120,10 @@ public class ShopMenu : MonoBehaviour
         // get relevant weapon base stats
         int weaponAmmo = weapon.BaseAmmoUsage;
         int weaponDamage = weapon.BaseDamage;
-        int weaponFiringRate = (int) weapon.BaseFiringRate;
-        int weaponShotCount = weapon.BaseBulletCount;
 
         // display the stats as a portion of the maximum stat string
-        _weaponAmmo.text = "AMMO USE: " + statString.Substring(0, weaponAmmo);
+        _weaponAmmo.text = "AMMO USAGE: " + statString.Substring(0, weaponAmmo);
         _weaponDamage.text = "DAMAGE: " + statString.Substring(0, weaponDamage);
-        _weaponFiringRate.text = "FIRING RATE: " + statString.Substring(0, weaponFiringRate);
-        _weaponShotCount.text = "SHOT COUNT: " + statString.Substring(0, weaponShotCount);
     }
 
     ShopItemField GetActiveItem()

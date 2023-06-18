@@ -18,6 +18,9 @@ public class ItemData : ScriptableObject
     [SerializeField] private string _description;
     public string Description => _description;
 
+    public void SetName(string name) => _name = name;
+    public void SetDescription(string desc) => _description = desc;
+
     #endregion
 
     #region Item Stats

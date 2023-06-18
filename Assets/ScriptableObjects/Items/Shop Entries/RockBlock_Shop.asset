@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c76e72387a28e7d4b89bfc5367aa96af, type: 3}
-  m_Name: DualFire_Shop
+  m_Name: RockBlock_Shop
   m_EditorClassIdentifier: 
   _name: Dual Fire Attack
   _description: Shoot in two directions at once
