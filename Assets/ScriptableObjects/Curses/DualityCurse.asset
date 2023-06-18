@@ -10,18 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a89eed4e6dc3cfa4d98f0e6c77c3ddce, type: 3}
-  m_Name: TestCurse2
+  m_Name: DualityCurse
   m_EditorClassIdentifier: 
-  _name: Test Curse 2
-  _description: 
-  _firingRateEffect: 0
-  _ammoCapacityEffect: 0
-  _damageEffect: 2
-  _bulletCountEffect: 0
-  _movementSpeedEffect: 0
-  _scoreMultiplierEffect: 0
-  _effectDuration: 0
-  _sellValue: 0
-  _image: {fileID: 21300000, guid: 6a1f17f4cfcd7ea44b4570f4c69608a3, type: 3}
+  _name: Duality
+  _description: 1 shot forward, 1 shot backwards / DUAL FIRE EFFECT
+  _modifiers: []
+  _image: {fileID: 21300000, guid: d8203803e3cb6374f94dc05a28c62f3d, type: 3}
   _spawnSound: {fileID: 0}
   _collectSound: {fileID: 0}
