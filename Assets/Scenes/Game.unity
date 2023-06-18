@@ -528,6 +528,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: df2dea99498ac584fbe3cb83bf122024, type: 2}
   _promptText: {fileID: 1115787515}
   _promptCountText: {fileID: 288111714}
+  _floatTextPrefab: {fileID: 1926224252435917835, guid: d197a9bd1f602ff46b3577e5076a9674, type: 3}
 --- !u!1 &1892666416 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8932138705243677299, guid: 2a29d8a524b29244fbdf9b6f37cfdea1, type: 3}
