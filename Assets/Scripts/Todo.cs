@@ -34,6 +34,5 @@ public class Todo : MonoBehaviour
 
     // TODO: character animation
 
-    // TODO: tutorial sequence
     // TODO: fix known bugs
 }
