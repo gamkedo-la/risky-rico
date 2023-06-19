@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class SliderField : InputField
 {
@@ -10,17 +11,14 @@ public class SliderField : InputField
     [Range(0f, 10f)]
     [SerializeField] private float _incrementValue = 0.1f;
 
-    protected override bool InputDetected()
+    protected override void HandleInput(InputAction.CallbackContext context)
     {
-        return _input.actions["navigate"].triggered && _input.actions["navigate"].ReadValue<Vector2>().x != 0;
+        if (context.ReadValue<Vector2>().x != 0 && _inputEnabled)
+        {
+            _slider.value += context.ReadValue<Vector2>().x * _incrementValue;
+            _onInput?.Invoke();
+        }
     }
-
-    protected override void HandleInput()
-    {
-        _slider.value += _input.actions["navigate"].ReadValue<Vector2>().x * _incrementValue;
-        _onInput?.Invoke();
-    }
-
 
     public float GetCurrentValue()
     {

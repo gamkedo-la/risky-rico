@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     private float _currentHorizontalSpeed, _currentVerticalSpeed;
 
     private bool _active;
+    private Vector2 movement = new Vector2(0f, 0f);
     void Awake() => Invoke(nameof(Activate), 0.5f);
     void Activate() =>  _active = true;
     
@@ -40,9 +41,6 @@ public class PlayerController : MonoBehaviour, IPlayerController {
 
 
     #region Input
-    
-    [SerializeField] private PlayerInput _input;
-
     private void GatherInput() 
     {
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();

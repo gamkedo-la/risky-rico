@@ -20,21 +20,19 @@ public class GridMenu : Menu
     {
         base.Start();
         SpawnGrid();
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Navigate().performed += NavigateMenu;
     }
 
-    void Update()
+    void NavigateMenu(InputAction.CallbackContext context)
     {
-        if (_input.actions["navigate"].triggered)
-        {
-            int newCursorRow = (int) _input.actions["navigate"].ReadValue<Vector2>().y * -1 * _gridLayout.constraintCount;
-            int newCursorColumn = (int) _input.actions["navigate"].ReadValue<Vector2>().x;
-            int newCursorIndex = _cursorIndex + newCursorColumn + newCursorRow;
-            SetCursorIndex(newCursorIndex);
-            SetActiveInput();
-            AnimateCursor();
-        }
-
-         SetCursorPosition();
+        int newCursorRow = (int) context.ReadValue<Vector2>().y * -1 * _gridLayout.constraintCount;
+        int newCursorColumn = (int) context.ReadValue<Vector2>().x;
+        int newCursorIndex = _cursorIndex + newCursorColumn + newCursorRow;
+        SetCursorIndex(newCursorIndex);
+        SetActiveInput();
+        AnimateCursor();
+        SetCursorPosition();
     }
 
     void SetCursorPosition()

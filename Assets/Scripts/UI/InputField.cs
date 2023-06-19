@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class InputField : MonoBehaviour
 {
@@ -25,24 +26,15 @@ public class InputField : MonoBehaviour
     protected bool _inputEnabled;
     public bool InputEnabled => _inputEnabled;
 
-    protected PlayerInput _input;
-
     protected void Awake()
     {
         if (_labelTextObject)
         {
             _labelTextObject.text = _label;
         }
-    }
 
-    protected virtual void HandleInput()
-    {
-        _onInput?.Invoke();
-    }
-    
-    protected virtual bool InputDetected() 
-    {
-        return false;
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Navigate().performed += HandleInput;
     }
 
     public void SetInputEnabled(bool toggleValue)
@@ -50,20 +42,15 @@ public class InputField : MonoBehaviour
         _inputEnabled = toggleValue;
     }
 
-    public void SetInput(PlayerInput input)
-    {
-        _input = input;
-    }
-
     protected virtual void GetCurrentValue()
     {
     }
 
-    void Update()
+   protected virtual void HandleInput(InputAction.CallbackContext context)
     {
-        if (_inputEnabled && _input != null && InputDetected())
+        if (_inputEnabled)
         {
-            HandleInput();
+            _onInput?.Invoke();
         }
     }
 

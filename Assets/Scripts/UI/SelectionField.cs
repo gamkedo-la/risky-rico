@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class SelectionField : InputField
 {
@@ -19,22 +20,20 @@ public class SelectionField : InputField
         UpdateValue();
     }
 
-    protected override bool InputDetected()
+    protected override void HandleInput(InputAction.CallbackContext context)
     {
-        return _input.actions["navigate"].triggered && _input.actions["navigate"].ReadValue<Vector2>().x != 0;
+        if (context.ReadValue<Vector2>().x != 0 && _inputEnabled)
+        {
+            UpdateValueIndex(context);
+            UpdateValue();
+            _onInput?.Invoke();
+        }
     }
 
-    protected override void HandleInput()
-    {
-        UpdateValueIndex();
-        UpdateValue();
-        _onInput?.Invoke();
-    }
-
-    void UpdateValueIndex()
+    void UpdateValueIndex(InputAction.CallbackContext context)
     {
         // get next value index
-        _valueIndex += (int) _input.actions["navigate"].ReadValue<Vector2>().x;
+        _valueIndex += (int) context.ReadValue<Vector2>().x;
 
         // loop to start of the list
         if (_valueIndex > _values.Count - 1)

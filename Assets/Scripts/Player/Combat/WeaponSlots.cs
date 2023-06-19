@@ -6,18 +6,15 @@ using UnityEngine.InputSystem;
 public class WeaponSlots : MonoBehaviour
 {
     [SerializeField] private PlayerAttributes _player;
-    [SerializeField] private PlayerInput _input;
     private int _currentWeaponIndex = 0;
 
-    void Update()
+    void Awake()
     {
-        if (_input.actions["switchweapon"].triggered)
-        {
-            SwitchWeapons();
-        }
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Interact().performed += SwitchWeapons;
     }
 
-    public void SwitchWeapons()
+    public void SwitchWeapons(InputAction.CallbackContext context)
     {
         _currentWeaponIndex += 1;
         if (_currentWeaponIndex == _player.WeaponList.Count)

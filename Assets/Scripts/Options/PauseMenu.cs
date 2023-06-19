@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
-    [SerializeField] private PlayerInput _input;
 
     public static bool isPaused;
 
@@ -15,19 +14,22 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
     }
 
-    void Update()
+    void Awake()
     {
-        if(_input.actions["pause"].triggered)
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Pause().performed += TogglePauseMenu;
+    }
+
+    public void TogglePauseMenu(InputAction.CallbackContext context)
+    {
+        if(isPaused)
         {
-            if(isPaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
-        }   
+            ResumeGame();
+        }
+        else
+        {
+            PauseGame();
+        }
     }
 
     public void PauseGame()

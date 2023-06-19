@@ -7,9 +7,6 @@ using ScriptableObjectArchitecture;
 
 public class InteractionRadius : MonoBehaviour
 {
-    [Header("INPUTS")]
-    private PlayerInput _input;
-
     [Header("DETECTION SETTINGS")]
     public List<IInteractable> interactables = new List<IInteractable>();
     public float detectionDistance = 2f;
@@ -19,7 +16,6 @@ public class InteractionRadius : MonoBehaviour
 
     void Awake()
     {
-        _input = GetComponent<PlayerInput>();
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
         _inputHandler.Interact().performed += Interact;
     }

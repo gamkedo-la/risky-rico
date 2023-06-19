@@ -9,7 +9,6 @@ public class ShopMenu : MonoBehaviour
 {
     [Header("PLAYER DATA")]
     [SerializeField] private GameObject _player;
-    private PlayerInput _input;
     private PlayerMoneyStore _playerMoneyStore;
     private PlayerWeaponStore _playerWeaponStore;
     private PlayerAmmoStore _playerAmmoStore;
@@ -30,10 +29,15 @@ public class ShopMenu : MonoBehaviour
 
     void Start()
     {
-        _input = _player.GetComponent<PlayerInput>();
+        // player data
         _playerMoneyStore = _player.GetComponent<PlayerMoneyStore>();
         _playerWeaponStore = _player.GetComponent<PlayerWeaponStore>();
         _playerAmmoStore = _player.GetComponent<PlayerAmmoStore>();
+
+        // inputs
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Exit().performed += CloseShop;
+        _inputHandler.Interact().performed += SelectItem;
     }
 
     void Update()
@@ -51,19 +55,22 @@ public class ShopMenu : MonoBehaviour
             _statsContainer.active = item.WeaponData != null;
             UpdateStatsContainer(item.WeaponData);
         }
+    }
 
+    void SelectItem(InputAction.CallbackContext context)
+    {
+        InputField currentInput = _gridMenu.GetActiveInput();
+        
         // attempt to purchase item
-        if (_input.actions["interact"].triggered && currentInput != null && currentInput is ShopItemField)
+        if (currentInput != null && currentInput is ShopItemField)
         {
             AttemptPurchase((ShopItemField)currentInput);
         }
+    }
 
-        // close shop menu
-        if (_input.actions["exit"].triggered)
-        {
-            _onShopClose?.Raise();
-        }
-
+    void CloseShop(InputAction.CallbackContext context)
+    {
+        _onShopClose?.Raise();
     }
 
     void AttemptPurchase(ShopItemField selectedItem)

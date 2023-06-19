@@ -21,15 +21,14 @@ public class PlayerAnimator : MonoBehaviour {
     [SerializeField] private float _timeBetweenFootsteps = 0.5f;
     private float _footStepTimer;
 
-    [SerializeField] private PlayerInput _input;
-
     void Awake() 
     {
         _player = GetComponentInParent<IPlayerController>();
         _footStepTimer = _timeBetweenFootsteps;
 
         // Kick dust on direction change
-        _input.actions["move"].performed += _ => KickDust();
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Move().performed += _ => KickDust();
     }
 
     void Update() {

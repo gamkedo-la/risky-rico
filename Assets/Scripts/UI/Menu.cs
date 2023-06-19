@@ -16,10 +16,6 @@ public class Menu : MonoBehaviour
 
     [SerializeField] protected int _cursorIndex;
     
-    [Header("INPUT")]
-    [Tooltip("The input module used for navigation")]
-    [SerializeField] protected PlayerInput _input;
-
     [Header("TEXT")]
     [Tooltip("The text to explain the current menu item's functionality")]
     [SerializeField] protected TMP_Text _explanationText;
@@ -35,18 +31,18 @@ public class Menu : MonoBehaviour
 
         SetActiveInput();
         SetExplanationText(GetCurrentField().Description);
+
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Navigate().performed += NavigateMenu;
     }
 
-    void Update()
+    void NavigateMenu(InputAction.CallbackContext context)
     {
-        if (_input.actions["navigate"].triggered)
-        {
-            int newCursorPosition = _cursorIndex + (int) _input.actions["navigate"].ReadValue<Vector2>().y * -1;
-            SetCursorIndex(newCursorPosition);
-            SetCursorPosition();
-            SetActiveInput();
-            SetExplanationText(GetCurrentField().Description);
-        }
+        int newCursorPosition = _cursorIndex + (int) context.ReadValue<Vector2>().y * -1;
+        SetCursorIndex(newCursorPosition);
+        SetCursorPosition();
+        SetActiveInput();
+        SetExplanationText(GetCurrentField().Description);
     }
 
     protected void SetCursorIndex(int index)

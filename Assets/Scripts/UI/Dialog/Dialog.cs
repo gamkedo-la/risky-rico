@@ -8,9 +8,6 @@ using ScriptableObjectArchitecture;
 public class Dialog : MonoBehaviour
 {
     #region Inspector Settings
-    [Header("INPUT")]
-    [SerializeField] private PlayerInput _input;
-    
     [Header("CONTENT")]
     [Tooltip("The current dialog sequence (will be split into lines)")]
     [SerializeField] private DialogSequence _dialogSequence;
@@ -36,24 +33,30 @@ public class Dialog : MonoBehaviour
     #endregion
     
     #region Methods
+    void Awake()
+    {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Interact().performed += UpdateTextProgress;
+    }
+
     void StartDialog()
     {
         typingCoroutine = TypeWriter();
         StartCoroutine(typingCoroutine);
     }
 
-    void Update()
+    void UpdateTextProgress(InputAction.CallbackContext context)
     {
         string currentLine = lines[index];
 
         // if the player has pressed the interact button before a line completes, immediately complete the whole line
-        if (_input.actions["interact"].triggered && textObject.text != currentLine)
+        if (textObject.text != currentLine)
         {
             StopCoroutine(typingCoroutine);
             AutoCompleteSentence();
         }
         // if the line has completed and the user has pressed the interact button, get the next line
-        else if (_input.actions["interact"].triggered && textObject.text == currentLine)
+        else if (textObject.text == currentLine)
         {
             MoveToNextSentence();
             typingCoroutine = TypeWriter();
