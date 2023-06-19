@@ -22,6 +22,8 @@ public class InputHandler : MonoBehaviour
         _inputs.Disable();
     }
 
+    
+
     // input actions
     public InputAction Shoot()
     {
@@ -31,11 +33,6 @@ public class InputHandler : MonoBehaviour
     public InputAction Move()
     {
         return _inputs.Player.Move;
-    }
-
-    public InputAction SwitchWeapon()
-    {
-        return _inputs.Player.SwitchWeapon;
     }
 
     public InputAction SwitchWeapon()

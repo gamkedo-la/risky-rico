@@ -45,9 +45,11 @@ public class PlayerController : MonoBehaviour, IPlayerController {
 
     private void GatherInput() 
     {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        movement = _inputHandler.Move().ReadValue<Vector2>();
         Input = new FrameInput {
-            X = _input.actions["move"].ReadValue<Vector2>().x,
-            Y = _input.actions["move"].ReadValue<Vector2>().y,
+            X = movement.x,
+            Y = movement.y,
         };
     }
 
