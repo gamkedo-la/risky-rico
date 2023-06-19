@@ -32,9 +32,6 @@ public class InputField : MonoBehaviour
         {
             _labelTextObject.text = _label;
         }
-
-        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
-        _inputHandler.Navigate().performed += HandleInput;
     }
 
     public void SetInputEnabled(bool toggleValue)

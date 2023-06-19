@@ -11,6 +11,13 @@ public class SliderField : InputField
     [Range(0f, 10f)]
     [SerializeField] private float _incrementValue = 0.1f;
 
+    void Awake()
+    {
+        base.Awake();
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Navigate().performed += HandleInput;
+    }
+
     protected override void HandleInput(InputAction.CallbackContext context)
     {
         if (context.ReadValue<Vector2>().x != 0 && _inputEnabled)

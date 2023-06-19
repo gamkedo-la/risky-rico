@@ -18,6 +18,9 @@ public class SelectionField : InputField
         }
    
         UpdateValue();
+
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Navigate().performed += HandleInput;
     }
 
     protected override void HandleInput(InputAction.CallbackContext context)

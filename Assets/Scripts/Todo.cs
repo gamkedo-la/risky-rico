@@ -9,7 +9,6 @@ public class Todo : MonoBehaviour
     // TODO: scoring zones based on proximity to player (closer to player, higher score)
 
     // CODE PATTERNS:
-    // TODO: input service
     // TODO: state machines (for animation, game state, player state, enemy state)
     // TODO: SO vars as middleman for UI
     // TODO: refactor existing code (consitent style, use custom collider, find anti-patterns)
