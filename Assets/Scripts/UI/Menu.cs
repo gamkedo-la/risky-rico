@@ -24,11 +24,6 @@ public class Menu : MonoBehaviour
     {
         _cursorIndex = 0;
 
-        foreach (InputField field in _fields)
-        {
-            field.SetInput(_input);
-        }
-
         SetActiveInput();
         SetExplanationText(GetCurrentField().Description);
 
