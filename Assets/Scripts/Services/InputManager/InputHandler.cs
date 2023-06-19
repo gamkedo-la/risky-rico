@@ -22,8 +22,6 @@ public class InputHandler : MonoBehaviour
         _inputs.Disable();
     }
 
-    
-
     // input actions
     public InputAction Shoot()
     {
@@ -58,5 +56,10 @@ public class InputHandler : MonoBehaviour
     public InputAction Exit()
     {
         return _inputs.Player.Exit;
+    }
+
+    public InputAction FindAction(string actionName)
+    {
+        return _inputs.FindAction(actionName, false);
     }
 }

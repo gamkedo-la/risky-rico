@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 
 public class TutorialSequence : MonoBehaviour
 {
-    [SerializeField] private PlayerInput _playerInput;
     [SerializeField] private List<TutorialPrompt> _prompts = new List<TutorialPrompt>();
     [SerializeField] private TMP_Text _promptText;
     [SerializeField] private TMP_Text _promptCountText;
@@ -19,13 +18,28 @@ public class TutorialSequence : MonoBehaviour
     {
         _promptText.text = CurrentPrompt().PromptText;
         _promptCountText.text = 0 + "/" + CurrentPrompt().MaxInputCounter;
+        SubscribeToPromptInput();
     }
 
-    void Update()
+    void SubscribeToPromptInput()
+    {
+        TutorialPrompt prompt = CurrentPrompt();
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.FindAction(prompt.InputKey).performed += PerformInput;
+    }
+
+    void UnsubscribeFromPromptInput()
+    {
+        TutorialPrompt prompt = CurrentPrompt();
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.FindAction(prompt.InputKey).performed -= PerformInput;
+    }
+
+    void PerformInput(InputAction.CallbackContext context)
     {
         TutorialPrompt prompt = CurrentPrompt();
 
-        if (_playerInput.actions[prompt.InputKey].triggered && _inputCounter < prompt.MaxInputCounter)
+        if (_inputCounter < prompt.MaxInputCounter)
         {
             // update the text information and play a success sound
             _inputCounter++;        
@@ -40,6 +54,7 @@ public class TutorialSequence : MonoBehaviour
 
         if (_inputCounter >= prompt.MaxInputCounter)
         {
+            UnsubscribeFromPromptInput();
             GoToNextPrompt();
         }
     }
@@ -53,6 +68,7 @@ public class TutorialSequence : MonoBehaviour
         {
             _promptText.text = CurrentPrompt().PromptText;
             _promptCountText.text = 0 + "/" + CurrentPrompt().MaxInputCounter;
+            SubscribeToPromptInput();
             return;   
         }
 
