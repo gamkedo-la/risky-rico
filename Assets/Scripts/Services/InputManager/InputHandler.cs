@@ -3,53 +3,63 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputHandler : MonoBehaviour, PlayerControls.IPlayerActions
+public class InputHandler : MonoBehaviour
 {
     private PlayerControls _inputs;
 
     private void Awake()
     {
         _inputs = new PlayerControls();
-        _inputs.Player.Shoot.performed += OnShoot;
-        _inputs.Player.Move.performed += OnMove;
-        _inputs.Player.SwitchWeapon.performed += OnSwitchWeapon;
-        _inputs.Player.Interact.performed += OnInteract;
-        _inputs.Player.Pause.performed += OnPause;
-        _inputs.Player.Navigate.performed += OnNavigate;
-        _inputs.Player.Exit.performed += OnExit;
     }
 
-    // player
-    public void OnShoot(InputAction.CallbackContext context) 
+    private void OnEnable()
     {
-        Debug.Log("OnShoot");
+        _inputs.Enable();
     }
-    public void OnMove(InputAction.CallbackContext context) 
-    {
-        Debug.Log("OnMove");
-    }
-    public void OnSwitchWeapon(InputAction.CallbackContext context) 
-    {
-        Debug.Log("OnSwitchWeapon");
 
-    }
-    public void OnInteract(InputAction.CallbackContext context) 
+    private void OnDisable()
     {
-        Debug.Log("OnInteract");
+        _inputs.Disable();
+    }
 
-    }
-    public void OnPause(InputAction.CallbackContext context) 
+    // input actions
+    public InputAction Shoot()
     {
-        Debug.Log("OnPause");
+        return _inputs.Player.Shoot;
+    }
+    
+    public InputAction Move()
+    {
+        return _inputs.Player.Move;
+    }
 
-    }
-    public void OnNavigate(InputAction.CallbackContext context) 
+    public InputAction SwitchWeapon()
     {
-        Debug.Log("OnNavigate");
+        return _inputs.Player.SwitchWeapon;
+    }
 
-    }
-    public void OnExit(InputAction.CallbackContext context) 
+    public InputAction SwitchWeapon()
     {
-        Debug.Log("OnExit");
+        return _inputs.Player.SwitchWeapon;
+    }
+
+    public InputAction Interact()
+    {
+        return _inputs.Player.Interact;
+    }
+
+    public InputAction Pause()
+    {
+        return _inputs.Player.Pause;
+    }
+
+    public InputAction Navigate()
+    {
+        return _inputs.Player.Navigate;
+    }
+
+    public InputAction Exit()
+    {
+        return _inputs.Player.Exit;
     }
 }

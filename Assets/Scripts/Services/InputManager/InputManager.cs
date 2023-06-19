@@ -25,4 +25,9 @@ public class InputManager : IService
     {
         Object.Destroy(_InputManagerGameObject);
     }
+
+    public InputHandler Inputs()
+    {
+        return _InputManagerGameObject.GetComponent<InputHandler>();
+    }
 }
