@@ -7,6 +7,7 @@ public class PlayerCurseSlots : MonoBehaviour
 {
     [Header("Slots")]
     [SerializeField] private List<CurseData> _curses = new List<CurseData>();
+    public List<CurseData> Curses => _curses;
     [SerializeField] private int _maxSlotCount = 3;
     
     [Header("Player")]
