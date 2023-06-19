@@ -6,32 +6,28 @@ public class Shoot : MonoBehaviour
 {
     [SerializeField] private Vector2Variable _aimDirection;
     [SerializeField] private GameObject _projectile;
-    [SerializeField] private PlayerInput _input;
     [SerializeField] private GameEvent _shootEvent;
     [SerializeField] private PlayerAttributes _player;
     [SerializeField] private IntReference _ammo;
-    private float _shotTimer;
 
     void Awake()
     {
-        _shotTimer = 1f;
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Shoot().performed += OnShoot;
     }
 
-    void Update()
+    void OnShoot(InputAction.CallbackContext context)
     {
         // get the ammo effect of the player's current weapon
         AmmoEffect effect = _player.CurrentWeapon.Effect;
         int ammoUsage = _player.CurrentWeapon.BaseAmmoUsage;
 
-        // tick shot timer upward by the player's firing rate
-        _shotTimer += Time.deltaTime * _player.FiringRate.CurrentValue;
-
         // update aiming direction with inputs and shoot when the timer reaches 1
-        if (_input.actions["shoot"].triggered && _shotTimer >= 1f && _ammo.Value >= ammoUsage)
+        if (_ammo.Value >= ammoUsage)
         {
             float offsetAmount = 1f;
-            float _aimDirectionX = _input.actions["shoot"].ReadValue<Vector2>().x;
-            float _aimDirectionY = _input.actions["shoot"].ReadValue<Vector2>().y;
+            float _aimDirectionX = context.ReadValue<Vector2>().x;
+            float _aimDirectionY = context.ReadValue<Vector2>().y;
             _aimDirection.Value = new Vector2(_aimDirectionX, _aimDirectionY);
 
             for (float i = 0; i < _player.ShotCount.CurrentValue; i++)
@@ -52,7 +48,6 @@ public class Shoot : MonoBehaviour
             
             _shootEvent.Raise();
             ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("PlayerShoot");
-            _shotTimer = 0f;
         }
     }
 

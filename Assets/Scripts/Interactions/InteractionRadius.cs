@@ -20,6 +20,17 @@ public class InteractionRadius : MonoBehaviour
     void Awake()
     {
         _input = GetComponent<PlayerInput>();
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Interact().performed += Interact;
+    }
+
+    void Interact(InputAction.CallbackContext context)
+    {
+        // interact with the last interactable (top of the stack)
+        if (interactables.Count > 0)
+        {
+            interactables.Last().ReceiveInteraction(gameObject);
+        }
     }
 
     void Update()
@@ -56,12 +67,6 @@ public class InteractionRadius : MonoBehaviour
         if (interactables.Count == 0)
         {
             _interactionPrompt.Value = "";
-        }
-
-        // interact with the last interactable (top of the stack)
-        if (_input.actions["interact"].triggered && interactables.Count > 0)
-        {
-            interactables.Last().ReceiveInteraction(gameObject);
         }
     }
 }
