@@ -3541,6 +3541,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: CombatUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1947569989733960755, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: m_Spacing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569990133554068, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569990133554068, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
 --- !u!1001 &2432658329629500583
