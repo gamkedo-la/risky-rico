@@ -15,9 +15,9 @@ public class CombatUI : MonoBehaviour
 
     void Update()
     {
-        if (_player.WeaponList.Count > 1)
+        if (_player.CurrentWeapon != null)
         {
-            _secondaryWeapon.sprite = _player.WeaponList[1].EquipIcon;
+            _secondaryWeapon.sprite = _player.CurrentWeapon.EquipIcon;
         } 
 
         for (int i = 0; i <= _curseSlots.Curses.Count - 1; i++)

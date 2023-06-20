@@ -11,10 +11,10 @@ public class WeaponSlots : MonoBehaviour
     void Awake()
     {
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
-        _inputHandler.Interact().performed += SwitchWeapons;
+        _inputHandler.SwitchWeapon().performed += SwitchWeapon;
     }
 
-    public void SwitchWeapons(InputAction.CallbackContext context)
+    public void SwitchWeapon(InputAction.CallbackContext context)
     {
         _currentWeaponIndex += 1;
         if (_currentWeaponIndex == _player.WeaponList.Count)
