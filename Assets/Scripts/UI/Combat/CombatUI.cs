@@ -10,20 +10,19 @@ public class CombatUI : MonoBehaviour
     [SerializeField] private PlayerAttributes _player;
     [SerializeField] private PlayerCurseSlots _curseSlots;
     [SerializeField] private GameObject _curseImage;
+    [SerializeField] private List<GameObject> _curseImageSlots = new List<GameObject>();
 
 
-    void Awake()
+    void Update()
     {
         if (_player.WeaponList.Count > 1)
         {
             _secondaryWeapon.sprite = _player.WeaponList[1].EquipIcon;
         } 
 
-        foreach(CurseData curse in _curseSlots.Curses)
+        for (int i = 0; i <= _curseSlots.Curses.Count - 1; i++)
         {
-            GameObject newCurseSlot = Instantiate(_curseImage);
-            newCurseSlot.transform.SetParent(_curseSlotsContainer.transform, false);
-            newCurseSlot.GetComponent<Image>().sprite = curse.Image;
+            _curseImageSlots[i].GetComponent<Image>().sprite = _curseSlots.Curses[i].Image;
         }
     }
 }
