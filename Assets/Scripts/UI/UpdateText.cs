@@ -23,16 +23,19 @@ public class UpdateText : MonoBehaviour
     [SerializeField] private bool _useString = false;
     [SerializeField, HideCustomDrawer] private StringReference _stringValue;
 
+    [Header("LABEL")]
+    [SerializeField] private string _label;
+
     void Update()
     {
         if (_useFloat && _value != null)
         {
-            _text.text = "" + _value.Value;
+            _text.text = _label + _value.Value;
         }
      
         if (_useInt && _intValue != null)
         {
-            _text.text = "" + _intValue.Value;
+            _text.text = _label + _intValue.Value;
         }
 
         if (_useString && _stringValue != null)

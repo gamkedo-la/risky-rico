@@ -2377,6 +2377,7 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: TEST PROMPT
     _variable: {fileID: 11400000, guid: 9473b9ecfab5da34cbd82224ead58d5c, type: 2}
+  _label: 
 --- !u!114 &1832249041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3872,6 +3873,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: CombatUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1947569989275935301, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _label
+      value: 'GOLD:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569989275935301, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _useInt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569989275935301, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _intValue
+      value: 
+      objectReference: {fileID: 11400000, guid: 0103ac55808973a439c483965ac9a60a, type: 2}
+    - target: {fileID: 1947569989275935301, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _useFloat
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569989442391440, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _label
+      value: 'SCORE:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569989442391440, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _useInt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569989442391440, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _useFloat
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1947569989571854553, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 256
@@ -3906,6 +3935,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1947569989733960755, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
       propertyPath: m_Spacing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569989850942967, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _label
+      value: 'GOLD:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569989850942967, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _useInt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569989850942967, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _intValue
+      value: 
+      objectReference: {fileID: 11400000, guid: 0103ac55808973a439c483965ac9a60a, type: 2}
+    - target: {fileID: 1947569989850942967, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _useFloat
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1947569990133554068, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
@@ -3975,6 +4020,18 @@ PrefabInstance:
     - target: {fileID: 1947569990667286804, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569990697812270, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _label
+      value: 'SCORE:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569990697812270, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _useInt
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947569990697812270, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _useFloat
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
