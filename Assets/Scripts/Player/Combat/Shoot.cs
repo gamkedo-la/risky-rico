@@ -13,7 +13,15 @@ public class Shoot : MonoBehaviour
     void Awake()
     {
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
-        _inputHandler.Shoot().performed += OnShoot;
+        _inputHandler.Shoot().performed += OnShootWrapper;
+    }
+
+    void OnShootWrapper(InputAction.CallbackContext context)
+    {
+        if (enabled)
+        {
+            OnShoot(context);
+        }
     }
 
     void OnShoot(InputAction.CallbackContext context)

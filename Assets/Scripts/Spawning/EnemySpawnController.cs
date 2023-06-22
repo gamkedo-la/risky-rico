@@ -72,6 +72,7 @@ public class EnemySpawnController : MonoBehaviour
             // --- end combat sequence
             _waveIndex = 0;
             _endEvent.Raise();
+            ServiceLocator.Instance.Get<GameStateManager>().SetState(GameState.EXPLORATION);
         }
 
         // get current wave with waveIndex
