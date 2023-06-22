@@ -32,7 +32,6 @@ public class CombatRoom : Room
         if (!_combatFinished && _collidableObjects.Contains(collision.gameObject))
         {
             CloseExits();
-            ServiceLocator.Instance.Get<GameStateManager>().SetState(GameState.COMBAT);
         }
     }
 

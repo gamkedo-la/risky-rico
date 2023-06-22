@@ -15,6 +15,7 @@ public class CombatTrigger : MonoBehaviour
             _spawner.SetActive(true);
             _spawner.GetComponent<EnemySpawnController>().ResetState();
             gameObject.SetActive(false);
+            ServiceLocator.Instance.Get<GameStateManager>().SetState(GameState.COMBAT);
         }
     }
 }
