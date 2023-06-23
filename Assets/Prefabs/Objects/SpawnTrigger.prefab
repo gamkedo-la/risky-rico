@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3431328352760771261}
   - component: {fileID: 4319973750528184725}
   - component: {fileID: 8173643032533035937}
+  - component: {fileID: 2320363534555888079}
   m_Layer: 7
   m_Name: SpawnTrigger
   m_TagString: Untagged
@@ -46,7 +47,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawner: {fileID: 0}
-  _exit: {fileID: 0}
   _collidableObjects: {fileID: 11400000, guid: 5867dc72610f0ff43b7e2f0286ca1f31, type: 2}
 --- !u!61 &8173643032533035937
 BoxCollider2D:
@@ -74,3 +74,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2320363534555888079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896344372463503488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e58c123a9f8b8418deb29f883e6e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetCollection: {fileID: 11400000, guid: 053f17d2dafa10546aaa175587a76a06, type: 2}
