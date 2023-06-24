@@ -16,7 +16,7 @@ MonoBehaviour:
   _description: "If you can\u2019t beat \u2018em, freeze \u2018em"
   _baseFiringRate: 4
   _baseDamage: 0
-  _baseAmmoUsage: 3
+  _baseAmmoUsage: 0
   _baseBulletCount: 1
   _effect: {fileID: 11400000, guid: 79cf8935d40b90444be4b2b70e05ea10, type: 2}
   _storeIcon: {fileID: 21300000, guid: d76809d02b7ec3f4a95f1a9945163ff0, type: 3}

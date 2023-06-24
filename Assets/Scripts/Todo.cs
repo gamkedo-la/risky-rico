@@ -27,7 +27,6 @@ public class Todo : MonoBehaviour
     // TODO: level layouts for each level (just demo 2 levels, no ending sequence)
     // TODO: enemy wave design for each combat room (use enemy count instead of wave timer)
     
-    // TODO: player state controller (prevent movement from player while in menus, lock movement when in combat)
     // TODO: WebGL build test
 
     // TODO: character animation
