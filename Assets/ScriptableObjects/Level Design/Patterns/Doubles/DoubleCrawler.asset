@@ -10,15 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0447c0e47fa010840b7cecd41ca368fb, type: 3}
-  m_Name: TestPattern
+  m_Name: DoubleCrawler
   m_EditorClassIdentifier: 
   _enemies:
-  - {fileID: 11400000, guid: 1a74e0697b8ac0847992269632e944e5, type: 2}
-  - {fileID: 11400000, guid: 3366c022415899b4d8e19ff4d442f116, type: 2}
-  - {fileID: 11400000, guid: 1a74e0697b8ac0847992269632e944e5, type: 2}
+  - {fileID: 11400000, guid: 20773ec1f6ad7b74f943ee5778a233fc, type: 2}
+  - {fileID: 11400000, guid: 20773ec1f6ad7b74f943ee5778a233fc, type: 2}
   _useOverrides: 0
-  _enemySpeed: 1
-  _enemyRotation: 1
-  _spawnLocations: 02000000
-  _itemDrops:
-  - {fileID: 11400000, guid: 0b382f09957c99b4b8fda2152943677e, type: 2}
+  _enemyRotation: 0
+  _spawnLocations: 
+  _itemDrops: []

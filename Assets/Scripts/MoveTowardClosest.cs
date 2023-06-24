@@ -32,6 +32,11 @@ public class MoveTowardClosest : MonoBehaviour
         }
     }
 
+    public void SetMovementSpeed(float speed)
+    {
+        _movementRate = speed;
+    }
+
    void MoveTowardObject(GameObject target)
    {
         transform.position = Vector2.Lerp(transform.position, target.transform.position, Time.deltaTime * _movementRate);

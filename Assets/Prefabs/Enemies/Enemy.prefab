@@ -104,7 +104,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8724373994609232352}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6ca104d6877fd243aee455714c690d8, type: 3}
   m_Name: 
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parameters: {fileID: 11400000, guid: 1a74e0697b8ac0847992269632e944e5, type: 2}
   _health: {fileID: -8256139097657875970}
-  _movement: {fileID: 8724373994609232365}
+  _movement: {fileID: 0}
   _renderer: {fileID: 8724373994609232367}
   _rotationBehavior: {fileID: 0}
   _swerveBehavior: {fileID: 0}
@@ -394,4 +394,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetObjects: {fileID: 11400000, guid: 5867dc72610f0ff43b7e2f0286ca1f31, type: 2}
-  _movementRate: 2
+  _movementRate: 1

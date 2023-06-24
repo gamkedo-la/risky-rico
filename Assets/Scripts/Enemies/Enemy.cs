@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyAttributes _parameters;
     [SerializeField] private EnemyHealth _health;
-    [SerializeField] private MoveInOwnDirection _movement;
+    [SerializeField] private MoveTowardClosest _movement;
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private EnemyRotate _rotationBehavior;
     [SerializeField] private EnemySwerve _swerveBehavior;
@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
         // get necesssary components
         _renderer = gameObject.GetComponent<SpriteRenderer>();
         _health = gameObject.GetComponent<EnemyHealth>();
-        _movement = gameObject.GetComponent<MoveInOwnDirection>();
+        _movement = gameObject.GetComponent<MoveTowardClosest>();
         _rotationBehavior = gameObject.GetComponent<EnemyRotate>();
         _swerveBehavior = gameObject.GetComponent<EnemySwerve>();
 
@@ -32,5 +32,6 @@ public class Enemy : MonoBehaviour
         _health.SetHealth(_parameters.XHealth.CurrentValue, _parameters.YHealth.CurrentValue);
         _rotationBehavior.enemy = parameters;
         _swerveBehavior.enemy = parameters;
+        _movement.SetMovementSpeed(parameters.MoveSpeed.CurrentValue);
     }
 }

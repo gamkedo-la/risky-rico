@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0447c0e47fa010840b7cecd41ca368fb, type: 3}
-  m_Name: TestPattern2
+  m_Name: SingleCyclops
   m_EditorClassIdentifier: 
   _enemies:
-  - {fileID: 11400000, guid: 3366c022415899b4d8e19ff4d442f116, type: 2}
+  - {fileID: 11400000, guid: fe30147d47fd0f24eb07d1bc1c1d2d88, type: 2}
   _useOverrides: 0
-  _enemySpeed: 1
   _enemyRotation: 0
   _spawnLocations: 
   _itemDrops: []
