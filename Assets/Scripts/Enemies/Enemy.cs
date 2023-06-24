@@ -32,6 +32,6 @@ public class Enemy : MonoBehaviour
         _health.SetHealth(_parameters.XHealth.CurrentValue, _parameters.YHealth.CurrentValue);
         _rotationBehavior.enemy = parameters;
         _swerveBehavior.enemy = parameters;
-        _movement.SetMovementSpeed(parameters.MoveSpeed.CurrentValue);
+        _movement.SetSpeed(parameters.MoveSpeed.CurrentValue);
     }
 }

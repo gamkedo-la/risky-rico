@@ -6,7 +6,8 @@ using ScriptableObjectArchitecture;
 public class MoveTowardClosest : MonoBehaviour
 {
     [SerializeField] private GameObjectCollection _targetObjects;
-    [SerializeField] private float _movementRate = 1f;
+    [SerializeField] private float _speed = 1f;
+    public float Speed => _speed;
     private GameObject targetObject;
 
     void Update()
@@ -14,15 +15,18 @@ public class MoveTowardClosest : MonoBehaviour
         float minDistance = Mathf.Infinity;
         Vector2 selfPosition = transform.position;
 
-        foreach (GameObject obj in _targetObjects)
+        if (targetObject == null)
         {
-            Vector2 targetPosition = obj.transform.position;
-            float distance = (targetPosition - selfPosition).sqrMagnitude;
-
-            if (distance < minDistance)
+            foreach (GameObject obj in _targetObjects)
             {
-                minDistance = distance;
-                targetObject = obj;
+                Vector2 targetPosition = obj.transform.position;
+                float distance = (targetPosition - selfPosition).sqrMagnitude;
+
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    targetObject = obj;
+                }
             }
         }
 
@@ -32,13 +36,18 @@ public class MoveTowardClosest : MonoBehaviour
         }
     }
 
-    public void SetMovementSpeed(float speed)
+    public void SetSpeed(float speed)
     {
-        _movementRate = speed;
+        _speed = speed;
+    }
+
+    public void SetTargetObject(GameObject target)
+    {
+        targetObject = target;
     }
 
    void MoveTowardObject(GameObject target)
    {
-        transform.position = Vector2.Lerp(transform.position, target.transform.position, Time.deltaTime * _movementRate);
+        transform.position = Vector2.Lerp(transform.position, target.transform.position, Time.deltaTime * _speed);
    }
 }

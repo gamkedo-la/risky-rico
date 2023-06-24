@@ -190,8 +190,8 @@ public class EnemySpawnController : MonoBehaviour
             {
                 spawnedObject.GetComponent<Enemy>().SetAttributes(enemyType);
                 spawnedObject.GetComponent<MoveInOwnDirection>()?.SetDirection(new Vector2(spawnPointData.XDirection, spawnPointData.YDirection));
-                MoveInOwnDirection enemyMovement = spawnedObject.GetComponent<MoveInOwnDirection>();
-                enemyMovement?.SetSpeed(enemyMovement.Speed.Value * speedModifier);
+                MoveTowardClosest enemyMovement = spawnedObject.GetComponent<MoveTowardClosest>();
+                enemyMovement?.SetSpeed((enemyMovement.Speed * speedModifier) - enemyCount * 0.2f);
             }
 
             // track spawned object in a list
@@ -202,6 +202,14 @@ public class EnemySpawnController : MonoBehaviour
 
             // increment multiplier for the position offset
             enemyCount += 1;
+        }
+
+        for (int i = 0; i <= _spawnedObjects.Count - 1; i++)
+        {
+            if (i > 0)
+            {
+                _spawnedObjects[i].GetComponent<MoveTowardClosest>().SetTargetObject(_spawnedObjects[i-1]);
+            }
         }
 
     }

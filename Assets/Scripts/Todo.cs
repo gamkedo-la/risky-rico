@@ -23,13 +23,10 @@ public class Todo : MonoBehaviour
     // TODO: update loot drops based on difficulty selection
 
     // COMBAT:
-    // TODO: give enemy types varying speed/health values
-    // TODO: create enemy groups that move in a pattern 
     // TODO: make them non-lethal on inital spawn 
     // TODO: change look of projectiles for when they become lethal 
     // TODO: create custom colliders for enemy health
     // TODO: use enemy count instead of wave timer
-    // TODO: define enemy types: simple one-hit enemy, weak line of enemies in snake pattern, bulky slow enemy,
     // TODO: tighten hitboxes
 
     // FOR PLAYTESTING:
