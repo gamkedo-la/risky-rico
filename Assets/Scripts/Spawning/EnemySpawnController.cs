@@ -25,6 +25,8 @@ public class EnemySpawnController : MonoBehaviour
     [Tooltip("Counts up until it reaches the max index of the wave list")]
     [SerializeField, ReadOnly] private int _waveIndex = 0;
 
+    private int _currentWaveSpawnCount = 0;
+
     private float _combatTime = 0;
     #endregion
 
@@ -104,7 +106,7 @@ public class EnemySpawnController : MonoBehaviour
                 int numberOfEnemies = activeEnemies.Length;
 
                 // only spawn enemies when none are active
-                if (numberOfEnemies <= 0)
+                if (numberOfEnemies <= currentWave.MinEnemyCount)
                 {
                     // --- get current pattern
                     EnemyPattern currentPattern = currentWave.EnemyPatterns[Random.Range(0, currentWave.EnemyPatterns.Count)];
@@ -115,9 +117,10 @@ public class EnemySpawnController : MonoBehaviour
 
                 
                 // if wave has ended
-                if (_waveTimer >= currentWave.Duration)
+                if (_currentWaveSpawnCount >= currentWave.SpawnCount)
                 {
-                    // --- reset timers
+                    // --- reset spawn count and timer
+                    _currentWaveSpawnCount = 0;
                     _waveTimer = 0;
                     
                     // --- set spawn state to REST
@@ -171,7 +174,7 @@ public class EnemySpawnController : MonoBehaviour
 
         Transform spawnPointTransform = spawnPoint.GetComponent<Transform>();
         float offsetAmount = 1f;
-        float enemyCount = 0;
+        float spawnedEnemyCount = 0;
 
         foreach(EnemyAttributes enemyType in pattern.Enemies)
         {
@@ -179,8 +182,8 @@ public class EnemySpawnController : MonoBehaviour
             SpawnData spawnPointData = spawnPoint.GetComponent<SpawnData>();
 
             // spawn enemies in the pattern separated by an offset
-            float xOffset = spawnPointData.XDirection * offsetAmount * enemyCount;
-            float yOffset = spawnPointData.YDirection * offsetAmount * enemyCount;
+            float xOffset = spawnPointData.XDirection * offsetAmount * spawnedEnemyCount;
+            float yOffset = spawnPointData.YDirection * offsetAmount * spawnedEnemyCount;
             Vector3 spawnPosition = spawnPointTransform.position;
             Vector3 spawnPositionWithOffSet = new Vector3(spawnPosition.x - xOffset, spawnPosition.y - yOffset, spawnPosition.z); 
             GameObject spawnedObject = Instantiate(_spawnPrefab, spawnPositionWithOffSet, Quaternion.identity);
@@ -191,7 +194,7 @@ public class EnemySpawnController : MonoBehaviour
                 spawnedObject.GetComponent<Enemy>().SetAttributes(enemyType);
                 spawnedObject.GetComponent<MoveInOwnDirection>()?.SetDirection(new Vector2(spawnPointData.XDirection, spawnPointData.YDirection));
                 MoveTowardClosest enemyMovement = spawnedObject.GetComponent<MoveTowardClosest>();
-                enemyMovement?.SetSpeed((enemyMovement.Speed * speedModifier) - enemyCount * 0.2f);
+                enemyMovement?.SetSpeed((enemyMovement.Speed * speedModifier) - spawnedEnemyCount * 0.2f);
             }
 
             // track spawned object in a list
@@ -201,7 +204,7 @@ public class EnemySpawnController : MonoBehaviour
             }
 
             // increment multiplier for the position offset
-            enemyCount += 1;
+            spawnedEnemyCount += 1;
         }
 
         for (int i = 0; i <= _spawnedObjects.Count - 1; i++)
@@ -212,6 +215,7 @@ public class EnemySpawnController : MonoBehaviour
             }
         }
 
+        _currentWaveSpawnCount += 1;
     }
     
     public void ResetState()

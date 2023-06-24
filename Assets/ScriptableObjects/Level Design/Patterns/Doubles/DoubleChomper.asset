@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DoubleChomper
   m_EditorClassIdentifier: 
   _enemies:
-  - {fileID: 11400000, guid: 3366c022415899b4d8e19ff4d442f116, type: 2}
+  - {fileID: 11400000, guid: 1a74e0697b8ac0847992269632e944e5, type: 2}
+  - {fileID: 11400000, guid: 1a74e0697b8ac0847992269632e944e5, type: 2}
   _useOverrides: 0
-  _enemySpeed: 1
   _enemyRotation: 0
   _spawnLocations: 
   _itemDrops: []

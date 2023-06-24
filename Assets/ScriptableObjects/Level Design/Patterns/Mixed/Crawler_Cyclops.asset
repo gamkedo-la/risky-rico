@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Crawler_Cyclops
   m_EditorClassIdentifier: 
   _enemies:
-  - {fileID: 11400000, guid: 1a74e0697b8ac0847992269632e944e5, type: 2}
-  - {fileID: 11400000, guid: 3366c022415899b4d8e19ff4d442f116, type: 2}
-  - {fileID: 11400000, guid: 1a74e0697b8ac0847992269632e944e5, type: 2}
+  - {fileID: 11400000, guid: fe30147d47fd0f24eb07d1bc1c1d2d88, type: 2}
+  - {fileID: 11400000, guid: 20773ec1f6ad7b74f943ee5778a233fc, type: 2}
   _useOverrides: 0
   _enemyRotation: 0
   _spawnLocations: 

@@ -62,7 +62,10 @@ public class WaveData : ScriptableObject
     [Tooltip("If checked, it will choose a random pattern on each spawn; otherwise, it will follow the list order")]
     [SerializeField] private bool _chooseRandomPattern = true;
 
-    [SerializeField] private int _enemyCount;
-    public int EnemyCount => _enemyCount;
+    [SerializeField] private int _minEnemyCount;
+    public int MinEnemyCount => _minEnemyCount;
+
+    [SerializeField] private int _spawnCount;
+    public int SpawnCount => _spawnCount;
     #endregion
 }
