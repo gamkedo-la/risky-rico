@@ -6,18 +6,22 @@ public class PlayerStateController : MonoBehaviour
 {
     [SerializeField] PlayerController _playerController;
     [SerializeField] Shoot _playerShoot;
+    [SerializeField] MoveTowardClosest _playerMoveTowardClosest;
 
     void Awake()
     {
         GameStateManager.OnStateChanged += OnGameStateChanged;
+        EnableComponentsBasedOnState(ServiceLocator.Instance.Get<GameStateManager>().State);
     }
 
     void OnGameStateChanged(GameState state)
     {
-        Debug.Log("new state");
-        Debug.Log(state);
+        EnableComponentsBasedOnState(state);
+    }
 
-        _playerController.enabled = state == GameState.EXPLORATION;
-        _playerShoot.enabled = state == GameState.COMBAT;
+    void EnableComponentsBasedOnState(GameState state)
+    {
+        // _playerShoot.enabled = state == GameState.COMBAT;
+        // _playerMoveTowardClosest.enabled = state == GameState.COMBAT;
     }
 }
