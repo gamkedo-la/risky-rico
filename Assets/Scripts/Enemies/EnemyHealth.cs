@@ -46,46 +46,18 @@ public class EnemyHealth : MonoBehaviour
         _yHealth -= yDamage;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void OnHit(RaycastHit2D hit, float baseXDamage, float baseYDamage)
     {
-        if (!_damagingObjects.Contains(collision.gameObject))
-        {
-            Debug.Log("not a damaging object");
-            return;
-        }  
-
-        // assume zero damage as default
-        float xDamage = 0;
-        float yDamage = 0;
-
-        // get center points and collider boundaries
-        Bounds bounds = _collider.bounds;
-        Bounds otherBounds = collision.gameObject.GetComponent<BoxCollider2D>().bounds;
-        Vector3 center = bounds.center;
-        Vector3 otherCenter = otherBounds.center;
-
         // get damage data of colliding object
-        DamageController damageController = collision.gameObject.GetComponent<DamageController>();
-        float defaultDamageAmount = 1;
+        DamageController damageController = hit.collider.gameObject.GetComponent<DamageController>();
+        float damageAmount = 1;
         if (damageController != null)
         {
-            defaultDamageAmount = damageController.Damage;
-        }
-
-        // check if colliding object is contained within height boundary of this collider
-        if (otherCenter.y > center.y - bounds.extents.y && otherCenter.y < center.y + bounds.extents.y)
-        {
-            xDamage = defaultDamageAmount;
-        }
-
-        // check if colliding object is contained within width boundary of this collider
-        if (otherCenter.x > center.x - bounds.extents.x && otherCenter.x < center.x + bounds.extents.x)
-        {
-            yDamage = defaultDamageAmount;
+            damageAmount = damageController.Damage;
         }
 
         // apply damage based on x and y values
-        TakeDamage(xDamage, yDamage);
+        TakeDamage(damageAmount * baseXDamage, damageAmount * baseYDamage);
 
         // invoke follow-up damage events
         _damageEvents?.Invoke();
@@ -94,7 +66,7 @@ public class EnemyHealth : MonoBehaviour
         Instantiate(_damageSplash, transform.position, transform.rotation);
 
         // get ammo data of the projectile
-        Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+        Bullet bullet = hit.collider.gameObject.GetComponent<Bullet>();
 
         // get type of ammo
         if (bullet != null)
@@ -106,7 +78,7 @@ public class EnemyHealth : MonoBehaviour
         // remove colliding object from scene
         if (bullet.CanBeDestoyedByEnemies)
         {
-            Destroy(collision.gameObject);
+            Destroy(hit.collider.gameObject);
         }
     }
 

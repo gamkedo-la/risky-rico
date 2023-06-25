@@ -27,7 +27,7 @@ public class CustomCollider : MonoBehaviour
     
     [SerializeField] private float _detectionRayLength = 0.1f;
     
-    [SerializeField] [Range(0.1f, 0.3f)] private float _rayBuffer = 0.1f; // Prevents side detectors hitting the ground
+    [SerializeField] [Range(0.1f, 0.3f)] private float _rayBuffer = 0.1f;
     
     [SerializeField, Tooltip("Raising this value increases collision accuracy at the cost of performance.")]
     
@@ -42,6 +42,8 @@ public class CustomCollider : MonoBehaviour
     public bool ColDown => _colDown; 
     public bool ColLeft => _colLeft;
 
+    public RaycastHit2D CurrentHit;
+
     public void RunCollisionChecks()
     {
         // Generate ray ranges
@@ -53,8 +55,18 @@ public class CustomCollider : MonoBehaviour
         _colLeft = RunDetection(_raysLeft);
         _colRight = RunDetection(_raysRight);
 
-        bool RunDetection(RayRange range) {
-            return EvaluateRayPositions(range).Any(point => Physics2D.Raycast(point, range.Dir, _detectionRayLength, _collisionLayer));
+        bool RunDetection(RayRange range) 
+        {
+            return EvaluateRayPositions(range).Any(point => {
+                RaycastHit2D hit = Physics2D.Raycast(point, range.Dir, _detectionRayLength, _collisionLayer);
+
+                if (hit.collider != null)
+                {
+                    CurrentHit = hit;
+                }
+
+                return hit.collider != null;
+            });
         }
     }
 
@@ -80,7 +92,8 @@ public class CustomCollider : MonoBehaviour
 
     private IEnumerable<Vector2> EvaluateRayPositions(RayRange range) 
     {
-        for (var i = 0; i < _detectorCount; i++) {
+        for (var i = 0; i < _detectorCount; i++) 
+        {
             var t = (float)i / (_detectorCount - 1);
             yield return Vector2.Lerp(range.Start, range.End, t);
         }
@@ -93,11 +106,14 @@ public class CustomCollider : MonoBehaviour
         Gizmos.DrawWireCube(transform.position + _bounds.center, _bounds.size);
 
         // Rays
-        if (!Application.isPlaying) {
+        if (!Application.isPlaying) 
+        {
             CalculateRayRanged();
             Gizmos.color = Color.blue;
-            foreach (var range in new List<RayRange> { _raysUp, _raysRight, _raysDown, _raysLeft }) {
-                foreach (var point in EvaluateRayPositions(range)) {
+            foreach (var range in new List<RayRange> { _raysUp, _raysRight, _raysDown, _raysLeft }) 
+            {
+                foreach (var point in EvaluateRayPositions(range)) 
+                {
                     Gizmos.DrawRay(point, range.Dir * _detectionRayLength);
                 }
             }

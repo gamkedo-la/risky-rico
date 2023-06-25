@@ -23,10 +23,9 @@ public class Todo : MonoBehaviour
     // TODO: update loot drops based on difficulty selection
 
     // COMBAT:
-    // TODO: create custom colliders for enemy health
     // TODO: make them non-lethal on inital spawn
     // TODO: tighten hitboxes
-    // TODO: change look of projectiles for when they become lethal 
+    // TODO: change look of projectiles for when they become lethal
 
     // FOR PLAYTESTING:
     // TODO: When changing levels, move player and camera to the starting position for that level prefab

@@ -33,12 +33,12 @@ public class Enemy : MonoBehaviour
 
         if (_hurtBox.ColDown || _hurtBox.ColUp)
         {
-            Debug.Log("Hit vertically");
+            _health.OnHit(_hurtBox.CurrentHit, 0, 1);
         }
 
         if (_hurtBox.ColLeft || _hurtBox.ColRight)
         {
-            Debug.Log("Hit horizontally");
+            _health.OnHit(_hurtBox.CurrentHit, 1, 0);
         }
     }
 

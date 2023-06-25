@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour, IPlayerController {
         MoveCharacter(); 
     }
 
-
     #region Input
     private void GatherInput() 
     {

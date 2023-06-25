@@ -411,11 +411,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.3, y: 0.3, z: 0}
   _collisionLayer:
     serializedVersion: 2
     m_Bits: 64
-  _detectorCount: 3
-  _detectionRayLength: 0.32
-  _rayBuffer: 0.252
+  _detectorCount: 5
+  _detectionRayLength: 0.1
+  _rayBuffer: 0.1
   _freeColliderIterations: 10
