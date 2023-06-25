@@ -30,6 +30,7 @@ public class Dialog : MonoBehaviour
     [SerializeField] private int typingSpeed;
     public int TypingSpeed => typingSpeed;
     IEnumerator typingCoroutine;
+    public bool startOnAwake = false;
     #endregion
     
     #region Methods
@@ -37,6 +38,11 @@ public class Dialog : MonoBehaviour
     {
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
         _inputHandler.Interact().performed += UpdateTextProgress;
+
+        if (startOnAwake)
+        {
+            UpdateDialogSequence();
+        }
     }
 
     void StartDialog()
@@ -170,6 +176,11 @@ public class Dialog : MonoBehaviour
         textObject.text = "";
 
         StartDialog();
+    }
+
+    public DialogLine GetCurrentDialogLine()
+    {
+        return _dialogSequence.Lines[index];
     }
     #endregion
 }
