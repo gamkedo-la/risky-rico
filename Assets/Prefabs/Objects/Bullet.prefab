@@ -381,3 +381,4 @@ MonoBehaviour:
   _ammoType: 4
   _iceBlockPrefab: {fileID: 3925684681538655905, guid: 03a06508edca41e478780946f85a821e, type: 3}
   CanBeDestoyedByEnemies: 1
+  _timeUntilLethal: 0.2

@@ -23,7 +23,6 @@ public class Todo : MonoBehaviour
     // TODO: update loot drops based on difficulty selection
 
     // COMBAT:
-    // TODO: make them non-lethal on inital spawn
     // TODO: tighten hitboxes
     // TODO: change look of projectiles for when they become lethal
 

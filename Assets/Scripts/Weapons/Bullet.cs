@@ -10,6 +10,21 @@ public class Bullet : MonoBehaviour
     public AmmoType AmmoType => _ammoType;
     public bool CanBeDestoyedByEnemies = true;
 
+    [SerializeField] private float _timeUntilLethal = 0.5f;
+    private bool _lethal = false;
+    public bool Lethal => _lethal;
+
+    public void Update()
+    {
+        _timeUntilLethal -= 1f * Time.deltaTime;
+
+        if (_timeUntilLethal <= 0.0f)
+        {
+            _lethal = true;
+            _timeUntilLethal = 0;
+        }
+    }
+
     public void SetAmmoType(AmmoType ammoType)
     {
         _ammoType = ammoType;
