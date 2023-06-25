@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 3374859099299653295}
   - component: {fileID: 694300751456116890}
   - component: {fileID: 1280584251447498085}
+  - component: {fileID: 1606415814695673330}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -322,6 +323,7 @@ MonoBehaviour:
   _renderer: {fileID: 8724373994609232367}
   _rotationBehavior: {fileID: 0}
   _swerveBehavior: {fileID: 0}
+  _hurtBox: {fileID: 0}
 --- !u!114 &9149865959413056470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,3 +397,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _targetObjects: {fileID: 11400000, guid: 5867dc72610f0ff43b7e2f0286ca1f31, type: 2}
   _speed: 1
+--- !u!114 &1606415814695673330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724373994609232352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b923f609659b9f048a1c6d979114a197, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  _collisionLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  _detectorCount: 3
+  _detectionRayLength: 0.32
+  _rayBuffer: 0.252
+  _freeColliderIterations: 10

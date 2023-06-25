@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] private EnemyRotate _rotationBehavior;
     [SerializeField] private EnemySwerve _swerveBehavior;
+    [SerializeField] private CustomCollider _hurtBox;
 
     void Awake()
     {
@@ -20,9 +21,25 @@ public class Enemy : MonoBehaviour
         _movement = gameObject.GetComponent<MoveTowardClosest>();
         _rotationBehavior = gameObject.GetComponent<EnemyRotate>();
         _swerveBehavior = gameObject.GetComponent<EnemySwerve>();
+        _hurtBox = gameObject.GetComponent<CustomCollider>();
 
         // apply parameters to individual components
         SetAttributes(_parameters);
+    }
+
+    void Update()
+    {
+        _hurtBox.RunCollisionChecks();
+
+        if (_hurtBox.ColDown || _hurtBox.ColUp)
+        {
+            Debug.Log("Hit vertically");
+        }
+
+        if (_hurtBox.ColLeft || _hurtBox.ColRight)
+        {
+            Debug.Log("Hit horizontally");
+        }
     }
 
     public void SetAttributes(EnemyAttributes parameters)

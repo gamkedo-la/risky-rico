@@ -255,17 +255,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7177433555238076017, guid: d0f5ae1fd063a8247ada998e75df6fdf, type: 3}
   m_PrefabInstance: {fileID: 401559476}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &439676218 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4363691703271536758, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
-  m_PrefabInstance: {fileID: 5527789461694649602}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &439676245 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4363691703271536765, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
@@ -609,7 +598,7 @@ PrefabInstance:
     - target: {fileID: 5943322870704775258, guid: f51cf6f6b3359d04fa11b6e3a1a9ef4f, type: 3}
       propertyPath: _input
       value: 
-      objectReference: {fileID: 439676218}
+      objectReference: {fileID: 0}
     - target: {fileID: 5943322870704775258, guid: f51cf6f6b3359d04fa11b6e3a1a9ef4f, type: 3}
       propertyPath: _moneyStore
       value: 
@@ -790,7 +779,7 @@ PrefabInstance:
     - target: {fileID: 3561358565911983656, guid: 9fe7a6ef5a7cd4040b72649ecde5e7e0, type: 3}
       propertyPath: _input
       value: 
-      objectReference: {fileID: 439676218}
+      objectReference: {fileID: 0}
     - target: {fileID: 4122782983139692284, guid: 9fe7a6ef5a7cd4040b72649ecde5e7e0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1342,6 +1331,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 473249998, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateDialogSequence
+      objectReference: {fileID: 0}
     - target: {fileID: 3805912975322417946, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1438,6 +1431,10 @@ PrefabInstance:
       propertyPath: _depositedMoney._constantValue
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 6519396348788298862, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: flashMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d08959ff9c62c045a86fad7bea85df9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
 --- !u!1001 &5677902232619263100

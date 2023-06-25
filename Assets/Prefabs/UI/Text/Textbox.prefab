@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82eec37d9c7625c4dac71f8667bc1203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _input: {fileID: 0}
+  _dialogSequence: {fileID: 0}
   textObject: {fileID: 1901643654983004571}
   lines:
   - abc
@@ -194,6 +194,7 @@ MonoBehaviour:
     ex ea commodo consequat.
   - Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
     eu fugiat nulla pariatur.
+  _UITextbox: {fileID: 0}
   typingSpeed: 8
 --- !u!1 &7735963773449469547
 GameObject:
@@ -284,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5da2f800915573d4aa5033f92a8d6203, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashMaterial: {fileID: 2100000, guid: ebfae847cc7164d4ea59b15f044fb231, type: 2}
+  flashMaterial: {fileID: 2100000, guid: 4d08959ff9c62c045a86fad7bea85df9, type: 2}
   duration: 0.2
   _flashToggle:
     _useConstant: 1
