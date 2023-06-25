@@ -7,11 +7,20 @@ public class MoveTowardClosest : MonoBehaviour
 {
     [SerializeField] private GameObjectCollection _targetObjects;
     [SerializeField] private float _speed = 1f;
+    private float _currentSpeed = 0f;
     public float Speed => _speed;
     private GameObject targetObject;
 
     void Update()
     {
+        // gradually ramp up to max speed
+        _currentSpeed += 0.5f * Time.deltaTime;
+        if (_currentSpeed >= _speed)
+        {
+            _currentSpeed = _speed;
+        }
+
+        // if no target object is already available, pick the closest object in a given collection
         float minDistance = Mathf.Infinity;
         Vector2 selfPosition = transform.position;
 
@@ -30,6 +39,7 @@ public class MoveTowardClosest : MonoBehaviour
             }
         }
 
+        // move toward the target object
         if (targetObject != null)
         {
             MoveTowardObject(targetObject);
@@ -48,6 +58,6 @@ public class MoveTowardClosest : MonoBehaviour
 
    void MoveTowardObject(GameObject target)
    {
-        transform.position = Vector2.Lerp(transform.position, target.transform.position, Time.deltaTime * _speed);
+        transform.position = Vector2.Lerp(transform.position, target.transform.position, Time.deltaTime * _currentSpeed);
    }
 }

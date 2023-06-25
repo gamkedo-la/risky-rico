@@ -9,7 +9,7 @@ public class Todo : MonoBehaviour
     // CODE PATTERNS:
     // TODO: state machines (for animation, game state, player state, enemy state)
     // TODO: SO vars as middleman for UI
-    // TODO: refactor existing code (consitent style, use custom collider, find anti-patterns)
+    // TODO: refactor existing code (consitent style, find anti-patterns)
 
     // SHOP:
     // TODO: equipment functionality
