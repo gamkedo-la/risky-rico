@@ -15,11 +15,6 @@ public class Item : MonoBehaviour, IInteractable
     {
         InteractionEnabled = true;
         Prompt = "Pick up";
-
-        // get necesssary components
-        _renderer = gameObject.GetComponent<SpriteRenderer>();
-
-        // apply parameters to individual components
         SetAttributes(_parameters);
     }
 

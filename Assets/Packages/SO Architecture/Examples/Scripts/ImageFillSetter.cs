@@ -15,5 +15,11 @@ namespace ScriptableObjectArchitecture.Examples
         {
             _imageTarget.fillAmount = Mathf.Clamp01(_variable.Value / _maxValue.Value);
         }
+
+        public void SetValues(float variable, float maxValue)
+        {
+            _variable.Value = variable;
+            _maxValue.Value = maxValue;
+        }
     }
 }

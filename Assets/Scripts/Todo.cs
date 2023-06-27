@@ -24,7 +24,6 @@ public class Todo : MonoBehaviour
 
     // COMBAT:
     // TODO: tighten hitboxes
-    // TODO: change look of projectiles for when they become lethal
 
     // FOR PLAYTESTING:
     // TODO: When changing levels, move player and camera to the starting position for that level prefab
