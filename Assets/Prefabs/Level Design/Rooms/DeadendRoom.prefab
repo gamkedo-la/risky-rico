@@ -264,6 +264,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4274267268233061665, guid: bde12851b50d8b548829c8ee96450adc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4274267268233061670, guid: bde12851b50d8b548829c8ee96450adc, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -819,6 +823,10 @@ PrefabInstance:
     - target: {fileID: 6673292471665026623, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
       propertyPath: m_Name
       value: RoomExit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673292471665026623, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 937e1f7547e6a7b40bf7dbec5fad91b4, type: 3}
