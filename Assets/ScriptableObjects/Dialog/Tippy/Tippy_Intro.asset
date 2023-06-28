@@ -10,9 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3f7e853beb301d4c8fc63f58bee40a2, type: 3}
-  m_Name: ShopKeeperDialog
+  m_Name: Tippy_Intro
   m_EditorClassIdentifier: 
-  lines:
-  - _content: Howdy, stranger.
-  - _content: Whatcha need?
-  _onDialogEnd: {fileID: 11400000, guid: 1a7da9822322bca42bd37f826a98afc9, type: 2}
+  lines: []
+  _onDialogEnd: {fileID: 0}
