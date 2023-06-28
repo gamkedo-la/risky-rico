@@ -45,3 +45,6 @@ public class SpriteDictionary : SerializableDictionary<string, Sprite> {}
 
 [Serializable]
 public class IntStringDictionary : SerializableDictionary<int, string> {}
+
+[Serializable]
+public class DialogFlagDictionary : SerializableDictionary<string, DialogSequence> {}

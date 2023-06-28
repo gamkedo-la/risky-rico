@@ -14,6 +14,7 @@ using UnityEditor;
 [CustomPropertyDrawer(typeof(SpriteDictionary))]
 [CustomPropertyDrawer(typeof(IntStringDictionary))]
 [CustomPropertyDrawer(typeof(ItemDropTableDictionary))]
+[CustomPropertyDrawer(typeof(DialogFlagDictionary))]
 public class AnySerializableDictionaryPropertyDrawer : SerializableDictionaryPropertyDrawer {}
 
 [CustomPropertyDrawer(typeof(ColorArrayStorage))]

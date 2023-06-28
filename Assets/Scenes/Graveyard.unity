@@ -255,6 +255,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7177433555238076017, guid: d0f5ae1fd063a8247ada998e75df6fdf, type: 3}
   m_PrefabInstance: {fileID: 401559476}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &435602400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2386492590734392872, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+  m_PrefabInstance: {fileID: 5527789461694649602}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &435602403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435602400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b491ccde957ba47b8022423993ddb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _activeDialogueSequence: {fileID: 11400000, guid: 4ec1a8a081ba3a4468273fe3e5c1296b, type: 2}
+  _npcDialogueSequence: {fileID: 11400000, guid: b08fa067a086f6a4f9bc3d83292c6c48, type: 2}
+  _availableDialog:
+  - {fileID: 11400000, guid: 84effcad66f90644d8a94b0ea589e75f, type: 2}
+  _flaggedDialog:
+    m_keys:
+    - paidHellWellForLore_1
+    - paidHellWellForLore_2
+    - introduceHellWell
+    m_values:
+    - {fileID: 11400000, guid: 2ed0ff2a9db73b6418b87124fb2b0eae, type: 2}
+    - {fileID: 11400000, guid: 2ed65c9701934fb4dbaa82f12349cb00, type: 2}
+    - {fileID: 11400000, guid: b08fa067a086f6a4f9bc3d83292c6c48, type: 2}
+  useFlags: 1
+  randomDialog: 0
+  randomLine: 0
+  _onDialogStart: {fileID: 0}
+  _onDialogEnd: {fileID: 0}
+  _interactionPrompt: 
 --- !u!114 &439676245 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4363691703271536765, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
@@ -1335,6 +1371,50 @@ PrefabInstance:
       propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: UpdateDialogSequence
       objectReference: {fileID: 0}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: randomDialog
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _npcDialogueSequence
+      value: 
+      objectReference: {fileID: 11400000, guid: cfd9d00c849d3cd4eb500544a453dc20, type: 2}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _availableDialog.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _availableDialog.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: c08f37408288ccc48bb456ebdf7df13f, type: 2}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _availableDialog.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a4d4637d7729cc747bc26499741cf902, type: 2}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _availableDialog.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 51bd229e08a4af7418d67f5d8b437bcc, type: 2}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _availableDialog.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 570bac9aef92965419ae06424b61a79a, type: 2}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _flaggedDialog.m_keys.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _flaggedDialog.m_values.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _flaggedDialog.m_keys.Array.data[0]
+      value: introduceShopkeeper
+      objectReference: {fileID: 0}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _flaggedDialog.m_values.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: cfd9d00c849d3cd4eb500544a453dc20, type: 2}
     - target: {fileID: 1519586140676458902, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: randomDialog
       value: 1

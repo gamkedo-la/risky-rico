@@ -18,6 +18,24 @@ public class SaveDataManager : IService
     private readonly string screenShakeKey = "ScreenShake";
     private readonly string flashingEffectKey = "FlashingEffects";
 
+    // Dialog flags
+    private readonly string paidHellWellForLore_1 = "paidHellWellForLore_1";
+    private readonly string paidHellWellForLore_2 = "paidHellWellForLore_2";
+
+
+    // 1 for true, 0 for false
+    public bool GetFlag(string flagKey)
+    {
+        string flagValue = PlayerPrefs.GetString(flagKey, "");
+        return flagValue == "1"; 
+    }
+
+    public void SetFlag(string flagKey, bool value)
+    {
+        string flagValue = value ? "1" : "0";
+        PlayerPrefs.SetString(flagKey, flagValue);
+    }
+
     public List<Score> GetHighScores()
     {
         string scores = PlayerPrefs.GetString(highScoresKey,"");

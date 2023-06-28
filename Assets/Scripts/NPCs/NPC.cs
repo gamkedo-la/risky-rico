@@ -10,6 +10,7 @@ public class NPC : MonoBehaviour, IInteractable
     [SerializeField, HideCustomDrawer] private DialogSequence _activeDialogueSequence;
     [SerializeField] private DialogSequence _npcDialogueSequence;
     [SerializeField] private List<DialogSequence> _availableDialog;
+    [SerializeField] private DialogFlagDictionary _flaggedDialog;
     public bool useFlags = false;
     public bool randomDialog = false;
     public bool randomLine = false;
@@ -28,6 +29,23 @@ public class NPC : MonoBehaviour, IInteractable
     {
         Prompt = _interactionPrompt;
         InteractionEnabled = true;
+
+        if (useFlags)
+        {
+            foreach(string flag in _flaggedDialog.Keys)
+            {
+                bool flagStatus = ServiceLocator.Instance.Get<SaveDataManager>().GetFlag(flag);
+                if (flagStatus)
+                {
+                    SetCurrentDialogSequence(_flaggedDialog[flag]);
+                }
+            }
+        }
+    }
+
+    public void SetCurrentDialogSequence(DialogSequence sequence)
+    {
+        _npcDialogueSequence = sequence;
     }
 
     public DialogSequence GetRandomDialogSequence()
