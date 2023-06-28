@@ -288,9 +288,9 @@ MonoBehaviour:
   useFlags: 1
   randomDialog: 0
   randomLine: 0
-  _onDialogStart: {fileID: 0}
+  _onDialogStart: {fileID: 11400000, guid: 1b5c3581b83d8f143bbb6dd40e2b714c, type: 2}
   _onDialogEnd: {fileID: 0}
-  _interactionPrompt: 
+  _interactionPrompt: Talk
 --- !u!114 &439676245 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4363691703271536765, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}

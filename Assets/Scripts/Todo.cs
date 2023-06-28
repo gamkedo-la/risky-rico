@@ -25,9 +25,17 @@ public class Todo : MonoBehaviour
     // COMBAT:
     // TODO: tighten hitboxes
 
+    // LEVEL DESIGN:
+    // TODO: level transitions
+    // TODO: level graphics changes
+    // TODO: tile alignment
+    // TODO: level layouts for each level (caverns, catacombs, hellpit)
+    // TODO: close combat exits during fights / make graphics for closed exit
+    // TODO: tutorial dialog placement
+    // TODO: grouping levels in the main scene
+
     // FOR PLAYTESTING:
     // TODO: When changing levels, move player and camera to the starting position for that level prefab
-    // TODO: level layouts for each level (just demo 2 levels, no ending sequence)
     // TODO: enemy wave design for each combat room 
     
     // TODO: WebGL build test
