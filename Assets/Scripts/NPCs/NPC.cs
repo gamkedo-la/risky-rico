@@ -9,9 +9,14 @@ public class NPC : MonoBehaviour, IInteractable
     [Header("DIALOG")]
     [SerializeField, HideCustomDrawer] private DialogSequence _activeDialogueSequence;
     [SerializeField] private DialogSequence _npcDialogueSequence;
+    [SerializeField] private List<DialogSequence> _availableDialog;
+    public bool useFlags = false;
+    public bool randomDialog = false;
+    public bool randomLine = false;
     
     [Header("EVENTS")]
     [SerializeField] private GameEvent _onDialogStart;
+    [SerializeField] private GameEvent _onDialogEnd;
     
     [Header("INTERACTIONS")]
     [SerializeField] private string _interactionPrompt;
@@ -25,12 +30,26 @@ public class NPC : MonoBehaviour, IInteractable
         InteractionEnabled = true;
     }
 
+    public DialogSequence GetRandomDialogSequence()
+    {
+        return _availableDialog[Random.Range(0, _availableDialog.Count)];
+    }
+
+    public List<DialogLine> GetRandomDialogLine(DialogSequence dialog)
+    {
+        List<DialogLine> randomLines = new List<DialogLine>();
+        randomLines.Add(dialog.Lines[Random.Range(0, dialog.Lines.Count)]);
+        return randomLines;
+    }
+
     public void ReceiveInteraction(GameObject interactor)
     {
        if (_npcDialogueSequence != null && _activeDialogueSequence != null)
        {
-            _activeDialogueSequence.SetLines(_npcDialogueSequence.Lines);
-            _activeDialogueSequence.SetEndEvent(_npcDialogueSequence.OnDialogEnd);
+            DialogSequence selectedDialogSequence = randomDialog ? GetRandomDialogSequence() : _npcDialogueSequence;
+            List<DialogLine> selectedDialogLines = randomLine ? GetRandomDialogLine(selectedDialogSequence) : selectedDialogSequence.Lines;
+            _activeDialogueSequence.SetLines(selectedDialogLines);
+            _activeDialogueSequence.SetEndEvent(_onDialogEnd ? _onDialogEnd : selectedDialogSequence.OnDialogEnd);
             _onDialogStart?.Raise();
             InteractionEnabled = false;
        }

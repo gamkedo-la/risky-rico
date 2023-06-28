@@ -12,5 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f7e853beb301d4c8fc63f58bee40a2, type: 3}
   m_Name: HellWell_Intro2
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - _content: Hehe alright kid (or adult or skull or whatever)
+    _image: {fileID: 0}
+  - _content: "They call me the Hell Well. I\u2019m like a wishing well but for cool
+      people."
+    _image: {fileID: 0}
+  - _content: Hit me up when you get tired of being poor.
+    _image: {fileID: 0}
+  - _content: Have fun in paradise down there hehe.
+    _image: {fileID: 0}
   _onDialogEnd: {fileID: 0}

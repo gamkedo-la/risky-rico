@@ -13,5 +13,16 @@ MonoBehaviour:
   m_Name: Chet_Barks
   m_EditorClassIdentifier: 
   lines:
-  - _content: Bark! [excitedly]
+  - _content: BARK [excitedly]
+    _image: {fileID: 0}
+  - _content: 'Bark! [admiringly] '
+    _image: {fileID: 0}
+  - _content: Baaaark [sarcastically]
+    _image: {fileID: 0}
+  - _content: bArK [mockingly]
+    _image: {fileID: 0}
+  - _content: '* bark * [emphatically]'
+    _image: {fileID: 0}
+  - _content: Bark ;) [romantically??]
+    _image: {fileID: 0}
   _onDialogEnd: {fileID: 0}

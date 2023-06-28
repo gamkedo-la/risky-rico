@@ -1335,6 +1335,26 @@ PrefabInstance:
       propertyPath: _response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: UpdateDialogSequence
       objectReference: {fileID: 0}
+    - target: {fileID: 1519586140676458902, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: randomDialog
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519586140676458902, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _availableDialog.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1519586140676458902, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _availableDialog.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 814ea275f43f078449f63193909ebbd0, type: 2}
+    - target: {fileID: 1519586140676458902, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _availableDialog.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: ae7e5615603341e4ebe921e8338ab93c, type: 2}
+    - target: {fileID: 1519586140676458902, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _availableDialog.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: a529f38ca46b2c04986e7081b46786b0, type: 2}
     - target: {fileID: 3805912975322417946, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1411,6 +1431,14 @@ PrefabInstance:
       propertyPath: _useFloat
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4114029786926050770, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: randomLine
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4114029786926050770, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _onDialogEnd
+      value: 
+      objectReference: {fileID: 11400000, guid: a612b7e88fc4e4445a6272dc0775ddf4, type: 2}
     - target: {fileID: 4363691703271536765, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: _depositedMoney._variable
       value: 

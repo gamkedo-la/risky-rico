@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f7e853beb301d4c8fc63f58bee40a2, type: 3}
   m_Name: HellWell_Randoms
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - _content: Back for more? Hell yeah (hehe)
+    _image: {fileID: 0}
+  - _content: Hehe nice, chuck those coins down there
+    _image: {fileID: 0}
+  - _content: "Can\u2019t get enough? Hehe I knew it "
+    _image: {fileID: 0}
   _onDialogEnd: {fileID: 0}

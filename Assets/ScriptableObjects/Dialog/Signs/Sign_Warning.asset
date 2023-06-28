@@ -12,5 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3f7e853beb301d4c8fc63f58bee40a2, type: 3}
   m_Name: Sign_Warning
   m_EditorClassIdentifier: 
-  lines: []
+  lines:
+  - _content: "[there\u2019s an old sign with text that\u2019s clearly been scribbled
+      over]"
+    _image: {fileID: 0}
+  - _content: <strikethrough>Turn back now.</strikethrough>
+    _image: {fileID: 0}
+  - _content: BIG RICHES UP AHEAD
+    _image: {fileID: 0}
+  - _content: MOUNTAINS OF GOLD UNDERGROUND
+    _image: {fileID: 0}
   _onDialogEnd: {fileID: 0}
