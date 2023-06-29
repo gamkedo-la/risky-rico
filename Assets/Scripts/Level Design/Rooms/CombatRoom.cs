@@ -7,7 +7,6 @@ using ScriptableObjectArchitecture;
 public class CombatRoom : Room
 {
     [SerializeField] private bool _combatFinished;
-    [SerializeField] private List<RoomTransition> _exits;
     [SerializeField] private GameObject _spawnTrigger;
     [SerializeField] private EnemySpawnController _spawnController;
     [SerializeField] private GameObjectCollection _collidableObjects;
@@ -37,18 +36,18 @@ public class CombatRoom : Room
 
     public void CloseExits()
     {
-        foreach(RoomTransition exit in _exits)
-        {
-            exit.open = false;
-        }
+        // foreach(RoomTransition exit in _exits)
+        // {
+        //     exit.open = false;
+        // }
     }
 
     public void OpenExits()
     {
-        foreach(RoomTransition exit in _exits)
-        {
-            exit.open = true;
-        }
+        // foreach(RoomTransition exit in _exits)
+        // {
+        //     exit.open = true;
+        // }
 
         _spawnTrigger.SetActive(false);
     }

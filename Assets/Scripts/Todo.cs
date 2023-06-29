@@ -26,7 +26,6 @@ public class Todo : MonoBehaviour
     // TODO: tighten hitboxes
 
     // LEVEL DESIGN:
-    // TODO: level transitions
     // TODO: level graphics changes
     // TODO: tile alignment
     // TODO: level layouts for each level (caverns, catacombs, hellpit)
