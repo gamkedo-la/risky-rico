@@ -27,9 +27,7 @@ public class Todo : MonoBehaviour
     // TODO: close off exits during combat
 
     // LEVEL DESIGN:
-    // TODO: level layouts for each level (caverns, hellpit)
-    // TODO: tutorial dialog placement
-    // TODO: grouping levels in the main scene
+    // TODO: level layouts for each level (hellpit)
 
     // FOR PLAYTESTING:
     // TODO: When changing levels, move player and camera to the starting position for that level prefab

@@ -384,6 +384,10 @@ PrefabInstance:
       propertyPath: _onDialogStart
       value: 
       objectReference: {fileID: 11400000, guid: 1b5c3581b83d8f143bbb6dd40e2b714c, type: 2}
+    - target: {fileID: -747211122740706475, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
+      propertyPath: _npcDialogueSequence
+      value: 
+      objectReference: {fileID: 11400000, guid: 437037a8d2f0b1a4ca27299deab255a0, type: 2}
     - target: {fileID: 963542596828204352, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1026,6 +1030,10 @@ PrefabInstance:
       propertyPath: _onDialogStart
       value: 
       objectReference: {fileID: 11400000, guid: 1b5c3581b83d8f143bbb6dd40e2b714c, type: 2}
+    - target: {fileID: -747211122740706475, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
+      propertyPath: _npcDialogueSequence
+      value: 
+      objectReference: {fileID: 11400000, guid: 5433c6e5fe030fb4d84a8f672c75309b, type: 2}
     - target: {fileID: 963542596828204352, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1314,6 +1322,10 @@ PrefabInstance:
       propertyPath: _onDialogStart
       value: 
       objectReference: {fileID: 11400000, guid: 1b5c3581b83d8f143bbb6dd40e2b714c, type: 2}
+    - target: {fileID: -747211122740706475, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
+      propertyPath: _npcDialogueSequence
+      value: 
+      objectReference: {fileID: 11400000, guid: 13741d902dc20e440b0213c6eb297f33, type: 2}
     - target: {fileID: 963542596828204352, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: m_Sprite
       value: 
