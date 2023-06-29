@@ -26,7 +26,6 @@ public class Todo : MonoBehaviour
     // TODO: tighten hitboxes
 
     // LEVEL DESIGN:
-    // TODO: tile alignment
     // TODO: level layouts for each level (caverns, catacombs, hellpit)
     // TODO: close combat exits during fights / make graphics for closed exit
     // TODO: tutorial dialog placement

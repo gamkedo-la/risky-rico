@@ -321,6 +321,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Catacombs
       objectReference: {fileID: 0}
+    - target: {fileID: 3454887622253568160, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4805407305379702275, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -365,10 +369,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6520532405040437067, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6758675787070805261, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
       propertyPath: _endPoint
       value: 
       objectReference: {fileID: 1706252778}
+    - target: {fileID: 7478820104498439709, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448836067820477312, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
 --- !u!212 &215634373 stripped

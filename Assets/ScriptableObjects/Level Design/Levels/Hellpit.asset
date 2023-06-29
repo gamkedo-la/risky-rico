@@ -19,5 +19,5 @@ MonoBehaviour:
     - wall
     m_values:
     - {fileID: 21300000, guid: 234389d007edf564aa4d7f64127c4a49, type: 3}
-    - {fileID: 21300000, guid: 9c5299f34be9c844082fefe0808fef27, type: 3}
+    - {fileID: 21300000, guid: d412dd4bae4821b4cb26cf85f69a7907, type: 3}
   _music: {fileID: 11400000, guid: 7ff71c7d7e8579d49b89591f85789687, type: 2}
