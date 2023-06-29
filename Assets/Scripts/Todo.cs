@@ -24,10 +24,10 @@ public class Todo : MonoBehaviour
 
     // COMBAT:
     // TODO: tighten hitboxes
+    // TODO: close off exits during combat
 
     // LEVEL DESIGN:
-    // TODO: level layouts for each level (caverns, catacombs, hellpit)
-    // TODO: close combat exits during fights / make graphics for closed exit
+    // TODO: level layouts for each level (caverns, hellpit)
     // TODO: tutorial dialog placement
     // TODO: grouping levels in the main scene
 

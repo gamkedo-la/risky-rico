@@ -8,6 +8,7 @@ public class RoomWall : MonoBehaviour
 
     public void Awake()
     {
+        _background = GetComponent<SpriteRenderer>();
         LevelManager.OnLevelChange += OnLevelChange;
     }
 
