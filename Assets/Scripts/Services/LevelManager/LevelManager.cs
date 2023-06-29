@@ -10,7 +10,10 @@ public class LevelManager : IService
     public static event ChangeLevel OnLevelChange;
 
     
-    public LevelManager() {}
+    public LevelManager() 
+    {
+        _params.levelIndex = 0;
+    }
 
     ~LevelManager() {}
 

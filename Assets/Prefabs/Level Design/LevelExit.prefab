@@ -97,6 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd586747d49290d4c9d9a57209f11071, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactionPrompt: Go to next level?
+  _interactionPrompt: Go deeper?
   _endPoint: {fileID: 0}
-  _onLevelTransition: {fileID: 0}
+  _onLevelTransition: {fileID: 11400000, guid: a4a0dce4ce7245143886abe03d05e8c8, type: 2}

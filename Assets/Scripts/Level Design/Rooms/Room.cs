@@ -5,7 +5,6 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _background;
-    [SerializeField] private string _roomType;
 
     public void Awake()
     {
@@ -18,7 +17,7 @@ public class Room : MonoBehaviour
 
         if (currentLevel)
         {
-            _background.sprite = currentLevel.Graphics[_roomType];
+            _background.sprite = currentLevel.Graphics["room"];
         }
     }
 }
