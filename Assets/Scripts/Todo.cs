@@ -2,29 +2,33 @@ using UnityEngine;
 
 public class Todo : MonoBehaviour
 {
-    // GAME POLISH:
-    // TODO: hitbox favortism
-    // TODO: balancing (speed, tempo, spawn types)
+    // HUB AREA:
+        // SHOP:
+        // TODO: equipment functionality
+        // TODO: emit particles from shop chimney
+        // TODO: change particle texture after player buys things
+        // TODO: play cursor sound
 
-    // CODE PATTERNS:
-    // TODO: state machines (for animation, game state, player state, enemy state)
-    // TODO: SO vars as middleman for UI
-    // TODO: refactor existing code (consitent style, find anti-patterns)
+        // HELL WELL:
+        // TODO: balance difficulty to reward ratio
+        // TODO: update loot drops based on difficulty selection
+        // TODO: make menu appear after talking to hell well
 
-    // SHOP:
-    // TODO: equipment functionality
-    // TODO: write shopkeeper dialog (add flags for game progress)
-    // TODO: emit particles from shop chimney
-    // TODO: change particle texture after player buys things
-    // TODO: play cursor sound
+        // SCORE GRAVES:
+        // TODO: show correct grave scores on scene start
 
-    // HELL WELL:
-    // TODO: balance difficulty to reward ratio
-    // TODO: update loot drops based on difficulty selection
+        // GENERAL: 
+        // TODO: add flags for all character dialog unlocks
+        // TODO: fix chest functionality
 
     // COMBAT:
-    // TODO: tighten hitboxes
+    // TODO: test all weapon effects
+    // TODO: test all curse effects
     // TODO: close off exits during combat
+    // TODO: character animation
+    // TODO: implement all combat waves / patterns
+    // TODO: balance enemy types / stats
+    // TODO: tighten hitboxes (walls, enemies, projectiles, player)
 
     // LEVEL DESIGN:
     // TODO: level layouts for each level (hellpit)
@@ -32,10 +36,6 @@ public class Todo : MonoBehaviour
     // FOR PLAYTESTING:
     // TODO: When changing levels, move player and camera to the starting position for that level prefab
     // TODO: enemy wave design for each combat room 
-    
     // TODO: WebGL build test
-
-    // TODO: character animation
-
     // TODO: fix known bugs
 }
