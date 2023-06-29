@@ -10,10 +10,13 @@ public class PlayerHealth : MonoBehaviour
 
      void OnTriggerEnter2D(Collider2D other) 
     {
-        bool isLethal = (bool) other.gameObject.GetComponent<Bullet>()?.Lethal;
-        if (_damagingObjects.Contains(other.gameObject) && isLethal)
+        if (_damagingObjects.Contains(other.gameObject))
         {
-            _deathEvent?.Raise();
+            Bullet projectile = other.gameObject.GetComponent<Bullet>();
+            if (projectile != null && projectile.Lethal)
+            {
+                _deathEvent?.Raise();
+            }
         }    
     }
 }
