@@ -68,7 +68,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
 
     [Tooltip("How much additional ammo the player will use on each shot")]
     [Range(0, 4)]
-    [SerializeField] private int _baseShotSpeed;
+    [SerializeField] private float _baseShotSpeed;
     #endregion
 
     #region Graphics
@@ -220,7 +220,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         _ammoUsage.SetBaseValue((float) _baseAmmoUsage);
         _moneyUsage.SetBaseValue(0f);
         _dualFire = false;
-        _shotSpeed.SetBaseValue((float) _baseShotSpeed);
+        _shotSpeed.SetBaseValue(_baseShotSpeed);
     }
     #endregion
 }
