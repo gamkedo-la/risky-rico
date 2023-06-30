@@ -28,7 +28,7 @@ public class Shoot : MonoBehaviour
     {
         // get the ammo effect of the player's current weapon
         AmmoEffect effect = _player.CurrentWeapon.Effect;
-        int ammoUsage = _player.CurrentWeapon.BaseAmmoUsage;
+        int ammoUsage = _player.CurrentWeapon.BaseAmmoUsage + (int) _player.AmmoUsage.CurrentValue;
 
         // update aiming direction with inputs and shoot when the timer reaches 1
         if (_ammo.Value >= ammoUsage)

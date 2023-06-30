@@ -32,6 +32,10 @@ MonoBehaviour:
     _baseValue: 9
     _currentValue: 9
     _modifiers: []
+  _ammoUsage:
+    _baseValue: 0
+    _currentValue: 0
+    _modifiers: []
   _currentWeapon: {fileID: 11400000, guid: 0c067d4eb4affc24ca8d8b13fab7cd27, type: 2}
   _weaponList:
   - {fileID: 11400000, guid: a2abe3a84582ac64cb2e943d563a0d54, type: 2}
@@ -41,6 +45,7 @@ MonoBehaviour:
   _baseDamage: 1
   _baseShotCount: 1
   _baseAmmoCap: 9
+  _baseAmmoUsage: 0
   _idleAnimation: {fileID: 0}
   _deathAnimation: {fileID: 0}
   _walkAnimation: {fileID: 1451624447, guid: 114367acc1301a346ae3593b0040b472, type: 3}

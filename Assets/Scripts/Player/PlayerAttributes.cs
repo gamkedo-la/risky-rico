@@ -23,6 +23,9 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     [SerializeField] private ModifiableAttribute _ammoCap = default(ModifiableAttribute);
     public ModifiableAttribute AmmoCap => _ammoCap;
 
+    [SerializeField] private ModifiableAttribute _ammoUsage = default(ModifiableAttribute);
+    public ModifiableAttribute AmmoUsage => _ammoUsage;
+
     [SerializeField] private WeaponData _currentWeapon = default(WeaponData);
     public WeaponData CurrentWeapon => _currentWeapon;
 
@@ -49,6 +52,10 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     [Tooltip("Maximum amount of ammo player can have at once")]
     [Range(0, 18)]
     [SerializeField] private int _baseAmmoCap;
+
+    [Tooltip("How much additional ammo the player will use on each shot")]
+    [Range(0, 3)]
+    [SerializeField] private int _baseAmmoUsage;
     #endregion
 
     #region Graphics
@@ -92,6 +99,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         _attributes.Add(_damage);
         _attributes.Add(_shotCount);
         _attributes.Add(_ammoCap);
+        _attributes.Add(_ammoUsage);
 
         InitAttributes();
     }
@@ -129,6 +137,10 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
             case AttributeType.AMMO_CAP:
                 _ammoCap.AddModifier(mod);
                 break;
+
+            case AttributeType.AMMO_USAGE:
+                _ammoUsage.AddModifier(mod);
+                break;
         }
     }
 
@@ -155,6 +167,10 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
             case AttributeType.AMMO_CAP:
                 _ammoCap.RemoveModifier(mod);
                 break;
+
+            case AttributeType.AMMO_USAGE:
+                _ammoUsage.RemoveModifier(mod);
+                break;
         }
     }
 
@@ -170,6 +186,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         _damage.SetBaseValue((float) _baseDamage);
         _shotCount.SetBaseValue((float) _baseShotCount);
         _ammoCap.SetBaseValue((float) _baseAmmoCap);
+        _ammoUsage.SetBaseValue((float) _baseAmmoUsage);
     }
     #endregion
 }
