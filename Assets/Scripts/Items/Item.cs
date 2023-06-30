@@ -3,18 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
 
-public class Item : MonoBehaviour, IInteractable
+public class Item : MonoBehaviour
 {
     [SerializeField] private ItemData _parameters;
     [SerializeField] private SpriteRenderer _renderer;
 
-    public string Prompt {get; set; }
-    public bool InteractionEnabled {get; set; }
-
     void Awake()
     {
-        InteractionEnabled = true;
-        Prompt = "Pick up";
         SetAttributes(_parameters);
     }
 
@@ -24,15 +19,9 @@ public class Item : MonoBehaviour, IInteractable
         _renderer.sprite = _parameters.Image;
     }
 
-    public void ActivateEffects(PlayerAttributes playerParameters)
+    public void ActivateEffects(PlayerAmmoStore ammoStore, PlayerMoneyStore moneyStore)
     {
-        Debug.Log("Activating effects of " + _parameters.name);
-    }
-
-    public void ReceiveInteraction(GameObject interactor)
-    {
-        Debug.Log("Item found");
-        InteractionEnabled = false;
-        Destroy(gameObject);
+        moneyStore.AddOnHandMoney(_parameters.MoneyAmount);
+        ammoStore.GainAmmo(_parameters.AmmoAmount);
     }
 }

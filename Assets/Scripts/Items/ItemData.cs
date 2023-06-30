@@ -30,6 +30,10 @@ public class ItemData : ScriptableObject
     [SerializeField] private int _ammoAmount;
     public int AmmoAmount => _ammoAmount;
 
+    [Tooltip("How much it will increase the player's current ammo for their secondary weapon")]
+    [SerializeField] private int _moneyAmount;
+    public int MoneyAmount => _moneyAmount;
+
     [Tooltip("How much money the item can be bought for")]
     [SerializeField] private int _price;
     public int Price => _price;

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 [CreateAssetMenu(fileName = "PlayerAttributes", menuName = "Player/PlayerAttributes", order = 1)]
 public class PlayerAttributes : AttributeSet, IResetOnExitPlay
@@ -18,6 +19,9 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
 
     [SerializeField] private ModifiableAttribute _shotCount = default(ModifiableAttribute);
     public ModifiableAttribute ShotCount => _shotCount;
+
+    [SerializeField] private ModifiableAttribute _ammoCap = default(ModifiableAttribute);
+    public ModifiableAttribute AmmoCap => _ammoCap;
 
     [SerializeField] private WeaponData _currentWeapon = default(WeaponData);
     public WeaponData CurrentWeapon => _currentWeapon;
@@ -41,6 +45,10 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     [Tooltip("How many rounds are fired on each shot")]
     [Range(0, 3)]
     [SerializeField] private int _baseShotCount;
+
+    [Tooltip("Maximum amount of ammo player can have at once")]
+    [Range(0, 18)]
+    [SerializeField] private int _baseAmmoCap;
     #endregion
 
     #region Graphics
@@ -83,6 +91,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         _attributes.Add(_firingRate);
         _attributes.Add(_damage);
         _attributes.Add(_shotCount);
+        _attributes.Add(_ammoCap);
 
         InitAttributes();
     }
@@ -116,6 +125,10 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
             case AttributeType.SHOT_COUNT:
                 _shotCount.AddModifier(mod);
                 break;
+
+            case AttributeType.AMMO_CAP:
+                _ammoCap.AddModifier(mod);
+                break;
         }
     }
 
@@ -138,6 +151,10 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
             case AttributeType.SHOT_COUNT:
                 _shotCount.RemoveModifier(mod);
                 break;
+
+            case AttributeType.AMMO_CAP:
+                _ammoCap.RemoveModifier(mod);
+                break;
         }
     }
 
@@ -152,6 +169,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         _firingRate.SetBaseValue(_baseFiringRate);
         _damage.SetBaseValue((float) _baseDamage);
         _shotCount.SetBaseValue((float) _baseShotCount);
+        _ammoCap.SetBaseValue((float) _baseAmmoCap);
     }
     #endregion
 }

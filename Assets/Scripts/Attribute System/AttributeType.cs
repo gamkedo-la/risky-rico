@@ -13,4 +13,5 @@ public enum AttributeType
     ROTATION_FREQUENCY,
     SWERVE_AMPLITUDE,
     SWERVE_FREQUENCY,
+    AMMO_CAP,
 }

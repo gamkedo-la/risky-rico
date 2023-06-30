@@ -22,7 +22,6 @@ public class Todo : MonoBehaviour
         // TODO: fix chest functionality
 
     // COMBAT:
-    // TODO: test all weapon effects
     // TODO: test all curse effects
     // TODO: balance enemy types / stats
     // TODO: close off exits during combat
