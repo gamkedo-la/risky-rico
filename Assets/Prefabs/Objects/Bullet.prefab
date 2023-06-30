@@ -383,6 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ammoType: 4
   _iceBlockPrefab: {fileID: 3925684681538655905, guid: 03a06508edca41e478780946f85a821e, type: 3}
+  _rockPrefab: {fileID: 8770399370370437809, guid: 0ff5d6a509ca6d845b4cbe975a79d8a9, type: 3}
   CanBeDestoyedByEnemies: 1
   _timeUntilLethal: 0.2
 --- !u!114 &3599530763864370256

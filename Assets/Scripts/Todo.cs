@@ -24,11 +24,12 @@ public class Todo : MonoBehaviour
     // COMBAT:
     // TODO: test all weapon effects
     // TODO: test all curse effects
+    // TODO: balance enemy types / stats
     // TODO: close off exits during combat
     // TODO: character animation
     // TODO: implement all combat waves / patterns
-    // TODO: balance enemy types / stats
     // TODO: tighten hitboxes (walls, enemies, projectiles, player)
+    // TODO: hitstop and slow-mo on game over
 
     // LEVEL DESIGN:
     // TODO: level layouts for each level (hellpit)

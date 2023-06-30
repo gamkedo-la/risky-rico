@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private AmmoType _ammoType = AmmoType.NONE;
     [SerializeField] private GameObject _iceBlockPrefab;
+    [SerializeField] private GameObject _rockPrefab;
     public AmmoType AmmoType => _ammoType;
     public bool CanBeDestoyedByEnemies = true;
 
@@ -37,8 +38,8 @@ public class Bullet : MonoBehaviour
             case AmmoType.FREEZE:
                 FreezeEffect(target);
                 break;
-            case AmmoType.SHOCK:
-                ShockEffect(target);
+            case AmmoType.STONE:
+                StoneEffect(target);
                 break;
             default:
                 break;
@@ -71,8 +72,11 @@ public class Bullet : MonoBehaviour
         Destroy(target);
     }
 
-    public void ShockEffect(GameObject target)
+    public void StoneEffect(GameObject target)
     {
+        GameObject rock = Instantiate(_rockPrefab, target.transform.position, Quaternion.identity);
+        
+        Destroy(target);
 
     }
 }

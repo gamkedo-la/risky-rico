@@ -9,6 +9,7 @@ public enum AmmoType
     PIERCE,
     DUAL_FIRE,
     SHOCK,
+    STONE,
     NONE,
 }
 
