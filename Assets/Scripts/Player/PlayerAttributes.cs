@@ -29,6 +29,9 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     [SerializeField] private ModifiableAttribute _moneyUsage = default(ModifiableAttribute);
     public ModifiableAttribute MoneyUsage => _moneyUsage;
 
+    [SerializeField] private ModifiableAttribute _shotSpeed = default(ModifiableAttribute);
+    public ModifiableAttribute ShotSpeed => _shotSpeed;
+
     [SerializeField] private WeaponData _currentWeapon = default(WeaponData);
     public WeaponData CurrentWeapon => _currentWeapon;
 
@@ -62,6 +65,10 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     [Tooltip("How much additional ammo the player will use on each shot")]
     [Range(0, 3)]
     [SerializeField] private int _baseAmmoUsage;
+
+    [Tooltip("How much additional ammo the player will use on each shot")]
+    [Range(0, 4)]
+    [SerializeField] private int _baseShotSpeed;
     #endregion
 
     #region Graphics
@@ -107,6 +114,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         _attributes.Add(_ammoCap);
         _attributes.Add(_ammoUsage);
         _attributes.Add(_moneyUsage);
+        _attributes.Add(_shotSpeed);
         _dualFire = false;
 
         InitAttributes();
@@ -134,8 +142,8 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
                 _firingRate.AddModifier(mod);
                 break;
 
-            case AttributeType.FIRING_RATE:
-                _damage.AddModifier(mod);
+            case AttributeType.SHOT_SPEED:
+                _shotSpeed.AddModifier(mod);
                 break;
 
             case AttributeType.SHOT_COUNT:
@@ -169,11 +177,11 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
                 break;
 
             case AttributeType.DAMAGE:
-                _firingRate.RemoveModifier(mod);
+                _damage.RemoveModifier(mod);
                 break;
 
-            case AttributeType.FIRING_RATE:
-                _damage.RemoveModifier(mod);
+            case AttributeType.SHOT_SPEED:
+                _shotSpeed.RemoveModifier(mod);
                 break;
 
             case AttributeType.SHOT_COUNT:
@@ -206,13 +214,13 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     public void SetBaseValuesOnValidate() 
     {
         _movementSpeed.SetBaseValue(_baseMovementSpeed);
-        _firingRate.SetBaseValue(_baseFiringRate);
         _damage.SetBaseValue((float) _baseDamage);
         _shotCount.SetBaseValue((float) _baseShotCount);
         _ammoCap.SetBaseValue((float) _baseAmmoCap);
         _ammoUsage.SetBaseValue((float) _baseAmmoUsage);
         _moneyUsage.SetBaseValue(0f);
         _dualFire = false;
+        _shotSpeed.SetBaseValue((float) _baseShotSpeed);
     }
     #endregion
 }

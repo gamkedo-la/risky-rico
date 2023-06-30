@@ -16,4 +16,5 @@ public enum AttributeType
     AMMO_CAP,
     MONEY_USAGE,
     DUAL_FIRE,
+    SHOT_SPEED,
 }

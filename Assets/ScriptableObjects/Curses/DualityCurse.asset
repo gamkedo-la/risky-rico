@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Duality
   _description: 1 shot forward, 1 shot backwards / DUAL FIRE EFFECT
-  _modifiers: []
+  _modifiers:
+  - _operator: 4
+    _value: 1
+    _targetAttribute: 11
   _image: {fileID: 21300000, guid: d8203803e3cb6374f94dc05a28c62f3d, type: 3}
   _spawnSound: {fileID: 0}
   _collectSound: {fileID: 0}

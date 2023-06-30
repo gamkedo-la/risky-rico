@@ -83,6 +83,7 @@ public class Shoot : MonoBehaviour
         if (moveComponent != null)
         {
             _newProjectile.GetComponent<MoveInOwnDirection>().SetDirection(_aimDirection.Value);
+            moveComponent.SetSpeed(moveComponent.Speed.Value * _player.ShotSpeed.CurrentValue);
         }
 
         // set damage of the projectile
