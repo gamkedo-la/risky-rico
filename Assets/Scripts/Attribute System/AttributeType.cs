@@ -15,4 +15,5 @@ public enum AttributeType
     SWERVE_FREQUENCY,
     AMMO_CAP,
     MONEY_USAGE,
+    DUAL_FIRE,
 }

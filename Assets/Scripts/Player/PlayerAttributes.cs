@@ -35,6 +35,9 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     [SerializeField] private List<WeaponData> _weaponList = new List<WeaponData>();
     public List<WeaponData> WeaponList => _weaponList;
 
+    [SerializeField] private bool _dualFire;
+    public bool DualFire => _dualFire;
+
     [Header("STAT TUNING")]
     [Tooltip("How quickly the player can move around in the Half-Skull state")]
     [Range(0f, 90f)]
@@ -104,6 +107,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         _attributes.Add(_ammoCap);
         _attributes.Add(_ammoUsage);
         _attributes.Add(_moneyUsage);
+        _dualFire = false;
 
         InitAttributes();
     }
@@ -149,6 +153,10 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
             case AttributeType.MONEY_USAGE:
                 _moneyUsage.AddModifier(mod);
                 break;
+
+            case AttributeType.DUAL_FIRE:
+                _dualFire = true;
+                break;
         }
     }
 
@@ -183,6 +191,10 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
             case AttributeType.MONEY_USAGE:
                 _moneyUsage.RemoveModifier(mod);
                 break;
+        
+            case AttributeType.DUAL_FIRE:
+                _dualFire = false;
+                break;
         }
     }
 
@@ -200,6 +212,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         _ammoCap.SetBaseValue((float) _baseAmmoCap);
         _ammoUsage.SetBaseValue((float) _baseAmmoUsage);
         _moneyUsage.SetBaseValue(0f);
+        _dualFire = false;
     }
     #endregion
 }

@@ -50,7 +50,7 @@ public class Shoot : MonoBehaviour
                 float offsetY = _aimDirectionY * offsetAmount * i;
                 SpawnProjectile(offsetX, offsetY);
 
-                if (effect != null && effect.Type == AmmoType.DUAL_FIRE)
+                if (_player.DualFire)
                 {
                     _aimDirection.Value = new Vector2(_aimDirectionX * -1, _aimDirectionY * -1);
                     SpawnProjectile(offsetX, offsetY);
