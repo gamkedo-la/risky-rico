@@ -28,10 +28,10 @@ MonoBehaviour:
     _baseValue: 1
     _currentValue: 1
     _modifiers: []
-  _currentWeapon: {fileID: 11400000, guid: 4047390979408764e98da0c07486dcb0, type: 2}
+  _currentWeapon: {fileID: 11400000, guid: 0c067d4eb4affc24ca8d8b13fab7cd27, type: 2}
   _weaponList:
-  - {fileID: 11400000, guid: 4047390979408764e98da0c07486dcb0, type: 2}
-  - {fileID: 11400000, guid: 892b2bdc5943a5243a2eefd46ed99cd1, type: 2}
+  - {fileID: 11400000, guid: a2abe3a84582ac64cb2e943d563a0d54, type: 2}
+  - {fileID: 11400000, guid: 0c067d4eb4affc24ca8d8b13fab7cd27, type: 2}
   _baseMovementSpeed: 45
   _baseFiringRate: 8
   _baseDamage: 1

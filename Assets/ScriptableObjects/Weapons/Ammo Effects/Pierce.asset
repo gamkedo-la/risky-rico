@@ -15,5 +15,6 @@ MonoBehaviour:
   _name: Pierce
   _description: A powerful ammo effect that rips through enemies (regardless of their
     HP) but it bounces back at the player incredibly fast.
+  _type: 1
   _icon: {fileID: 0}
   _activationSound: {fileID: 0}

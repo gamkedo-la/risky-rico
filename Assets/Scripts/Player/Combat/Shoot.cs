@@ -91,7 +91,18 @@ public class Shoot : MonoBehaviour
         {
             AmmoType currentAmmoType = _player.CurrentWeapon.Effect.Type;
             bullet.SetAmmoType(currentAmmoType);
+
+            if (bullet.AmmoType == AmmoType.PIERCE)
+            {
+                bullet.CanBeDestoyedByEnemies = false;
+            }
         }
 
+        // change sprite
+        SpriteRenderer _renderer = _newProjectile.GetComponent<SpriteRenderer>();
+        if (_renderer != null)
+        {
+            _renderer.sprite = _player.CurrentWeapon.EquipIcon;
+        }
     }
 }
