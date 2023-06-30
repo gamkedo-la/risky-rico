@@ -9,6 +9,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] private GameEvent _shootEvent;
     [SerializeField] private PlayerAttributes _player;
     [SerializeField] private IntReference _ammo;
+    [SerializeField] private PlayerMoneyStore _moneyStore;
 
     void Awake()
     {
@@ -29,9 +30,14 @@ public class Shoot : MonoBehaviour
         // get the ammo effect of the player's current weapon
         AmmoEffect effect = _player.CurrentWeapon.Effect;
         int ammoUsage = _player.CurrentWeapon.BaseAmmoUsage + (int) _player.AmmoUsage.CurrentValue;
+        if (ammoUsage < 0) 
+        {
+            ammoUsage = 0;
+        }
+        int moneyUsage = (int) _player.MoneyUsage.CurrentValue;
 
         // update aiming direction with inputs and shoot when the timer reaches 1
-        if (_ammo.Value >= ammoUsage)
+        if (_ammo.Value >= ammoUsage && _moneyStore.OnHandMoney.Value >= moneyUsage)
         {
             float offsetAmount = 1f;
             float _aimDirectionX = context.ReadValue<Vector2>().x;
@@ -51,6 +57,7 @@ public class Shoot : MonoBehaviour
                 }
 
                 _ammo.Value -= ammoUsage;
+                _moneyStore.SubtractOnHandMoney(moneyUsage);
             }
 
             

@@ -26,6 +26,9 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     [SerializeField] private ModifiableAttribute _ammoUsage = default(ModifiableAttribute);
     public ModifiableAttribute AmmoUsage => _ammoUsage;
 
+    [SerializeField] private ModifiableAttribute _moneyUsage = default(ModifiableAttribute);
+    public ModifiableAttribute MoneyUsage => _moneyUsage;
+
     [SerializeField] private WeaponData _currentWeapon = default(WeaponData);
     public WeaponData CurrentWeapon => _currentWeapon;
 
@@ -100,6 +103,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         _attributes.Add(_shotCount);
         _attributes.Add(_ammoCap);
         _attributes.Add(_ammoUsage);
+        _attributes.Add(_moneyUsage);
 
         InitAttributes();
     }
@@ -141,6 +145,10 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
             case AttributeType.AMMO_USAGE:
                 _ammoUsage.AddModifier(mod);
                 break;
+
+            case AttributeType.MONEY_USAGE:
+                _moneyUsage.AddModifier(mod);
+                break;
         }
     }
 
@@ -171,6 +179,10 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
             case AttributeType.AMMO_USAGE:
                 _ammoUsage.RemoveModifier(mod);
                 break;
+
+            case AttributeType.MONEY_USAGE:
+                _moneyUsage.RemoveModifier(mod);
+                break;
         }
     }
 
@@ -187,6 +199,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         _shotCount.SetBaseValue((float) _baseShotCount);
         _ammoCap.SetBaseValue((float) _baseAmmoCap);
         _ammoUsage.SetBaseValue((float) _baseAmmoUsage);
+        _moneyUsage.SetBaseValue(0f);
     }
     #endregion
 }

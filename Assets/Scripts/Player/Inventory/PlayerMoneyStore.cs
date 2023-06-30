@@ -11,6 +11,7 @@ public class PlayerMoneyStore : MonoBehaviour
     [Header("Money Sources")]
     [Tooltip("How much money the player is currently holding")]
     [SerializeField] private IntReference _onHandMoney;
+    public IntReference OnHandMoney => _onHandMoney;
 
     [Tooltip("How much money the player has stored in the shop")]
     [SerializeField] private IntReference _depositedMoney;
