@@ -62,6 +62,13 @@ public class SpriteFlash : MonoBehaviour
         flashRoutine = StartCoroutine(FlashRoutine());
     }
 
+    public void StopFlash()
+    {
+        StopCoroutine(flashRoutine);
+        spriteRenderer.material = originalMaterial;
+        flashRoutine = null;
+    }
+
     private IEnumerator FlashRoutine()
     {
         // Swap to the flashMaterial.

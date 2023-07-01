@@ -14,7 +14,7 @@ public class EnemyRotate : MonoBehaviour
         if (enemy.RotationFrequency.CurrentValue > 0f &&  _rotationTimer >= 1f)
         {
             // rotate the enemy gameobject
-            transform.Rotate(0,0,90);
+            transform.Rotate(0f,0f,90f);
 
             // reset the timer
             _rotationTimer = 0f;

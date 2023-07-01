@@ -51,6 +51,10 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
     [Range(1, 3)]
     [Tooltip("How many hits the enemy can take on the y-axis")]
     [SerializeField] private int _baseYHealth;
+
+    [Tooltip("What the enemy will spawn after being destroyed")]
+    [SerializeField] private List<EnemyAttributes> _spawnableEnemies = new List<EnemyAttributes>();
+    public List<EnemyAttributes> SpawnableEnemies => _spawnableEnemies;
     #endregion
 
     #region Visuals and Sound

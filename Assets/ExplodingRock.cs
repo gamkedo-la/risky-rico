@@ -42,7 +42,7 @@ public class ExplodingRock : MonoBehaviour
                 // spawn object
                 GameObject _newProjectile = Instantiate(_projectilePrefab, spawnPosition, Quaternion.identity);
 
-                // change sprite
+                // change sprite to match the rock projectile 
                 SpriteRenderer _renderer = _newProjectile.GetComponent<SpriteRenderer>();
                 if (_renderer != null)
                 {
@@ -56,15 +56,14 @@ public class ExplodingRock : MonoBehaviour
                 // set rotation
                 _newProjectile.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
 
-                // move the new object in the aiming direction
+                // move each projectile in a cardinal direction
                 MoveInOwnDirection moveComponent = _newProjectile.GetComponent<MoveInOwnDirection>();
                 if (moveComponent != null)
                 {
-                    float x = Mathf.Cos(angle * Mathf.PI / 180);
-                    float y = Mathf.Sin(angle * Mathf.PI / 180);
-                    _newProjectile.GetComponent<MoveInOwnDirection>().SetDirection(new Vector2(x,y));
+                    _newProjectile.GetComponent<MoveInOwnDirection>().SetMovementDirectionFromAngle(angle);
                 }
 
+                // increment the angle for the next iteration
                 angle += 90;
             }
 

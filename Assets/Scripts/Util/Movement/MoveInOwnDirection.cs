@@ -58,8 +58,8 @@ public class MoveInOwnDirection : MonoBehaviour
 
     public void SetMovementDirectionFromAngle(float angle)
     {
-        float x = Mathf.Cos(angle * Mathf.PI / 180);
-        float y = Mathf.Sin(angle * Mathf.PI / 180);
+        float x = Mathf.Round(Mathf.Cos(angle * Mathf.PI / 180f));
+        float y = Mathf.Round(Mathf.Sin(angle * Mathf.PI / 180f));
         SetDirection(new Vector2(x, y));
     }
 }

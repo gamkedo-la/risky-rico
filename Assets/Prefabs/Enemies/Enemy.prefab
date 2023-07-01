@@ -191,6 +191,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -2322080432025562422}
+        m_TargetAssemblyTypeName: SpawnChildEnemy, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 8954828896350092599}
         m_TargetAssemblyTypeName: ItemDropper, Assembly-CSharp
         m_MethodName: GetRandomItemFromTable
@@ -218,7 +230,6 @@ MonoBehaviour:
         m_CallState: 2
   _explosion: {fileID: 9184134307034593392, guid: 0dfa7ddc46c67a74b88e15d3cbc5b285, type: 3}
   _damageSplash: {fileID: 532118048280880871, guid: 3d80df70054df14458cfabdba28d3595, type: 3}
-  _spawnableEnemyPrefab: {fileID: 8724373994609232352}
 --- !u!61 &535639565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -578,6 +589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5511d9e2a7968544ad4acd015981bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _spawnOffset: 0
+  _projectilePrefab: {fileID: 5220456760211092832, guid: 9263d746118dcd045aee19b647184304, type: 3}
 --- !u!1001 &721478768408432162
 PrefabInstance:
   m_ObjectHideFlags: 0

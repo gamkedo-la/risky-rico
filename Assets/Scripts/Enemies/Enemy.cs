@@ -6,6 +6,7 @@ using ScriptableObjectArchitecture;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private EnemyAttributes _parameters;
+    public EnemyAttributes EnemyAttributes => _parameters;
     [SerializeField] private EnemyHealth _health;
     [SerializeField] private MoveTowardClosest _movement;
     [SerializeField] private SpriteRenderer _renderer;
