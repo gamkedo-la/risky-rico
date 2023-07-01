@@ -55,4 +55,11 @@ public class MoveInOwnDirection : MonoBehaviour
         float angle = Mathf.Atan2(_yDirection, _xDirection) * Mathf.Rad2Deg - 90f;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
+
+    public void SetMovementDirectionFromAngle(float angle)
+    {
+        float x = Mathf.Cos(angle * Mathf.PI / 180);
+        float y = Mathf.Sin(angle * Mathf.PI / 180);
+        SetDirection(new Vector2(x, y));
+    }
 }
