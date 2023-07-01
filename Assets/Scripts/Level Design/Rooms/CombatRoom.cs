@@ -10,6 +10,7 @@ public class CombatRoom : Room
     [SerializeField] private GameObject _spawnTrigger;
     [SerializeField] private EnemySpawnController _spawnController;
     [SerializeField] private GameObjectCollection _collidableObjects;
+    [SerializeField] private List<GameObject> _exits = new List<GameObject>();
 
     void Awake()
     {
@@ -36,18 +37,18 @@ public class CombatRoom : Room
 
     public void CloseExits()
     {
-        // foreach(RoomTransition exit in _exits)
-        // {
-        //     exit.open = false;
-        // }
+        foreach(GameObject exit in _exits)
+        {
+            exit.SetActive(true);
+        }
     }
 
     public void OpenExits()
     {
-        // foreach(RoomTransition exit in _exits)
-        // {
-        //     exit.open = true;
-        // }
+        foreach(GameObject exit in _exits)
+        {
+            exit.SetActive(false);
+        }
 
         _spawnTrigger.SetActive(false);
     }
