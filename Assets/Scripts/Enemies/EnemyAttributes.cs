@@ -21,11 +21,8 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
     public ModifiableAttribute SwerveFrequency => _swerveFrequency;
 
     [Header("HEALTH")]
-    [SerializeField] private ModifiableAttribute _xHealth;
-    public ModifiableAttribute XHealth => _xHealth;
-
-    [SerializeField] private ModifiableAttribute _yHealth;
-    public ModifiableAttribute YHealth => _yHealth;
+    [SerializeField] private ModifiableAttribute _health;
+    public ModifiableAttribute Health => _health;
 
     [Header("STAT TUNING")]
     [Tooltip("How quickly the enemy can move")]
@@ -45,12 +42,8 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
     [SerializeField] private float _baseSwerveFrequency;
     
     [Tooltip("How many hits the enemy can take on the x-axis")]
-    [Range(1, 3)]
-    [SerializeField] private int _baseXHealth;
-    
-    [Range(1, 3)]
-    [Tooltip("How many hits the enemy can take on the y-axis")]
-    [SerializeField] private int _baseYHealth;
+    [Range(1, 10)]
+    [SerializeField] private int _baseHealth;
 
     [Tooltip("What the enemy will spawn after being destroyed")]
     [SerializeField] private List<EnemyAttributes> _spawnableEnemies = new List<EnemyAttributes>();
@@ -91,8 +84,7 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
 
         _attributes.Add(_moveSpeed);
         _attributes.Add(_rotationFrequency);
-        _attributes.Add(_xHealth);
-        _attributes.Add(_yHealth);
+        _attributes.Add(_health);
         _attributes.Add(_swerveAmplitude);
         _attributes.Add(_swerveFrequency);
 
@@ -122,8 +114,7 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
                 break;
 
             case AttributeType.HEALTH:
-                _xHealth.AddModifier(mod);
-                _yHealth.AddModifier(mod);
+                _health.AddModifier(mod);
                 break;
         }
     }
@@ -141,8 +132,7 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
                 break;
 
             case AttributeType.HEALTH:
-                _xHealth.RemoveModifier(mod);
-                _yHealth.RemoveModifier(mod);
+                _health.RemoveModifier(mod);
                 break;
         }
     }
@@ -153,8 +143,7 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
         _rotationFrequency.SetBaseValue(_baseRotationFrequency);
         _swerveAmplitude.SetBaseValue(_baseSwerveAmplitude);
         _swerveFrequency.SetBaseValue(_baseSwerveFrequency);
-        _xHealth.SetBaseValue((float) _baseXHealth);
-        _yHealth.SetBaseValue((float) _baseYHealth);
+        _health.SetBaseValue((float) _baseHealth);
     }
     #endregion
 }

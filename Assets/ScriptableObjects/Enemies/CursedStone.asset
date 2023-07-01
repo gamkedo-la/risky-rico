@@ -28,20 +28,16 @@ MonoBehaviour:
     _baseValue: 0
     _currentValue: 0
     _modifiers: []
-  _xHealth:
-    _baseValue: 3
-    _currentValue: 3
-    _modifiers: []
-  _yHealth:
-    _baseValue: 3
-    _currentValue: 3
+  _health:
+    _baseValue: 10
+    _currentValue: 10
     _modifiers: []
   _baseMoveSpeed: 0
   _baseRotationFrequency: 0
   _baseSwerveAmplitude: 0
   _baseSwerveFrequency: 0
-  _baseXHealth: 3
-  _baseYHealth: 3
+  _baseHealth: 10
+  _spawnableEnemies: []
   _attackAnimation: {fileID: 0}
   _deathAnimation: {fileID: 0}
   _spawnCry: {fileID: 0}

@@ -7,12 +7,9 @@ using UnityEngine.Events;
 public class EnemyHealth : MonoBehaviour
 {
     [Header("Stats")]
-    [SerializeField] private float _xHealth;
-    [SerializeField] private float _yHealth;
-    public float YHealth => _yHealth;
-    public float XHealth => _xHealth;
-    public float XHealthMax { get; private set; }
-    public float YHealthMax { get; private set; }
+    [SerializeField] private float _health;
+    public float Health => _health;
+    public float HealthMax { get; private set; }
 
     [Header("Collisions")]
     [SerializeField] private GameObjectCollection _damagingObjects;
@@ -30,23 +27,20 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         _collider = GetComponent<BoxCollider2D>();
-        XHealthMax = _xHealth;
-        YHealthMax = _yHealth;
+        HealthMax = _health;
     }
 
-    public void SetHealth(float xHealth, float yHealth)
+    public void SetHealth(float health)
     {
-        _xHealth = xHealth;
-        _yHealth = yHealth;
+        _health = health;
     }
 
-    public void TakeDamage(float xDamage, float yDamage)
+    public void TakeDamage(float damage)
     {
-        _xHealth -= xDamage;
-        _yHealth -= yDamage;
+        _health -= damage;
     }
 
-    public void OnHit(RaycastHit2D hit, float baseXDamage, float baseYDamage)
+    public void OnHit(RaycastHit2D hit, float baseDamage)
     {
         // get damage data of colliding object
         DamageController damageController = hit.collider.gameObject.GetComponent<DamageController>();
@@ -57,7 +51,7 @@ public class EnemyHealth : MonoBehaviour
         }
 
         // apply damage based on x and y values
-        TakeDamage(damageAmount * baseXDamage, damageAmount * baseYDamage);
+        TakeDamage(damageAmount * baseDamage);
 
         // invoke follow-up damage events
         _damageEvents?.Invoke();
@@ -84,7 +78,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Update()
     {
-        if (_yHealth <= 0 || _xHealth <= 0)
+        if (_health <= 0)
         {
             _deathEvents?.Invoke();
             Instantiate(_explosion, transform.position, transform.rotation);

@@ -32,22 +32,18 @@ public class Enemy : MonoBehaviour
     {
         _hurtBox.RunCollisionChecks();
 
-        if (_hurtBox.ColDown || _hurtBox.ColUp)
+        if (_hurtBox.ColDown || _hurtBox.ColUp || _hurtBox.ColLeft || _hurtBox.ColRight)
         {
-            _health.OnHit(_hurtBox.CurrentHit, 0, 1);
+            _health.OnHit(_hurtBox.CurrentHit, 1);
         }
 
-        if (_hurtBox.ColLeft || _hurtBox.ColRight)
-        {
-            _health.OnHit(_hurtBox.CurrentHit, 1, 0);
-        }
     }
 
     public void SetAttributes(EnemyAttributes parameters)
     {
         _parameters = parameters;
         _renderer.sprite = _parameters.AttackAnimation;
-        _health.SetHealth(_parameters.XHealth.CurrentValue, _parameters.YHealth.CurrentValue);
+        _health.SetHealth(_parameters.Health.CurrentValue);
         _rotationBehavior.enemy = parameters;
         _swerveBehavior.enemy = parameters;
         _movement.SetSpeed(parameters.MoveSpeed.CurrentValue);

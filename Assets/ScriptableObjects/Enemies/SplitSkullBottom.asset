@@ -28,11 +28,7 @@ MonoBehaviour:
     _baseValue: 0
     _currentValue: 0
     _modifiers: []
-  _xHealth:
-    _baseValue: 1
-    _currentValue: 1
-    _modifiers: []
-  _yHealth:
+  _health:
     _baseValue: 1
     _currentValue: 1
     _modifiers: []
@@ -40,8 +36,7 @@ MonoBehaviour:
   _baseRotationFrequency: 0
   _baseSwerveAmplitude: 0
   _baseSwerveFrequency: 0
-  _baseXHealth: 1
-  _baseYHealth: 1
+  _baseHealth: 1
   _spawnableEnemies: []
   _attackAnimation: {fileID: 21300000, guid: 1e99fbc061d80ef4b84f4077cf182af6, type: 3}
   _deathAnimation: {fileID: 0}

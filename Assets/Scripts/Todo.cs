@@ -22,7 +22,6 @@ public class Todo : MonoBehaviour
         // TODO: fix chest functionality
 
     // COMBAT:
-    // TODO: balance enemy types / stats
     // TODO: close off exits during combat
     // TODO: character animation
     // TODO: implement all combat waves / patterns
