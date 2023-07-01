@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: -106055436074604971}
   - component: {fileID: 6962070650944363356}
   - component: {fileID: 2006976916144168021}
+  - component: {fileID: -2322080432025562422}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -217,6 +218,7 @@ MonoBehaviour:
         m_CallState: 2
   _explosion: {fileID: 9184134307034593392, guid: 0dfa7ddc46c67a74b88e15d3cbc5b285, type: 3}
   _damageSplash: {fileID: 532118048280880871, guid: 3d80df70054df14458cfabdba28d3595, type: 3}
+  _spawnableEnemyPrefab: {fileID: 8724373994609232352}
 --- !u!61 &535639565
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -564,6 +566,18 @@ MonoBehaviour:
   _spawnRate: 0.2
   _lifeSpan: 0.4
   _color: {r: 0.8509804, g: 0.34117648, b: 0.3882353, a: 1}
+--- !u!114 &-2322080432025562422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724373994609232352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5511d9e2a7968544ad4acd015981bb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &721478768408432162
 PrefabInstance:
   m_ObjectHideFlags: 0
