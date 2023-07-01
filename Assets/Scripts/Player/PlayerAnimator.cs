@@ -1,8 +1,10 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 using UnityEngine.InputSystem;
+using ScriptableObjectArchitecture;
 
-public class PlayerAnimator : MonoBehaviour {
+public class PlayerAnimator : MonoBehaviour 
+{
     [SerializeField] private Animator _anim;
     [SerializeField] private AudioSource _source;
     [SerializeField] private LayerMask _groundMask;
@@ -12,6 +14,7 @@ public class PlayerAnimator : MonoBehaviour {
     [SerializeField] private float _tiltSpeed = 1;
     [SerializeField, Range(1f, 3f)] private float _maxIdleSpeed = 2;
     [SerializeField] private float _maxParticleFallSpeed = -40;
+    [SerializeField] private Vector2Variable _aimDirection;
 
     private IPlayerController _player;
     private bool _playerGrounded;
@@ -28,15 +31,21 @@ public class PlayerAnimator : MonoBehaviour {
 
         // Kick dust on direction change
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
-        _inputHandler.Move().performed += _ => KickDust();
+        _inputHandler.Shoot().performed += StartShoot;
+        // _inputHandler.Move().canceled += _ => StopRun();
     }
 
-    void Update() {
-        if (_player == null) return;
+    void Update() 
+    {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        Vector2 Input = _inputHandler.Move().ReadValue<Vector2>();
 
         // Flip the sprite
-        if (_player.Input.X != 0) transform.localScale = new Vector3(_player.Input.X > 0 ? 1 : -1, 1, 1);
-
+        UnityEngine.Debug.Log("Input: " + Input.x + ", " + Input.y);
+        _anim.SetFloat("Horizontal", Input.x);
+        _anim.SetFloat("Vertical", Input.y);
+        _anim.SetFloat("Speed", Mathf.Abs(Input.x) + Mathf.Abs(Input.y));
+        
         // Lean while running
         var targetRotVector = new Vector3(0, 0, Mathf.Lerp(-_maxTilt, _maxTilt, Mathf.InverseLerp(-1, 1, _player.Input.X)));
         // _anim.transform.rotation = Quaternion.RotateTowards(_anim.transform.rotation, Quaternion.Euler(targetRotVector), _tiltSpeed * Time.deltaTime);
@@ -56,21 +65,6 @@ public class PlayerAnimator : MonoBehaviour {
         {
             _footStepTimer = _timeBetweenFootsteps;
         }
-
-        // Play landing effects and begin ground movement effects
-        // if (!_playerGrounded && _player.Grounded) 
-        // {
-        //     _playerGrounded = true;
-        //     _moveParticles.Play();
-        //     _landParticles.transform.localScale = Vector3.one * Mathf.InverseLerp(0, _maxParticleFallSpeed, _movement.y);
-        //     SetColor(_landParticles);
-        //     _landParticles.Play();
-        // }
-        // else if (_playerGrounded && !_player.Grounded) 
-        // {
-        //     _playerGrounded = false;
-        //     _moveParticles.Stop();
-        // }
 
         // Detect ground color
         var groundHit = Physics2D.Raycast(transform.position, Vector3.down, 2, _groundMask);
@@ -98,6 +92,26 @@ public class PlayerAnimator : MonoBehaviour {
         var main = ps.main;
         main.startColor = _currentGradient;
     }
+
+    void StartShoot(InputAction.CallbackContext context)
+    {
+        float _aimDirectionX = context.ReadValue<Vector2>().x;
+        float _aimDirectionY = context.ReadValue<Vector2>().y;
+        _anim.SetFloat("ShootHorizontal", _aimDirectionX);
+        _anim.SetFloat("ShootVertical", _aimDirectionY);
+        _anim.SetTrigger("Shooting");
+    }
+
+    void StartRun()
+    {
+        KickDust();
+        _anim.SetTrigger("Run");
+    }
+
+    void StopRun()
+    {
+        _anim.SetTrigger("Idle");
+    } 
 
     void KickDust()
     {

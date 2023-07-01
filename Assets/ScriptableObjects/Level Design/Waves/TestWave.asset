@@ -45,7 +45,7 @@ MonoBehaviour:
       m_RotationOrder: 4
     _variable: {fileID: 0}
   _enemyPatterns:
-  - {fileID: 11400000, guid: cd5fc68183aff99418dd03efe222b173, type: 2}
+  - {fileID: 11400000, guid: 9afa5f473f02f57409d2eb4d39035e37, type: 2}
   _chooseRandomPattern: 1
   _minEnemyCount: 0
-  _spawnCount: 6
+  _spawnCount: 1

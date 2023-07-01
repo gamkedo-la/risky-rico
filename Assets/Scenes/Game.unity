@@ -1246,6 +1246,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1264359271}
     m_Modifications:
+    - target: {fileID: 376056898413164753, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 603381006608176290, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
       propertyPath: _ammoStore
       value: 
@@ -1386,6 +1390,14 @@ PrefabInstance:
       propertyPath: _playerAttributes
       value: 
       objectReference: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
+    - target: {fileID: 4441381551253902466, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7458378131196466479, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 603381006608176302, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
     - {fileID: 603381006608176313, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
