@@ -619,6 +619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fog
       objectReference: {fileID: 0}
+    - target: {fileID: 4989018024368556834, guid: 16071c39b3563964a868b9724deee450, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4989018024368556837, guid: 16071c39b3563964a868b9724deee450, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -904,6 +908,7 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 
     _variable: {fileID: 0}
+  _label: 
 --- !u!114 &1886486022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6046,7 +6051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5787197154587995468
 Transform:
   m_ObjectHideFlags: 0
