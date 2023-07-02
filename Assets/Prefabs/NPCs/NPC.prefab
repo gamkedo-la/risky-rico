@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 963542596828204352}
   - component: {fileID: -747211122740706475}
   - component: {fileID: 7819595489692357984}
+  - component: {fileID: 4156066534367379854}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -100,7 +101,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _activeDialogueSequence: {fileID: 11400000, guid: 4ec1a8a081ba3a4468273fe3e5c1296b, type: 2}
   _npcDialogueSequence: {fileID: 0}
+  _availableDialog: []
+  _flaggedDialog:
+    m_keys: []
+    m_values: []
+  useFlags: 0
+  randomDialog: 0
+  randomLine: 0
   _onDialogStart: {fileID: 0}
+  _onDialogEnd: {fileID: 0}
   _interactionPrompt: Talk
 --- !u!114 &7819595489692357984
 MonoBehaviour:
@@ -117,7 +126,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 0}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: a612b7e88fc4e4445a6272dc0775ddf4, type: 2}
   _event: {fileID: 11400000, guid: a612b7e88fc4e4445a6272dc0775ddf4, type: 2}
   _response:
     m_PersistentCalls:
@@ -134,3 +143,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!95 &4156066534367379854
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4017927638213761040}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

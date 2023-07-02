@@ -3656,6 +3656,22 @@ PrefabInstance:
       propertyPath: _endPoint
       value: 
       objectReference: {fileID: 299850573}
+    - target: {fileID: 1937670065266173272, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1937670065266173272, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -234249280, guid: 25b8276bedcce5842b3805023c33585d, type: 3}
+    - target: {fileID: 1937670065266173272, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3319606152838605206, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4cd175fc57e1fe345a42aa436174a773, type: 2}
     - target: {fileID: 5003408900057818362, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
       propertyPath: _endPoint
       value: 
@@ -3664,10 +3680,42 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5318455343267315862, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0625
+      objectReference: {fileID: 0}
+    - target: {fileID: 5318455343267315862, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -234249280, guid: 25b8276bedcce5842b3805023c33585d, type: 3}
+    - target: {fileID: 5318455343267315862, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703573949279530265, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0625
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703573949279530265, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -234249280, guid: 25b8276bedcce5842b3805023c33585d, type: 3}
+    - target: {fileID: 6703573949279530265, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7192082773042714749, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
       propertyPath: m_Name
       value: Caverns
       objectReference: {fileID: 0}
+    - target: {fileID: 7635149893725725143, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4cd175fc57e1fe345a42aa436174a773, type: 2}
+    - target: {fileID: 9024248735479516248, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4cd175fc57e1fe345a42aa436174a773, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
 --- !u!4 &1829026909 stripped
