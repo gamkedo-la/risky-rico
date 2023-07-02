@@ -36,13 +36,19 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        _hurtBox.RunCollisionChecks();
+        // time until the enemy can hurt the player
+        _timeUntilLethal -= Time.deltaTime;
+        if (_timeUntilLethal <= 0f)
+        {
+            _lethal = true;
+        }
 
+        // colision checks for projectile damage
+        _hurtBox.RunCollisionChecks();
         if (_hurtBox.ColDown || _hurtBox.ColUp || _hurtBox.ColLeft || _hurtBox.ColRight)
         {
             _health.OnHit(_hurtBox.CurrentHit, 1);
         }
-
     }
 
     public void SetAttributes(EnemyAttributes parameters)
@@ -56,7 +62,7 @@ public class Enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        if (_collidableObjects.Contains(other.gameObject))
+        if (_collidableObjects.Contains(other.gameObject) && _lethal)
         {
             _enterResponse?.Invoke();
         }    
