@@ -57,7 +57,9 @@ public class EnemyAttributes : AttributeSet, IResetOnExitPlay
 
     [SerializeField] private Sprite _deathAnimation; 
     public Sprite DeathAnimation => _deathAnimation;
-    
+
+    [SerializeField] private RuntimeAnimatorController _animation;
+    public RuntimeAnimatorController Animation => _animation;
     
     [Header("SOUNDS")]
     [SerializeField] private AudioClip _spawnCry;

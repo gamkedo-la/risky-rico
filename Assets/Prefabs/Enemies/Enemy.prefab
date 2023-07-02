@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 6962070650944363356}
   - component: {fileID: 2006976916144168021}
   - component: {fileID: -2322080432025562422}
+  - component: {fileID: -6925337967592092312}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -146,8 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7581f7d20a2e7d04fae0c4d7ea4266e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _xHealth: 2
-  _yHealth: 2
+  _health: 0
   _damagingObjects: {fileID: 11400000, guid: cf065a3fa2e5c644c8a9d4f3ea148a5e, type: 2}
   _damageEvents:
     m_PersistentCalls:
@@ -591,6 +591,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnOffset: 0
   _projectilePrefab: {fileID: 5220456760211092832, guid: 9263d746118dcd045aee19b647184304, type: 3}
+--- !u!95 &-6925337967592092312
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8724373994609232352}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 81d96ef81d3c08341a3f95c28f033984, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &721478768408432162
 PrefabInstance:
   m_ObjectHideFlags: 0

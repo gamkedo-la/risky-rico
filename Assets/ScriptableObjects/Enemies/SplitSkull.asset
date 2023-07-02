@@ -42,5 +42,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c47b6a46518eb3548957ced05088ffa9, type: 2}
   _attackAnimation: {fileID: 21300000, guid: 729e3b3f40a19834c847776c1a5b88f7, type: 3}
   _deathAnimation: {fileID: 0}
+  _animation: {fileID: 9100000, guid: 801b5d6b0ef153647b6a4c2557d5b717, type: 2}
   _spawnCry: {fileID: 0}
   _deathCry: {fileID: 0}

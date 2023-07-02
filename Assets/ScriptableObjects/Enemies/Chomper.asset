@@ -40,5 +40,6 @@ MonoBehaviour:
   _spawnableEnemies: []
   _attackAnimation: {fileID: -1807793795, guid: 2d3284ff2c62c254cbd52215bae8c2ed, type: 3}
   _deathAnimation: {fileID: 0}
+  _animation: {fileID: 9100000, guid: 81d96ef81d3c08341a3f95c28f033984, type: 2}
   _spawnCry: {fileID: 0}
   _deathCry: {fileID: 0}
