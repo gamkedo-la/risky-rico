@@ -133,6 +133,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 863674666316332421, guid: 0668fd000e36a534392ff41583fce1fb, type: 3}
   m_PrefabInstance: {fileID: 1504462793}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &601773439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8856098556006494792, guid: 0668fd000e36a534392ff41583fce1fb, type: 3}
+  m_PrefabInstance: {fileID: 1504462793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &837078828
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +269,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 0}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 98877cac4ce1ffd48b5bfa15b50b3bdc, type: 2}
   _event: {fileID: 11400000, guid: 98877cac4ce1ffd48b5bfa15b50b3bdc, type: 2}
   _response:
     m_PersistentCalls:
@@ -278,7 +283,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: startmenu
+          m_StringArgument: credits
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &983231862 stripped
@@ -606,7 +611,7 @@ PrefabInstance:
     - target: {fileID: 2159937997727273374, guid: 0668fd000e36a534392ff41583fce1fb, type: 3}
       propertyPath: _UITextbox
       value: 
-      objectReference: {fileID: 1504462794}
+      objectReference: {fileID: 601773439}
     - target: {fileID: 2159937997727273374, guid: 0668fd000e36a534392ff41583fce1fb, type: 3}
       propertyPath: startOnAwake
       value: 1
@@ -614,7 +619,7 @@ PrefabInstance:
     - target: {fileID: 2159937997727273374, guid: 0668fd000e36a534392ff41583fce1fb, type: 3}
       propertyPath: _dialogSequence
       value: 
-      objectReference: {fileID: 11400000, guid: 16597746f4a0599419394a049c4d5180, type: 2}
+      objectReference: {fileID: 11400000, guid: 5c7ca3ed50073e347bb316d0a873e474, type: 2}
     - target: {fileID: 2159937997727273374, guid: 0668fd000e36a534392ff41583fce1fb, type: 3}
       propertyPath: lines.Array.size
       value: 4
@@ -642,11 +647,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5390740683235407632, guid: 0668fd000e36a534392ff41583fce1fb, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0668fd000e36a534392ff41583fce1fb, type: 3}
---- !u!1 &1504462794 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8856098556006494792, guid: 0668fd000e36a534392ff41583fce1fb, type: 3}
-  m_PrefabInstance: {fileID: 1504462793}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1696155165
 PrefabInstance:
   m_ObjectHideFlags: 0

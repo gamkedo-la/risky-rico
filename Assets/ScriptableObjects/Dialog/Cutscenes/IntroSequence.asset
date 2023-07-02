@@ -33,4 +33,4 @@ MonoBehaviour:
     _image: {fileID: 21300000, guid: 942a17d9754964040a18f7278ea8724c, type: 3}
   - _content: "This fool\u2019s name \u2026 is Rico."
     _image: {fileID: 21300000, guid: 942a17d9754964040a18f7278ea8724c, type: 3}
-  _onDialogEnd: {fileID: 0}
+  _onDialogEnd: {fileID: 11400000, guid: 98877cac4ce1ffd48b5bfa15b50b3bdc, type: 2}
