@@ -172,3 +172,4 @@ MonoBehaviour:
   _shatterEffect: {fileID: 9184134307034593392, guid: 0dfa7ddc46c67a74b88e15d3cbc5b285, type: 3}
   _damageSplashEffect: {fileID: 532118048280880871, guid: 3d80df70054df14458cfabdba28d3595, type: 3}
   _healthbar: {fileID: 0}
+  _onDestroyEvent: {fileID: 11400000, guid: 57bfd5d57cfcaba4abe866dfb3778169, type: 2}

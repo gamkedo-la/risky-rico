@@ -21,6 +21,8 @@ public class CursedStone : MonoBehaviour
     [SerializeField] private GameObject _damageSplashEffect;
 
     [SerializeField] private ImageFillSetter _healthbar;
+
+    [SerializeField] private GameEvent _onDestroyEvent;
     
     private SpriteRenderer _spriteRenderer;
 
@@ -28,7 +30,7 @@ public class CursedStone : MonoBehaviour
     {
         _currentHealth = _baseHealth;
         _spriteRenderer = GetComponent<SpriteRenderer>();
-        _healthbar.SetValues(_currentHealth, _baseHealth);
+        // _healthbar.SetValues(_currentHealth, _baseHealth);
     }
 
     void OnCollisionEnter2D(Collision2D other)
@@ -44,7 +46,7 @@ public class CursedStone : MonoBehaviour
 
             Instantiate(_damageSplashEffect, transform.position, Quaternion.identity);
 
-            _healthbar.SetValues(_currentHealth, _baseHealth);
+            // _healthbar.SetValues(_currentHealth, _baseHealth);
 
             if (_currentHealth <= _baseHealth / 2)
             {
@@ -55,8 +57,8 @@ public class CursedStone : MonoBehaviour
             {
                 Instantiate(_shatterEffect, transform.position, Quaternion.identity);
                 Destroy(gameObject);
+                _onDestroyEvent?.Raise();
             }
         }
     }
-
 }

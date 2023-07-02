@@ -992,6 +992,8 @@ GameObject:
   - component: {fileID: 760435095}
   - component: {fileID: 760435097}
   - component: {fileID: 760435098}
+  - component: {fileID: 760435100}
+  - component: {fileID: 760435099}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1149,6 +1151,67 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slowDownRate: 0.05
   _gameOverTimer: 2
+--- !u!114 &760435099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760435090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91473edfb01de74e8f351fa85c871c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slowDownRate: 0.02
+  _slowMoTimer: 2
+  _onEndEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 760435095}
+        m_TargetAssemblyTypeName: SceneChangeHandler, Assembly-CSharp
+        m_MethodName: GoTo
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: outro
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &760435100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760435090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 57bfd5d57cfcaba4abe866dfb3778169, type: 2}
+  _event: {fileID: 11400000, guid: 57bfd5d57cfcaba4abe866dfb3778169, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 760435099}
+        m_TargetAssemblyTypeName: SlowMoEffect, Assembly-CSharp
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &782183609
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,7 +2254,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1003765466
 GameObject:
@@ -2230,67 +2293,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -25.000002}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &1034628967
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3057686336215255564, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_Name
-      value: CursedStone - Copy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057686336215255566, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057686336215255566, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 233.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057686336215255566, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 94.98
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057686336215255566, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057686336215255566, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057686336215255566, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057686336215255566, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057686336215255566, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057686336215255566, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057686336215255566, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057686336215255566, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3057686336215255567, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1b48fb5abd5fb7b45994e5f0e9054322, type: 3}
 --- !u!114 &1115787515 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6940081778726361512, guid: 2f7cdc760d175f348b5c7e66524a39a3, type: 3}
@@ -2331,7 +2333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264359270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 79, y: 5.3, z: 0.16306663}
+  m_LocalPosition: {x: 75.7, y: 1.7, z: 0.16306663}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

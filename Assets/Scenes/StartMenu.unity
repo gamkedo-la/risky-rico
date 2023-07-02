@@ -582,7 +582,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: orthographic size
-      value: 14.0625
+      value: 8.4375
       objectReference: {fileID: 0}
     - target: {fileID: 4070451234905853740, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_Name
@@ -806,6 +806,10 @@ PrefabInstance:
     - target: {fileID: 6245049247074295843, guid: a11f9ffc9ad2f204ea63730389103114, type: 3}
       propertyPath: m_Name
       value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537319090375673960, guid: a11f9ffc9ad2f204ea63730389103114, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: game
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a11f9ffc9ad2f204ea63730389103114, type: 3}

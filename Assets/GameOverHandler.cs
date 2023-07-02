@@ -24,7 +24,7 @@ public class GameOverHandler : MonoBehaviour
         }
 
         // scene change on countdown finish
-        if (Time.timeScale <= 0.02f)
+        if (Time.timeScale <= 0.02f && _sequenceStarted)
         {
             _gameOverTimer -= Time.unscaledDeltaTime;
             if (_gameOverTimer <= 0f)
