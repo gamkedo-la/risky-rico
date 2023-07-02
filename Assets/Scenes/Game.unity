@@ -1285,6 +1285,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 603381006608176292, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
+      propertyPath: _deAcceleration
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 603381006608176293, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
       propertyPath: _onHandMoney._variable
       value: 

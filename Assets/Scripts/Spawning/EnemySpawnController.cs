@@ -117,7 +117,7 @@ public class EnemySpawnController : MonoBehaviour
 
                 
                 // if wave has ended
-                if (_currentWaveSpawnCount >= currentWave.SpawnCount)
+                if (_currentWaveSpawnCount >= currentWave.SpawnCount && numberOfEnemies <= 0)
                 {
                     // --- reset spawn count and timer
                     _currentWaveSpawnCount = 0;

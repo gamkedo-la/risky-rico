@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
+using UnityEngine.Events;
 
 public class Enemy : MonoBehaviour
 {
@@ -10,10 +11,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemyHealth _health;
     [SerializeField] private MoveTowardClosest _movement;
     [SerializeField] private SpriteRenderer _renderer;
-    [SerializeField] private EnemyRotate _rotationBehavior;
-    [SerializeField] private EnemySwerve _swerveBehavior;
     [SerializeField] private CustomCollider _hurtBox;
     [SerializeField] private Animator _animator;
+    [SerializeField] private SpawnVFX _vfxSpawner;   
+    [SerializeField] private GameObjectCollection _collidableObjects;
+    [SerializeField] private UnityEvent _enterResponse;
+
+    [SerializeField] private float _timeUntilLethal = 0.5f;
+    private bool _lethal = false;
+    public bool Lethal => _lethal;
 
     void Awake()
     {
@@ -21,8 +27,6 @@ public class Enemy : MonoBehaviour
         _renderer = gameObject.GetComponent<SpriteRenderer>();
         _health = gameObject.GetComponent<EnemyHealth>();
         _movement = gameObject.GetComponent<MoveTowardClosest>();
-        _rotationBehavior = gameObject.GetComponent<EnemyRotate>();
-        _swerveBehavior = gameObject.GetComponent<EnemySwerve>();
         _hurtBox = gameObject.GetComponent<CustomCollider>();
         _animator = gameObject.GetComponent<Animator>();
 
@@ -46,9 +50,15 @@ public class Enemy : MonoBehaviour
         _parameters = parameters;
         _renderer.sprite = _parameters.AttackAnimation;
         _health.SetHealth(_parameters.Health.CurrentValue);
-        _rotationBehavior.enemy = parameters;
-        _swerveBehavior.enemy = parameters;
         _movement.SetSpeed(parameters.MoveSpeed.CurrentValue);
         _animator.runtimeAnimatorController = parameters.Animation;
+    }
+
+    void OnTriggerEnter2D(Collider2D other) 
+    {
+        if (_collidableObjects.Contains(other.gameObject))
+        {
+            _enterResponse?.Invoke();
+        }    
     }
 }
