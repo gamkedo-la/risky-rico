@@ -21,10 +21,8 @@ public class Todo : MonoBehaviour
         // TODO: add flags for all character dialog unlocks
         // TODO: fix chest functionality
 
-    // COMBAT:
-    // TODO: implement all combat waves / patterns
-
     // FOR PLAYTESTING:
-    // TODO: WebGL build test
+    // TODO: end-to-end playthrough
     // TODO: fix known bugs
+    // TODO: build test
 }
