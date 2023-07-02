@@ -32,5 +32,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 567f57683dec6fe478859333c89a4e80, type: 2}
   - {fileID: 11400000, guid: 66aacab350c82e4459574678415b9aeb, type: 2}
   _chooseRandomPattern: 1
-  _minEnemyCount: 3
-  _spawnCount: 12
+  _minEnemyCount: 2
+  _spawnCount: 10
