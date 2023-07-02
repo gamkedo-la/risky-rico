@@ -26,12 +26,7 @@ public class Todo : MonoBehaviour
     // TODO: tighten hitboxes (walls, enemies, projectiles, player)
     // TODO: hitstop and slow-mo on game over
 
-    // LEVEL DESIGN:
-    // TODO: level layouts for each level (hellpit)
-
     // FOR PLAYTESTING:
-    // TODO: When changing levels, move player and camera to the starting position for that level prefab
-    // TODO: enemy wave design for each combat room 
     // TODO: WebGL build test
     // TODO: fix known bugs
 }
