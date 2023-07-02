@@ -23,7 +23,6 @@ public class Todo : MonoBehaviour
 
     // COMBAT:
     // TODO: implement all combat waves / patterns
-    // TODO: tighten hitboxes (walls, enemies, projectiles, player)
 
     // FOR PLAYTESTING:
     // TODO: WebGL build test

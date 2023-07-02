@@ -1293,6 +1293,22 @@ PrefabInstance:
       propertyPath: _onHandMoney._useConstant
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 603381006608176297, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
+      propertyPath: m_Size.x
+      value: 0.27529997
+      objectReference: {fileID: 0}
+    - target: {fileID: 603381006608176297, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
+      propertyPath: m_Size.y
+      value: 0.20343828
+      objectReference: {fileID: 0}
+    - target: {fileID: 603381006608176297, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 603381006608176297, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.04619026
+      objectReference: {fileID: 0}
     - target: {fileID: 603381006608176298, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
       propertyPath: m_Constraints
       value: 4
