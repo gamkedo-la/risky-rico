@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 3599530763864370256}
   - component: {fileID: 2714091766481756196}
   - component: {fileID: 6830361496004203691}
+  - component: {fileID: 2041236818527561684}
+  - component: {fileID: -2812702502435677115}
   m_Layer: 6
   m_Name: Bullet
   m_TagString: Untagged
@@ -527,3 +529,45 @@ MonoBehaviour:
   _spawnRate: 0.1
   _lifeSpan: 0.5
   _color: {r: 0.8509804, g: 0.34117648, b: 0.3882353, a: 1}
+--- !u!114 &2041236818527561684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5220456760211092832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58780c616a4411f4699be4c7d52a589e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _lifespan: 5
+  _onDestroy:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2812702502435677115}
+        m_TargetAssemblyTypeName: SpawnVFX, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-2812702502435677115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5220456760211092832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4962c343e1559cd439f79221a4489a10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _effectPrefab: {fileID: 1535447269072338634, guid: 57248d116d4d4f44da6903360af90cfd, type: 3}
+  _destroySelf: 0
