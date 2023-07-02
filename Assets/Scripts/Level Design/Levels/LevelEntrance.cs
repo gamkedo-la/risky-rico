@@ -20,5 +20,6 @@ public class LevelEntrance : MonoBehaviour, IInteractable
     public void ReceiveInteraction(GameObject interactor)
     {
        ServiceLocator.Instance.Get<LevelManager>().StartLevel();
+       ServiceLocator.Instance.Get<GameStateManager>().SetState(GameState.EXPLORATION);
     }
 }
