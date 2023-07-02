@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fc6390376dc63a43ab1db63fd7ce757, type: 3}
-  m_Name: Hellpit_1-1
+  m_Name: Hellpit_1-2
   m_EditorClassIdentifier: 
   _waveName: 
   _designPurpose: 
@@ -27,7 +27,8 @@ MonoBehaviour:
       m_RotationOrder: 4
     _variable: {fileID: 0}
   _enemyPatterns:
+  - {fileID: 11400000, guid: fe2028bae2ecea14a871e34ce26198d2, type: 2}
   - {fileID: 11400000, guid: 1613ddc2d818f054a993c08deaffbed0, type: 2}
   _chooseRandomPattern: 1
-  _minEnemyCount: 0
-  _spawnCount: 4
+  _minEnemyCount: 1
+  _spawnCount: 6
