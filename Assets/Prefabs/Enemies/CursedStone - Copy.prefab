@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2229205465922203453}
   - component: {fileID: 2305182948808410218}
   - component: {fileID: 2012701064817782088}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CursedStone - Copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
