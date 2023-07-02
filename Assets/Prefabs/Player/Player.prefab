@@ -147,12 +147,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.32, y: 0.24, z: 0}
+    m_Extent: {x: 0.17, y: 0.15, z: 0}
   _collisionLayer:
     serializedVersion: 2
     m_Bits: 8
   _detectorCount: 3
-  _detectionRayLength: 0.1
+  _detectionRayLength: 0.07
   _rayBuffer: 0.1
   _freeColliderIterations: 10
 --- !u!114 &603381006608176316
