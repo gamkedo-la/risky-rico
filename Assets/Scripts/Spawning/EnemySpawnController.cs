@@ -106,7 +106,7 @@ public class EnemySpawnController : MonoBehaviour
                 int numberOfEnemies = activeEnemies.Length;
 
                 // only spawn enemies when none are active
-                if (numberOfEnemies <= currentWave.MinEnemyCount)
+                if (numberOfEnemies <= currentWave.MinEnemyCount && _currentWaveSpawnCount <= currentWave.SpawnCount)
                 {
                     // --- get current pattern
                     EnemyPattern currentPattern = currentWave.EnemyPatterns[Random.Range(0, currentWave.EnemyPatterns.Count)];

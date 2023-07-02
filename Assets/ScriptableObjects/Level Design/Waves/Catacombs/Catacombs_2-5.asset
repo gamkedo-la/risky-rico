@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fc6390376dc63a43ab1db63fd7ce757, type: 3}
-  m_Name: Caverns_1-4
+  m_Name: Catacombs_2-5
   m_EditorClassIdentifier: 
   _waveName: 
   _designPurpose: 
@@ -27,9 +27,10 @@ MonoBehaviour:
       m_RotationOrder: 4
     _variable: {fileID: 0}
   _enemyPatterns:
-  - {fileID: 11400000, guid: 9afa5f473f02f57409d2eb4d39035e37, type: 2}
-  - {fileID: 11400000, guid: 66aacab350c82e4459574678415b9aeb, type: 2}
+  - {fileID: 11400000, guid: 596980abd4878174f9761c671327103c, type: 2}
   - {fileID: 11400000, guid: aa4433f7da8ea4644a4697e9a8f0ddb9, type: 2}
+  - {fileID: 11400000, guid: 567f57683dec6fe478859333c89a4e80, type: 2}
+  - {fileID: 11400000, guid: 66aacab350c82e4459574678415b9aeb, type: 2}
   _chooseRandomPattern: 1
-  _minEnemyCount: 2
-  _spawnCount: 8
+  _minEnemyCount: 3
+  _spawnCount: 12

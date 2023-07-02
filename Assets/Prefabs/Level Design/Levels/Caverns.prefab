@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 836941257620849111}
     m_Modifications:
+    - target: {fileID: 443926289617966774, guid: 1b8b780d030ad76428a0652755a6e941, type: 3}
+      propertyPath: _waves.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 443926289617966774, guid: 1b8b780d030ad76428a0652755a6e941, type: 3}
+      propertyPath: _waves.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b55fd17794155da46986ebf881cd7e2f, type: 2}
+    - target: {fileID: 443926289617966774, guid: 1b8b780d030ad76428a0652755a6e941, type: 3}
+      propertyPath: _waves.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: b55fd17794155da46986ebf881cd7e2f, type: 2}
     - target: {fileID: 758373613347281352, guid: 1b8b780d030ad76428a0652755a6e941, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -394,7 +406,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 25b8276bedcce5842b3805023c33585d, type: 3}
     - target: {fileID: 963542596828204352, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4017927638213761040, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: m_Name
@@ -843,6 +855,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 836941257620849111}
     m_Modifications:
+    - target: {fileID: 443926289617966774, guid: 1b8b780d030ad76428a0652755a6e941, type: 3}
+      propertyPath: _waves.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 51749c8a68f4a5d42b55b77925524325, type: 2}
     - target: {fileID: 758373613347281352, guid: 1b8b780d030ad76428a0652755a6e941, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1040,7 +1056,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 25b8276bedcce5842b3805023c33585d, type: 3}
     - target: {fileID: 963542596828204352, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4017927638213761040, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: m_Name
@@ -1332,7 +1348,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 25b8276bedcce5842b3805023c33585d, type: 3}
     - target: {fileID: 963542596828204352, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4017927638213761040, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: m_Name
@@ -1996,6 +2012,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 836941257620849111}
     m_Modifications:
+    - target: {fileID: 443926289617966774, guid: 1b8b780d030ad76428a0652755a6e941, type: 3}
+      propertyPath: _waves.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 92eed49047cc2ad4a910169b84695945, type: 2}
     - target: {fileID: 758373613347281352, guid: 1b8b780d030ad76428a0652755a6e941, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2260,6 +2280,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 836941257620849111}
     m_Modifications:
+    - target: {fileID: 443926289617966774, guid: 1b8b780d030ad76428a0652755a6e941, type: 3}
+      propertyPath: _waves.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 291e7d1bb79c67244bd83c0e9d744a3e, type: 2}
     - target: {fileID: 758373613347281352, guid: 1b8b780d030ad76428a0652755a6e941, type: 3}
       propertyPath: m_IsActive
       value: 1
