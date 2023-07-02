@@ -393,6 +393,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 836941257620849111}
     m_Modifications:
     - target: {fileID: -747211122740706475, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
+      propertyPath: _onDialogEnd
+      value: 
+      objectReference: {fileID: 11400000, guid: a612b7e88fc4e4445a6272dc0775ddf4, type: 2}
+    - target: {fileID: -747211122740706475, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: _onDialogStart
       value: 
       objectReference: {fileID: 11400000, guid: 1b5c3581b83d8f143bbb6dd40e2b714c, type: 2}
@@ -1043,6 +1047,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 836941257620849111}
     m_Modifications:
     - target: {fileID: -747211122740706475, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
+      propertyPath: _onDialogEnd
+      value: 
+      objectReference: {fileID: 11400000, guid: a612b7e88fc4e4445a6272dc0775ddf4, type: 2}
+    - target: {fileID: -747211122740706475, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: _onDialogStart
       value: 
       objectReference: {fileID: 11400000, guid: 1b5c3581b83d8f143bbb6dd40e2b714c, type: 2}
@@ -1250,6 +1258,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 836941257620849111}
     m_Modifications:
     - target: {fileID: -747211122740706475, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
+      propertyPath: _onDialogEnd
+      value: 
+      objectReference: {fileID: 11400000, guid: a612b7e88fc4e4445a6272dc0775ddf4, type: 2}
+    - target: {fileID: -747211122740706475, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: _onDialogStart
       value: 
       objectReference: {fileID: 11400000, guid: 1b5c3581b83d8f143bbb6dd40e2b714c, type: 2}
@@ -1334,6 +1346,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 836941257620849111}
     m_Modifications:
+    - target: {fileID: -747211122740706475, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
+      propertyPath: _onDialogEnd
+      value: 
+      objectReference: {fileID: 11400000, guid: a612b7e88fc4e4445a6272dc0775ddf4, type: 2}
     - target: {fileID: -747211122740706475, guid: e65da2adf01a2f34d9a7b4460ff3515c, type: 3}
       propertyPath: _onDialogStart
       value: 

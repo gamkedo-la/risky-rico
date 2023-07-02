@@ -839,7 +839,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692146045}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
   m_Name: 
@@ -1398,11 +1398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 603381006608176301, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.2029
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 603381006608176301, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8796988
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 603381006608176301, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1518,7 +1518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &832463069
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2333,7 +2333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264359270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 253.10812, y: 102.55735, z: 0.16306663}
+  m_LocalPosition: {x: 2.0830355, y: 12.54835, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3580,6 +3580,10 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2736375956538696460, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: _onDialogEnd
+      value: 
+      objectReference: {fileID: 11400000, guid: a612b7e88fc4e4445a6272dc0775ddf4, type: 2}
     - target: {fileID: 3319606152838605206, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
       propertyPath: m_Controller
       value: 
@@ -5156,7 +5160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 281514952879029380, guid: c95593126d3686f41b138834804dfea9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 281514952879029383, guid: c95593126d3686f41b138834804dfea9, type: 3}
       propertyPath: m_Pivot.x
@@ -5241,6 +5245,18 @@ PrefabInstance:
     - target: {fileID: 281514952879029383, guid: c95593126d3686f41b138834804dfea9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151727965905707392, guid: c95593126d3686f41b138834804dfea9, type: 3}
+      propertyPath: m_text
+      value: QUIT
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151727965931281022, guid: c95593126d3686f41b138834804dfea9, type: 3}
+      propertyPath: m_text
+      value: MAIN MENU
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151727966547067831, guid: c95593126d3686f41b138834804dfea9, type: 3}
+      propertyPath: m_text
+      value: RESUME
       objectReference: {fileID: 0}
     - target: {fileID: 1151727966648666853, guid: c95593126d3686f41b138834804dfea9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -6036,6 +6052,10 @@ PrefabInstance:
       propertyPath: _input
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2159937997727273374, guid: 0668fd000e36a534392ff41583fce1fb, type: 3}
+      propertyPath: _UITextbox
+      value: 
+      objectReference: {fileID: 4110243286829661132}
     - target: {fileID: 2159937997727273374, guid: 0668fd000e36a534392ff41583fce1fb, type: 3}
       propertyPath: _dialogSequence
       value: 

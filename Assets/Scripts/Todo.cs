@@ -23,6 +23,12 @@ public class Todo : MonoBehaviour
 
     // FOR PLAYTESTING:
     // TODO: end-to-end playthrough
+    // TODO: player spawner
+    // TODO: write outro text / credits
     // TODO: fix known bugs
+    // TODO: fix main menu buttons
+    // TODO: fix music overlap
+    // TODO: fix sound/music volume changer
+    // TODO: udpate sound effects
     // TODO: build test
 }

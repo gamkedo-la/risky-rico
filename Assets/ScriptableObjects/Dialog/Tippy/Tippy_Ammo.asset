@@ -19,12 +19,11 @@ MonoBehaviour:
       to be, like, totally honest.
     _image: {fileID: 0}
   - _content: 'But since you did, I wanna let you know that I''ve seen some of these
-      cool red orbs in some rooms. They''re super magical, dude. '
+      cool red orbs in some rooms. They''re super magical. '
     _image: {fileID: 0}
-  - _content: I've seen others pick them up and they suddenly can use their curse
-      powers, like, even more. If you ran out of energy to use your powers, you can
-      just use those orbs to get it back.
+  - _content: ' If you run out of energy to use your powers, you can just use those
+      orbs to get it back.'
     _image: {fileID: 0}
-  - _content: It's like ammo for your face. I say check 'em out.
+  - _content: It's like ammo for your face. Check 'em out.
     _image: {fileID: 0}
   _onDialogEnd: {fileID: 0}

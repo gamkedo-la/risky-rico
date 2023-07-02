@@ -24,7 +24,7 @@ public class SlowMoEffect : MonoBehaviour
         }
 
         // scene change on countdown finish
-        if (Time.timeScale <= 0.02f)
+        if (Time.timeScale <= 0.02f && _activated)
         {
             _slowMoTimer -= Time.unscaledDeltaTime;
             if (_slowMoTimer <= 0f)
