@@ -2691,7 +2691,7 @@ MonoBehaviour:
   randomDialog: 0
   randomLine: 0
   _onDialogStart: {fileID: 11400000, guid: 1b5c3581b83d8f143bbb6dd40e2b714c, type: 2}
-  _onDialogEnd: {fileID: 0}
+  _onDialogEnd: {fileID: 11400000, guid: a612b7e88fc4e4445a6272dc0775ddf4, type: 2}
   _interactionPrompt: Read
 --- !u!1001 &7079741531070158656
 PrefabInstance:

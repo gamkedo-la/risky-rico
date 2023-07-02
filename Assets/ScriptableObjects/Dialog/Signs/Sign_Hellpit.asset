@@ -17,4 +17,4 @@ MonoBehaviour:
     _image: {fileID: 0}
   - _content: TREASURE JUST UP AHEAD
     _image: {fileID: 0}
-  _onDialogEnd: {fileID: 0}
+  _onDialogEnd: {fileID: 11400000, guid: a612b7e88fc4e4445a6272dc0775ddf4, type: 2}
