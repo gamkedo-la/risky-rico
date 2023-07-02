@@ -2462,6 +2462,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 8173643032533035937, guid: a57a8ce82ae56e54c94dde10f7d165ae, type: 3}
+      propertyPath: m_Size.x
+      value: 11.897497
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173643032533035937, guid: a57a8ce82ae56e54c94dde10f7d165ae, type: 3}
+      propertyPath: m_Size.y
+      value: 11.741617
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173643032533035937, guid: a57a8ce82ae56e54c94dde10f7d165ae, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.063555
+      objectReference: {fileID: 0}
+    - target: {fileID: 8173643032533035937, guid: a57a8ce82ae56e54c94dde10f7d165ae, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.042289734
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a57a8ce82ae56e54c94dde10f7d165ae, type: 3}
 --- !u!4 &6386952616875789126 stripped
