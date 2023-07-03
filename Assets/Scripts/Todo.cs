@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Todo : MonoBehaviour
 {
-    // HUB AREA:
+    // FOR POST-RELEASE:
         // SHOP:
         // TODO: equipment functionality
         // TODO: emit particles from shop chimney
@@ -20,11 +20,14 @@ public class Todo : MonoBehaviour
         // GENERAL: 
         // TODO: add flags for all character dialog unlocks
         // TODO: fix chest functionality
+        // TODO: fix sound/music volume changer
 
     // FOR PLAYTESTING:
-    // TODO: player spawner
-    // TODO: fix known bugs
-    // TODO: fix sound/music volume changer
-    // TODO: update sound effects
-    // TODO: build test
+        // TODO: update sound effects
+        // --- text sound
+        // --- interact sound
+        // --- shot collision sound
+        // --- death sound
+        // TODO: fix known bugs
+        // TODO: build test
 }

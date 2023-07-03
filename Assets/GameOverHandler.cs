@@ -13,6 +13,7 @@ public class GameOverHandler : MonoBehaviour
     public void StartGameOverSequence()
     {
         _sequenceStarted = true;
+        ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("GameOver");
     }
     
     void Update()
