@@ -39,6 +39,7 @@ public class CursedStone : MonoBehaviour
         if (_damagingObjects.Contains(other.gameObject))
         {
             _currentHealth -= 1;
+            ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Hit");
             
             Destroy(other.gameObject);
             

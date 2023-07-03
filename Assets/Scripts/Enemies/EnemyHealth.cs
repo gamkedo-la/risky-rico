@@ -74,6 +74,8 @@ public class EnemyHealth : MonoBehaviour
         {
             Destroy(hit.collider.gameObject);
         }
+
+        ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Hit");
     }
 
     void Update()
