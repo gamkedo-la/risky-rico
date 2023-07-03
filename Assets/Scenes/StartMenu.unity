@@ -719,6 +719,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 837078829}
     m_Modifications:
+    - target: {fileID: 185460426262530471, guid: a11f9ffc9ad2f204ea63730389103114, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -129.65723
+      objectReference: {fileID: 0}
     - target: {fileID: 6245049247074295840, guid: a11f9ffc9ad2f204ea63730389103114, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -807,9 +811,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 6537319090054041412, guid: a11f9ffc9ad2f204ea63730389103114, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537319090054041412, guid: a11f9ffc9ad2f204ea63730389103114, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537319090054041415, guid: a11f9ffc9ad2f204ea63730389103114, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -169.6572
+      objectReference: {fileID: 0}
     - target: {fileID: 6537319090375673960, guid: a11f9ffc9ad2f204ea63730389103114, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: game
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537319092162298760, guid: a11f9ffc9ad2f204ea63730389103114, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -89.65723
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a11f9ffc9ad2f204ea63730389103114, type: 3}

@@ -10,4 +10,9 @@ public class SceneChangeHandler : MonoBehaviour
         SceneManager.LoadScene(scene);
         Time.timeScale = 1f;
     }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
 }
