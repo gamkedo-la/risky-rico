@@ -23,8 +23,8 @@ MonoBehaviour:
     _image: {fileID: 21300000, guid: e546bd295b62639499b78675644e48d1, type: 3}
   - _content: and the fools who tried to steal it.
     _image: {fileID: 0}
-  - _content: Guarded by an ever-growing army of ghouls, skeletons, and twisted creatures,
-      the treasure remained untouched.
+  - _content: Guarded by an army of ghouls, skeletons, and twisted creatures, the
+      treasure remained untouched.
     _image: {fileID: 0}
   - _content: That is until one day when a new fool arrived. One who was, like all
       the others, dumb enough to try.
