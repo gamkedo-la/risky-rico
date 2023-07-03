@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     private Vector2 movement = new Vector2(0f, 0f);
     void Awake() => Invoke(nameof(Activate), 0.5f);
     void Activate() =>  _active = true;
+
+    void Start() 
+    {
+        ServiceLocator.Instance.Get<GameStateManager>().SetState(GameState.EXPLORATION);
+    }
     
     private void Update() 
     {
