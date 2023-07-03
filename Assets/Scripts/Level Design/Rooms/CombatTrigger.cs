@@ -30,6 +30,7 @@ public class CombatTrigger : MonoBehaviour
             _spawner.GetComponent<EnemySpawnController>().ResetState();
             _combatStarted = true;
             ServiceLocator.Instance.Get<GameStateManager>().SetState(GameState.COMBAT);
+            ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("GameOver");
         }
     }
 

@@ -39,7 +39,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: cc2a1583c7e6780499c4c812a67ed033, type: 2}
     - {fileID: 11400000, guid: 6cb23edf4d8a9d04dbbc25e6a99f12ac, type: 2}
     - {fileID: 11400000, guid: 480b8abdc5375de45ab64432ea177ca3, type: 2}
-    - {fileID: 11400000, guid: 480b8abdc5375de45ab64432ea177ca3, type: 2}
+    - {fileID: 11400000, guid: 6b04a6460ea0cf841a381c6a212d8127, type: 2}
     - {fileID: 11400000, guid: 2abebc47c61d0b848b64bd10003cb17c, type: 2}
     - {fileID: 11400000, guid: 77452957fea36ec4398f5d174896da9b, type: 2}
   musicDictionary:

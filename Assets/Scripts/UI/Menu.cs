@@ -68,6 +68,8 @@ public class Menu : MonoBehaviour
 
             Vector3 cursorPosition = _cursor.transform.position;
             _cursor.transform.position = new Vector3(cursorPosition.x, currentFieldPosition.y, cursorPosition.z);
+
+            ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Interact");
         }
     }
 
