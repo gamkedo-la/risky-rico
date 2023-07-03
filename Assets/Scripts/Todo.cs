@@ -25,7 +25,6 @@ public class Todo : MonoBehaviour
     // TODO: end-to-end playthrough
     // TODO: player spawner
     // TODO: fix known bugs
-    // TODO: fix main menu buttons
     // TODO: fix music overlap
     // TODO: fix sound/music volume changer
     // TODO: update sound effects
