@@ -27,6 +27,10 @@ MonoBehaviour:
     - Pickup
     - BonusPoints
     - GameOver
+    - SwitchWeapon
+    - Interact
+    - Text
+    - Footstep
     m_values:
     - {fileID: 11400000, guid: 2235b4818cfa234469793d2d9ae030cd, type: 2}
     - {fileID: 11400000, guid: 45fd6e348b2c6d04ea2507f755e224fc, type: 2}
@@ -34,6 +38,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: d8ea3c82cc9ddf44c9b18454986b502f, type: 2}
     - {fileID: 11400000, guid: cc2a1583c7e6780499c4c812a67ed033, type: 2}
     - {fileID: 11400000, guid: 6cb23edf4d8a9d04dbbc25e6a99f12ac, type: 2}
+    - {fileID: 11400000, guid: 480b8abdc5375de45ab64432ea177ca3, type: 2}
+    - {fileID: 11400000, guid: 480b8abdc5375de45ab64432ea177ca3, type: 2}
+    - {fileID: 11400000, guid: 2abebc47c61d0b848b64bd10003cb17c, type: 2}
+    - {fileID: 11400000, guid: 77452957fea36ec4398f5d174896da9b, type: 2}
   musicDictionary:
     m_keys:
     - Combat

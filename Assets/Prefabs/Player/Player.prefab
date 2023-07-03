@@ -383,7 +383,7 @@ MonoBehaviour:
   _maxIdleSpeed: 2
   _maxParticleFallSpeed: -40
   _aimDirection: {fileID: 11400000, guid: f727cdc12f876574483289b5508b7335, type: 2}
-  _timeBetweenFootsteps: 0.5
+  _timeBetweenFootsteps: 0.4
 --- !u!1 &5610416021755849048
 GameObject:
   m_ObjectHideFlags: 0

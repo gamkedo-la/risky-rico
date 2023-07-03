@@ -25,5 +25,7 @@ public class WeaponSlots : MonoBehaviour
         WeaponData nextWeapon = _player.WeaponList[_currentWeaponIndex];
 
         _player.SetCurrentWeapon(nextWeapon);
+
+        ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("SwitchWeapon");
     }
 }

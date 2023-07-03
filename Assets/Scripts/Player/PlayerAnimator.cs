@@ -55,10 +55,9 @@ public class PlayerAnimator : MonoBehaviour
 
         // Footstep sound loop
         _footStepTimer -= Time.deltaTime;
-        if ((_player.Input.X != 0 || _player.Input.Y != 0) && _footStepTimer < 0f) 
+        if ((_anim.GetFloat("Speed") >= 0.1f) && _footStepTimer < 0f) 
         {
-            // _anim.SetTrigger(GroundedKey);
-            // _source.PlayOneShot(_footsteps[Random.Range(0, _footsteps.Length)]);
+            ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Footstep");
         }
 
         if (_footStepTimer < 0f)

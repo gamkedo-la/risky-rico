@@ -111,6 +111,8 @@ public class Dialog : MonoBehaviour
                     textObject.text = currentLine;
                 }
 
+                ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Text");
+
                 // wait for a set time before revealing the next character
                 yield return new WaitForSeconds(1f/(float)typingSpeed);
             }
