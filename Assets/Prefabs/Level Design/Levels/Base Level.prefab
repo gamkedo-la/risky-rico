@@ -89,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 31189193031724129, guid: d0a504e0e7e62574ea678165cc80ed20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.0368686
+      value: -0.036468506
       objectReference: {fileID: 0}
     - target: {fileID: 31189193031724129, guid: d0a504e0e7e62574ea678165cc80ed20, type: 3}
       propertyPath: m_LocalPosition.y
@@ -344,6 +344,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelEscape
       objectReference: {fileID: 0}
+    - target: {fileID: 3593257480773965775, guid: 0042094d3524e6541990c2ba27a29d68, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0042094d3524e6541990c2ba27a29d68, type: 3}
 --- !u!1001 &8968355344599358533
@@ -412,6 +416,10 @@ PrefabInstance:
     - target: {fileID: 3593257480773965775, guid: 0042094d3524e6541990c2ba27a29d68, type: 3}
       propertyPath: m_Name
       value: LevelEscape
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593257480773965775, guid: 0042094d3524e6541990c2ba27a29d68, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0042094d3524e6541990c2ba27a29d68, type: 3}

@@ -1367,6 +1367,10 @@ PrefabInstance:
       propertyPath: _useFloat
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3805912975363685431, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _startingSong
+      value: Graveyard
+      objectReference: {fileID: 0}
     - target: {fileID: 3805912976037242093, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: m_RootOrder
       value: 0

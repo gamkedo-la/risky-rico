@@ -22,10 +22,8 @@ public class Todo : MonoBehaviour
         // TODO: fix chest functionality
 
     // FOR PLAYTESTING:
-    // TODO: end-to-end playthrough
     // TODO: player spawner
     // TODO: fix known bugs
-    // TODO: fix music overlap
     // TODO: fix sound/music volume changer
     // TODO: update sound effects
     // TODO: build test

@@ -40,8 +40,7 @@ using UnityEngine;
             source.pitch = pitch;
             source.loop = loop;
 
-            source.Play();
-            
+            source.Play();   
         }
 
         public void Stop()

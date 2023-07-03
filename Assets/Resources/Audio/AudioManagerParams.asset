@@ -35,7 +35,7 @@ MonoBehaviour:
   musicDictionary:
     m_keys:
     - Combat
-    - Combat_Alt
+    - GameOver
     - Intro
     - MainMenu
     - Graveyard

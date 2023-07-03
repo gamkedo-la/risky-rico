@@ -189,6 +189,20 @@ public class AudioManager : IService
             soundEffect.Play();
         }
     }
+
+    /// <summary>
+    /// Plays a sound effect once after getting it from a dictionary lookup.
+    /// </summary>
+    /// <param name="clipToPlay">The AudioClip to play.</param>
+    public void PlaySongFromDictionary(string songToPlay)
+    {
+        MusicTrack song = _params.musicDictionary[songToPlay];
+
+        if (song != null)
+        {
+            song.Play();
+        }
+    }
     
     /// <summary>
     /// Returns a new AudioSource component attached to the AudioManager's GameObject with the music output mixer group.
