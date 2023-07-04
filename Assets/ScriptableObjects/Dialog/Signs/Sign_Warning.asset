@@ -16,7 +16,7 @@ MonoBehaviour:
   - _content: "[there\u2019s an old sign with text that\u2019s clearly been scribbled
       over]"
     _image: {fileID: 0}
-  - _content: <strikethrough>Turn back now.</strikethrough>
+  - _content: <s>Turn back now.</s>
     _image: {fileID: 0}
   - _content: BIG RICHES UP AHEAD
     _image: {fileID: 0}

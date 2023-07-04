@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sign_Hellpit
   m_EditorClassIdentifier: 
   lines:
-  - _content: <strikethrough>Get out while you still can</strikethrough>
+  - _content: <s>Get out while you still can</s>
     _image: {fileID: 0}
   - _content: TREASURE JUST UP AHEAD
     _image: {fileID: 0}

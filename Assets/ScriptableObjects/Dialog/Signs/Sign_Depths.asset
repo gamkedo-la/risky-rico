@@ -16,7 +16,7 @@ MonoBehaviour:
   - _content: "[another sign with printed text that\u2019s been hastily scribbled
       over]"
     _image: {fileID: 0}
-  - _content: <strikethrough>Enter at your own risk</strikethrough>
+  - _content: <s>Enter at your own risk</s>
     _image: {fileID: 0}
   - _content: GOLD INSIDE. MOUNTAINS. OF. GOLD
     _image: {fileID: 0}
