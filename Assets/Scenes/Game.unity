@@ -5294,6 +5294,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _focalPoint: {fileID: 1560247539}
   _trackingSpeed: 0.08
+  _offsetX: 0
+  _offsetY: 2.5
 --- !u!4 &667373275794218000
 Transform:
   m_ObjectHideFlags: 0
