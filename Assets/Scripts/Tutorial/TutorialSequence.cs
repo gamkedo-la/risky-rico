@@ -19,6 +19,13 @@ public class TutorialSequence : MonoBehaviour
         _promptText.text = CurrentPrompt().PromptText;
         _promptCountText.text = 0 + "/" + CurrentPrompt().MaxInputCounter;
         SubscribeToPromptInput();
+
+        bool finishedTutorial = ServiceLocator.Instance.Get<SaveDataManager>().GetFlag("finishedTutorial");
+        if (finishedTutorial) 
+        {
+            UnsubscribeFromPromptInput();
+            gameObject.SetActive(false);
+        }
     }
 
     void SubscribeToPromptInput()
@@ -77,6 +84,7 @@ public class TutorialSequence : MonoBehaviour
 
     void ClosePromptSequence()
     {
+        ServiceLocator.Instance.Get<SaveDataManager>().SetFlag("finishedTutorial", true);
         gameObject.SetActive(false);
     }
 
