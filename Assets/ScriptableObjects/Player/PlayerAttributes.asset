@@ -49,6 +49,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4047390979408764e98da0c07486dcb0, type: 2}
   - {fileID: 11400000, guid: 0c067d4eb4affc24ca8d8b13fab7cd27, type: 2}
   _dualFire: 0
+  _currentAmmo: {fileID: 11400000, guid: 8a779dfc1b682d848b20db13ca9b8115, type: 2}
   _baseMovementSpeed: 45
   _baseFiringRate: 8
   _baseDamage: 1

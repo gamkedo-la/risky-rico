@@ -41,6 +41,8 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     [SerializeField] private bool _dualFire;
     public bool DualFire => _dualFire;
 
+    [SerializeField] private IntVariable _currentAmmo;
+
     [Header("STAT TUNING")]
     [Tooltip("How quickly the player can move around in the Half-Skull state")]
     [Range(0f, 90f)]
@@ -152,6 +154,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
 
             case AttributeType.AMMO_CAP:
                 _ammoCap.AddModifier(mod);
+                _currentAmmo.Value = (int) _ammoCap.CurrentValue;
                 break;
 
             case AttributeType.AMMO_USAGE:
