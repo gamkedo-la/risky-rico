@@ -51,7 +51,25 @@ public class MoveInOwnDirection : MonoBehaviour
         _xDirection *= -1;
         _yDirection *= -1;
 
-         // set rotation
+        UpdateRotation();
+    }
+
+    public void FlipYDirection()
+    {
+        _yDirection *= -1;
+
+         UpdateRotation();
+    }
+
+    public void FlipXDirection()
+    {
+        _xDirection *= -1;
+
+        UpdateRotation();
+    }
+
+    public void UpdateRotation()
+    {
         float angle = Mathf.Atan2(_yDirection, _xDirection) * Mathf.Rad2Deg - 90f;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
