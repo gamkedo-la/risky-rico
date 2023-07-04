@@ -5,20 +5,11 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _background;
+    public SpriteRenderer Background => _background;
+    public List<GameObject> Doors = new List<GameObject>();
 
     public void Awake()
     {
         _background = GetComponent<SpriteRenderer>();
-        LevelManager.OnLevelChange += OnLevelChange;
-    }
-
-    public void OnLevelChange()
-    {
-        Level currentLevel = ServiceLocator.Instance.Get<LevelManager>().GetCurrentLevel();
-
-        if (currentLevel)
-        {
-            _background.sprite = currentLevel.Graphics["room"];
-        }
     }
 }

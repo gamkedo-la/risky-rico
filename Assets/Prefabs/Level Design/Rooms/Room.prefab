@@ -456,6 +456,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _background: {fileID: 3050897547712910769}
+  Doors:
+  - {fileID: 3519258412257635301}
+  - {fileID: 964161811494329011}
+  - {fileID: 2299990232856176430}
+  - {fileID: 4997102988857269262}
 --- !u!212 &3050897547712910769
 SpriteRenderer:
   m_ObjectHideFlags: 0
