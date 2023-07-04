@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 603381006608176314}
   - component: {fileID: 603381006608176315}
   - component: {fileID: 603381006608176290}
-  - component: {fileID: 603381006608176317}
   - component: {fileID: 603381006608176313}
   - component: {fileID: 820273638513774886}
   - component: {fileID: 519939959039382197}
@@ -299,20 +298,6 @@ MonoBehaviour:
   _moneyStore: {fileID: 0}
   _ammoStore: {fileID: 0}
   _particleEffect: {fileID: 9131268053268607772, guid: 60fdbc45a883cd44aba26670a1a93b93, type: 3}
---- !u!114 &603381006608176317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603381006608176339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b0d67ae25d486740a17e4467742faba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _curseCollection: {fileID: 11400000, guid: be9f466d88f0b1f4d89fa431ef542a81, type: 2}
-  _curseSlots: {fileID: 603381006608176316}
 --- !u!114 &603381006608176313
 MonoBehaviour:
   m_ObjectHideFlags: 0

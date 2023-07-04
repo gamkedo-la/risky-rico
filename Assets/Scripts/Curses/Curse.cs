@@ -5,8 +5,8 @@ using ScriptableObjectArchitecture;
 
 public class Curse : MonoBehaviour, IInteractable
 {
-    [SerializeField] private CurseData _parameters;
-    public CurseData Parameters => _parameters;
+    [SerializeField] private CurseData _curseData;
+    public CurseData Parameters => _curseData;
     [SerializeField] private SpriteRenderer _renderer;
 
     public string Prompt {get; set; }
@@ -22,22 +22,27 @@ public class Curse : MonoBehaviour, IInteractable
         _renderer = gameObject.GetComponent<SpriteRenderer>();
 
         // apply parameters to individual components
-        SetAttributes(_parameters);
+        SetAttributes(_curseData);
     }
 
     public void SetAttributes(CurseData parameters)
     {
-        _parameters = parameters;
-        _renderer.sprite = _parameters.Image;
+        _curseData = parameters;
+        _renderer.sprite = _curseData.Image;
     }
 
-    public void ActivateEffects(PlayerAttributes playerParameters)
+    public void ActivateEffects(PlayerCurseSlots curseSlots)
     {
-        Debug.Log("Activating effects of " + _parameters.name);
+        if (curseSlots != null)
+        {
+            curseSlots.AddCurse(_curseData);
+        }
     }
 
     public void ReceiveInteraction(GameObject interactor)
     {
-         Destroy(gameObject);
+        PlayerCurseSlots curseSlots = interactor.GetComponent<PlayerCurseSlots>();
+        ActivateEffects(curseSlots);
+        Destroy(gameObject);
     }
 }
