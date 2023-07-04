@@ -806,19 +806,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5197200529674077311, guid: 8d7c4e21b6c6b8446a0be9cd8cc887a0, type: 3}
       propertyPath: m_Size.x
-      value: 1.5154624
+      value: 2.5829334
       objectReference: {fileID: 0}
     - target: {fileID: 5197200529674077311, guid: 8d7c4e21b6c6b8446a0be9cd8cc887a0, type: 3}
       propertyPath: m_Size.y
-      value: 1.18839
+      value: 1.1851182
       objectReference: {fileID: 0}
     - target: {fileID: 5197200529674077311, guid: 8d7c4e21b6c6b8446a0be9cd8cc887a0, type: 3}
       propertyPath: m_Offset.x
-      value: -0.01516068
+      value: -0.049228907
       objectReference: {fileID: 0}
     - target: {fileID: 5197200529674077311, guid: 8d7c4e21b6c6b8446a0be9cd8cc887a0, type: 3}
       propertyPath: m_Offset.y
-      value: -0.09419507
+      value: -0.09255919
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d7c4e21b6c6b8446a0be9cd8cc887a0, type: 3}
@@ -1234,7 +1234,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.9904431, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &5240524101382498842
 MonoBehaviour:
@@ -2010,7 +2010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5197200529674077311, guid: 8d7c4e21b6c6b8446a0be9cd8cc887a0, type: 3}
       propertyPath: m_Size.x
-      value: 1.5154624
+      value: 1.9574211
       objectReference: {fileID: 0}
     - target: {fileID: 5197200529674077311, guid: 8d7c4e21b6c6b8446a0be9cd8cc887a0, type: 3}
       propertyPath: m_Size.y
@@ -2018,11 +2018,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5197200529674077311, guid: 8d7c4e21b6c6b8446a0be9cd8cc887a0, type: 3}
       propertyPath: m_Offset.x
-      value: -0.01516068
+      value: 0.0018377602
       objectReference: {fileID: 0}
     - target: {fileID: 5197200529674077311, guid: 8d7c4e21b6c6b8446a0be9cd8cc887a0, type: 3}
       propertyPath: m_Offset.y
-      value: -0.094085485
+      value: -0.094085455
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d7c4e21b6c6b8446a0be9cd8cc887a0, type: 3}
