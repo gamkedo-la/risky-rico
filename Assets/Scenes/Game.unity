@@ -1159,6 +1159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slowDownRate: 0.05
   _gameOverTimer: 2
+  _gold: {fileID: 11400000, guid: 0103ac55808973a439c483965ac9a60a, type: 2}
 --- !u!114 &760435099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2213,7 +2214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264359270}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.082835436, y: 0.5471504, z: 0}
+  m_LocalPosition: {x: 0.0828352, y: 0.5471505, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3437,6 +3438,53 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8770934704547923810, guid: 252e233ef2b69da4fb1a3d667d07fe3e, type: 3}
   m_PrefabInstance: {fileID: 173598467}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1712811157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1712811158}
+  - component: {fileID: 1712811159}
+  m_Layer: 0
+  m_Name: DungeonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1712811158
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712811157}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1891730146}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1712811159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712811157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc01c549668e9144c9b9e95a3686b93d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
+  _score: {fileID: 11400000, guid: 8834f99b6ea2c5246832e22f28879a96, type: 2}
+  _ammo: {fileID: 11400000, guid: 8a779dfc1b682d848b20db13ca9b8115, type: 2}
 --- !u!1 &1803054870 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1606937870534627003, guid: 2f7cdc760d175f348b5c7e66524a39a3, type: 3}
@@ -3964,6 +4012,7 @@ Transform:
   - {fileID: 760435093}
   - {fileID: 10503180}
   - {fileID: 1463548823}
+  - {fileID: 1712811158}
   m_Father: {fileID: 253633346}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
