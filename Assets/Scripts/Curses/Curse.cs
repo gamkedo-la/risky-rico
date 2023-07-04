@@ -5,9 +5,11 @@ using ScriptableObjectArchitecture;
 
 public class Curse : MonoBehaviour, IInteractable
 {
+    [SerializeField] List<CurseData> _allCurses = new List<CurseData>();
     [SerializeField] private CurseData _curseData;
     public CurseData Parameters => _curseData;
     [SerializeField] private SpriteRenderer _renderer;
+    [SerializeField] public bool RandomCurse;
 
     public string Prompt {get; set; }
     public bool InteractionEnabled {get; set; }
@@ -20,6 +22,12 @@ public class Curse : MonoBehaviour, IInteractable
 
         // get necesssary components
         _renderer = gameObject.GetComponent<SpriteRenderer>();
+
+        // 
+        if (RandomCurse)
+        {
+            _curseData = _allCurses[Random.Range(0, _allCurses.Count)];
+        }
 
         // apply parameters to individual components
         SetAttributes(_curseData);
