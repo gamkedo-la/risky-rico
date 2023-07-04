@@ -39,7 +39,10 @@ public class LevelManager : IService
             Level currentLevel = _params.levels[_params.levelIndex];
 
             // invoke the event of a level change so that all rooms in a level will respond
-            OnLevelChange();
+            if (OnLevelChange != null)
+            {
+                OnLevelChange();
+            }
         }
         else 
         {

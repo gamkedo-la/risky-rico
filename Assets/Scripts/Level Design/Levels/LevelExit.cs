@@ -30,6 +30,7 @@ public class LevelExit : MonoBehaviour, IInteractable
     public void ReceiveInteraction(GameObject interactor)
     {
        ServiceLocator.Instance.Get<LevelManager>().GoToNextLevel();
+       
        MoveToNextLevel(interactor);
     }
 }
