@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835aee1d6e6945740865e3cf605c934b, type: 3}
   m_Name: ItemDropTable
   m_EditorClassIdentifier: 
-  _probabilityTotalWeight: 50
+  _probabilityTotalWeight: 65
   Lookup:
     m_keys:
     - {fileID: 11400000, guid: 0b382f09957c99b4b8fda2152943677e, type: 2}
     - {fileID: 11400000, guid: ec5b414ca9bdb764e84759c9da614e8d, type: 2}
+    - {fileID: 11400000, guid: 6abfd9a3ffe889242a7f6b289a669e9b, type: 2}
+    - {fileID: 11400000, guid: 3ce02786aa29cc94f9de8cc44de870f2, type: 2}
     m_values:
     - probabilityWeight: 25
       probabilityFrom: 0
@@ -24,3 +26,9 @@ MonoBehaviour:
     - probabilityWeight: 25
       probabilityFrom: 25
       probabilityTo: 50
+    - probabilityWeight: 10
+      probabilityFrom: 50
+      probabilityTo: 60
+    - probabilityWeight: 5
+      probabilityFrom: 60
+      probabilityTo: 65
