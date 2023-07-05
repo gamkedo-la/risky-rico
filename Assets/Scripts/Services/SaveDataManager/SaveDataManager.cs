@@ -8,7 +8,7 @@ public class SaveDataManager : IService
 
     private readonly string despositedMoneyKey = "Money";
     
-    //TODO Guns
+    //TODO: Acquired weapon data
     
     //Settings Keys
     private readonly string masterVolumeKey = "MasterVolume";
@@ -22,6 +22,13 @@ public class SaveDataManager : IService
     private readonly string paidHellWellForLore_1 = "paidHellWellForLore_1";
     private readonly string paidHellWellForLore_2 = "paidHellWellForLore_2";
 
+    // Tutorial flags
+    private readonly string finishedTutorial = "finishedTutorial";
+
+    public SaveDataManager()
+    {
+        PlayerPrefs.Save();
+    }
 
     // 1 for true, 0 for false
     public bool GetFlag(string flagKey)
