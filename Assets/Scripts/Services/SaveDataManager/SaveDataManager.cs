@@ -33,7 +33,7 @@ public class SaveDataManager : IService
     // 1 for true, 0 for false
     public bool GetFlag(string flagKey)
     {
-        string flagValue = PlayerPrefs.GetString(flagKey, "");
+        string flagValue = PlayerPrefs.GetString(flagKey, "0");
         return flagValue == "1"; 
     }
 
@@ -59,7 +59,7 @@ public class SaveDataManager : IService
 
     public int GetDepositedMoney()
     {
-        return PlayerPrefs.GetInt(despositedMoneyKey,0);
+        return PlayerPrefs.GetInt(despositedMoneyKey, 0);
     }
     public void SetDespositedMoney(int money)
     {
@@ -68,31 +68,34 @@ public class SaveDataManager : IService
 
     public float GetMasterVolume()
     {
-        return PlayerPrefs.GetFloat(masterVolumeKey, 0f);
+        return PlayerPrefs.GetFloat(masterVolumeKey, 0.75f);
     }
 
     public void SetMasterVolume(float masterVolume)
     {
         PlayerPrefs.SetFloat(masterVolumeKey,masterVolume);
     }
+
     public float GetMusicVolume()
     {
-        return PlayerPrefs.GetFloat(musicVolumeKey, 0f);
+        return PlayerPrefs.GetFloat(musicVolumeKey, 0.75f);
     }
 
     public void SetMusicVolume(float musicVolume)
     {
         PlayerPrefs.SetFloat(musicVolumeKey,musicVolume);
     }
+
     public float GetSFXVolume()
     {
-        return PlayerPrefs.GetFloat(sfxVolumeKey, 0f);
+        return PlayerPrefs.GetFloat(sfxVolumeKey, 0.75f);
     }
 
     public void SetSFXVolume(float sfxVolume)
     {
         PlayerPrefs.SetFloat(sfxVolumeKey,sfxVolume);
     }
+    
     public Resolutions GetResolution()
     {
         string resolutions = PlayerPrefs.GetString(resolutionKey,"");
@@ -102,24 +105,34 @@ public class SaveDataManager : IService
         }
         return JsonUtility.FromJson<Resolutions>(resolutions);
     }
+
     public void SetResolution(Resolutions resolutions)
     {
         PlayerPrefs.SetString(resolutionKey,JsonUtility.ToJson(resolutions));
     }
+
     public void SetScreenShake(float screenShake)
     {
         PlayerPrefs.SetFloat(screenShakeKey,screenShake);
     }
+
     public float GetScreenShake()
     {
         return PlayerPrefs.GetFloat(screenShakeKey, 0f);
     }
+
     public void SetFlashingEffects(bool flashingEffects)
     {
         PlayerPrefs.SetInt(flashingEffectKey,flashingEffects ? 1 : 0);
     }
+    
     public bool GetFlashingEffects()
     {
         return PlayerPrefs.GetInt(flashingEffectKey, 0) != 0;
+    }
+
+    public void ResetPlayerPrefs()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
