@@ -44,6 +44,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     [SerializeField] private IntVariable _currentAmmo;
 
     [SerializeField] private CurseList _curseSlots;
+    public CurseList CurseSlots => _curseSlots;
 
     [Header("STAT TUNING")]
     [Tooltip("How quickly the player can move around in the Half-Skull state")]

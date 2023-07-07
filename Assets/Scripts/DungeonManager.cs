@@ -14,5 +14,6 @@ public class DungeonManager : MonoBehaviour
         // reset player values to the default
         _score.Value = 0;
         _ammo.Value = 9;
+        _player.CurseSlots.Clear();
     }
 }

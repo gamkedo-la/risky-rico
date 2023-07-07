@@ -2,7 +2,19 @@ using UnityEngine;
 
 public class Todo : MonoBehaviour
 {
+    // REFACTOR todos:
+    // FIXME: UI de-coupling
+    // FIXME: tool tips and getters
+    // FIXME: regioning for larger scripts
+    // FIXME: naming conventions
+    // FIXME: removed commented code and unused scripts
+    // FIXME: same folder structure for all domains
+    // FIXME: state machines via animation controller
+
     // FOR POST-RELEASE:
+        // TODO: Resolve camera/UI differences between hub area and dungeon scenes 
+        // TODO: Create a player spawner to spawn the player based on certain flags
+
         // SHOP:
         // TODO: equipment functionality
         // TODO: emit particles from shop chimney
