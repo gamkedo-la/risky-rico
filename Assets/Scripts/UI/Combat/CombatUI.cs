@@ -5,24 +5,28 @@ using UnityEngine.UI;
 
 public class CombatUI : MonoBehaviour
 {
-    [SerializeField] private Image _secondaryWeapon;
-    [SerializeField] private GameObject _curseSlotsContainer;
+    [Tooltip("Player data to display in the UI")]
     [SerializeField] private PlayerAttributes _player;
-    [SerializeField] private PlayerCurseSlots _curseSlots;
-    [SerializeField] private GameObject _curseImage;
-    [SerializeField] private List<GameObject> _curseImageSlots = new List<GameObject>();
 
+    [Tooltip("Icon for the player's active weapon")]
+    [SerializeField] private Image _currentWeapon;
+
+    [Tooltip("The open slots the player has available for curses")]
+    [SerializeField] private CurseList _curseSlots;
+    
+    [Tooltip("Icon positions for each curse slot")]
+    [SerializeField] private List<GameObject> _curseImageSlots = new List<GameObject>();
 
     void Update()
     {
         if (_player.CurrentWeapon != null)
         {
-            _secondaryWeapon.sprite = _player.CurrentWeapon.EquipIcon;
+            _currentWeapon.sprite = _player.CurrentWeapon.EquipIcon;
         } 
 
-        for (int i = 0; i <= _curseSlots.Curses.Count - 1; i++)
+        for (int i = 0; i <= _curseSlots.Elements.Count - 1; i++)
         {
-            _curseImageSlots[i].GetComponent<Image>().sprite = _curseSlots.Curses[i].Image;
+            _curseImageSlots[i].GetComponent<Image>().sprite = _curseSlots.Elements[i].Image;
         }
     }
 }

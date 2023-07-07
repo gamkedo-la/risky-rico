@@ -43,6 +43,8 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
 
     [SerializeField] private IntVariable _currentAmmo;
 
+    [SerializeField] private CurseList _curseSlots;
+
     [Header("STAT TUNING")]
     [Tooltip("How quickly the player can move around in the Half-Skull state")]
     [Range(0f, 90f)]
@@ -118,6 +120,7 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         _attributes.Add(_moneyUsage);
         _attributes.Add(_shotSpeed);
         _dualFire = false;
+        _curseSlots.Clear();
 
         InitAttributes();
     }
