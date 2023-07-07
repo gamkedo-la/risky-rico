@@ -2,12 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class Cutscene : MonoBehaviour
 {
+    [Tooltip("The text that will be displayed for this cutscene")]
     [SerializeField] private Dialog _textSequence;
+
+    [Tooltip("UI object to hold the current dialog object's corresponding image")]
     [SerializeField] private Image _image;
+    
+    [Tooltip("Default color of the image object when no cutscene image is available")]
     [SerializeField] private Color _backgroundColor;
+
+    [Tooltip("The scene to transition into when the cutscene is skipped or finished")]
+    [SerializeField] private string _nextScene;
+
+    void Awake()
+    {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Exit().performed += SkipCutScene;
+    }
 
     public void Update()
     {
@@ -26,5 +42,10 @@ public class Cutscene : MonoBehaviour
         {
             _image.color = Color.white;
         }
+    }
+
+    public void SkipCutScene(InputAction.CallbackContext context)
+    {
+        SceneManager.LoadScene(_nextScene);
     }
 }

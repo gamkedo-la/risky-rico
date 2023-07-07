@@ -803,6 +803,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1947569988740947056, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
   m_PrefabInstance: {fileID: 1947569989266077090}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &595261408 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1947569990133554069, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+  m_PrefabInstance: {fileID: 1947569989266077090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &692146045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1480,10 @@ PrefabInstance:
       propertyPath: detectionDistance
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 603381006608176316, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
+      propertyPath: _curses
+      value: 
+      objectReference: {fileID: 11400000, guid: f7b8d9eeab7f2214fb5a93a2a5ae330f, type: 2}
     - target: {fileID: 603381006608176316, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
       propertyPath: _curses.Array.size
       value: 0
@@ -2808,17 +2823,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 603381006608176301, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
   m_PrefabInstance: {fileID: 812215159}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1560247552 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 603381006608176316, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
-  m_PrefabInstance: {fileID: 812215159}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560247539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f6a8a2b41b252940bfb7999b5467b24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1560247571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5639,7 +5643,11 @@ PrefabInstance:
     - target: {fileID: 1947569988740947057, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
       propertyPath: _curseSlots
       value: 
-      objectReference: {fileID: 1560247552}
+      objectReference: {fileID: 11400000, guid: f7b8d9eeab7f2214fb5a93a2a5ae330f, type: 2}
+    - target: {fileID: 1947569988740947057, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _currentWeapon
+      value: 
+      objectReference: {fileID: 595261408}
     - target: {fileID: 1947569988740947057, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
       propertyPath: _curseImageSlots.Array.size
       value: 3
@@ -5776,6 +5784,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2107824933, guid: 6ee893eff1ee33e47af2ca493c4231d9, type: 3}
+    - target: {fileID: 1947569990133554071, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: m_Name
+      value: CurrentWeapon
+      objectReference: {fileID: 0}
     - target: {fileID: 1947569990593913767, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0.5

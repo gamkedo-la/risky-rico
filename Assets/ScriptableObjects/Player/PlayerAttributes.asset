@@ -44,12 +44,13 @@ MonoBehaviour:
     _baseValue: 1
     _currentValue: 1
     _modifiers: []
-  _currentWeapon: {fileID: 11400000, guid: 4047390979408764e98da0c07486dcb0, type: 2}
+  _currentWeapon: {fileID: 11400000, guid: 0c067d4eb4affc24ca8d8b13fab7cd27, type: 2}
   _weaponList:
   - {fileID: 11400000, guid: 4047390979408764e98da0c07486dcb0, type: 2}
   - {fileID: 11400000, guid: 0c067d4eb4affc24ca8d8b13fab7cd27, type: 2}
   _dualFire: 0
   _currentAmmo: {fileID: 11400000, guid: 8a779dfc1b682d848b20db13ca9b8115, type: 2}
+  _curseSlots: {fileID: 11400000, guid: f7b8d9eeab7f2214fb5a93a2a5ae330f, type: 2}
   _baseMovementSpeed: 45
   _baseFiringRate: 8
   _baseDamage: 1
