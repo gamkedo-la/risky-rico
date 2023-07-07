@@ -50,5 +50,4 @@ public class InputField : MonoBehaviour
             _onInput?.Invoke();
         }
     }
-
 }

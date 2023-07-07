@@ -6,8 +6,10 @@ using UnityEngine.InputSystem;
 
 public class SliderField : InputField
 {
+    [Tooltip("The UI slider to control this field")]
     [SerializeField] private Slider _slider;
 
+    [Tooltip("How much the slider will move on each input")]
     [Range(0f, 10f)]
     [SerializeField] private float _incrementValue = 0.1f;
 

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ShopItemField : InputField
 {
+    [Tooltip("The item represented in this field")]
     [SerializeField] private ItemData _itemData;
     public ItemData ItemData => _itemData;
 

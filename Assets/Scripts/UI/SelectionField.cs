@@ -6,8 +6,13 @@ using UnityEngine.InputSystem;
 
 public class SelectionField : InputField
 {
+    [Tooltip("The UI object that will display the currently selected value")]
     [SerializeField] private TMP_Text _valueTextObject;
+
+    [Tooltip("List of acceptable values for this field")]
     [SerializeField] private List<string> _values;
+    
+    [Tooltip("The index used to retrive the active value in our list")]
     [SerializeField] private int _valueIndex = 0;
 
     protected void Awake()

@@ -14,6 +14,8 @@ public class GridMenu : Menu
     [Tooltip("The UI object to represent a cell in the grid")]
     [SerializeField] private GameObject _gridItem;
     private List<GameObject> _gridItems = new List<GameObject>();
+    
+    [Tooltip("The UI object to control the grid's layout")]
     [SerializeField] private GridLayoutGroup _gridLayout;
 
     void Start()
