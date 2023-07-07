@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
 
-public class PlayerCurseSlots : MonoBehaviour
+public class PlayerCurseStore : MonoBehaviour
 {
     [Header("Slots")]
-    [SerializeField] private List<CurseData> _curses = new List<CurseData>();
-    public List<CurseData> Curses => _curses;
-    [SerializeField] private int _maxSlotCount = 3;
+    [SerializeField] private CurseList _curses;
     
     [Header("Player")]
     [SerializeField] private PlayerAttributes _player;
+
+    void Awake()
+    {
+        _curses.OnAddCurse += ActivateCurse;
+    }
 
     private void ActivateCurse(CurseData curse)
     {
@@ -20,7 +23,7 @@ public class PlayerCurseSlots : MonoBehaviour
 
     public void RemoveCurse(CurseData curse)
     {
-        if (_curses.Contains(curse))
+        if (_curses.Elements.Contains(curse))
         {
             _curses.Remove(curse);
              foreach(Modifier mod in curse.Modifiers)
@@ -32,7 +35,7 @@ public class PlayerCurseSlots : MonoBehaviour
 
     public void AddCurse(CurseData curse)
     {
-        if (!_curses.Contains(curse) && _curses.Count < _maxSlotCount)
+        if (!_curses.Elements.Contains(curse))
         {
             _curses.Add(curse);
             foreach(Modifier mod in curse.Modifiers)

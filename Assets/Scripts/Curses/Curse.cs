@@ -39,18 +39,18 @@ public class Curse : MonoBehaviour, IInteractable
         _renderer.sprite = _curseData.Image;
     }
 
-    public void ActivateEffects(PlayerCurseSlots curseSlots)
+    public void ActivateEffects(PlayerCurseStore curseStore)
     {
-        if (curseSlots != null)
+        if (curseStore != null)
         {
-            curseSlots.AddCurse(_curseData);
+            curseStore.AddCurse(_curseData);
         }
     }
 
     public void ReceiveInteraction(GameObject interactor)
     {
-        PlayerCurseSlots curseSlots = interactor.GetComponent<PlayerCurseSlots>();
-        ActivateEffects(curseSlots);
+        PlayerCurseStore curseStore = interactor.GetComponent<PlayerCurseStore>();
+        ActivateEffects(curseStore);
         Destroy(gameObject);
     }
 }
