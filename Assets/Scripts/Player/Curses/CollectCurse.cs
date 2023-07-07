@@ -3,24 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
 
-
 public class CollectCurse : MonoBehaviour
 {
     [SerializeField] GameObjectCollection _curseCollection;
-    [SerializeField] PlayerCurseSlots _curseSlots;
+    [SerializeField] CurseList _curseSlots;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (_curseCollection.Contains(collision.gameObject))
         {
-            // Get curse and activate its effect
             Curse curseComponent = collision.gameObject.GetComponent<Curse>();
             if (curseComponent != null)
             {
-                _curseSlots.AddCurse(curseComponent.Parameters);
+                _curseSlots.Add(curseComponent.Parameters);
+                Destroy(collision.gameObject);
             }
-
-            Destroy(collision.gameObject);
         }
     }
 }
