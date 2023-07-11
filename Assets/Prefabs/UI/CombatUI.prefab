@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1947569988740947056}
   - component: {fileID: 1947569988740947057}
+  - component: {fileID: 3084749418791014231}
+  - component: {fileID: 6143147118514169287}
   m_Layer: 5
   m_Name: CombatUI
   m_TagString: Untagged
@@ -29,7 +31,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1947569989571854553}
   - {fileID: 1947569990667286804}
   - {fileID: 1947569990593913767}
   - {fileID: 1947569990133554068}
@@ -54,11 +55,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 598cbe64a5b15154982bc848d05e1284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _secondaryWeapon: {fileID: 1947569990133554069}
-  _curseSlotsContainer: {fileID: 1947569989733960749}
   _player: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
+  _currentWeapon: {fileID: 0}
   _curseSlots: {fileID: 0}
-  _curseImage: {fileID: 5735071930871028677, guid: d061b53dd74a97940afc3f01054b8240, type: 3}
+  _curseImageSlots: []
+--- !u!222 &3084749418791014231
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947569988740947059}
+  m_CullTransparentMesh: 1
+--- !u!114 &6143147118514169287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947569988740947059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1947569989275935303
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +255,7 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 
     _variable: {fileID: 0}
+  _label: 
 --- !u!1 &1947569989442391432
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,82 +414,7 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 
     _variable: {fileID: 0}
---- !u!1 &1947569989571854552
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1947569989571854553}
-  - component: {fileID: 1947569989571854559}
-  - component: {fileID: 1947569989571854558}
-  m_Layer: 5
-  m_Name: CombatUIBackground
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1947569989571854553
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947569989571854552}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1947569988740947056}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00049591, y: 29.099497}
-  m_SizeDelta: {x: 256, y: 41.39901}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1947569989571854559
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947569989571854552}
-  m_CullTransparentMesh: 1
---- !u!114 &1947569989571854558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947569989571854552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  _label: 
 --- !u!1 &1947569989733960749
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +445,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1947569988740947056}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -695,6 +659,7 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 
     _variable: {fileID: 0}
+  _label: 
 --- !u!114 &1947569989850942966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -823,7 +788,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1947569988740947056}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -900,7 +865,7 @@ RectTransform:
   - {fileID: 1947569989275935300}
   - {fileID: 1947569989850942963}
   m_Father: {fileID: 1947569988740947056}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -958,7 +923,7 @@ RectTransform:
   - {fileID: 1947569989442391433}
   - {fileID: 1947569990697812267}
   m_Father: {fileID: 1947569988740947056}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1165,6 +1130,7 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 
     _variable: {fileID: 0}
+  _label: 
 --- !u!114 &1947569990697812265
 MonoBehaviour:
   m_ObjectHideFlags: 0
