@@ -9,6 +9,7 @@ public class UpdateScore : MonoBehaviour
     [SerializeField] private IntVariable _maxScoreMultiplier;
     [SerializeField] private FloatVariable _shakeAmount;
     [SerializeField] private GameObject _pointTextPrefab;
+    [SerializeField] private GameObject _canvas;
     [SerializeField] private SoundEffect _scoreSound;
     [SerializeField] private int _perfectStreakPoints;
     private bool _perfectStreak = true;
@@ -41,7 +42,7 @@ public class UpdateScore : MonoBehaviour
         // spawn text object to show score increase
         GameObject pointText = Instantiate(_pointTextPrefab, transform.position, transform.rotation);
         pointText.GetComponent<TMP_Text>().text = label + "+" + points + "x" + _scoreMultiplier.Value;
-        pointText.transform.SetParent(transform.parent);
+        pointText.transform.SetParent(_canvas.transform);
 
         // increase the score multiplier for consecutive kills; don't increase it past the max multiplier
         _score.Value += points * _scoreMultiplier.Value;
@@ -63,7 +64,7 @@ public class UpdateScore : MonoBehaviour
         // if the player never hit a combo break, grant them extra bonus points
         if (_perfectStreak)
         {
-            IncreaseScore(_perfectStreakPoints, "<color=#fbf236>Perfect Streak:</color> ");
+            IncreaseScore(_perfectStreakPoints, "<color=#fbf236>Perfect:</color> ");
             ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("BonusPoints");
         }
 
