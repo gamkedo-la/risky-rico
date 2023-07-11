@@ -1390,7 +1390,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 5
   m_TargetDisplay: 0
@@ -1679,7 +1679,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -4091,7 +4091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.23333335
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
@@ -4099,7 +4099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.53333336
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
@@ -5805,6 +5805,10 @@ PrefabInstance:
       propertyPath: m_Spacing
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1947569989850942964, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _canvas
+      value: 
+      objectReference: {fileID: 782183609}
     - target: {fileID: 1947569989850942965, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
       propertyPath: m_fontSize
       value: 6
@@ -5929,6 +5933,10 @@ PrefabInstance:
       propertyPath: _useFloat
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1947569990697812271, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+      propertyPath: _canvas
+      value: 
+      objectReference: {fileID: 782183609}
     - target: {fileID: 6093433101386211826, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -5989,7 +5997,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1947569989850942960, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+    - {fileID: 1947569989850942961, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+    - {fileID: 1947569989850942966, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
+    - {fileID: 1947569989850942964, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3ca569e7408e6f141aaf409d7a843a8e, type: 3}
 --- !u!1001 &2084293654231762138
 PrefabInstance:
