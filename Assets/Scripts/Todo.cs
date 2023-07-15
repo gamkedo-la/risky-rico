@@ -13,7 +13,6 @@ public class Todo : MonoBehaviour
 
     // FOR POST-RELEASE:
         // TODO: Resolve camera/UI differences between hub area and dungeon scenes 
-        // TODO: Create a player spawner to spawn the player based on certain flags
 
         // SHOP:
         // TODO: equipment functionality
