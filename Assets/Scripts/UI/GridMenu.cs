@@ -14,7 +14,7 @@ public class GridMenu : Menu
     [Tooltip("The UI object to represent a cell in the grid")]
     [SerializeField] private GameObject _gridItem;
     private List<GameObject> _gridItems = new List<GameObject>();
-    
+
     [Tooltip("The UI object to control the grid's layout")]
     [SerializeField] private GridLayoutGroup _gridLayout;
 
@@ -28,8 +28,8 @@ public class GridMenu : Menu
 
     void NavigateMenu(InputAction.CallbackContext context)
     {
-        int newCursorRow = (int) context.ReadValue<Vector2>().y * -1 * _gridLayout.constraintCount;
-        int newCursorColumn = (int) context.ReadValue<Vector2>().x;
+        int newCursorRow = (int)context.ReadValue<Vector2>().y * -1 * _gridLayout.constraintCount;
+        int newCursorColumn = (int)context.ReadValue<Vector2>().x;
         int newCursorIndex = _cursorIndex + newCursorColumn + newCursorRow;
         SetCursorIndex(newCursorIndex);
         SetActiveInput();
@@ -60,13 +60,13 @@ public class GridMenu : Menu
 
     void SpawnGrid()
     {
-       foreach (ItemData item in _itemList)
-       {
+        foreach (ItemData item in _itemList)
+        {
             // spawn the next item in the grid 
             GameObject newGridItem = Instantiate(_gridItem, transform.position, transform.rotation);
             newGridItem.transform.parent = gameObject.transform;
             _gridItems.Add(newGridItem);
-            
+
             // reset rect scale of UI element
             RectTransform rect = newGridItem.GetComponent<RectTransform>();
             if (rect != null)
@@ -81,6 +81,6 @@ public class GridMenu : Menu
                 itemField.SetItemData(item);
                 _fields.Add(itemField);
             }
-       }
+        }
     }
 }
