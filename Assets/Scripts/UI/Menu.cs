@@ -15,7 +15,7 @@ public class Menu : MonoBehaviour
     public List<InputField> Fields => _fields;
 
     [SerializeField] protected int _cursorIndex;
-    
+
     [Header("TEXT")]
     [Tooltip("The text to explain the current menu item's functionality")]
     [SerializeField] protected TMP_Text _explanationText;
@@ -31,9 +31,9 @@ public class Menu : MonoBehaviour
         _inputHandler.Navigate().performed += NavigateMenu;
     }
 
-    void NavigateMenu(InputAction.CallbackContext context)
+    public virtual void NavigateMenu(InputAction.CallbackContext context)
     {
-        int newCursorPosition = _cursorIndex + (int) context.ReadValue<Vector2>().y * -1;
+        int newCursorPosition = _cursorIndex + (int)context.ReadValue<Vector2>().y * -1;
         SetCursorIndex(newCursorPosition);
         SetCursorPosition();
         SetActiveInput();
@@ -42,7 +42,7 @@ public class Menu : MonoBehaviour
 
     protected void SetCursorIndex(int index)
     {
-         // get the attempted new cursor position
+        // get the attempted new cursor position
         _cursorIndex = index;
 
         // loop back to start of menu list
@@ -75,7 +75,7 @@ public class Menu : MonoBehaviour
 
     protected void SetActiveInput()
     {
-        foreach(InputField field in _fields)
+        foreach (InputField field in _fields)
         {
             field.SetInputEnabled(false);
         }
@@ -89,8 +89,8 @@ public class Menu : MonoBehaviour
     public InputField GetActiveInput()
     {
         InputField activeInput = null;
-        
-        foreach(InputField field in _fields)
+
+        foreach (InputField field in _fields)
         {
             if (field.InputEnabled)
             {
@@ -105,7 +105,7 @@ public class Menu : MonoBehaviour
     {
         if (_fields.Count > 0 && _fields[_cursorIndex] != null)
         {
-            return _fields[_cursorIndex]; 
+            return _fields[_cursorIndex];
         }
 
         return new InputField();
