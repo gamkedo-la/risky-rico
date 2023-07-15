@@ -12,24 +12,22 @@ public class Todo : MonoBehaviour
     // FIXME: state machines via animation controller
 
     // FOR POST-RELEASE:
-        // TODO: Resolve camera/UI differences between hub area and dungeon scenes
+    // SHOP:
+    // TODO: equipment functionality
+    // TODO: emit particles from shop chimney
+    // TODO: change particle texture after player buys things
+    // TODO: play cursor sound
 
-        // SHOP:
-        // TODO: equipment functionality
-        // TODO: emit particles from shop chimney
-        // TODO: change particle texture after player buys things
-        // TODO: play cursor sound
+    // HELL WELL:
+    // TODO: balance difficulty to reward ratio
+    // TODO: update loot drops based on difficulty selection
+    // TODO: make menu appear after talking to hell well
 
-        // HELL WELL:
-        // TODO: balance difficulty to reward ratio
-        // TODO: update loot drops based on difficulty selection
-        // TODO: make menu appear after talking to hell well
+    // SCORE GRAVES:
+    // TODO: show correct grave scores on scene start
 
-        // SCORE GRAVES:
-        // TODO: show correct grave scores on scene start
-
-        // GENERAL: 
-        // TODO: add flags for all character dialog unlocks
-        // TODO: fix chest functionality
-        // TODO: fix sound/music volume changer
+    // GENERAL: 
+    // TODO: add flags for all character dialog unlocks
+    // TODO: fix chest functionality
+    // TODO: fix sound/music volume changer
 }
