@@ -12,7 +12,7 @@ public class Todo : MonoBehaviour
     // FIXME: state machines via animation controller
 
     // FOR POST-RELEASE:
-        // TODO: Resolve camera/UI differences between hub area and dungeon scenes 
+        // TODO: Resolve camera/UI differences between hub area and dungeon scenes
 
         // SHOP:
         // TODO: equipment functionality

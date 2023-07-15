@@ -2436,19 +2436,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
-      propertyPath: m_NormalizedViewPortRect.y
       value: 0.23333335
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_NormalizedViewPortRect.y
+      value: 0.025925925
+      objectReference: {fileID: 0}
+    - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.4
+      value: 0.53333336
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.53333336
+      value: 0.94814813
       objectReference: {fileID: 0}
     - target: {fileID: 3781750290360783605, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_CropFrame
