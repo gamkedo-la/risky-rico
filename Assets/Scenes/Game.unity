@@ -1920,6 +1920,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerPrefab: {fileID: 603381006608176339, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
   _spawnPoint: {fileID: 920558374}
+  _spawnTarget: {fileID: 0}
+  _spawnFlag: enteredDungeon
+  _useFlags: 0
 --- !u!1001 &925929366
 PrefabInstance:
   m_ObjectHideFlags: 0
