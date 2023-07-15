@@ -6,7 +6,6 @@ public class PlayerSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject _playerPrefab;
     [SerializeField] private GameObject _spawnPoint;
-    [SerializeField] private GameObject _spawnTarget;
     [SerializeField] private string _spawnFlag;
     [SerializeField] private bool _useFlags;
 
