@@ -32,6 +32,9 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     [SerializeField] private ModifiableAttribute _shotSpeed = default(ModifiableAttribute);
     public ModifiableAttribute ShotSpeed => _shotSpeed;
 
+    [SerializeField] private WeaponData _defaultWeapon = default(WeaponData);
+    public WeaponData DefaultWeapon => _defaultWeapon;
+
     [SerializeField] private WeaponData _currentWeapon = default(WeaponData);
     public WeaponData CurrentWeapon => _currentWeapon;
 
@@ -124,6 +127,8 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
         _curseSlots.Clear();
 
         InitAttributes();
+
+        _currentWeapon = _defaultWeapon;
     }
 
     public void ResetOnExitPlay()
