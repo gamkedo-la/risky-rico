@@ -459,7 +459,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d07f956522396c488b5da50c8b0aa6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
   _gridMenu: {fileID: 1011550740610510819}
   _itemName: {fileID: 2072276243}
   _itemDescription: {fileID: 8510926852507453907}
@@ -1559,7 +1558,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8510926852478169945, guid: ef85f15abf602284dbc903731b9ffca6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 12
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8510926852478169945, guid: ef85f15abf602284dbc903731b9ffca6, type: 3}
       propertyPath: m_AnchoredPosition.y
