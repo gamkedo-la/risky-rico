@@ -27,4 +27,9 @@ public class PlayerAmmoStore : MonoBehaviour
         _currentAmmo.Value += amount;
         _currentAmmo.Value = Mathf.Clamp(_currentAmmo.Value, 0, (int) _playerAttributes.AmmoCap.CurrentValue);
     }
+
+    public bool MaxAmmo()
+    {
+        return _currentAmmo.Value >= _playerAttributes.AmmoCap.CurrentValue;
+    } 
 }
