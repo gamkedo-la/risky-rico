@@ -59,7 +59,9 @@ public class GridMenu : Menu
 
         if (cursorAnimator != null)
         {
-            cursorAnimator.StartPlayback();
+            cursorAnimator.enabled = false;
+            cursorAnimator.enabled = true;
+            cursorAnimator.SetTrigger("OnNavigate");
         }
     }
 
