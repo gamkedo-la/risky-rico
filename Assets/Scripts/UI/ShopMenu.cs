@@ -75,9 +75,19 @@ public class ShopMenu : MonoBehaviour
         _onShopClose?.Raise();
     }
 
-    bool ItemIsOwned(ItemData item)
+    bool ItemCanBePurchased(ItemData item)
     {
-        return item.WeaponData != null && _playerWeaponStore.HasWeapon(item.WeaponData);
+        // can you afford the item?
+        bool canAfford = _playerMoneyStore.CanAfford(item.Price);
+
+        // if the item provides ammo, do you already have max ammo?
+        bool tooMuchAmmo = _playerAmmoStore.MaxAmmo() && item.AmmoAmount > 0;
+
+        // do you already own the item?
+        bool ownItem = item.WeaponData != null && _playerWeaponStore.HasWeapon(item.WeaponData);
+
+        // purchasing criteria
+        return canAfford && !ownItem && !tooMuchAmmo;
     }
 
     void CheckForOwnedItems()
@@ -85,7 +95,7 @@ public class ShopMenu : MonoBehaviour
         foreach (ShopItemField field in _gridMenu.Fields)
         {
             ItemData item = field.ItemData;
-            if (ItemIsOwned(item))
+            if (!ItemCanBePurchased(item))
             {
                 GameObject shopItemGO = field.gameObject;
                 float transparency = 0.5f;
@@ -99,14 +109,9 @@ public class ShopMenu : MonoBehaviour
     {
         ItemData item = selectedItem.ItemData;
 
-        // do you own the item?
-        bool ownItem = ItemIsOwned(item);
-
-        // can you afford the item?
-        bool canAfford = _playerMoneyStore.CanAfford(item.Price);
-
         // attempt purchase based on criteria
-        if (canAfford && !ownItem)
+        bool canBePurchased = ItemCanBePurchased(item);
+        if (canBePurchased)
         {
             PurchaseItem(item);
             ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Purchase");
