@@ -32,17 +32,26 @@ public class Dialog : MonoBehaviour
     IEnumerator typingCoroutine;
     public bool startOnAwake = false;
     #endregion
-    
+
     #region Methods
     void Awake()
     {
-        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
-        _inputHandler.Interact().performed += UpdateTextProgress;
-
         if (startOnAwake)
         {
             UpdateDialogSequence();
         }
+    }
+
+    void OnDisable()
+    {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Interact().performed -= UpdateTextProgress;
+    }
+
+    void OnEnable()
+    {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Interact().performed += UpdateTextProgress;
     }
 
     void StartDialog()
@@ -79,11 +88,11 @@ public class Dialog : MonoBehaviour
 
         if (textObject.text != currentLine)
         {
-            while(characterIndex <= charactersOfCurrentLine.Length - 1)
+            while (characterIndex <= charactersOfCurrentLine.Length - 1)
             {
                 // get the next character to display
                 char currentCharacter = charactersOfCurrentLine[characterIndex];
-                
+
                 // increment the character index so that we can display another character on the next iteration
                 characterIndex++;
 
@@ -114,7 +123,7 @@ public class Dialog : MonoBehaviour
                 ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Text");
 
                 // wait for a set time before revealing the next character
-                yield return new WaitForSeconds(1f/(float)typingSpeed);
+                yield return new WaitForSeconds(1f / (float)typingSpeed);
             }
         }
     }
@@ -140,7 +149,7 @@ public class Dialog : MonoBehaviour
     {
         _UITextbox.SetActive(false);
         StopCoroutine(typingCoroutine);
-        
+
         if (_dialogSequence.OnDialogEnd != null)
         {
             _dialogSequence.OnDialogEnd.Raise();
@@ -158,7 +167,7 @@ public class Dialog : MonoBehaviour
             index = lines.Length - 1;
             return; // return so that we don't reset the final line to an empty string (see below)
         }
-    
+
         // reset the text so that we have a clear textbox for the next line
         textObject.text = "";
     }
