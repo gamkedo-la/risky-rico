@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using TMPro;
 using ScriptableObjectArchitecture;
@@ -54,6 +55,8 @@ public class ShopMenu : MonoBehaviour
             _statsContainer.active = item.WeaponData != null;
             UpdateStatsContainer(item.WeaponData);
         }
+
+        CheckForOwnedItems();
     }
 
     void SelectItem(InputAction.CallbackContext context)
@@ -72,12 +75,32 @@ public class ShopMenu : MonoBehaviour
         _onShopClose?.Raise();
     }
 
+    bool ItemIsOwned(ItemData item)
+    {
+        return item.WeaponData != null && _playerWeaponStore.HasWeapon(item.WeaponData);
+    }
+
+    void CheckForOwnedItems()
+    {
+        foreach (ShopItemField field in _gridMenu.Fields)
+        {
+            ItemData item = field.ItemData;
+            if (ItemIsOwned(item))
+            {
+                GameObject shopItemGO = field.gameObject;
+                float transparency = 0.5f;
+                Color color = new Color(1f, 1f, 1f, transparency);
+                shopItemGO.GetComponent<CanvasRenderer>().SetColor(color);
+            }
+        }
+    }
+
     void AttemptPurchase(ShopItemField selectedItem)
     {
         ItemData item = selectedItem.ItemData;
 
         // do you own the item?
-        bool ownItem = item.WeaponData != null && _playerWeaponStore.HasWeapon(item.WeaponData);
+        bool ownItem = ItemIsOwned(item);
 
         // can you afford the item?
         bool canAfford = _playerMoneyStore.CanAfford(item.Price);
@@ -146,4 +169,6 @@ public class ShopMenu : MonoBehaviour
 
         return currentItem;
     }
+
+
 }

@@ -13,7 +13,6 @@ public class Todo : MonoBehaviour
 
     // FOR POST-RELEASE:
     // SHOP:
-    // TODO: equipment functionality
     // TODO: emit particles from shop chimney
     // TODO: change particle texture after player buys things
     // TODO: play cursor sound
