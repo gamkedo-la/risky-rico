@@ -32,6 +32,8 @@ MonoBehaviour:
     - Text
     - Footstep
     - Hit
+    - Purchase
+    - Denied
     m_values:
     - {fileID: 11400000, guid: 2235b4818cfa234469793d2d9ae030cd, type: 2}
     - {fileID: 11400000, guid: 45fd6e348b2c6d04ea2507f755e224fc, type: 2}
@@ -44,6 +46,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 2abebc47c61d0b848b64bd10003cb17c, type: 2}
     - {fileID: 11400000, guid: 77452957fea36ec4398f5d174896da9b, type: 2}
     - {fileID: 11400000, guid: edaf99ef899a32c4c8e1dc1a073dd744, type: 2}
+    - {fileID: 11400000, guid: cc2a1583c7e6780499c4c812a67ed033, type: 2}
+    - {fileID: 11400000, guid: 4e49115fdc74b0d4d892eee2615a608d, type: 2}
   musicDictionary:
     m_keys:
     - Combat
