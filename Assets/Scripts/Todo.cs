@@ -29,5 +29,4 @@ public class Todo : MonoBehaviour
     // TODO: fix chest functionality
     // TODO: fix sound/music volume changer
     // TODO: set flags and scene changes for graveyard intro
-    // TODO: re-route back to graveyard on game over
 }

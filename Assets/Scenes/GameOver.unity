@@ -343,6 +343,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Retry
       objectReference: {fileID: 0}
+    - target: {fileID: 870292178765805435, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: graveyard
+      objectReference: {fileID: 0}
     - target: {fileID: 870292178867535401, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
       propertyPath: m_text
       value: RETRY
