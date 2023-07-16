@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class WeaponSlots : MonoBehaviour
 {
     [SerializeField] private PlayerAttributes _player;
+    [SerializeField] private WeaponList _acquiredWeapons;
     private int _currentWeaponIndex = 0;
 
     void Awake()
@@ -17,12 +18,12 @@ public class WeaponSlots : MonoBehaviour
     public void SwitchWeapon(InputAction.CallbackContext context)
     {
         _currentWeaponIndex += 1;
-        if (_currentWeaponIndex == _player.WeaponList.Count)
+        if (_currentWeaponIndex == _acquiredWeapons.Elements.Count)
         {
             _currentWeaponIndex = 0;
         }
 
-        WeaponData nextWeapon = _player.WeaponList[_currentWeaponIndex];
+        WeaponData nextWeapon = _acquiredWeapons.Elements[_currentWeaponIndex];
 
         _player.SetCurrentWeapon(nextWeapon);
 
