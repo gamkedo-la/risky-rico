@@ -22,6 +22,15 @@ public class GridMenu : Menu
     {
         base.Start();
         SpawnGrid();
+
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Interact().performed += GridMenuInteraction;
+    }
+
+    void OnDisable()
+    {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Interact().performed -= GridMenuInteraction;
     }
 
     void Update()
@@ -36,8 +45,8 @@ public class GridMenu : Menu
         int newCursorIndex = (_cursorIndex) + newCursorColumn + newCursorRow;
         SetCursorIndex(newCursorIndex);
         SetActiveInput();
-        AnimateCursor();
         SetCursorPosition();
+        ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Interact");
     }
 
     void SetCursorPosition()
@@ -47,8 +56,13 @@ public class GridMenu : Menu
             GameObject currentItem = _gridItems[_cursorIndex].gameObject;
             Vector3 currentItemPosition = currentItem.transform.position;
             _cursor.transform.position = currentItemPosition;
-
         }
+    }
+
+    void GridMenuInteraction(InputAction.CallbackContext context)
+    {
+        AnimateCursor();
+        ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Interact");
     }
 
     void AnimateCursor()

@@ -105,14 +105,15 @@ public class ShopMenu : MonoBehaviour
         // can you afford the item?
         bool canAfford = _playerMoneyStore.CanAfford(item.Price);
 
-        // attemp purchase based on criteria
+        // attempt purchase based on criteria
         if (canAfford && !ownItem)
         {
             PurchaseItem(item);
+            ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Purchase");
             return;
         }
 
-        Debug.Log("CAN'T BUY ITEM");
+        ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Denied");
     }
 
     void PurchaseItem(ItemData item)
