@@ -20,7 +20,6 @@ public class ScriptableObjectList<T> : ScriptableObject
         if (_elements.Count < _maxLength && !_elements.Contains(element))
         {
             _elements.Add(element);
-            OnAddElement(element);
         }
     }
 
