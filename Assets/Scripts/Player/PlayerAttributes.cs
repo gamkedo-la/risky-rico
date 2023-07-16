@@ -38,9 +38,6 @@ public class PlayerAttributes : AttributeSet, IResetOnExitPlay
     [SerializeField] private WeaponData _currentWeapon = default(WeaponData);
     public WeaponData CurrentWeapon => _currentWeapon;
 
-    [SerializeField] private List<WeaponData> _weaponList = new List<WeaponData>();
-    public List<WeaponData> WeaponList => _weaponList;
-
     [SerializeField] private bool _dualFire;
     public bool DualFire => _dualFire;
 
