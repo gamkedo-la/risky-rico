@@ -27,17 +27,28 @@ public class ShopMenu : MonoBehaviour
     [Header("EVENTS")]
     [SerializeField] private GameEvent _onShopClose;
 
-    void Start()
+    void Awake()
     {
         // player data
         _playerMoneyStore = GetComponent<PlayerMoneyStore>();
         _playerAmmoStore = GetComponent<PlayerAmmoStore>();
         _playerWeaponStore = GetComponent<PlayerWeaponStore>();
+    }
 
-        // inputs
+    void OnEnable()
+    {
+        // subscribe to inputs
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
         _inputHandler.Exit().performed += CloseShop;
         _inputHandler.Interact().performed += SelectItem;
+    }
+
+    void OnDisable()
+    {
+        // unsubscribe from inputs
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Exit().performed -= CloseShop;
+        _inputHandler.Interact().performed -= SelectItem;
     }
 
     void Update()

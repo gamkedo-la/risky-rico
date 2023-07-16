@@ -15,8 +15,6 @@ public class Todo : MonoBehaviour
     // SHOP:
     // TODO: emit particles from shop chimney
     // TODO: change particle texture after player buys things
-    // TODO: play cursor sound
-    // TODO: open/close shop
     // TODO: empty out acquired items on game over
 
     // HELL WELL:
