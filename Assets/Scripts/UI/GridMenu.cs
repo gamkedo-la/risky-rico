@@ -31,8 +31,6 @@ public class GridMenu : Menu
 
     public override void NavigateMenu(InputAction.CallbackContext context)
     {
-        Debug.Log("_cursorIndex");
-        Debug.Log(_cursorIndex);
         int newCursorRow = (int)context.ReadValue<Vector2>().y * -1 * _gridLayout.constraintCount;
         int newCursorColumn = (int)context.ReadValue<Vector2>().x;
         int newCursorIndex = (_cursorIndex) + newCursorColumn + newCursorRow;

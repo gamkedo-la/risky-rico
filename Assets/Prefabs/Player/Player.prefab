@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b32b1f71796f94647b6e9b0d082a1879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _acquiredWeapons: []
+  _acquiredWeapons: {fileID: 11400000, guid: 6216290e66a93c045aa1d03afb90d559, type: 2}
 --- !u!114 &2255163112615161542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
+  _acquiredWeapons: {fileID: 11400000, guid: 6216290e66a93c045aa1d03afb90d559, type: 2}
 --- !u!114 &603381006608176315
 MonoBehaviour:
   m_ObjectHideFlags: 0
