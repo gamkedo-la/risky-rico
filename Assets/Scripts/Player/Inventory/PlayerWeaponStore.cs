@@ -6,14 +6,15 @@ public class PlayerWeaponStore : MonoBehaviour
 {
     #region Inspector Settings
     [Tooltip("The weapons the player currently has access to")]
-    [SerializeField] private List<WeaponData> _acquiredWeapons = new List<WeaponData>();
-    public List<WeaponData> AcquiredWeapons => _acquiredWeapons;
+    [SerializeField] private WeaponList _acquiredWeapons = default(WeaponList);
+    public WeaponList AcquiredWeapons => _acquiredWeapons;
     #endregion
 
     #region Methods
     public void AddWeapon(WeaponData weapon)
     {
-        if (!AcquiredWeapons.Contains(weapon))
+        Debug.Log("Adding Weapon ");
+        if (!AcquiredWeapons.Elements.Contains(weapon))
         {
             _acquiredWeapons.Add(weapon);
         }
@@ -21,7 +22,7 @@ public class PlayerWeaponStore : MonoBehaviour
 
     public void RemoveWeapon(WeaponData weapon)
     {
-        if (AcquiredWeapons.Contains(weapon))
+        if (AcquiredWeapons.Elements.Contains(weapon))
         {
             _acquiredWeapons.Remove(weapon);
         }
@@ -29,7 +30,7 @@ public class PlayerWeaponStore : MonoBehaviour
 
     public bool HasWeapon(WeaponData weapon)
     {
-        return _acquiredWeapons.Contains(weapon);
+        return _acquiredWeapons.Elements.Contains(weapon);
     }
     #endregion
 }
