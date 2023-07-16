@@ -15,7 +15,6 @@ public class Todo : MonoBehaviour
     // SHOP:
     // TODO: emit particles from shop chimney
     // TODO: change particle texture after player buys things
-    // TODO: empty out acquired items on game over
 
     // HELL WELL:
     // TODO: balance difficulty to reward ratio
@@ -30,4 +29,5 @@ public class Todo : MonoBehaviour
     // TODO: fix chest functionality
     // TODO: fix sound/music volume changer
     // TODO: set flags and scene changes for graveyard intro
+    // TODO: re-route back to graveyard on game over
 }

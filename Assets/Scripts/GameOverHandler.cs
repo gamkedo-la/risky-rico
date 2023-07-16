@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 using ScriptableObjectArchitecture;
 
 public class GameOverHandler : MonoBehaviour
-{   
+{
 
     [SerializeField] private float _slowDownRate = 0.01f;
     [SerializeField] private float _gameOverTimer;
     [SerializeField] private IntVariable _gold;
+    [SerializeField] private WeaponList _acquiredWeapons;
+    [SerializeField] private PlayerAttributes _playerAttributes;
     private bool _sequenceStarted = false;
 
     public void StartGameOverSequence()
@@ -17,12 +19,12 @@ public class GameOverHandler : MonoBehaviour
         _sequenceStarted = true;
         ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("GameOver");
     }
-    
+
     void Update()
     {
         if (_sequenceStarted)
         {
-            // lerp slow-mo
+            // lerp slow-mo until it's time for the gameover transition
             Time.timeScale = Mathf.Lerp(Time.timeScale, 0f, _slowDownRate);
         }
 
@@ -32,8 +34,18 @@ public class GameOverHandler : MonoBehaviour
             _gameOverTimer -= Time.unscaledDeltaTime;
             if (_gameOverTimer <= 0f)
             {
+                // bring our timescale back to normal
                 Time.timeScale = 1f;
+
+                // lose all gold collected in the dungeon
                 _gold.Value = 0;
+
+                // lose all weapons purchased or collected in the dungeon
+                _acquiredWeapons.Clear();
+                _acquiredWeapons.Add(_playerAttributes.DefaultWeapon);
+                _playerAttributes.SetCurrentWeapon(_playerAttributes.DefaultWeapon);
+
+                // move to game over menu
                 SceneManager.LoadScene("gameover");
                 _sequenceStarted = false;
             }
