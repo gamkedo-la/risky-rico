@@ -10,6 +10,7 @@ public class GameOverHandler : MonoBehaviour
     [SerializeField] private float _slowDownRate = 0.01f;
     [SerializeField] private float _gameOverTimer;
     [SerializeField] private IntVariable _gold;
+    [SerializeField] private IntVariable _score;
     [SerializeField] private WeaponList _acquiredWeapons;
     [SerializeField] private PlayerAttributes _playerAttributes;
     private bool _sequenceStarted = false;
@@ -37,13 +38,25 @@ public class GameOverHandler : MonoBehaviour
                 // bring our timescale back to normal
                 Time.timeScale = 1f;
 
-                // lose all gold collected in the dungeon
+                // lose all gold collected in the dungeon, but convert points into new gold
                 _gold.Value = 0;
 
                 // lose all weapons purchased or collected in the dungeon
                 _acquiredWeapons.Clear();
                 _acquiredWeapons.Add(_playerAttributes.DefaultWeapon);
                 _playerAttributes.SetCurrentWeapon(_playerAttributes.DefaultWeapon);
+
+                // set flags for entering the dungeon for the first time
+                SaveDataManager dataManager = ServiceLocator.Instance.Get<SaveDataManager>();
+                bool haveEnteredDungeonBefore = dataManager.GetFlag(dataManager.enteredDungeon);
+
+                if (!haveEnteredDungeonBefore)
+                {
+                    dataManager.SetFlag(dataManager.enteredDungeon, true);
+                    dataManager.SetFlag(dataManager.meetHellWell, true);
+                    dataManager.SetFlag(dataManager.meetTippy, true);
+                    dataManager.SetFlag(dataManager.meetShopKeeper, true);
+                }
 
                 // move to game over menu
                 SceneManager.LoadScene("gameover");
