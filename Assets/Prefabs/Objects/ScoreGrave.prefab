@@ -92,12 +92,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7177433555238076019}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7b491ccde957ba47b8022423993ddb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _activeDialogueSequence: {fileID: 11400000, guid: 4ec1a8a081ba3a4468273fe3e5c1296b, type: 2}
   _npcDialogueSequence: {fileID: 0}
+  _availableDialog: []
+  _flaggedDialog:
+    m_keys: []
+    m_values: []
+  useFlags: 0
+  randomDialog: 0
+  randomLine: 0
   _onDialogStart: {fileID: 11400000, guid: 1b5c3581b83d8f143bbb6dd40e2b714c, type: 2}
+  _onDialogEnd: {fileID: 0}
   _interactionPrompt: Read
