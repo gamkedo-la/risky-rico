@@ -7,9 +7,9 @@ public class SaveDataManager : IService
     private readonly string highScoresKey = "HighScores";
 
     private readonly string despositedMoneyKey = "Money";
-    
+
     //TODO: Acquired weapon data
-    
+
     //Settings Keys
     private readonly string masterVolumeKey = "MasterVolume";
     private readonly string musicVolumeKey = "MusicVolume";
@@ -22,8 +22,12 @@ public class SaveDataManager : IService
     private readonly string paidHellWellForLore_1 = "paidHellWellForLore_1";
     private readonly string paidHellWellForLore_2 = "paidHellWellForLore_2";
 
-    // Tutorial flags
+    // Intro flags
     private readonly string finishedTutorial = "finishedTutorial";
+    private readonly string enteredDungeon = "enteredDungeon";
+    private readonly string meetShopKeeper = "meetShopKeeper";
+    private readonly string meetTippy = "meetTippy";
+    private readonly string meetHellWell = "meetHellWell";
 
     public SaveDataManager()
     {
@@ -34,7 +38,7 @@ public class SaveDataManager : IService
     public bool GetFlag(string flagKey)
     {
         string flagValue = PlayerPrefs.GetString(flagKey, "0");
-        return flagValue == "1"; 
+        return flagValue == "1";
     }
 
     public void SetFlag(string flagKey, bool value)
@@ -45,7 +49,7 @@ public class SaveDataManager : IService
 
     public List<Score> GetHighScores()
     {
-        string scores = PlayerPrefs.GetString(highScoresKey,"");
+        string scores = PlayerPrefs.GetString(highScoresKey, "");
         if (scores == "")
         {
             return new List<Score>();
@@ -54,7 +58,7 @@ public class SaveDataManager : IService
     }
     public void SetHighScores(List<Score> highScores)
     {
-        PlayerPrefs.SetString(highScoresKey,JsonUtility.ToJson(highScores));
+        PlayerPrefs.SetString(highScoresKey, JsonUtility.ToJson(highScores));
     }
 
     public int GetDepositedMoney()
@@ -63,7 +67,7 @@ public class SaveDataManager : IService
     }
     public void SetDespositedMoney(int money)
     {
-        PlayerPrefs.SetInt(despositedMoneyKey,money);
+        PlayerPrefs.SetInt(despositedMoneyKey, money);
     }
 
     public float GetMasterVolume()
@@ -73,7 +77,7 @@ public class SaveDataManager : IService
 
     public void SetMasterVolume(float masterVolume)
     {
-        PlayerPrefs.SetFloat(masterVolumeKey,masterVolume);
+        PlayerPrefs.SetFloat(masterVolumeKey, masterVolume);
     }
 
     public float GetMusicVolume()
@@ -83,7 +87,7 @@ public class SaveDataManager : IService
 
     public void SetMusicVolume(float musicVolume)
     {
-        PlayerPrefs.SetFloat(musicVolumeKey,musicVolume);
+        PlayerPrefs.SetFloat(musicVolumeKey, musicVolume);
     }
 
     public float GetSFXVolume()
@@ -93,12 +97,12 @@ public class SaveDataManager : IService
 
     public void SetSFXVolume(float sfxVolume)
     {
-        PlayerPrefs.SetFloat(sfxVolumeKey,sfxVolume);
+        PlayerPrefs.SetFloat(sfxVolumeKey, sfxVolume);
     }
-    
+
     public Resolutions GetResolution()
     {
-        string resolutions = PlayerPrefs.GetString(resolutionKey,"");
+        string resolutions = PlayerPrefs.GetString(resolutionKey, "");
         if (resolutions == "")
         {
             return new Resolutions();
@@ -108,12 +112,12 @@ public class SaveDataManager : IService
 
     public void SetResolution(Resolutions resolutions)
     {
-        PlayerPrefs.SetString(resolutionKey,JsonUtility.ToJson(resolutions));
+        PlayerPrefs.SetString(resolutionKey, JsonUtility.ToJson(resolutions));
     }
 
     public void SetScreenShake(float screenShake)
     {
-        PlayerPrefs.SetFloat(screenShakeKey,screenShake);
+        PlayerPrefs.SetFloat(screenShakeKey, screenShake);
     }
 
     public float GetScreenShake()
@@ -123,9 +127,9 @@ public class SaveDataManager : IService
 
     public void SetFlashingEffects(bool flashingEffects)
     {
-        PlayerPrefs.SetInt(flashingEffectKey,flashingEffects ? 1 : 0);
+        PlayerPrefs.SetInt(flashingEffectKey, flashingEffects ? 1 : 0);
     }
-    
+
     public bool GetFlashingEffects()
     {
         return PlayerPrefs.GetInt(flashingEffectKey, 0) != 0;

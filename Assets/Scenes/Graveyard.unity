@@ -345,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274267268233061671, guid: bde12851b50d8b548829c8ee96450adc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.182836
+      value: 9.14
       objectReference: {fileID: 0}
     - target: {fileID: 4274267268233061671, guid: bde12851b50d8b548829c8ee96450adc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1555,7 +1555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4274267268233061671, guid: bde12851b50d8b548829c8ee96450adc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.217165
+      value: -9.18
       objectReference: {fileID: 0}
     - target: {fileID: 4274267268233061671, guid: bde12851b50d8b548829c8ee96450adc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2074,21 +2074,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: useFlags
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: randomDialog
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _npcDialogueSequence
+      value: 
+      objectReference: {fileID: 11400000, guid: a4d4637d7729cc747bc26499741cf902, type: 2}
+    - target: {fileID: 98582819577549841, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
+      propertyPath: _flaggedDialog.m_keys.Array.data[0]
+      value: meetShopKeeper
+      objectReference: {fileID: 0}
     - target: {fileID: 159154362198391917, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0
+      value: 0.23333335
       objectReference: {fileID: 0}
     - target: {fileID: 159154362198391917, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0
+      value: 0.025925925
       objectReference: {fileID: 0}
     - target: {fileID: 159154362198391917, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 0.53333336
       objectReference: {fileID: 0}
     - target: {fileID: 159154362198391917, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.94814813
       objectReference: {fileID: 0}
     - target: {fileID: 3668164981908263768, guid: 81032fe663b1ed14ebd6190bee35f34c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2445,6 +2461,10 @@ PrefabInstance:
     - target: {fileID: 6463996940641293280, guid: 5739f961e0f9d034c911a99c13cf1a21, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463996940641293281, guid: 5739f961e0f9d034c911a99c13cf1a21, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6463996940641293286, guid: 5739f961e0f9d034c911a99c13cf1a21, type: 3}
       propertyPath: m_Name
