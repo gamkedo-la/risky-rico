@@ -8,6 +8,6 @@ public class PlayerSaveFileHandler : MonoBehaviour
     public void StartNewGame()
     {
         ServiceLocator.Instance.Get<SaveDataManager>().ResetPlayerPrefs();
-        SceneManager.LoadScene("game");
+        SceneManager.LoadScene("graveyard");
     }
 }

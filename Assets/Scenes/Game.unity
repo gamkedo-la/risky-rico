@@ -2453,6 +2453,14 @@ PrefabInstance:
       propertyPath: m_NormalizedViewPortRect.height
       value: 0.94814813
       objectReference: {fileID: 0}
+    - target: {fileID: 871600998685698506, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788811495440113530, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3781750290360783605, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_CropFrame
       value: 3
@@ -2508,6 +2516,10 @@ PrefabInstance:
     - target: {fileID: 5735071932286040171, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6399459316209199172, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6689865221004436167, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2583,6 +2595,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6893428816609155358, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7291794887449848940, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038704308684151139, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8832148421060150193, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8973237077451342919, guid: 0772af49464587347becba7a2d6e1455, type: 3}
