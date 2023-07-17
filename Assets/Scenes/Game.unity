@@ -716,6 +716,7 @@ MonoBehaviour:
   _slowDownRate: 0.05
   _gameOverTimer: 2
   _gold: {fileID: 11400000, guid: 0103ac55808973a439c483965ac9a60a, type: 2}
+  _score: {fileID: 0}
   _acquiredWeapons: {fileID: 11400000, guid: 6216290e66a93c045aa1d03afb90d559, type: 2}
   _playerAttributes: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
 --- !u!114 &760435099
@@ -1253,10 +1254,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d58ca95b4753348bbaf5485fe58f5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerPrefab: {fileID: 603381006608176339, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
+  _prefab: {fileID: 603381006608176339, guid: 7250b633e89527747ad7918b064bfa82, type: 3}
   _spawnPoint: {fileID: 920558374}
   _spawnFlag: enteredDungeon
   _useFlags: 0
+  _flagValueToCheck: 0
 --- !u!1 &1264359270
 GameObject:
   m_ObjectHideFlags: 0
@@ -2507,6 +2509,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6689865221004436167, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689865221004436167, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689865221004436167, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689865221004436167, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875543281033028759, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875543281033028759, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875543281033028759, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6875543281033028759, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6893428816609155358, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2549,6 +2583,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6893428816609155358, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973237077451342919, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973237077451342919, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973237077451342919, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8973237077451342919, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
