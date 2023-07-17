@@ -23,11 +23,11 @@ public class SaveDataManager : IService
     private readonly string paidHellWellForLore_2 = "paidHellWellForLore_2";
 
     // Intro flags
-    private readonly string finishedTutorial = "finishedTutorial";
-    private readonly string enteredDungeon = "enteredDungeon";
-    private readonly string meetShopKeeper = "meetShopKeeper";
-    private readonly string meetTippy = "meetTippy";
-    private readonly string meetHellWell = "meetHellWell";
+    public readonly string finishedTutorial = "finishedTutorial";
+    public readonly string enteredDungeon = "enteredDungeon";
+    public readonly string meetShopKeeper = "meetShopKeeper";
+    public readonly string meetTippy = "meetTippy";
+    public readonly string meetHellWell = "meetHellWell";
 
     public SaveDataManager()
     {
