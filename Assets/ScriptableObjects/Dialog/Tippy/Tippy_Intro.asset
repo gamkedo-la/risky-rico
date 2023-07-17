@@ -26,11 +26,12 @@ MonoBehaviour:
   - _content: "For starters, ummm you\u2019re cursed?"
     _image: {fileID: 0}
   - _content: "I\u2019ve seen this before with some folks. They get the powers of
-      the curse but they keep their free will. It\u2019s like a glitch in the magic
-      or something. "
+      the curse but they keep their free will. "
+    _image: {fileID: 0}
+  - _content: "It\u2019s like a glitch in the magic or something. "
     _image: {fileID: 0}
   - _content: The catch is you can only use the magic while you're in the underground.
-      Closer to the magic radio waves or something ...
+      Closer to the magic ... radio waves ...
     _image: {fileID: 0}
   - _content: "Anyway, the name\u2019s Tippy. Just talk to me if you ever need more
       uhhh advice."
