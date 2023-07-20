@@ -31,6 +31,12 @@ public class Menu : MonoBehaviour
         _inputHandler.Navigate().performed += NavigateMenu;
     }
 
+    protected void OnDisable()
+    {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Navigate().performed -= NavigateMenu;
+    }
+
     public virtual void NavigateMenu(InputAction.CallbackContext context)
     {
         int newCursorPosition = _cursorIndex + (int)context.ReadValue<Vector2>().y * -1;
