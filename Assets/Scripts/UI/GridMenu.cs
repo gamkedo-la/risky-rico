@@ -29,6 +29,8 @@ public class GridMenu : Menu
 
     void OnDisable()
     {
+        base.OnDisable();
+
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
         _inputHandler.Interact().performed -= GridMenuInteraction;
     }

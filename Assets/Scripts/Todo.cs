@@ -15,6 +15,7 @@ public class Todo : MonoBehaviour
     // SHOP:
     // TODO: emit particles from shop chimney
     // TODO: change particle texture after player buys things
+    // TODO: tune prices / gold rate
 
     // HELL WELL:
     // TODO: balance difficulty to reward ratio
@@ -28,4 +29,6 @@ public class Todo : MonoBehaviour
     // TODO: add flags for all character dialog unlocks
     // TODO: fix chest functionality
     // TODO: fix sound/music volume changer
+    // TODO: default money and score to 0 when starting a new game
+    // TODO: get tutorial prompts to appear again when starting a new game
 }
