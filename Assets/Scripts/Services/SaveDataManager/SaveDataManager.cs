@@ -6,9 +6,9 @@ public class SaveDataManager : IService
 {
     private readonly string highScoresKey = "HighScores";
 
-    private readonly string despositedMoneyKey = "Money";
-
-    //TODO: Acquired weapon data
+    // Money Keys
+    private readonly string despositedMoneyKey = "depositedMoney";
+    private readonly string onHandMoney = "onHandMoney";
 
     //Settings Keys
     private readonly string masterVolumeKey = "MasterVolume";
@@ -59,6 +59,16 @@ public class SaveDataManager : IService
     public void SetHighScores(List<Score> highScores)
     {
         PlayerPrefs.SetString(highScoresKey, JsonUtility.ToJson(highScores));
+    }
+
+    public int GetOnHandMoney()
+    {
+        return PlayerPrefs.GetInt(onHandMoney, 0);
+    }
+
+    public void SetOnHandMoney(int money)
+    {
+        PlayerPrefs.SetInt(onHandMoney, money);
     }
 
     public int GetDepositedMoney()

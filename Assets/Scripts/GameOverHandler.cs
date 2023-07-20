@@ -41,6 +41,7 @@ public class GameOverHandler : MonoBehaviour
                 // lose all gold collected in the dungeon, but convert points into new gold
                 _gold.Value = 0;
                 _gold.Value = (int)Mathf.Floor((float)_score.Value / 10f);
+                ServiceLocator.Instance.Get<SaveDataManager>().SetOnHandMoney(_gold.Value);
 
                 // lose all weapons purchased or collected in the dungeon
                 _acquiredWeapons.Clear();

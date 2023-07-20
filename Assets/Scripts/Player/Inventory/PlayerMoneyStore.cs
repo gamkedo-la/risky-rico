@@ -28,6 +28,7 @@ public class PlayerMoneyStore : MonoBehaviour
     private void Awake()
     {
         SetDepositedMoney(ServiceLocator.Instance.Get<SaveDataManager>().GetDepositedMoney());
+        SetOnHandMoney(ServiceLocator.Instance.Get<SaveDataManager>().GetOnHandMoney());
     }
 
     #region Methods
