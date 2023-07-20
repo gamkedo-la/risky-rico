@@ -30,5 +30,4 @@ public class Todo : MonoBehaviour
     // TODO: fix chest functionality
     // TODO: fix sound/music volume changer
     // TODO: default money and score to 0 when starting a new game
-    // TODO: get tutorial prompts to appear again when starting a new game
 }

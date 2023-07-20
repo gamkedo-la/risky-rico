@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 603381006608176298}
   - component: {fileID: 603381006608176297}
   - component: {fileID: 603381006608176291}
-  - component: {fileID: 603381006608176316}
-  - component: {fileID: 603381006608176299}
   - component: {fileID: 603381006608176292}
+  - component: {fileID: 603381006608176299}
+  - component: {fileID: 603381006608176316}
   - component: {fileID: 603381006608176293}
   - component: {fileID: 2184584551925953628}
   - component: {fileID: 2255163112615161542}
@@ -157,7 +157,7 @@ MonoBehaviour:
   _detectionRayLength: 0.07
   _rayBuffer: 0.123
   _freeColliderIterations: 10
---- !u!114 &603381006608176316
+--- !u!114 &603381006608176292
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,11 +166,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 603381006608176339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f6a8a2b41b252940bfb7999b5467b24, type: 3}
+  m_Script: {fileID: 11500000, guid: e3e7402ddd773e543ab0fc7f2e73732f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _curses: {fileID: 11400000, guid: f7b8d9eeab7f2214fb5a93a2a5ae330f, type: 2}
-  _player: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
+  _playerAttributes: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
+  _collider: {fileID: 603381006608176291}
+  _moveClamp: 6
+  _deAcceleration: 60
 --- !u!114 &603381006608176299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +191,7 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 536ed5484cec1994c9bc37510d027939, type: 2}
---- !u!114 &603381006608176292
+--- !u!114 &603381006608176316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -198,13 +200,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 603381006608176339}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3e7402ddd773e543ab0fc7f2e73732f, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f6a8a2b41b252940bfb7999b5467b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAttributes: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
-  _collider: {fileID: 603381006608176291}
-  _moveClamp: 6
-  _deAcceleration: 60
+  _curses: {fileID: 11400000, guid: f7b8d9eeab7f2214fb5a93a2a5ae330f, type: 2}
+  _player: {fileID: 11400000, guid: 8e0f235d22c911e438427fbcb9958f57, type: 2}
 --- !u!114 &603381006608176293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,10 +222,10 @@ MonoBehaviour:
     _constantValue: 60
     _variable: {fileID: 11400000, guid: 0103ac55808973a439c483965ac9a60a, type: 2}
   _depositedMoney:
-    _useConstant: 1
+    _useConstant: 0
     _constantValue: 0
-    _variable: {fileID: 0}
-  _onHandMoneyLimit: 1000
+    _variable: {fileID: 11400000, guid: ba8e9b68b6881804898227dfbb000eca, type: 2}
+  _onHandMoneyLimit: 9999
   _depositMoneyLimit: 5000
 --- !u!114 &2184584551925953628
 MonoBehaviour:
