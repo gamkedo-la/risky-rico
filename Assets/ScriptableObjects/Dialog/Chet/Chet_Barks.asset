@@ -23,6 +23,4 @@ MonoBehaviour:
     _image: {fileID: 0}
   - _content: '* bark * [emphatically]'
     _image: {fileID: 0}
-  - _content: Bark ;) [romantically??]
-    _image: {fileID: 0}
   _onDialogEnd: {fileID: 0}
