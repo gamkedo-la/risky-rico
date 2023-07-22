@@ -792,6 +792,7 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 
     _variable: {fileID: 0}
+  _label: 
 --- !u!1 &6751081589213964679
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +951,7 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 
     _variable: {fileID: 0}
+  _label: 
 --- !u!1 &8392776408498602105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1078,7 @@ GameObject:
   - component: {fileID: 474827982}
   - component: {fileID: 474827981}
   - component: {fileID: 5943322870704775258}
+  - component: {fileID: 4781437854356081604}
   m_Layer: 5
   m_Name: StorageMenu
   m_TagString: Untagged
@@ -1156,9 +1159,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c0bb21d1a52c44f8f9179d513e12e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moneyStore: {fileID: 0}
-  _input: {fileID: 0}
+  _moneyStore: {fileID: 4781437854356081604}
   _moneyIncrement: 100
+  _onClose: {fileID: 11400000, guid: a13fd52ba2d956a47800d9c6710ac6e9, type: 2}
+--- !u!114 &4781437854356081604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9217744624936154310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cae35a9143f7b4a90e8d93024de38b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onHandMoney:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 0103ac55808973a439c483965ac9a60a, type: 2}
+  _depositedMoney:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: ba8e9b68b6881804898227dfbb000eca, type: 2}
+  _onHandMoneyLimit: 9999
+  _depositMoneyLimit: 9999
 --- !u!1001 &7931212974940371104
 PrefabInstance:
   m_ObjectHideFlags: 0
