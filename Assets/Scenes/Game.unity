@@ -2461,6 +2461,10 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 3015506788286053127, guid: 0772af49464587347becba7a2d6e1455, type: 3}
+      propertyPath: _prompts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3781750290360783605, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_CropFrame
       value: 3

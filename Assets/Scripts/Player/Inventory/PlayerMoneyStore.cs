@@ -7,7 +7,7 @@ using ScriptableObjectArchitecture;
 public class PlayerMoneyStore : MonoBehaviour
 {
     #region Inspector Settings
-    
+
     [Header("Money Sources")]
     [Tooltip("How much money the player is currently holding")]
     [SerializeField] private IntReference _onHandMoney;
@@ -15,7 +15,7 @@ public class PlayerMoneyStore : MonoBehaviour
 
     [Tooltip("How much money the player has stored in the shop")]
     [SerializeField] private IntReference _depositedMoney;
-    
+
     [Header("Limits")]
     [Tooltip("The maximum amount of money the player can hold")]
     [SerializeField] private int _onHandMoneyLimit;
@@ -72,13 +72,15 @@ public class PlayerMoneyStore : MonoBehaviour
         {
             SubtractOnHandMoney(amount);
             _depositedMoney.Value += amount;
-        } 
+        }
         else if (amount >= _onHandMoney.Value)
         {
             _depositedMoney.Value += _onHandMoney.Value;
             SubtractOnHandMoney(_onHandMoney.Value);
         }
+
         ServiceLocator.Instance.Get<SaveDataManager>().SetDespositedMoney(_depositedMoney.Value);
+        ServiceLocator.Instance.Get<SaveDataManager>().SetOnHandMoney(_onHandMoney.Value);
     }
 
     public void WithdrawMoney(int amount)
@@ -93,7 +95,9 @@ public class PlayerMoneyStore : MonoBehaviour
             AddOnHandMoney(_depositedMoney.Value);
             _depositedMoney.Value -= _depositedMoney.Value;
         }
+
         ServiceLocator.Instance.Get<SaveDataManager>().SetDespositedMoney(_depositedMoney.Value);
+        ServiceLocator.Instance.Get<SaveDataManager>().SetOnHandMoney(_onHandMoney.Value);
     }
     #endregion
 
