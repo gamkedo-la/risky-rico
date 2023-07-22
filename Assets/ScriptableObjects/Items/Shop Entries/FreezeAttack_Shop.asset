@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76e72387a28e7d4b89bfc5367aa96af, type: 3}
   m_Name: FreezeAttack_Shop
   m_EditorClassIdentifier: 
-  _name: Freeze Attack
-  _description: Freeze enemies and push them back with a follow up attack!
+  _name: Freeze Flake
+  _description: "If you can\u2019t beat \u2018em, freeze \u2018em"
   _ammoAmount: 0
-  _price: 2000
+  _moneyAmount: 0
+  _price: 3000
   _weaponData: {fileID: 11400000, guid: a2abe3a84582ac64cb2e943d563a0d54, type: 2}
   _image: {fileID: 21300000, guid: d8203803e3cb6374f94dc05a28c62f3d, type: 3}
   _spawnSound: {fileID: 0}

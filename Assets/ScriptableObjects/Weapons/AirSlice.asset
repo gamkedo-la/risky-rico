@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: AirSlice
   m_EditorClassIdentifier: 
   _name: Air Slice
-  _description: A gust of wind that slices through anything, even the one who dealt
-    it
+  _description: A gust of wind that slices through anything - including the one who
+    dealt it
   _baseFiringRate: 8
   _baseDamage: 1
-  _baseAmmoUsage: 1
+  _baseAmmoUsage: 2
   _baseBulletCount: 1
   _effect: {fileID: 11400000, guid: a2658ed5746f18b4ba1f671b6a913fd0, type: 2}
   _storeIcon: {fileID: 21300000, guid: c18fd40049635b840bb23fe6efa393b5, type: 3}

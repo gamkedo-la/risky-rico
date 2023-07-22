@@ -15,7 +15,6 @@ public class Todo : MonoBehaviour
     // SHOP:
     // TODO: emit particles from shop chimney
     // TODO: change particle texture after player buys things
-    // TODO: tune prices / gold rate
 
     // HELL WELL:
     // TODO: balance difficulty to reward ratio

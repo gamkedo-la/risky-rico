@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: RockBlock
   m_EditorClassIdentifier: 
   _name: Rock Block
-  _description: Okay, what if I just turn you into a rock? What then??
+  _description: Turn your enemies rocks. Nothing bad will happen, I promise.
   _baseFiringRate: 5
   _baseDamage: 0
-  _baseAmmoUsage: 0
+  _baseAmmoUsage: 1
   _baseBulletCount: 1
   _effect: {fileID: 11400000, guid: ccbb22016ac65c74bbd00fcc6b29e7ae, type: 2}
   _storeIcon: {fileID: 21300000, guid: f6151126563ede74a946597b21518068, type: 3}
