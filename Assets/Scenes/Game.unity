@@ -145,9 +145,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 667373275794218000}
     m_Modifications:
+    - target: {fileID: 619451695847914826, guid: 252e233ef2b69da4fb1a3d667d07fe3e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 940693027829705754, guid: 252e233ef2b69da4fb1a3d667d07fe3e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2382272845965290633, guid: 252e233ef2b69da4fb1a3d667d07fe3e, type: 3}
       propertyPath: m_Name
       value: HellPit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607215715845276852, guid: 252e233ef2b69da4fb1a3d667d07fe3e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39945734
+      objectReference: {fileID: 0}
+    - target: {fileID: 2607215715845276852, guid: 252e233ef2b69da4fb1a3d667d07fe3e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.852932
       objectReference: {fileID: 0}
     - target: {fileID: 5286531100744037667, guid: 252e233ef2b69da4fb1a3d667d07fe3e, type: 3}
       propertyPath: m_RootOrder
@@ -218,6 +234,14 @@ PrefabInstance:
     - target: {fileID: 20422600223848912, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 249114648720797290, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 496441792836124474, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 516867907557974103, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
       propertyPath: m_RootOrder
@@ -318,6 +342,10 @@ PrefabInstance:
     - target: {fileID: 4928225526931155935, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
       propertyPath: m_RootOrder
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252653494750632336, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.036855
       objectReference: {fileID: 0}
     - target: {fileID: 5807253259189867469, guid: 63d13c44c7a719341ac7651eae6cdf06, type: 3}
       propertyPath: m_RootOrder
@@ -2268,6 +2296,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 667373275794218000}
     m_Modifications:
+    - target: {fileID: 128486035267403332, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.8363955
+      objectReference: {fileID: 0}
     - target: {fileID: 836941257620849111, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2360,6 +2392,14 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5357134751570069950, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750783322297129198, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6703573949279530265, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
       propertyPath: m_Size.x
       value: 1.0625
@@ -2375,6 +2415,14 @@ PrefabInstance:
     - target: {fileID: 7192082773042714749, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
       propertyPath: m_Name
       value: Caverns
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416954989169160256, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.16401064
+      objectReference: {fileID: 0}
+    - target: {fileID: 7416954989169160256, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.453018
       objectReference: {fileID: 0}
     - target: {fileID: 7635149893725725143, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
       propertyPath: m_Controller
@@ -2439,19 +2487,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.23333335
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.025925925
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.53333336
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.94814813
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 871600998685698506, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_IsActive

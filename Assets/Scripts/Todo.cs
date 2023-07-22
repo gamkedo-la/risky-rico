@@ -27,7 +27,6 @@ public class Todo : MonoBehaviour
 
     // GENERAL: 
     // TODO: add flags for all character dialog unlocks
-    // TODO: fix chest functionality
     // TODO: fix sound/music volume changer
     // TODO: disable player movement in menus
 }

@@ -98,3 +98,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interactionPrompt: Go back to graveyard?
+  _playerMoney: {fileID: 11400000, guid: 0103ac55808973a439c483965ac9a60a, type: 2}
