@@ -134,7 +134,7 @@ public class ShopMenu : MonoBehaviour
 
     void PurchaseItem(ItemData item)
     {
-        _playerMoneyStore.SubtractOnHandMoney(item.Price);
+        _playerMoneyStore.SpendMoney(item.Price);
 
         bool isWeapon = item.WeaponData != null;
 

@@ -52,6 +52,12 @@ public class PlayerMoneyStore : MonoBehaviour
         _onHandMoney.Value = Mathf.Clamp(_onHandMoney.Value, 0, _onHandMoneyLimit);
     }
 
+    public void SpendMoney(int amount)
+    {
+        SubtractOnHandMoney(amount);
+        ServiceLocator.Instance.Get<SaveDataManager>().SetOnHandMoney(_onHandMoney.Value);
+    }
+
     public bool CanAfford(int amount)
     {
         return amount <= _onHandMoney.Value;
