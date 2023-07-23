@@ -26,7 +26,10 @@ public class Menu : MonoBehaviour
 
         SetActiveInput();
         SetExplanationText(GetCurrentField().Description);
+    }
 
+    protected void OnEnable()
+    {
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
         _inputHandler.Navigate().performed += NavigateMenu;
     }

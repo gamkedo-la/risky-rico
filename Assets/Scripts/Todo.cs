@@ -28,4 +28,11 @@ public class Todo : MonoBehaviour
     // TODO: add flags for all character dialog unlocks
     // TODO: fix sound/music volume changer
     // TODO: disable player movement in menus
+    // TODO: shopkeeper only appears after first gameover, not first dungeon entrance
+    // TODO: sound on weapon switch is crazy loud
+    // TODO: purchasing doesn't seem to affect the save data value of money
+    // TODO: can still shoot and die in the hub area
+    // TODO: no sound plays when picking up a curse
+    // TODO: no explanation is given for curses before collecting them
+    // TODO: old weapon items are left in dungeon; they do nothing
 }

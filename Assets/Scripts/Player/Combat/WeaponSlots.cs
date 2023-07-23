@@ -9,7 +9,12 @@ public class WeaponSlots : MonoBehaviour
     [SerializeField] private WeaponList _acquiredWeapons;
     private int _currentWeaponIndex = 0;
 
-    void Awake()
+    void OnDisable()
+    {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.SwitchWeapon().performed -= SwitchWeapon;
+    }
+    void OnEnable()
     {
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
         _inputHandler.SwitchWeapon().performed += SwitchWeapon;

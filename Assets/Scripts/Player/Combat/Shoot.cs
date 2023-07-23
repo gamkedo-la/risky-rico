@@ -11,10 +11,15 @@ public class Shoot : MonoBehaviour
     [SerializeField] private IntReference _ammo;
     [SerializeField] private PlayerMoneyStore _moneyStore;
 
-    void Awake()
+    void OnEnable()
     {
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
         _inputHandler.Shoot().performed += OnShootWrapper;
+    }
+    void OnDisable()
+    {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Shoot().performed -= OnShootWrapper;
     }
 
     void OnShootWrapper(InputAction.CallbackContext context)

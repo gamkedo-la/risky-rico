@@ -22,7 +22,12 @@ public class GridMenu : Menu
     {
         base.Start();
         SpawnGrid();
+    }
 
+    void OnEnable()
+    {
+        base.OnEnable();
+        
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
         _inputHandler.Interact().performed += GridMenuInteraction;
     }
