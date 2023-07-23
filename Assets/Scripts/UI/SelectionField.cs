@@ -11,7 +11,7 @@ public class SelectionField : InputField
 
     [Tooltip("List of acceptable values for this field")]
     [SerializeField] private List<string> _values;
-    
+
     [Tooltip("The index used to retrive the active value in our list")]
     [SerializeField] private int _valueIndex = 0;
 
@@ -21,11 +21,20 @@ public class SelectionField : InputField
         {
             _labelTextObject.text = _label;
         }
-   
-        UpdateValue();
 
+        UpdateValue();
+    }
+
+    void OnEnable()
+    {
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
         _inputHandler.Navigate().performed += HandleInput;
+    }
+
+    void OnDisable()
+    {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Navigate().performed -= HandleInput;
     }
 
     protected override void HandleInput(InputAction.CallbackContext context)
@@ -41,14 +50,14 @@ public class SelectionField : InputField
     void UpdateValueIndex(InputAction.CallbackContext context)
     {
         // get next value index
-        _valueIndex += (int) context.ReadValue<Vector2>().x;
+        _valueIndex += (int)context.ReadValue<Vector2>().x;
 
         // loop to start of the list
         if (_valueIndex > _values.Count - 1)
         {
             _valueIndex = 0;
         }
-        
+
         // loop to end of the list
         if (_valueIndex < 0)
         {
@@ -59,7 +68,7 @@ public class SelectionField : InputField
     public string GetCurrentValue()
     {
         return _values[_valueIndex];
-    } 
+    }
 
     void UpdateValue()
     {

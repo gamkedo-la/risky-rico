@@ -11,9 +11,14 @@ public class PlayerCurseStore : MonoBehaviour
     [Header("Player")]
     [SerializeField] private PlayerAttributes _player;
 
-    void Awake()
+    void OnEnable()
     {
         _curses.OnAddCurse += ActivateCurse;
+    }
+
+    void OnDisable()
+    {
+        _curses.OnAddCurse -= ActivateCurse;
     }
 
     private void ActivateCurse(CurseData curse)

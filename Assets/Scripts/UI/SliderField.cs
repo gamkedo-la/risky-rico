@@ -16,8 +16,18 @@ public class SliderField : InputField
     void Awake()
     {
         base.Awake();
+    }
+
+    void OnEnable()
+    {
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
         _inputHandler.Navigate().performed += HandleInput;
+    }
+
+    void OnDisable()
+    {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Navigate().performed -= HandleInput;
     }
 
     protected override void HandleInput(InputAction.CallbackContext context)
