@@ -8,10 +8,16 @@ public class ButtonField : InputField
 {
     [SerializeField] private Button _button;
 
-    void Awake()
+    void OnEnable()
     {
         InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
         _inputHandler.Interact().performed += HandleInput;
+    }
+
+    void OnDisable()
+    {
+        InputHandler _inputHandler = ServiceLocator.Instance.Get<InputManager>().Inputs();
+        _inputHandler.Interact().performed -= HandleInput;
     }
 
     protected override void HandleInput(InputAction.CallbackContext context)

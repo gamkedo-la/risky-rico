@@ -8,6 +8,11 @@ public class DifficultyCalculation : MonoBehaviour
     [SerializeField] private List<DifficultySetting> settings = new List<DifficultySetting>();
     [SerializeField] private TMP_Text costText;
     [SerializeField] private TMP_Text rewardText;
+    
+    private float _totalCost;
+    private float _totalRewardBoost;
+    public float TotalCost => _totalCost;
+    public float TotalRewardBoost => _totalRewardBoost;
 
     void Update()
     {
@@ -52,6 +57,9 @@ public class DifficultyCalculation : MonoBehaviour
 
         totalCost = Mathf.Floor(totalCost);
         totalRewardBoost = Mathf.Round(totalRewardBoost * 10f) / 10f;
+
+        _totalCost = totalCost;
+        _totalRewardBoost = totalRewardBoost;
 
         costText.text = "" + totalCost;
         rewardText.text = "" + totalRewardBoost +"<color=#d95763>X</color>";
