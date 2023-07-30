@@ -29,6 +29,7 @@ public class Todo : MonoBehaviour
     // TODO: fix sound/music volume changer
     // TODO: disable player movement in menus
     // TODO: shopkeeper only appears after first gameover, not first dungeon entrance
+    // -- could solve this by making the player feeble on first dungeon attempt - gain powers on death
     // TODO: no sound plays when picking up a curse
     // TODO: no explanation is given for curses before collecting them
     // TODO: old weapon items are left in dungeon; they do nothing
