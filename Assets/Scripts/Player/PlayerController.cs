@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     public FrameInput Input { get; private set; }
     public Vector3 RawMovement { get; private set; }
     public bool Grounded => _collider.ColDown;
+    public Animator anim;
 
     // Private members
     private Vector3 _lastPosition;
@@ -30,7 +31,10 @@ public class PlayerController : MonoBehaviour, IPlayerController {
     
     private void Update() 
     {
-        if(!_active) return;
+        // Don't let the player move if they're navigating a menu or dialog box
+        bool inMenu = anim.GetBool("InMenu");
+        if(!_active || inMenu) return;
+
         // Calculate velocity
         Velocity = (transform.position - _lastPosition) / Time.deltaTime;
         _lastPosition = transform.position;

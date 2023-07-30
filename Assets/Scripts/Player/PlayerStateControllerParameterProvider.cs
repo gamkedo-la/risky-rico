@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class PlayerStateControllerParameterProvider : MonoBehaviour
 {
-    [SerializeField] Animator _animator;
-    [SerializeField] bool _inMenu;
+    [SerializeField] private Animator _animator;
+    [SerializeField] private bool _inMenu;
 
-    void Awake()
+    void Update()
     {
         _animator.SetBool("InMenu", _inMenu);
+    }
+
+    public void SetMenuState(bool inMenu)
+    {
+        _inMenu = inMenu;
     }
 }
