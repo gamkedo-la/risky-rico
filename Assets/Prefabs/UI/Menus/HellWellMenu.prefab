@@ -1155,6 +1155,18 @@ PrefabInstance:
       propertyPath: _description
       value: Accept the difficulty changes
       objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fb638ebe39439d4fbac81ada367cf4e, type: 2}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
 --- !u!224 &2726524207960795866 stripped
@@ -1303,6 +1315,18 @@ PrefabInstance:
     - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
       propertyPath: _description
       value: Exit the menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 7fb638ebe39439d4fbac81ada367cf4e, type: 2}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528799403754262292, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
+      propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ScriptableObjectArchitecture.GameEventBase, ScriptableObject-Architecture
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e108b5d6763f84543bcf7982869c2a91, type: 3}
