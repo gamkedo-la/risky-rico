@@ -46,7 +46,7 @@ public class EnemySpawnController : MonoBehaviour
     #region Difficulty Settings
     [Header("DIFFICULTY SETTINGS")]
     [SerializeField] private FloatVariable _enemySpeedModifier;
-    [SerializeField] private FloatVariable _maxEnemyCountModifier;
+    [SerializeField] private FloatVariable _minEnemyCountModifier;
     #endregion
 
     #region Events
@@ -112,7 +112,7 @@ public class EnemySpawnController : MonoBehaviour
                 int numberOfEnemies = activeEnemies.Length;
 
                 // only spawn enemies when none are active
-                if (numberOfEnemies <= currentWave.MinEnemyCount && _currentWaveSpawnCount <= currentWave.SpawnCount)
+                if (numberOfEnemies <= currentWave.MinEnemyCount + (int) _minEnemyCountModifier.Value && _currentWaveSpawnCount <= currentWave.SpawnCount)
                 {
                     // --- get current pattern
                     EnemyPattern currentPattern = currentWave.EnemyPatterns[Random.Range(0, currentWave.EnemyPatterns.Count)];

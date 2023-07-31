@@ -1287,6 +1287,7 @@ MonoBehaviour:
   _spawnFlag: enteredDungeon
   _useFlags: 0
   _flagValueToCheck: 0
+  _disabledComponents: []
 --- !u!1 &1264359270
 GameObject:
   m_ObjectHideFlags: 0
@@ -2487,19 +2488,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0
+      value: 0.23333335
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0
+      value: 0.025925925
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 1
+      value: 0.53333336
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 1
+      value: 0.94814813
       objectReference: {fileID: 0}
     - target: {fileID: 871600998685698506, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_IsActive

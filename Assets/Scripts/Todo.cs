@@ -22,7 +22,6 @@ public class Todo : MonoBehaviour
     
     // TODO: ensure all difficulty modifications affect gameplay as expected
     // TODO: --- speed
-    // TODO: --- count
     // TODO: --- curses
     // TODO: --- weapons
     // TODO: prevent player from wasting their money when re-opening the menu
