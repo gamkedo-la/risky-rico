@@ -43,6 +43,12 @@ public class EnemySpawnController : MonoBehaviour
     private GameObject _previousSpawnPoint;
     #endregion
 
+    #region Difficulty Settings
+    [Header("DIFFICULTY SETTINGS")]
+    [SerializeField] private FloatVariable _enemySpeedModifier;
+    [SerializeField] private FloatVariable _maxEnemyCountModifier;
+    #endregion
+
     #region Events
     [Header("EVENTS")]
     [Tooltip("Signifies when a wave begins")]
@@ -99,7 +105,7 @@ public class EnemySpawnController : MonoBehaviour
 
                 // get our current point in the speed fluctuation
                 float CurrentWaveEnemySpeed = currentWave.SpeedRateChange.Value.Evaluate(_waveTimer / currentWave.Duration);
-                float SpeedModifier = currentWave.SpeedFactor + currentWave.SpeedFactor * CurrentWaveEnemySpeed;
+                float SpeedModifier = (currentWave.SpeedFactor + currentWave.SpeedFactor * CurrentWaveEnemySpeed);
        
                 // get count of enemies on screen
                 GameObject[] activeEnemies = GameObject.FindGameObjectsWithTag("Enemy");
