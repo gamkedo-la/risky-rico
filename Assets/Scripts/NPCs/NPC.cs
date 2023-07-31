@@ -77,7 +77,7 @@ public class NPC : MonoBehaviour, IInteractable
             selectedDialogSequence = randomDialog && flaggedSequence == null ? GetRandomDialogSequence() : selectedDialogSequence;
 
             // if we want a random line of a sequence, set our selected sequences lines to match the retrieved line
-            List<DialogLine> selectedDialogLines = randomLine ? GetRandomDialogLine(selectedDialogSequence) : selectedDialogSequence.Lines;
+            List<DialogLine> selectedDialogLines = randomLine && flaggedSequence == null ? GetRandomDialogLine(selectedDialogSequence) : selectedDialogSequence.Lines;
             _activeDialogueSequence.SetLines(selectedDialogLines);
 
             // only set our end event if we have one to use
