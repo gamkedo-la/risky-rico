@@ -7,7 +7,7 @@ public class PlayerCurseStore : MonoBehaviour
 {
     [Header("Slots")]
     [SerializeField] private CurseList _curses;
-    
+
     [Header("Player")]
     [SerializeField] private PlayerAttributes _player;
 
@@ -23,7 +23,10 @@ public class PlayerCurseStore : MonoBehaviour
 
     private void ActivateCurse(CurseData curse)
     {
-        AddCurse(curse);
+        foreach (Modifier mod in curse.Modifiers)
+        {
+            _player.ApplyModifier(mod);
+        }
     }
 
     public void RemoveCurse(CurseData curse)
@@ -31,7 +34,7 @@ public class PlayerCurseStore : MonoBehaviour
         if (_curses.Elements.Contains(curse))
         {
             _curses.Remove(curse);
-             foreach(Modifier mod in curse.Modifiers)
+            foreach (Modifier mod in curse.Modifiers)
             {
                 _player.RemoveModifier(mod);
             }
@@ -43,7 +46,7 @@ public class PlayerCurseStore : MonoBehaviour
         if (!_curses.Elements.Contains(curse))
         {
             _curses.Add(curse);
-            foreach(Modifier mod in curse.Modifiers)
+            foreach (Modifier mod in curse.Modifiers)
             {
                 _player.ApplyModifier(mod);
             }

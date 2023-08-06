@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b96debdf4c1ef4aaf7783bc44c9f46, type: 3}
   m_Name: AllWeapons
   m_EditorClassIdentifier: 
-  _elements: []
+  _elements:
+  - {fileID: 11400000, guid: 0c067d4eb4affc24ca8d8b13fab7cd27, type: 2}
+  - {fileID: 11400000, guid: 4047390979408764e98da0c07486dcb0, type: 2}
+  - {fileID: 11400000, guid: a2abe3a84582ac64cb2e943d563a0d54, type: 2}
+  - {fileID: 11400000, guid: 892b2bdc5943a5243a2eefd46ed99cd1, type: 2}
   _maxLength: 0
