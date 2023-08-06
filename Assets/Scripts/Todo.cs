@@ -19,9 +19,8 @@ public class Todo : MonoBehaviour
     // HELL WELL:
     // TODO: balance difficulty to reward ratio
     // TODO: update loot drops based on difficulty selection
-    
+
     // TODO: ensure all difficulty modifications affect gameplay as expected
-    // TODO: --- speed
     // TODO: --- curses
     // TODO: --- weapons
     // TODO: prevent player from wasting their money when re-opening the menu

@@ -37,7 +37,7 @@ public class EnemySpawnController : MonoBehaviour
 
     [Tooltip("Acceptable locations to spawn the prefab")]
     [SerializeField] private List<GameObject> _spawnPoints = new List<GameObject>();
-    
+
     [Tooltip("Collection of game objects that have been spawned (used for deleting all objects in cleanup)")]
     [SerializeField, HideCustomDrawer] private GameObjectCollection _spawnedObjects;
     private GameObject _previousSpawnPoint;
@@ -86,7 +86,7 @@ public class EnemySpawnController : MonoBehaviour
         // get current wave with waveIndex
         WaveData currentWave = _waves[_waveIndex];
 
-        switch(_state) 
+        switch (_state)
         {
             case SpawnState.STOP:
                 break;
@@ -106,29 +106,29 @@ public class EnemySpawnController : MonoBehaviour
                 // get our current point in the speed fluctuation
                 float CurrentWaveEnemySpeed = currentWave.SpeedRateChange.Value.Evaluate(_waveTimer / currentWave.Duration);
                 float SpeedModifier = (currentWave.SpeedFactor + currentWave.SpeedFactor * CurrentWaveEnemySpeed);
-       
+
                 // get count of enemies on screen
                 GameObject[] activeEnemies = GameObject.FindGameObjectsWithTag("Enemy");
                 int numberOfEnemies = activeEnemies.Length;
 
                 // only spawn enemies when none are active
-                if (numberOfEnemies <= currentWave.MinEnemyCount + (int) _minEnemyCountModifier.Value && _currentWaveSpawnCount <= currentWave.SpawnCount)
+                if (numberOfEnemies <= currentWave.MinEnemyCount + (int)_minEnemyCountModifier.Value && _currentWaveSpawnCount <= currentWave.SpawnCount)
                 {
                     // --- get current pattern
                     EnemyPattern currentPattern = currentWave.EnemyPatterns[Random.Range(0, currentWave.EnemyPatterns.Count)];
-                    
+
                     // --- spawn enemies in a specific pattern
                     SpawnEnemyPattern(currentPattern, SpeedModifier);
                 }
 
-                
+
                 // if wave has ended
                 if (_currentWaveSpawnCount >= currentWave.SpawnCount && numberOfEnemies <= 0)
                 {
                     // --- reset spawn count and timer
                     _currentWaveSpawnCount = 0;
                     _waveTimer = 0;
-                    
+
                     // --- set spawn state to REST
                     _state = SpawnState.REST;
                     _restEvent?.Raise();
@@ -169,11 +169,11 @@ public class EnemySpawnController : MonoBehaviour
         }
 
         GameObject spawnPoint;
-        
+
         do
         {
             spawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Count)];
-        } 
+        }
         while (GameObject.ReferenceEquals(spawnPoint, _previousSpawnPoint));
 
         _previousSpawnPoint = spawnPoint;
@@ -182,7 +182,7 @@ public class EnemySpawnController : MonoBehaviour
         float offsetAmount = 1f;
         float spawnedEnemyCount = 0;
 
-        foreach(EnemyAttributes enemyType in pattern.Enemies)
+        foreach (EnemyAttributes enemyType in pattern.Enemies)
         {
             // get spawn point data
             SpawnData spawnPointData = spawnPoint.GetComponent<SpawnData>();
@@ -191,7 +191,7 @@ public class EnemySpawnController : MonoBehaviour
             float xOffset = spawnPointData.XDirection * offsetAmount * spawnedEnemyCount;
             float yOffset = spawnPointData.YDirection * offsetAmount * spawnedEnemyCount;
             Vector3 spawnPosition = spawnPointTransform.position;
-            Vector3 spawnPositionWithOffSet = new Vector3(spawnPosition.x - xOffset, spawnPosition.y - yOffset, spawnPosition.z); 
+            Vector3 spawnPositionWithOffSet = new Vector3(spawnPosition.x - xOffset, spawnPosition.y - yOffset, spawnPosition.z);
             GameObject spawnedObject = Instantiate(_spawnPrefab, spawnPositionWithOffSet, Quaternion.identity);
 
             // set the enemy's movement direction based on spawn point data
@@ -200,7 +200,7 @@ public class EnemySpawnController : MonoBehaviour
                 spawnedObject.GetComponent<Enemy>().SetAttributes(enemyType);
                 spawnedObject.GetComponent<MoveInOwnDirection>()?.SetDirection(new Vector2(spawnPointData.XDirection, spawnPointData.YDirection));
                 MoveTowardClosest enemyMovement = spawnedObject.GetComponent<MoveTowardClosest>();
-                enemyMovement?.SetSpeed((enemyMovement.Speed * speedModifier) - spawnedEnemyCount * 0.2f);
+                enemyMovement?.SetSpeed((enemyMovement.Speed * _enemySpeedModifier.Value) - spawnedEnemyCount * 0.2f);
             }
 
             // track spawned object in a list
@@ -217,13 +217,13 @@ public class EnemySpawnController : MonoBehaviour
         {
             if (i > 0)
             {
-                _spawnedObjects[i].GetComponent<MoveTowardClosest>().SetTargetObject(_spawnedObjects[i-1]);
+                _spawnedObjects[i].GetComponent<MoveTowardClosest>().SetTargetObject(_spawnedObjects[i - 1]);
             }
         }
 
         _currentWaveSpawnCount += 1;
     }
-    
+
     public void ResetState()
     {
         _state = SpawnState.WAVE;

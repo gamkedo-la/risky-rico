@@ -2634,7 +2634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6de1a60c1f0a41479671ee0e8f23be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _float: {fileID: 11400000, guid: 675773d6d0afd38409636d1a8a828fd1, type: 2}
+  _float: {fileID: 11400000, guid: 1ab51e5bf01849c479ef8f7fe38ce52e, type: 2}
   _slider: {fileID: 4122782984510352683}
 --- !u!114 &1350721042
 MonoBehaviour:

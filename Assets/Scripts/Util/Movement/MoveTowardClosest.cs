@@ -58,6 +58,6 @@ public class MoveTowardClosest : MonoBehaviour
 
    void MoveTowardObject(GameObject target)
    {
-        transform.position = Vector2.Lerp(transform.position, target.transform.position, Time.deltaTime * _currentSpeed);
+        transform.position = Vector2.Lerp(transform.position, target.transform.position, Time.deltaTime * _speed);
    }
 }
