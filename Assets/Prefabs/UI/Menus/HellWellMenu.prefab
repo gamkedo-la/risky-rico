@@ -448,6 +448,10 @@ MonoBehaviour:
   _maxEnemyCount: {fileID: 11400000, guid: 90a91136dfd658b48878d8c6b9dfedc6, type: 2}
   _randomCurses: {fileID: 11400000, guid: fc413000ab0833140ac78021535b118a, type: 2}
   _randomAbilities: {fileID: 11400000, guid: c15c49cb387d3b343a53e0ba39e18ca3, type: 2}
+  _speedSlider: {fileID: 1350721041}
+  _countSlider: {fileID: 856829690}
+  _randomCurseToggle: {fileID: 4793941776544528905}
+  _randomWeaponToggle: {fileID: 4389630035209430657}
   _playerMoneyStore: {fileID: 6648342897565900265}
   _onClose: {fileID: 11400000, guid: 7fb638ebe39439d4fbac81ada367cf4e, type: 2}
 --- !u!114 &6648342897565900265
@@ -1526,7 +1530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8626482491602490610, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
       propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8626482491602490610, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
       propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -2489,7 +2493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8626482491602490610, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
       propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8626482491602490610, guid: 98a39d0edc1f94444b2f7203f3aef389, type: 3}
       propertyPath: _onInput.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

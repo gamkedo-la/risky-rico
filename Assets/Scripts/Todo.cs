@@ -20,10 +20,6 @@ public class Todo : MonoBehaviour
     // TODO: balance difficulty to reward ratio
     // TODO: update loot drops based on difficulty selection
 
-    // TODO: ensure all difficulty modifications affect gameplay as expected
-    // TODO: --- curses
-    // TODO: prevent player from wasting their money when re-opening the menu
-
     // SCORE GRAVES:
     // TODO: show correct grave scores on scene start
 

@@ -12,21 +12,35 @@ public class DifficultyMenuController : MonoBehaviour
     [SerializeField] private BoolVariable _randomCurses;
     [SerializeField] private BoolVariable _randomAbilities;
 
+    [Header("FIELDS")]
+    [SerializeField] private SliderSOVariable _speedSlider;
+    [SerializeField] private SliderSOVariable _countSlider;
+    [SerializeField] private ToggleSOVariable _randomCurseToggle;
+    [SerializeField] private ToggleSOVariable _randomWeaponToggle;
+
     [Header("STORES")]
     [SerializeField] private PlayerMoneyStore _playerMoneyStore;
 
     [Header("EVENTS")]
     [SerializeField] private GameEvent _onClose;
 
+    public void ApplyChanges()
+    {
+        _speedSlider.UpdateValue();
+        _countSlider.UpdateValue();
+        _randomCurseToggle.UpdateValue();
+        _randomWeaponToggle.UpdateValue();
+    }
     public void AcceptChanges()
     {
         // accept the cost of the difficulty changes and close the menu
-        int cost = (int) _totalDifficultyCalculation.TotalCost;
+        int cost = (int)_totalDifficultyCalculation.TotalCost;
         if (_playerMoneyStore.CanAfford(cost))
         {
             _playerMoneyStore.SpendMoney(cost);
             _onClose?.Raise();
             ServiceLocator.Instance.Get<AudioManager>().PlaySoundFromDictionary("Purchase");
+            ApplyChanges();
             return;
         }
 
@@ -36,11 +50,6 @@ public class DifficultyMenuController : MonoBehaviour
 
     public void RejectChanges()
     {
-        // reset difficulty values back to default before closing
-        _baseEnemySpeed.Value = 1f;
-        _maxEnemyCount.Value = 1f;
-        _randomCurses.Value = false;
-        _randomAbilities.Value = false;
         _onClose?.Raise();
     }
 }
