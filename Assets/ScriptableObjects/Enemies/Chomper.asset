@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Chomper
   m_EditorClassIdentifier: 
   _moveSpeed:
-    _baseValue: 2
-    _currentValue: 2
+    _baseValue: 1
+    _currentValue: 1
     _modifiers: []
   _rotationFrequency:
     _baseValue: 0
@@ -32,7 +32,7 @@ MonoBehaviour:
     _baseValue: 1
     _currentValue: 1
     _modifiers: []
-  _baseMoveSpeed: 2
+  _baseMoveSpeed: 1
   _baseRotationFrequency: 0
   _baseSwerveAmplitude: 0
   _baseSwerveFrequency: 0
