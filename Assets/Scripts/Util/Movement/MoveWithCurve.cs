@@ -5,21 +5,17 @@ using ScriptableObjectArchitecture;
 
 public class MoveWithCurve : MonoBehaviour
 {
-    private AnimationCurve _movementCurve;
     private float _baseY;
+    [SerializeField] private float _amplitude = 1f;
+    [SerializeField] private float _frequency = 1f;
 
     void Awake()
     {
         _baseY = transform.position.y;
-        _movementCurve = new AnimationCurve();
-        _movementCurve.AddKey( new Keyframe( 0, 0.5f, 0, 0 ) );
-        _movementCurve.AddKey( new Keyframe( 0.5f, 0f, 0, 0 ) );
-        _movementCurve.AddKey( new Keyframe( 1, 0.5f, 0, 0 ) );
-        _movementCurve.AddKey( new Keyframe( 1.5f, 0f, 0, 0 ) );
     }
 
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, _baseY + _movementCurve.Evaluate((Time.time % _movementCurve.length)), transform.position.z);
+        transform.position = new Vector3(transform.position.x, _baseY + Mathf.Sin(Time.time * _frequency) * _amplitude, transform.position.z);
     }
 }
