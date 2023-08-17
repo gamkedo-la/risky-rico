@@ -165,6 +165,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.852932
       objectReference: {fileID: 0}
+    - target: {fileID: 2633742687088179241, guid: 252e233ef2b69da4fb1a3d667d07fe3e, type: 3}
+      propertyPath: _parameters
+      value: 
+      objectReference: {fileID: 11400000, guid: 8cd5f452f88346046950ebbf918f23ef, type: 2}
     - target: {fileID: 5286531100744037667, guid: 252e233ef2b69da4fb1a3d667d07fe3e, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2403,6 +2407,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5530066322052098779, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
+      propertyPath: _parameters
+      value: 
+      objectReference: {fileID: 11400000, guid: 8cd5f452f88346046950ebbf918f23ef, type: 2}
     - target: {fileID: 5750783322297129198, guid: d667c442a6669e246b517b0f21ca356d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2494,19 +2502,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.23333335
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.025925925
+      value: 0.14444445
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.53333336
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 859277144467758652, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.94814813
+      value: 0.7111111
       objectReference: {fileID: 0}
     - target: {fileID: 871600998685698506, guid: 0772af49464587347becba7a2d6e1455, type: 3}
       propertyPath: m_IsActive
