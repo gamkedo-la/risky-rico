@@ -68,9 +68,9 @@ where TResponse : UnityEvent<TType>
         [SerializeField]
         private TEvent _previouslyRegisteredEvent = default(TEvent);
         [SerializeField]
-        private TEvent _event = default(TEvent);
+        protected TEvent _event = default(TEvent);
         [SerializeField]
-        private TResponse _response = default(TResponse);
+        protected TResponse _response = default(TResponse);
 
         public void OnEventRaised()
         {
@@ -94,7 +94,7 @@ where TResponse : UnityEvent<TType>
             if (_event != null)
                 _event.RemoveListener(this);
         }
-        private void Register()
+        protected void Register()
         {
             if (_previouslyRegisteredEvent != null)
             {

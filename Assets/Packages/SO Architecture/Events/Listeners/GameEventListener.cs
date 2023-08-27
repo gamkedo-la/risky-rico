@@ -7,5 +7,18 @@ namespace ScriptableObjectArchitecture
     [ExecuteInEditMode]
     public sealed class GameEventListener : BaseGameEventListener<GameEventBase, UnityEvent>
     {
+        public void SetResponse(UnityEvent response)
+        {
+            _response = response;
+        }
+        public void SetEvent(GameEvent e)
+        {
+            _event = e;
+        }
+
+        public void Register()
+        {
+            base.Register();
+        }
     }
 }
